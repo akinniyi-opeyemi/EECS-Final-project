@@ -1,0 +1,13 @@
+{
+  "task_id": "3",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "Is Nivedita Okonkwo taking prospective graduate students in the upcoming academic year?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_cs_001__jekyll_alfolio/",
+  "raw_output": "Yes, she is accepting Ph.D. students for Fall\u202f2026.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

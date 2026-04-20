@@ -1,0 +1,13 @@
+{
+  "task_id": "77",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/thornfield_anth_001__hugo_papermod/",
+  "raw_output": "ANTH\u202f410\u202fSenior Seminar: Fieldwork and Its Discontents (Spring\u202f2026) \u2013 location not specified.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

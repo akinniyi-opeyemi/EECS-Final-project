@@ -1,0 +1,13 @@
+{
+  "task_id": "57",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/merrow_lit_001__hugo_papermod/",
+  "raw_output": "LIT\u202f21.014\u202fIntroduction to Fiction \u2013 Hale\u202f2\u2011190 (Fall\u202f2025)  \nLIT\u202f21.S02\u202fLiterature and the Computer \u2013 Hale\u202f3\u2011270 (Fall\u202f2025)",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

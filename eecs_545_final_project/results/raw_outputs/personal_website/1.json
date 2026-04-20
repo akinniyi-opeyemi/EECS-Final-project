@@ -1,0 +1,13 @@
+{
+  "task_id": "1",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "When does Niv hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_cs_001__jekyll_alfolio/",
+  "raw_output": "Tuesdays\u202f2:00\u202f\u2013\u202f4:00\u202fPM (or by appointment)",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

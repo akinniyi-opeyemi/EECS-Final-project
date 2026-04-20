@@ -1,0 +1,13 @@
+{
+  "task_id": "56",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "When does Yuki hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/merrow_lit_001__hugo_papermod/",
+  "raw_output": "Mondays 3:00\u202f\u2013\u202f5:00\u202fPM (in person) and Thursdays 11:00\u202fAM\u202f\u2013\u202f12:00\u202fPM (virtual, by sign\u2011up)",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

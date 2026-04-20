@@ -1,0 +1,13 @@
+{
+  "task_id": "37",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_econ_001__hugo_papermod/",
+  "raw_output": "ECON\u202f8301\u202fMicroeconomic Theory\u202fI (Ph.D. core) \u2013 Whitmore Hall\u202f210 (Fall\u202f2025)  \nECON\u202f4500\u202fGame Theory and Economic Behavior \u2013 Whitmore Hall\u202f105 (Fall\u202f2025)",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "34",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "Find Dr. Gerhardt V\u00f6ssing's Twitter account.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_econ_001__notion/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

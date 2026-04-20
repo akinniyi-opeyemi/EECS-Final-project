@@ -1,0 +1,13 @@
+{
+  "task_id": "20",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "Find the title of the most recent publication of Dr. Gerhardt V\u00f6ssing.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_econ_001__jekyll_alfolio/",
+  "raw_output": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

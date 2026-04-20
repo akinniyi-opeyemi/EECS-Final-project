@@ -1,0 +1,13 @@
+{
+  "task_id": "26",
+  "website": "personal_website",
+  "template": "raw_html_1998",
+  "instruction": "When does Gerhardt hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_econ_001__raw_html_1998/",
+  "raw_output": "Mondays and Wednesdays, 3:30\u202f\u2013\u202f5:00\u202fPM.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

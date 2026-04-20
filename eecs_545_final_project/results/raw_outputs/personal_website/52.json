@@ -1,0 +1,13 @@
+{
+  "task_id": "52",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/merrow_lit_001__notion/",
+  "raw_output": "LIT\u202f21.735\u202fGraduate Seminar: Postwar American Fiction and the Machine (Spring\u202f2026); location not listed.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

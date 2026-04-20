@@ -1,0 +1,13 @@
+{
+  "task_id": "14",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "Find Nivedita Okonkwo's Twitter account.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_cs_001__notion/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "78",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "Is Malcolm Reyes-Whittaker taking prospective graduate students in the upcoming academic year?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/thornfield_anth_001__hugo_papermod/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

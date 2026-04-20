@@ -1,0 +1,13 @@
+{
+  "task_id": "67",
+  "website": "personal_website",
+  "template": "raw_html_1998",
+  "instruction": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/thornfield_anth_001__raw_html_1998/",
+  "raw_output": "ANTH\u202f101\u202f\u2014\u202fIntroduction to Cultural Anthropology, held in Ashwood Hall\u202f110; and ANTH\u202f324\u202f\u2014\u202fEthnography of Work, held in Ashwood Hall\u202f208.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

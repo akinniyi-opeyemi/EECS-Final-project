@@ -1,25 +1,108 @@
 # scripts/infer.py
-# Runs text-only inference on house-renting-eval tasks
-# using gpt-oss-120B via the class server.
-# Saves raw outputs to results/raw_outputs/
+# Configurable inference script for all four websites.
+# Usage:
+#   python scripts/infer.py --website house_renting
+#   python scripts/infer.py --website personal_website
+#   python scripts/infer.py --website job_application
+#   python scripts/infer.py --website course_registration
+#   python scripts/infer.py --website house_renting --test
+#   (--test runs only first 3 tasks)
 
-import json, os, time
+import json, os, time, argparse
 from pathlib import Path
 from openai import OpenAI
 from playwright.sync_api import sync_playwright
 
 # ============================================================
-# CONFIGURATION
+# WEBSITE CONFIGURATIONS
 # ============================================================
-TASK_FILE   = Path("house-renting-eval/tasks.json")
-#TASK_FILE   = Path("house-renting-eval/tasks_test.json")
-OUTPUT_DIR  = Path("results/raw_outputs/house_renting")
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+CONFIGS = {
+    "house_renting": {
+        "task_file":  Path("house-renting-eval/tasks.json"),
+        "output_dir": Path("results/raw_outputs/house_renting"),
+        "system_prompt": """You are a web agent evaluating rental property listings.
+You are given the text content of a web page and a task.
+Find the specific information requested and return it concisely.
 
+Rules:
+- Return ONLY the answer, no explanation
+- Be precise: return exact values like '$1,450/month' not 'fourteen fifty'
+- If information is not visible, say 'Not visible'
+"""
+    },
+    "personal_website": {
+        "task_file":  Path("Personal Website/tasks/test.raw.json"),
+        "output_dir": Path("results/raw_outputs/personal_website"),
+        "system_prompt": """You are a web agent evaluating academic personal websites.
+You are given the text content of a web page and a task.
+Find the specific information requested and return it concisely.
+
+Rules:
+- Return ONLY the answer, no explanation
+- If information is not on this page, it may be on a linked page
+  like publications or teaching
+- If information is not found anywhere, say 'Not found'
+- Be precise with names, titles, and dates
+"""
+    },
+    "job_application": {
+        "task_file":  Path("job_application/tasks.json"),
+        "output_dir": Path("results/raw_outputs/job_application"),
+        "system_prompt": """You are a web agent evaluating job application websites.
+You are given the text content of a web page and a task.
+Find the specific information requested and return it concisely.
+
+Rules:
+- Return ONLY the answer, no explanation
+- If information requires clicking a button, note that
+- Be precise with job titles, dates, and requirements
+"""
+    },
+    "course_registration": {
+        "task_file":  Path("course_registration/tasks_v2.json"),
+        "output_dir": Path("results/raw_outputs/course_registration"),
+        "system_prompt": """You are a web agent evaluating a course registration system.
+You are given the text content of a web page and a task.
+Find the specific information requested and return it concisely.
+
+Rules:
+- Return ONLY the answer, no explanation
+- Course codes, instructor names, and times must be exact
+- If a filter or search is needed, describe what you would do
+"""
+    }
+}
+
+# ============================================================
+# ARGUMENT PARSING
+# ============================================================
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "--website",
+    required=True,
+    choices=list(CONFIGS.keys()),
+    help="Which website to run inference on"
+)
+parser.add_argument(
+    "--test",
+    action="store_true",
+    help="Run only first 3 tasks for testing"
+)
+args = parser.parse_args()
+
+config     = CONFIGS[args.website]
+TASK_FILE  = config["task_file"]
+OUTPUT_DIR = config["output_dir"]
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+SYSTEM_PROMPT = config["system_prompt"]
+
+# ============================================================
+# MODEL CONFIGURATION
+# ============================================================
 MODEL       = "openai/gpt-oss-120b"
 TEMPERATURE = 0.0
 MAX_TOKENS  = 500
-PAUSE       = 1.0    # seconds between requests
+PAUSE       = 1.0
 
 client = OpenAI(
     base_url=os.environ["OPENAI_BASE_URL"],
@@ -27,34 +110,16 @@ client = OpenAI(
 )
 
 # ============================================================
-# SYSTEM PROMPT
-# ============================================================
-SYSTEM_PROMPT = """You are a web agent evaluating rental property listings.
-You are given the text content of a web page and a task.
-Your job is to find the specific information requested and return it concisely.
-
-Rules:
-- Return ONLY the answer, no explanation
-- If the information requires clicking a button or navigating to a tab,
-  say what action is needed and what the answer would be
-- If information is not visible on the page, say 'Not visible'
-- Be precise: return exact values like '$1,450/month' not 'fourteen fifty'
-"""
-
-# ============================================================
-# FUNCTION 1: Extract page text using Playwright
+# FUNCTION 1: Extract page text
 # ============================================================
 def get_page_text(url):
-    """Load a page and extract its visible text content."""
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(viewport={"width": 1280, "height": 720})
         try:
             page.goto(url, timeout=15000, wait_until="domcontentloaded")
             page.wait_for_timeout(1500)
-            # get all visible text
             text = page.evaluate("""() => {
-                // remove script and style tags
                 const clone = document.body.cloneNode(true);
                 clone.querySelectorAll('script, style, noscript').forEach(
                     el => el.remove()
@@ -69,73 +134,60 @@ def get_page_text(url):
 
 
 # ============================================================
-# FUNCTION 2: Build prompt for text-only mode
+# FUNCTION 2: Build prompt
 # ============================================================
-def build_prompt(page_text, instruction, interaction):
-    """Build the user prompt for text-only mode."""
-
-    # truncate page text if too long
+def build_prompt(page_text, instruction, interaction="none"):
     if len(page_text) > 6000:
         page_text = page_text[:6000] + "\n...[truncated]"
 
-    # add interaction hint if needed
-    interaction_hint = ""
-    if interaction and interaction != "none":
-        hints = {
-            "click_show_details_button":
-                "\nNote: Some information may be hidden behind a 'Show Details' button.",
-            "click_apply_tab":
-                "\nNote: Some information may be under an 'Apply' tab.",
-            "click_contact_tab":
-                "\nNote: Contact information may be under a 'Contact' tab.",
-            "click_details_tab":
-                "\nNote: Some information may be under a 'Details' tab.",
-            "click_details_tab_then_toggle":
-                "\nNote: Some information may be under a 'Details' tab inside an expandable section.",
-            "click_details_tab_then_fees_toggle":
-                "\nNote: Fee information may be under a 'Details' tab inside a 'Fees' expandable section.",
-            "use_sidebar_city_filter":
-                "\nNote: You may need to use a city filter in the sidebar to find this listing.",
-        }
-        interaction_hint = hints.get(interaction, "")
+    interaction_hints = {
+        "click_show_details_button":
+            "\nNote: Some information may be hidden behind a 'Show Details' button.",
+        "click_apply_tab":
+            "\nNote: Some information may be under an 'Apply' tab.",
+        "click_contact_tab":
+            "\nNote: Contact information may be under a 'Contact' tab.",
+        "click_details_tab":
+            "\nNote: Some information may be under a 'Details' tab.",
+        "click_details_tab_then_toggle":
+            "\nNote: Some information may be under a 'Details' tab inside an expandable section.",
+        "click_details_tab_then_fees_toggle":
+            "\nNote: Fee information may be under a 'Details' tab inside a 'Fees' section.",
+        "use_sidebar_city_filter":
+            "\nNote: You may need to use a city filter in the sidebar.",
+    }
+    hint = interaction_hints.get(interaction, "")
 
-    prompt = f"""Page content:
+    return f"""Page content:
 {page_text}
-{interaction_hint}
+{hint}
 
 Task: {instruction}
 
 Answer:"""
 
-    return prompt
-
 
 # ============================================================
-# FUNCTION 3: Run inference for one task
+# FUNCTION 3: Run one task
 # ============================================================
 def run_task(task):
-    """Run inference for a single task. Returns result dict."""
-    task_id    = task["task_id"]
-    url        = task["start_url"]
-    instruction = task["instruction"]
+    task_id     = task["task_id"]
+    url         = task.get("start_url", "")
+    instruction = task.get("instruction") or task.get("intent", "")
     interaction = task.get("interaction", "none")
 
     output_path = OUTPUT_DIR / f"{task_id}.json"
 
-    # skip if already done
     if output_path.exists():
         return None, "skipped"
 
-    # get page text
     try:
         page_text = get_page_text(url)
     except Exception as e:
         page_text = f"ERROR: {e}"
 
-    # build prompt
     prompt = build_prompt(page_text, instruction, interaction)
 
-    # run inference
     try:
         response = client.chat.completions.create(
             model=MODEL,
@@ -152,19 +204,18 @@ def run_task(task):
         raw_output = None
         error = str(e)
 
-    # save result
     result = {
-        "task_id":    task_id,
-        "website":    task.get("website", "house_renting"),
-        "template":   task["template"],
-        "instruction": instruction,
-        "interaction": interaction,
+        "task_id":           str(task_id),
+        "website":           args.website,
+        "template":          task.get("template", ""),
+        "instruction":       instruction,
+        "interaction":       interaction,
         "perturbation_type": task.get("perturbation_type", ""),
-        "start_url":  url,
-        "raw_output": raw_output,
-        "error":      error,
-        "model":      MODEL,
-        "mode":       "text_only"
+        "start_url":         url,
+        "raw_output":        raw_output,
+        "error":             error,
+        "model":             MODEL,
+        "mode":              "text_only"
     }
 
     with open(output_path, "w") as f:
@@ -176,22 +227,31 @@ def run_task(task):
 # ============================================================
 # MAIN
 # ============================================================
-print("Loading tasks...")
+print(f"Website:  {args.website}")
+print(f"Tasks:    {TASK_FILE}")
+print(f"Output:   {OUTPUT_DIR}")
+print(f"Model:    {MODEL}")
+print(f"Mode:     text-only")
+if args.test:
+    print(f"Mode:     TEST (first 3 tasks only)")
+print()
+
 with open(TASK_FILE) as f:
     tasks = json.load(f)
 
-print(f"Found {len(tasks)} tasks")
-print(f"Output directory: {OUTPUT_DIR}")
-print(f"Model: {MODEL}")
-print(f"Mode: text-only\n")
+if args.test:
+    tasks = tasks[:3]
+
+print(f"Loaded {len(tasks)} tasks\n")
 
 stats = {"done": 0, "skipped": 0, "error": 0}
 
 for i, task in enumerate(tasks):
-    task_id  = task["task_id"]
-    template = task["template"]
+    task_id  = str(task["task_id"])
+    template = task.get("template", "")
 
-    print(f"[{i+1}/{len(tasks)}] {task_id} ({template})...", end=" ", flush=True)
+    print(f"[{i+1}/{len(tasks)}] {task_id} ({template})...",
+          end=" ", flush=True)
 
     result, status = run_task(task)
 
@@ -202,12 +262,12 @@ for i, task in enumerate(tasks):
         print(f"ERROR: {result['error'][:50]}")
         stats["error"] += 1
     else:
-        print(f"done → {result['raw_output'][:50] if result['raw_output'] else 'None'}")
+        out = result['raw_output'][:50] if result and result['raw_output'] else 'None'
+        print(f"done → {out}")
         stats["done"] += 1
 
     time.sleep(PAUSE)
 
-# summary
 print(f"\n{'='*45}")
 print(f"Inference complete")
 print(f"{'='*45}")
