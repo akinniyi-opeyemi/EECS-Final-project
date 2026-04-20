@@ -1,141 +1,380 @@
 [
   {
     "task_id": "J01_classic",
+    "website": "job_application",
+    "template": "classic",
     "env_id": "job_site_classic",
+    "start_url": "http://localhost:8002/templates/job_site_1_classic.html",
     "instruction": "Find the most recent job opening",
-    "evaluation": {
-      "type": "string_match",
-      "target": "most recent"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "most recent",
+        "must_include": [
+          "most recent"
+        ],
+        "fuzzy_match": [
+          "most recent"
+        ]
+      },
+      "reference_answer_raw_annotation": "most recent"
     }
   },
   {
     "task_id": "J01_modern",
+    "website": "job_application",
+    "template": "modern",
     "env_id": "job_site_modern",
+    "start_url": "http://localhost:8002/templates/job_site_2_modern.html",
     "instruction": "Find the most recent job opening",
-    "evaluation": {
-      "type": "string_match",
-      "target": "most recent"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "most recent",
+        "must_include": [
+          "most recent"
+        ],
+        "fuzzy_match": [
+          "most recent"
+        ]
+      },
+      "reference_answer_raw_annotation": "most recent"
     }
   },
   {
     "task_id": "J01_notion",
+    "website": "job_application",
+    "template": "notion",
     "env_id": "job_site_notion",
+    "start_url": "http://localhost:8002/templates/job_site_3_notion.html",
     "instruction": "Find the most recent job opening",
-    "evaluation": {
-      "type": "string_match",
-      "target": "recent"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "recent",
+        "must_include": [
+          "recent"
+        ],
+        "fuzzy_match": [
+          "recent"
+        ]
+      },
+      "reference_answer_raw_annotation": "recent"
     }
   },
-
   {
     "task_id": "J02_classic",
+    "website": "job_application",
+    "template": "classic",
     "env_id": "job_site_classic",
+    "start_url": "http://localhost:8002/templates/job_site_1_classic.html",
     "instruction": "Find the application deadline for the most recent job",
-    "evaluation": {
-      "type": "regex",
-      "target": "May \\d{1,2}, 2026"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "regex"
+      ],
+      "reference_answers": {
+        "exact_match": "May \\d{1,2}, 2026",
+        "must_include": [
+          "May \\d{1,2}, 2026",
+          "2026"
+        ],
+        "fuzzy_match": [
+          "May \\d{1,2}, 2026"
+        ]
+      },
+      "reference_answer_raw_annotation": "May \\d{1,2}, 2026"
     }
   },
   {
     "task_id": "J02_modern",
+    "website": "job_application",
+    "template": "modern",
     "env_id": "job_site_modern",
+    "start_url": "http://localhost:8002/templates/job_site_2_modern.html",
     "instruction": "Find the application deadline for the most recent job",
-    "evaluation": {
-      "type": "regex",
-      "target": "May \\d{1,2}, 2026"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "regex"
+      ],
+      "reference_answers": {
+        "exact_match": "May \\d{1,2}, 2026",
+        "must_include": [
+          "May \\d{1,2}, 2026",
+          "2026"
+        ],
+        "fuzzy_match": [
+          "May \\d{1,2}, 2026"
+        ]
+      },
+      "reference_answer_raw_annotation": "May \\d{1,2}, 2026"
     }
   },
   {
     "task_id": "J02_notion",
+    "website": "job_application",
+    "template": "notion",
     "env_id": "job_site_notion",
+    "start_url": "http://localhost:8002/templates/job_site_3_notion.html",
     "instruction": "Find the application deadline for the most recent job",
-    "evaluation": {
-      "type": "regex",
-      "target": "May \\d{1,2}, 2026"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "regex"
+      ],
+      "reference_answers": {
+        "exact_match": "May \\d{1,2}, 2026",
+        "must_include": [
+          "May \\d{1,2}, 2026",
+          "2026"
+        ],
+        "fuzzy_match": [
+          "May \\d{1,2}, 2026"
+        ]
+      },
+      "reference_answer_raw_annotation": "May \\d{1,2}, 2026"
     }
   },
-
   {
     "task_id": "J03_classic",
+    "website": "job_application",
+    "template": "classic",
     "env_id": "job_site_classic",
+    "start_url": "http://localhost:8002/templates/job_site_1_classic.html",
     "instruction": "Find how to apply for the job",
-    "evaluation": {
-      "type": "string_match",
-      "target": "@"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "@",
+        "must_include": [
+          "@"
+        ],
+        "fuzzy_match": [
+          "@"
+        ]
+      },
+      "reference_answer_raw_annotation": "@"
     }
   },
   {
     "task_id": "J03_modern",
+    "website": "job_application",
+    "template": "modern",
     "env_id": "job_site_modern",
+    "start_url": "http://localhost:8002/templates/job_site_2_modern.html",
     "instruction": "Find how to apply for the job",
-    "evaluation": {
-      "type": "string_match",
-      "target": "@"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "@",
+        "must_include": [
+          "@"
+        ],
+        "fuzzy_match": [
+          "@"
+        ]
+      },
+      "reference_answer_raw_annotation": "@"
     }
   },
   {
     "task_id": "J03_notion",
+    "website": "job_application",
+    "template": "notion",
     "env_id": "job_site_notion",
+    "start_url": "http://localhost:8002/templates/job_site_3_notion.html",
     "instruction": "Find how to apply for the job",
-    "evaluation": {
-      "type": "string_match",
-      "target": "apply"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "apply",
+        "must_include": [
+          "apply"
+        ],
+        "fuzzy_match": [
+          "apply"
+        ]
+      },
+      "reference_answer_raw_annotation": "apply"
     }
   },
-
   {
     "task_id": "J04_classic",
+    "website": "job_application",
+    "template": "classic",
     "env_id": "job_site_classic",
+    "start_url": "http://localhost:8002/templates/job_site_1_classic.html",
     "instruction": "Find the required application materials",
-    "evaluation": {
-      "type": "string_match",
-      "target": "CV"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "CV",
+        "must_include": [
+          "CV"
+        ],
+        "fuzzy_match": [
+          "CV"
+        ]
+      },
+      "reference_answer_raw_annotation": "CV"
     }
   },
   {
     "task_id": "J04_modern",
+    "website": "job_application",
+    "template": "modern",
     "env_id": "job_site_modern",
+    "start_url": "http://localhost:8002/templates/job_site_2_modern.html",
     "instruction": "Find the required application materials",
-    "evaluation": {
-      "type": "string_match",
-      "target": "Resume"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "Resume",
+        "must_include": [
+          "Resume"
+        ],
+        "fuzzy_match": [
+          "Resume"
+        ]
+      },
+      "reference_answer_raw_annotation": "Resume"
     }
   },
   {
     "task_id": "J04_notion",
+    "website": "job_application",
+    "template": "notion",
     "env_id": "job_site_notion",
+    "start_url": "http://localhost:8002/templates/job_site_3_notion.html",
     "instruction": "Find the required application materials",
-    "evaluation": {
-      "type": "string_match",
-      "target": "CV"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "CV",
+        "must_include": [
+          "CV"
+        ],
+        "fuzzy_match": [
+          "CV"
+        ]
+      },
+      "reference_answer_raw_annotation": "CV"
     }
   },
-
   {
     "task_id": "J05_classic",
+    "website": "job_application",
+    "template": "classic",
     "env_id": "job_site_classic",
+    "start_url": "http://localhost:8002/templates/job_site_1_classic.html",
     "instruction": "Check whether the most recent job is still open",
-    "evaluation": {
-      "type": "string_match",
-      "target": "OPEN"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "OPEN",
+        "must_include": [
+          "OPEN"
+        ],
+        "fuzzy_match": [
+          "OPEN"
+        ]
+      },
+      "reference_answer_raw_annotation": "OPEN"
     }
   },
   {
     "task_id": "J05_modern",
+    "website": "job_application",
+    "template": "modern",
     "env_id": "job_site_modern",
+    "start_url": "http://localhost:8002/templates/job_site_2_modern.html",
     "instruction": "Check whether the most recent job is still open",
-    "evaluation": {
-      "type": "string_match",
-      "target": "OPEN"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "OPEN",
+        "must_include": [
+          "OPEN"
+        ],
+        "fuzzy_match": [
+          "OPEN"
+        ]
+      },
+      "reference_answer_raw_annotation": "OPEN"
     }
   },
   {
     "task_id": "J05_notion",
+    "website": "job_application",
+    "template": "notion",
     "env_id": "job_site_notion",
+    "start_url": "http://localhost:8002/templates/job_site_3_notion.html",
     "instruction": "Check whether the most recent job is still open",
-    "evaluation": {
-      "type": "string_match",
-      "target": "OPEN"
+    "interaction": "none",
+    "perturbation_type": "layout_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "OPEN",
+        "must_include": [
+          "OPEN"
+        ],
+        "fuzzy_match": [
+          "OPEN"
+        ]
+      },
+      "reference_answer_raw_annotation": "OPEN"
     }
   }
 ]

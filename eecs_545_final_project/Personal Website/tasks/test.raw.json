@@ -1,23 +1,16 @@
 [
   {
     "task_id": 0,
-    "task_type": "T1_recent_pub",
-    "persona_id": "halvern_cs_001",
+    "website": "personal_website",
     "template": "jekyll_alfolio",
-    "sites": [
-      "halvern_cs_001__jekyll_alfolio"
-    ],
+    "template_style": "modern_academic",
+    "persona_id": "halvern_cs_001",
+    "env_id": "halvern_cs_001__jekyll_alfolio",
     "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Find the title of the most recent publication of {name}.",
-    "intent_template_id": 1,
-    "instantiation_dict": {
-      "name": "Nivedita Okonkwo"
-    },
-    "intent": "Find the title of the most recent publication of Nivedita Okonkwo.",
-    "require_reset": false,
+    "instruction": "Find the title of the most recent publication of Nivedita Okonkwo.",
+    "task_type": "T1_recent_pub",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -31,33 +24,23 @@
         "must_include": [
           "Certified Robustness via Smoothed Representations under Covariate Shift"
         ],
-        "fuzzy_match": null
+        "fuzzy_match": []
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "Certified Robustness via Smoothed Representations under Covariate Shift"
     }
   },
   {
     "task_id": 1,
-    "task_type": "T2_office_hours",
-    "persona_id": "halvern_cs_001",
+    "website": "personal_website",
     "template": "jekyll_alfolio",
-    "sites": [
-      "halvern_cs_001__jekyll_alfolio"
-    ],
+    "template_style": "modern_academic",
+    "persona_id": "halvern_cs_001",
+    "env_id": "halvern_cs_001__jekyll_alfolio",
     "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "When does {name} hold office hours this semester?",
-    "intent_template_id": 2,
-    "instantiation_dict": {
-      "name": "Nivedita Okonkwo"
-    },
-    "intent": "When does Niv hold office hours this semester?",
-    "require_reset": false,
+    "instruction": "When does Niv hold office hours this semester?",
+    "task_type": "T2_office_hours",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -72,34 +55,24 @@
           "Tuesday"
         ],
         "fuzzy_match": [
-          "Tuesdays 2:00–4:00 PM, or by appointment"
+          "Tuesdays 2:00\u20134:00 PM, or by appointment"
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "Tuesdays 2:00–4:00 PM, or by appointment"
+      "reference_answer_raw_annotation": "Tuesdays 2:00\u20134:00 PM, or by appointment"
     }
   },
   {
     "task_id": 2,
-    "task_type": "T3_current_course",
-    "persona_id": "halvern_cs_001",
+    "website": "personal_website",
     "template": "jekyll_alfolio",
-    "sites": [
-      "halvern_cs_001__jekyll_alfolio"
-    ],
+    "template_style": "modern_academic",
+    "persona_id": "halvern_cs_001",
+    "env_id": "halvern_cs_001__jekyll_alfolio",
     "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "What course is {name} teaching this semester, and where does it take place?",
-    "intent_template_id": 3,
-    "instantiation_dict": {
-      "name": "Nivedita Okonkwo"
-    },
-    "intent": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
-    "require_reset": false,
+    "instruction": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+    "task_type": "T3_current_course",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -115,34 +88,24 @@
           "Ramsey Hall 1301"
         ],
         "fuzzy_match": [
-          "CS 5891 — Trustworthy Machine Learning, in Ramsey Hall 1301"
+          "CS 5891 \u2014 Trustworthy Machine Learning, in Ramsey Hall 1301"
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "CS 5891 — Trustworthy Machine Learning, in Ramsey Hall 1301"
+      "reference_answer_raw_annotation": "CS 5891 \u2014 Trustworthy Machine Learning, in Ramsey Hall 1301"
     }
   },
   {
     "task_id": 3,
-    "task_type": "T4_accepting",
-    "persona_id": "halvern_cs_001",
+    "website": "personal_website",
     "template": "jekyll_alfolio",
-    "sites": [
-      "halvern_cs_001__jekyll_alfolio"
-    ],
+    "template_style": "modern_academic",
+    "persona_id": "halvern_cs_001",
+    "env_id": "halvern_cs_001__jekyll_alfolio",
     "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?",
-    "intent_template_id": 4,
-    "instantiation_dict": {
-      "name": "Nivedita Okonkwo"
-    },
-    "intent": "Is Nivedita Okonkwo taking prospective graduate students in the upcoming academic year?",
-    "require_reset": false,
+    "instruction": "Is Nivedita Okonkwo taking prospective graduate students in the upcoming academic year?",
+    "task_type": "T4_accepting",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -153,36 +116,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": null,
+        "must_include": [],
         "fuzzy_match": [
           "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
     }
   },
   {
     "task_id": 4,
-    "task_type": "T5_twitter",
-    "persona_id": "halvern_cs_001",
+    "website": "personal_website",
     "template": "jekyll_alfolio",
-    "sites": [
-      "halvern_cs_001__jekyll_alfolio"
-    ],
+    "template_style": "modern_academic",
+    "persona_id": "halvern_cs_001",
+    "env_id": "halvern_cs_001__jekyll_alfolio",
     "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Find {name}'s Twitter account.",
-    "intent_template_id": 5,
-    "instantiation_dict": {
-      "name": "Nivedita Okonkwo"
-    },
-    "intent": "Find Nivedita Okonkwo's Twitter account.",
-    "require_reset": false,
+    "instruction": "Find Nivedita Okonkwo's Twitter account.",
+    "task_type": "T5_twitter",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -193,36 +146,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": null,
+        "must_include": [],
         "fuzzy_match": [
           "The page does not list a Twitter account for Nivedita Okonkwo."
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Nivedita Okonkwo."
     }
   },
   {
     "task_id": 5,
-    "task_type": "T1_recent_pub",
-    "persona_id": "halvern_econ_001",
+    "website": "personal_website",
     "template": "raw_html_1998",
-    "sites": [
-      "halvern_econ_001__raw_html_1998"
-    ],
+    "template_style": "retro_minimal",
+    "persona_id": "halvern_econ_001",
+    "env_id": "halvern_econ_001__raw_html_1998",
     "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Find the title of the most recent publication of {name}.",
-    "intent_template_id": 1,
-    "instantiation_dict": {
-      "name": "Dr. Gerhardt Vössing"
-    },
-    "intent": "Find the title of the most recent publication of Dr. Gerhardt Vössing.",
-    "require_reset": false,
+    "instruction": "Find the title of the most recent publication of Dr. Gerhardt V\u00f6ssing.",
+    "task_type": "T1_recent_pub",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -236,33 +179,23 @@
         "must_include": [
           "On the Existence of Equilibrium in Double Auctions with Interdependent Values"
         ],
-        "fuzzy_match": null
+        "fuzzy_match": []
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "On the Existence of Equilibrium in Double Auctions with Interdependent Values"
     }
   },
   {
     "task_id": 6,
-    "task_type": "T2_office_hours",
-    "persona_id": "halvern_econ_001",
+    "website": "personal_website",
     "template": "raw_html_1998",
-    "sites": [
-      "halvern_econ_001__raw_html_1998"
-    ],
+    "template_style": "retro_minimal",
+    "persona_id": "halvern_econ_001",
+    "env_id": "halvern_econ_001__raw_html_1998",
     "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "When does {name} hold office hours this semester?",
-    "intent_template_id": 2,
-    "instantiation_dict": {
-      "name": "Dr. Gerhardt Vössing"
-    },
-    "intent": "When does Gerhardt hold office hours this semester?",
-    "require_reset": false,
+    "instruction": "When does Gerhardt hold office hours this semester?",
+    "task_type": "T2_office_hours",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -280,31 +213,21 @@
           "Mondays and Wednesdays, 3:30-5:00 PM"
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "Mondays and Wednesdays, 3:30-5:00 PM"
     }
   },
   {
     "task_id": 7,
-    "task_type": "T3_current_course",
-    "persona_id": "halvern_econ_001",
+    "website": "personal_website",
     "template": "raw_html_1998",
-    "sites": [
-      "halvern_econ_001__raw_html_1998"
-    ],
+    "template_style": "retro_minimal",
+    "persona_id": "halvern_econ_001",
+    "env_id": "halvern_econ_001__raw_html_1998",
     "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "What course is {name} teaching this semester, and where does it take place?",
-    "intent_template_id": 3,
-    "instantiation_dict": {
-      "name": "Dr. Gerhardt Vössing"
-    },
-    "intent": "What course is Dr. Gerhardt Vössing teaching this semester, and where does it take place?",
-    "require_reset": false,
+    "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+    "task_type": "T3_current_course",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -320,34 +243,24 @@
           "Whitmore Hall 210"
         ],
         "fuzzy_match": [
-          "ECON 8301 — Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 — Game Theory and Economic Behavior, in Whitmore Hall 105"
+          "ECON 8301 \u2014 Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 \u2014 Game Theory and Economic Behavior, in Whitmore Hall 105"
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "ECON 8301 — Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 — Game Theory and Economic Behavior, in Whitmore Hall 105"
+      "reference_answer_raw_annotation": "ECON 8301 \u2014 Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 \u2014 Game Theory and Economic Behavior, in Whitmore Hall 105"
     }
   },
   {
     "task_id": 8,
-    "task_type": "T4_accepting",
-    "persona_id": "halvern_econ_001",
+    "website": "personal_website",
     "template": "raw_html_1998",
-    "sites": [
-      "halvern_econ_001__raw_html_1998"
-    ],
+    "template_style": "retro_minimal",
+    "persona_id": "halvern_econ_001",
+    "env_id": "halvern_econ_001__raw_html_1998",
     "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?",
-    "intent_template_id": 4,
-    "instantiation_dict": {
-      "name": "Dr. Gerhardt Vössing"
-    },
-    "intent": "Is Dr. Gerhardt Vössing taking prospective graduate students in the upcoming academic year?",
-    "require_reset": false,
+    "instruction": "Is Dr. Gerhardt V\u00f6ssing taking prospective graduate students in the upcoming academic year?",
+    "task_type": "T4_accepting",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -358,36 +271,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": null,
+        "must_include": [],
         "fuzzy_match": [
-          "No, Dr. Gerhardt Vössing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "No, Dr. Gerhardt Vössing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+      "reference_answer_raw_annotation": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
     }
   },
   {
     "task_id": 9,
-    "task_type": "T5_twitter",
-    "persona_id": "halvern_econ_001",
+    "website": "personal_website",
     "template": "raw_html_1998",
-    "sites": [
-      "halvern_econ_001__raw_html_1998"
-    ],
+    "template_style": "retro_minimal",
+    "persona_id": "halvern_econ_001",
+    "env_id": "halvern_econ_001__raw_html_1998",
     "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Find {name}'s Twitter account.",
-    "intent_template_id": 5,
-    "instantiation_dict": {
-      "name": "Dr. Gerhardt Vössing"
-    },
-    "intent": "Find Dr. Gerhardt Vössing's Twitter account.",
-    "require_reset": false,
+    "instruction": "Find Dr. Gerhardt V\u00f6ssing's Twitter account.",
+    "task_type": "T5_twitter",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -398,36 +301,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": null,
+        "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Dr. Gerhardt Vössing."
+          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "The page does not list a Twitter account for Dr. Gerhardt Vössing."
+      "reference_answer_raw_annotation": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
     }
   },
   {
     "task_id": 10,
-    "task_type": "T1_recent_pub",
-    "persona_id": "merrow_lit_001",
+    "website": "personal_website",
     "template": "notion",
-    "sites": [
-      "merrow_lit_001__notion"
-    ],
+    "template_style": "structured_blocks",
+    "persona_id": "merrow_lit_001",
+    "env_id": "merrow_lit_001__notion",
     "start_url": "http://localhost:8000/merrow_lit_001__notion/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Find the title of the most recent publication of {name}.",
-    "intent_template_id": 1,
-    "instantiation_dict": {
-      "name": "Yuki Abernathy"
-    },
-    "intent": "Find the title of the most recent publication of Yuki Abernathy.",
-    "require_reset": false,
+    "instruction": "Find the title of the most recent publication of Yuki Abernathy.",
+    "task_type": "T1_recent_pub",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -439,35 +332,25 @@
       "reference_answers": {
         "exact_match": null,
         "must_include": [
-          "Compiled Fictions: American Literature and the Programming Imagination, 1948–1984"
+          "Compiled Fictions: American Literature and the Programming Imagination, 1948\u20131984"
         ],
-        "fuzzy_match": null
+        "fuzzy_match": []
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "Compiled Fictions: American Literature and the Programming Imagination, 1948–1984"
+      "reference_answer_raw_annotation": "Compiled Fictions: American Literature and the Programming Imagination, 1948\u20131984"
     }
   },
   {
     "task_id": 11,
-    "task_type": "T2_office_hours",
-    "persona_id": "merrow_lit_001",
+    "website": "personal_website",
     "template": "notion",
-    "sites": [
-      "merrow_lit_001__notion"
-    ],
+    "template_style": "structured_blocks",
+    "persona_id": "merrow_lit_001",
+    "env_id": "merrow_lit_001__notion",
     "start_url": "http://localhost:8000/merrow_lit_001__notion/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "When does {name} hold office hours this semester?",
-    "intent_template_id": 2,
-    "instantiation_dict": {
-      "name": "Yuki Abernathy"
-    },
-    "intent": "When does Yuki hold office hours this semester?",
-    "require_reset": false,
+    "instruction": "When does Yuki hold office hours this semester?",
+    "task_type": "T2_office_hours",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -482,34 +365,24 @@
           "Monday"
         ],
         "fuzzy_match": [
-          "Mondays 3:00–5:00 PM (in person) and Thursdays 11:00 AM–12:00 PM (virtual, by sign-up)"
+          "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)"
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "Mondays 3:00–5:00 PM (in person) and Thursdays 11:00 AM–12:00 PM (virtual, by sign-up)"
+      "reference_answer_raw_annotation": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)"
     }
   },
   {
     "task_id": 12,
-    "task_type": "T3_current_course",
-    "persona_id": "merrow_lit_001",
+    "website": "personal_website",
     "template": "notion",
-    "sites": [
-      "merrow_lit_001__notion"
-    ],
+    "template_style": "structured_blocks",
+    "persona_id": "merrow_lit_001",
+    "env_id": "merrow_lit_001__notion",
     "start_url": "http://localhost:8000/merrow_lit_001__notion/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "What course is {name} teaching this semester, and where does it take place?",
-    "intent_template_id": 3,
-    "instantiation_dict": {
-      "name": "Yuki Abernathy"
-    },
-    "intent": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
-    "require_reset": false,
+    "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+    "task_type": "T3_current_course",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -525,34 +398,24 @@
           "Hale 2-190"
         ],
         "fuzzy_match": [
-          "LIT 21.014 — Introduction to Fiction, in Hale 2-190; LIT 21.S02 — Literature and the Computer, in Hale 3-270"
+          "LIT 21.014 \u2014 Introduction to Fiction, in Hale 2-190; LIT 21.S02 \u2014 Literature and the Computer, in Hale 3-270"
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "LIT 21.014 — Introduction to Fiction, in Hale 2-190; LIT 21.S02 — Literature and the Computer, in Hale 3-270"
+      "reference_answer_raw_annotation": "LIT 21.014 \u2014 Introduction to Fiction, in Hale 2-190; LIT 21.S02 \u2014 Literature and the Computer, in Hale 3-270"
     }
   },
   {
     "task_id": 13,
-    "task_type": "T4_accepting",
-    "persona_id": "merrow_lit_001",
+    "website": "personal_website",
     "template": "notion",
-    "sites": [
-      "merrow_lit_001__notion"
-    ],
+    "template_style": "structured_blocks",
+    "persona_id": "merrow_lit_001",
+    "env_id": "merrow_lit_001__notion",
     "start_url": "http://localhost:8000/merrow_lit_001__notion/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?",
-    "intent_template_id": 4,
-    "instantiation_dict": {
-      "name": "Yuki Abernathy"
-    },
-    "intent": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
-    "require_reset": false,
+    "instruction": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
+    "task_type": "T4_accepting",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -563,36 +426,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": null,
+        "must_include": [],
         "fuzzy_match": [
           "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
     }
   },
   {
     "task_id": 14,
-    "task_type": "T5_twitter",
-    "persona_id": "merrow_lit_001",
+    "website": "personal_website",
     "template": "notion",
-    "sites": [
-      "merrow_lit_001__notion"
-    ],
+    "template_style": "structured_blocks",
+    "persona_id": "merrow_lit_001",
+    "env_id": "merrow_lit_001__notion",
     "start_url": "http://localhost:8000/merrow_lit_001__notion/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Find {name}'s Twitter account.",
-    "intent_template_id": 5,
-    "instantiation_dict": {
-      "name": "Yuki Abernathy"
-    },
-    "intent": "Find Yuki Abernathy's Twitter account.",
-    "require_reset": false,
+    "instruction": "Find Yuki Abernathy's Twitter account.",
+    "task_type": "T5_twitter",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -603,36 +456,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": null,
+        "must_include": [],
         "fuzzy_match": [
           "The page does not list a Twitter account for Yuki Abernathy."
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Yuki Abernathy."
     }
   },
   {
     "task_id": 15,
-    "task_type": "T1_recent_pub",
-    "persona_id": "thornfield_anth_001",
+    "website": "personal_website",
     "template": "hugo_papermod",
-    "sites": [
-      "thornfield_anth_001__hugo_papermod"
-    ],
+    "template_style": "blog_style",
+    "persona_id": "thornfield_anth_001",
+    "env_id": "thornfield_anth_001__hugo_papermod",
     "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Find the title of the most recent publication of {name}.",
-    "intent_template_id": 1,
-    "instantiation_dict": {
-      "name": "Malcolm Reyes-Whittaker"
-    },
-    "intent": "Find the title of the most recent publication of Malcolm Reyes-Whittaker.",
-    "require_reset": false,
+    "instruction": "Find the title of the most recent publication of Malcolm Reyes-Whittaker.",
+    "task_type": "T1_recent_pub",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -646,33 +489,23 @@
         "must_include": [
           "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town"
         ],
-        "fuzzy_match": null
+        "fuzzy_match": []
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town"
     }
   },
   {
     "task_id": 16,
-    "task_type": "T2_office_hours",
-    "persona_id": "thornfield_anth_001",
+    "website": "personal_website",
     "template": "hugo_papermod",
-    "sites": [
-      "thornfield_anth_001__hugo_papermod"
-    ],
+    "template_style": "blog_style",
+    "persona_id": "thornfield_anth_001",
+    "env_id": "thornfield_anth_001__hugo_papermod",
     "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "When does {name} hold office hours this semester?",
-    "intent_template_id": 2,
-    "instantiation_dict": {
-      "name": "Malcolm Reyes-Whittaker"
-    },
-    "intent": "When does Malcolm hold office hours this semester?",
-    "require_reset": false,
+    "instruction": "When does Malcolm hold office hours this semester?",
+    "task_type": "T2_office_hours",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -687,34 +520,24 @@
           "Wednesday"
         ],
         "fuzzy_match": [
-          "Wednesdays 1:00–3:00 PM and Fridays 10:00–11:30 AM"
+          "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM"
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "Wednesdays 1:00–3:00 PM and Fridays 10:00–11:30 AM"
+      "reference_answer_raw_annotation": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM"
     }
   },
   {
     "task_id": 17,
-    "task_type": "T3_current_course",
-    "persona_id": "thornfield_anth_001",
+    "website": "personal_website",
     "template": "hugo_papermod",
-    "sites": [
-      "thornfield_anth_001__hugo_papermod"
-    ],
+    "template_style": "blog_style",
+    "persona_id": "thornfield_anth_001",
+    "env_id": "thornfield_anth_001__hugo_papermod",
     "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "What course is {name} teaching this semester, and where does it take place?",
-    "intent_template_id": 3,
-    "instantiation_dict": {
-      "name": "Malcolm Reyes-Whittaker"
-    },
-    "intent": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
-    "require_reset": false,
+    "instruction": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+    "task_type": "T3_current_course",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -730,34 +553,24 @@
           "Ashwood Hall 110"
         ],
         "fuzzy_match": [
-          "ANTH 101 — Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 — Ethnography of Work, in Ashwood Hall 208"
+          "ANTH 101 \u2014 Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 \u2014 Ethnography of Work, in Ashwood Hall 208"
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "ANTH 101 — Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 — Ethnography of Work, in Ashwood Hall 208"
+      "reference_answer_raw_annotation": "ANTH 101 \u2014 Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 \u2014 Ethnography of Work, in Ashwood Hall 208"
     }
   },
   {
     "task_id": 18,
-    "task_type": "T4_accepting",
-    "persona_id": "thornfield_anth_001",
+    "website": "personal_website",
     "template": "hugo_papermod",
-    "sites": [
-      "thornfield_anth_001__hugo_papermod"
-    ],
+    "template_style": "blog_style",
+    "persona_id": "thornfield_anth_001",
+    "env_id": "thornfield_anth_001__hugo_papermod",
     "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?",
-    "intent_template_id": 4,
-    "instantiation_dict": {
-      "name": "Malcolm Reyes-Whittaker"
-    },
-    "intent": "Is Malcolm Reyes-Whittaker taking prospective graduate students in the upcoming academic year?",
-    "require_reset": false,
+    "instruction": "Is Malcolm Reyes-Whittaker taking prospective graduate students in the upcoming academic year?",
+    "task_type": "T4_accepting",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -768,36 +581,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": null,
+        "must_include": [],
         "fuzzy_match": [
-          "Not applicable — the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
-      "reference_answer_raw_annotation": "Not applicable — the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+      "reference_answer_raw_annotation": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
     }
   },
   {
     "task_id": 19,
-    "task_type": "T5_twitter",
-    "persona_id": "thornfield_anth_001",
+    "website": "personal_website",
     "template": "hugo_papermod",
-    "sites": [
-      "thornfield_anth_001__hugo_papermod"
-    ],
+    "template_style": "blog_style",
+    "persona_id": "thornfield_anth_001",
+    "env_id": "thornfield_anth_001__hugo_papermod",
     "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
-    "geolocation": null,
-    "require_login": false,
-    "storage_state": null,
-    "intent_template": "Find {name}'s Twitter account.",
-    "intent_template_id": 5,
-    "instantiation_dict": {
-      "name": "Malcolm Reyes-Whittaker"
-    },
-    "intent": "Find Malcolm Reyes-Whittaker's Twitter account.",
-    "require_reset": false,
+    "instruction": "Find Malcolm Reyes-Whittaker's Twitter account.",
+    "task_type": "T5_twitter",
+    "interaction": "navigation",
+    "perturbation_type": "framework_style",
     "viewport_size": {
       "width": 1280,
       "height": 720
@@ -808,14 +611,11 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": null,
+        "must_include": [],
         "fuzzy_match": [
           "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
         ]
       },
-      "reference_url": "",
-      "program_html": [],
-      "string_note": "",
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
     }
   }
