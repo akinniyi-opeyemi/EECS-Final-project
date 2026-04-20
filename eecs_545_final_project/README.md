@@ -105,7 +105,7 @@ TRS = 0.0  → complete failure
 | Mode | Description | Model |
 |---|---|---|
 | text_only | DOM text extraction only | gpt-oss-120B |
-| multimodal | Screenshot + DOM text | Qwen3-VL-30B |
+| multimodal | Screenshot + DOM text | Qwen3-VL-30B / local models |
 | vision_only | Screenshot only | Qwen3-VL-30B / local models |
 
 ---
@@ -163,11 +163,12 @@ python -m vllm.entrypoints.openai.api_server \
     --port 8002 --host 0.0.0.0 \
     --max-model-len 4096 --dtype bfloat16
 
-# InternVL2-8B on port 8003
+# InternVL2-8B on port 8003 (requires --trust-remote-code)
 python -m vllm.entrypoints.openai.api_server \
     --model /scratch/.../models/InternVL2-8B \
     --port 8003 --host 0.0.0.0 \
-    --max-model-len 4096 --dtype bfloat16
+    --max-model-len 4096 --dtype bfloat16 \
+    --trust-remote-code
 ```
 
 ---
@@ -296,9 +297,11 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 | Agent | Params | Type | Classic | Modern | Hidden | TRS |
 |---|---|---|---|---|---|---|
 | Qwen3-VL-30B | 30B | general vision | 93.3% | 73.8% | 97.5% | 0.791 |
-| UI-TARS-7B | 7B | GUI-specialized | TBD | TBD | TBD | TBD |
-| Qwen2.5-VL-7B | 7B | general vision | TBD | TBD | TBD | TBD |
+| UI-TARS-7B | 7B | GUI-specialized | 98.3% | 96.4% | 96.7% | **0.981** |
+| Qwen2.5-VL-7B | 7B | general vision | 93.3% | 78.6% | 94.2% | 0.842 |
 | InternVL2-8B | 8B | general vision | TBD | TBD | TBD | TBD |
+
+**Key finding:** UI-TARS-7B achieves TRS=0.981 in multimodal mode, nearly matching text-only performance (TRS=0.988). This combines visual GUI understanding with DOM text extraction, effectively solving the interaction barrier. click_to_reveal tasks achieve 100% success rate in multimodal mode for UI-TARS versus 0% in vision-only mode.
 
 ### RQ I: Cross-Agent Comparison (vision_only, personal_website)
 
@@ -338,7 +341,7 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 | memory | 0 | 0.0% | 31 | -73.8% |
 | CoT | 1 | 2.4% | 8 | -16.7% |
 
-**Key finding:** Memory intervention is actively harmful on personal_website (-73.8% net) because failures are caused by information being on a different page entirely (navigation failures) rather than visibility failures. Agent hallucinates plausible answers instead of admitting the information is not found.
+**Key finding:** Memory intervention is actively harmful on personal_website (-73.8% net) because failures are caused by information being on a different page entirely. Agent hallucinates plausible answers instead of admitting the information is not found.
 
 ### RQ II: Recovery Rate by Perturbation Type (house_renting, vision_only)
 
@@ -371,30 +374,80 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 | Visual reading failure | 8 | 19.0% | Text too small or below fold |
 | Wrong content retrieved | 6 | 14.3% | Agent found wrong course or publication |
 
+---
+
+## Summary of Key Findings
+
+### Finding 1: Input modality is the primary driver of robustness
+
+| Mode | TRS (house_renting) | TRS (personal_website) |
+|---|---|---|
+| text_only | 0.988 | 0.842 |
+| multimodal | 0.791 | 0.867 |
+| vision_only | 0.236 | 0.500 |
+
+Text-only agents bypass UI complexity entirely via DOM extraction, achieving near-perfect robustness. Vision-only agents degrade severely because interactive elements are invisible barriers.
+
+### Finding 2: GUI specialization outperforms scale in vision-only mode
+
+| Agent | Size | Type | TRS (house_renting) |
+|---|---|---|---|
+| UI-TARS-7B | 7B | GUI-specialized | **0.414** |
+| Qwen2.5-VL-7B | 7B | general vision | 0.250 |
+| Qwen3-VL-30B | 30B | general vision | 0.236 |
+| InternVL2-8B | 8B | general vision | 0.234 |
+
+A 7B GUI-specialized model outperforms a 30B general vision model by 76% in TRS. Domain specialization is more important than parameter count for temporal robustness.
+
+### Finding 3: UI-TARS multimodal is the optimal configuration
+
+| Agent | Mode | TRS |
+|---|---|---|
+| gpt-oss-120B | text_only | 0.988 |
+| UI-TARS-7B | multimodal | **0.981** |
+| Qwen2.5-VL-7B | multimodal | 0.842 |
+| Qwen3-VL-30B | multimodal | 0.791 |
+| UI-TARS-7B | vision_only | 0.414 |
+
+UI-TARS in multimodal mode nearly matches text-only performance (TRS=0.981 vs 0.988) while using a 17x smaller model. This combination of GUI specialization with DOM text access resolves interaction barriers completely.
+
+### Finding 4: click_to_reveal and tab_navigation are irreducible barriers in vision-only mode
+
+All five vision agents score 0% on click_to_reveal and tab_navigation perturbations. These represent fundamental limitations of static screenshot evaluation that cannot be overcome without actual browser interaction. Multimodal agents resolve these barriers via DOM text extraction.
+
+### Finding 5: Memory intervention effectiveness depends on failure mode type
+
+| Website | Failure type | Memory net |
+|---|---|---|
+| house_renting | Visibility failures | +24.0% |
+| personal_website | Navigation failures | -73.8% |
+
+Memory intervention is beneficial when information exists on the page but the agent missed it. It is actively harmful when failures are caused by information being on a different page.
+
+---
 
 ## Failure Analysis
 
-Three distinct failure categories identified:
-
-**Category 1: Viewport limitation (9.1% of failures)**
+**Category 1: Viewport limitation (12.5% of house_renting failures)**
 Information exists on the page but is below the 720px viewport. Agent cannot scroll. Fixable with full-page screenshots.
 
-**Category 2: Interaction limitation (72.7% of failures)**
+**Category 2: Interaction limitation (75.0% of house_renting failures)**
 Content hidden behind interactive elements (buttons, tabs, toggles). Agent can see the element visually but cannot click it. Fundamental barrier for static screenshot evaluation.
 
-**Category 3: Navigation limitation (3.6% of failures)**
+**Category 3: Navigation limitation (3.6% of house_renting failures)**
 Information requires sidebar filter or multi-page navigation. Agent cannot interact with filters or navigate to linked pages.
+
+**Category 4: Navigation multi-page (66.7% of personal_website failures)**
+Information lives on a linked page (teaching.html, publications.html). Agent only sees the homepage and cannot follow links in static evaluation mode.
 
 ---
 
 ## Citation
 
-If you use this benchmark, please cite:
-
 ```
 @misc{eecs545_gui_robustness_2026,
   title  = {GUI Agent Temporal Robustness Benchmark},
-  author = {Zuchen Li, Opeyemi Akinniyi, Carol Kang, Hao Yin, Xiangnong Wu },
+  author = {Zuchen Li, Opeyemi Akinniyi, Carol Kang, Hao Yin, Xiangnong Wu},
   year   = {2026},
   note   = {EECS 545 Final Project, University of Michigan}
 }
