@@ -261,9 +261,10 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 
 | Agent | Classic | Modern | Hidden | TRS |
 |---|---|---|---|---|
+| gpt-oss-120B (text-only) | 100.0% | 98.8% | 100.0% | 0.988 |
 | Qwen3-VL-30B | 60.0% | 22.6% | 14.2% | 0.236 |
 | UI-TARS-7B | 58.3% | 27.4% | 24.2% | 0.414 |
-| Qwen2.5-VL-7B | TBD | TBD | TBD | TBD |
+| Qwen2.5-VL-7B | 60.0% | 23.8% | 15.0% | 0.250 |
 | InternVL2-8B | TBD | TBD | TBD | TBD |
 
 ### RQ II: Test-Time Interventions (house_renting, vision_only)
