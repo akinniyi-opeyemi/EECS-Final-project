@@ -18,3 +18,4 @@ dependencies:
       - rapidfuzz
       - tqdm
       - requests
+      - openai

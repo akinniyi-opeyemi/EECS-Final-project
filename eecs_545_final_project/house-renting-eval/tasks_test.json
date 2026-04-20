@@ -1,0 +1,84 @@
+[
+  {
+    "task_id": "C_01_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "env_id": "classic_house_01",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "instruction": "Find the monthly rent for Maplewood Apartments.",
+    "interaction": "none",
+    "perturbation_type": "visible",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "$1,450/month",
+        "must_include": [
+          "$1,450/month",
+          "$1,450"
+        ],
+        "fuzzy_match": [
+          "$1,450/month",
+          "The monthly rent is $1,450",
+          "rent of $1,450/month",
+          "$1,450 per month"
+        ]
+      },
+      "reference_answer_raw_annotation": "$1,450/month"
+    }
+  },
+  {
+    "task_id": "C_01_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "env_id": "classic_house_01",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "instruction": "Find the number of bedrooms in Maplewood Apartments.",
+    "interaction": "none",
+    "perturbation_type": "visible",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "2",
+        "must_include": [
+          "2"
+        ],
+        "fuzzy_match": [
+          "2",
+          "two bedroom",
+          "two bedrooms"
+        ]
+      },
+      "reference_answer_raw_annotation": "2"
+    }
+  },
+  {
+    "task_id": "C_01_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "env_id": "classic_house_01",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "instruction": "Find the application deadline for Maplewood Apartments.",
+    "interaction": "none",
+    "perturbation_type": "visible",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "July 15, 2025",
+        "must_include": [
+          "July 15, 2025",
+          "2025"
+        ],
+        "fuzzy_match": [
+          "July 15, 2025"
+        ]
+      },
+      "reference_answer_raw_annotation": "July 15, 2025"
+    }
+  }
+]
