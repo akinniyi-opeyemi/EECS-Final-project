@@ -1,0 +1,14 @@
+{
+  "task_id": "M_08_T05",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Check whether Cedar Grove Flat is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/modern/house_08.html",
+  "raw_output": "Yes, Cedar Grove Flat is currently available for rent, as indicated by the green \"Available\" label with a checkmark on the listing page.",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "vision_only"
+}

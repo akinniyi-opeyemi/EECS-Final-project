@@ -371,6 +371,7 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 | Visual reading failure | 8 | 19.0% | Text too small or below fold |
 | Wrong content retrieved | 6 | 14.3% | Agent found wrong course or publication |
 
+
 ## Failure Analysis
 
 Three distinct failure categories identified:

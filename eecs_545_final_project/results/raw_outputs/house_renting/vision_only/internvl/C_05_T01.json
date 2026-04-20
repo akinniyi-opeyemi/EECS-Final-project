@@ -1,0 +1,14 @@
+{
+  "task_id": "C_05_T01",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the monthly rent for Riverfront Studio.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/classic/house_05.html",
+  "raw_output": "$1,100/month",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "H_07_T05",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Check whether Parkview Terrace is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/hidden/house_07.html",
+  "raw_output": "Available",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}

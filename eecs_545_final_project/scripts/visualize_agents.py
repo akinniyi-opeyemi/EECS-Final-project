@@ -15,11 +15,16 @@ VIZ_DIR.mkdir(parents=True, exist_ok=True)
 # CONFIGURATION
 # ============================================================
 AGENTS = {
-    "gpt_oss":  {"label": "GPT-oss-120B",    "color": "#3266ad", "marker": "o", "tier": "text-only"},
-    "qwen_vl":  {"label": "Qwen3-VL-30B",    "color": "#d85a30", "marker": "^", "tier": "general"},
-    "uitars":   {"label": "UI-TARS-7B",       "color": "#7f77dd", "marker": "D", "tier": "GUI-specialized"},
-    "qwen25":   {"label": "Qwen2.5-VL-7B",   "color": "#1d9e75", "marker": "s", "tier": "general"},
-    "internvl": {"label": "InternVL2-8B",     "color": "#ba7517", "marker": "P", "tier": "general"},
+    "gpt_oss":  {"label": "GPT-oss-120B",   "color": "#3266ad", "marker": "o",
+                 "tier": "text-only", "modes": ["text_only"]},
+    "qwen_vl":  {"label": "Qwen3-VL-30B",   "color": "#d85a30", "marker": "^",
+                 "tier": "general",   "modes": ["text_only", "multimodal", "vision_only"]},
+    "uitars":   {"label": "UI-TARS-7B",      "color": "#7f77dd", "marker": "D",
+                 "tier": "GUI-specialized", "modes": ["multimodal", "vision_only"]},
+    "qwen25":   {"label": "Qwen2.5-VL-7B",  "color": "#1d9e75", "marker": "s",
+                 "tier": "general",   "modes": ["multimodal", "vision_only"]},
+    "internvl": {"label": "InternVL2-8B",    "color": "#ba7517", "marker": "P",
+                 "tier": "general",   "modes": ["multimodal", "vision_only"]},
 }
 
 WEBSITES = {
@@ -44,9 +49,15 @@ MODES = {
 # HELPERS
 # ============================================================
 def load_summary(website, mode, agent):
+    # new structure with agent subfolder
     path = Path(f"results/metrics/{website}/{mode}/{agent}/summary.json")
     if path.exists():
         with open(path) as f:
+            return json.load(f)
+    # old structure without agent subfolder (gpt_oss, qwen_vl)
+    path_old = Path(f"results/metrics/{website}/{mode}/summary.json")
+    if path_old.exists():
+        with open(path_old) as f:
             return json.load(f)
     return None
 
@@ -158,59 +169,71 @@ def plot_agent_trs_comparison():
 # ============================================================
 def plot_agent_degradation_lines():
     for website_key, config in WEBSITES.items():
-        templates = config["templates"]
-        baseline  = config["baseline"]
-        x         = list(range(len(templates)))
-        labels    = [short_label(t) for t in templates]
-
-        fig, ax = plt.subplots(figsize=(12, 6))
-        fig.suptitle(
-            f"{config['title']} — per-template success rate by agent (vision only)",
-            fontsize=13, fontweight="bold"
-        )
-
-        for agent_key, agent_cfg in AGENTS.items():
-            s = load_summary(website_key, "vision_only", agent_key)
-            if not s:
+        for mode in ["vision_only", "multimodal", "text_only"]:
+            # only plot if we have at least 2 agents
+            agents_with_data = []
+            for agent_key, agent_cfg in AGENTS.items():
+                if mode not in agent_cfg.get("modes", []):
+                    continue
+                s = load_summary(website_key, mode, agent_key)
+                if s:
+                    agents_with_data.append(agent_key)
+            if len(agents_with_data) < 2:
                 continue
 
-            values = [s["success_rates"].get(t, 0) * 100 for t in templates]
-            ax.plot(
-                x, values,
-                color=agent_cfg["color"],
-                linestyle="-",
-                marker=agent_cfg["marker"],
-                linewidth=2.5,
-                markersize=8,
-                label=agent_cfg["label"],
-                zorder=3
-            )
-            ax.annotate(
-                f"{values[-1]:.0f}%",
-                (len(templates) - 1, values[-1]),
-                textcoords="offset points",
-                xytext=(9, 0),
-                fontsize=9,
-                color=agent_cfg["color"],
-                fontweight="bold"
+            templates = config["templates"]
+            x         = list(range(len(templates)))
+            labels    = [short_label(t) for t in templates]
+
+            fig, ax = plt.subplots(figsize=(12, 6))
+            fig.suptitle(
+                f"{config['title']} — per-template success rate by agent ({mode.replace('_',' ')})",
+                fontsize=13, fontweight="bold"
             )
 
-        ax.set_xticks(x)
-        ax.set_xticklabels(labels, fontsize=10)
-        ax.set_ylim(0, 115)
-        ax.set_ylabel("success rate (%)", fontsize=11)
-        ax.legend(fontsize=10, loc="upper right")
-        ax.grid(alpha=0.25, axis="y", zorder=0)
-        ax.spines["top"].set_visible(False)
-        ax.spines["right"].set_visible(False)
+            for agent_key in agents_with_data:
+                agent_cfg = AGENTS[agent_key]
+                s = load_summary(website_key, mode, agent_key)
+                values = [s["success_rates"].get(t, 0) * 100 for t in templates]
+                ax.plot(
+                    x, values,
+                    color=agent_cfg["color"],
+                    linestyle="-",
+                    marker=agent_cfg["marker"],
+                    linewidth=2.5,
+                    markersize=8,
+                    label=agent_cfg["label"],
+                    zorder=3
+                )
+                ax.annotate(
+                    f"{values[-1]:.0f}%",
+                    (len(templates) - 1, values[-1]),
+                    textcoords="offset points",
+                    xytext=(9, 0),
+                    fontsize=9,
+                    color=agent_cfg["color"],
+                    fontweight="bold"
+                )
 
-        plt.tight_layout()
-        path = VIZ_DIR / f"agent_degradation_{website_key}.png"
-        plt.savefig(path, dpi=150, bbox_inches="tight")
-        plt.close()
-        print(f"Saved: {path}")
+            ax.set_xticks(x)
+            ax.set_xticklabels(labels, fontsize=10)
+            ax.set_ylim(0, 115)
+            ax.set_ylabel("success rate (%)", fontsize=11)
+            ax.legend(fontsize=10, loc="upper right")
+            ax.grid(alpha=0.25, axis="y", zorder=0)
+            ax.spines["top"].set_visible(False)
+            ax.spines["right"].set_visible(False)
 
+            plt.tight_layout()
+            path = VIZ_DIR / f"agent_degradation_{website_key}_{mode}.png"
+            plt.savefig(path, dpi=150, bbox_inches="tight")
+            plt.close()
+            print(f"Saved: {path}")
 
+    for agent_key, agent_cfg in AGENTS.items():
+        if mode not in agent_cfg.get("modes", [mode]):
+            continue
+        s = load_summary(website_key, mode, agent_key)
 # ============================================================
 # FIGURE 3: Agent tier comparison (model size vs TRS)
 # ============================================================

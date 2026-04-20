@@ -1,0 +1,14 @@
+{
+  "task_id": "C_11_T05",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Check whether Downtown Loft is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/classic/house_11.html",
+  "raw_output": "Not available",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "vision_only"
+}

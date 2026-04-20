@@ -1,0 +1,14 @@
+{
+  "task_id": "M_06_T02",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the number of bedrooms in Oak Hill House.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/modern/house_06.html",
+  "raw_output": "3 Bedrooms",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "agent": "qwen25",
+  "mode": "multimodal"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "H_03_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Chicago and identify Lakeside Condo.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8888/templates/hidden/index.html",
+  "raw_output": "Lakeside Condo is located at 1005 Lakeshore Blvd, Chicago, IL 60611.",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

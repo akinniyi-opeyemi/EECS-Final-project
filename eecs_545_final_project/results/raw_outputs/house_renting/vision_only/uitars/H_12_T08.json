@@ -1,0 +1,14 @@
+{
+  "task_id": "H_12_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Minneapolis and identify Birchwood Place.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8888/templates/hidden/index.html",
+  "raw_output": "Click on the \"City\" dropdown in the sidebar to open the city selection menu.",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "vision_only"
+}

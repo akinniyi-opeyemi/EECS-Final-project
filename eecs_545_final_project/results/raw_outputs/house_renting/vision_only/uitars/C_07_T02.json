@@ -1,0 +1,14 @@
+{
+  "task_id": "C_07_T02",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the number of bedrooms in Parkview Terrace.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/classic/house_07.html",
+  "raw_output": "2",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "vision_only"
+}

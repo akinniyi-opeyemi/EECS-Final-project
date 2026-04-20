@@ -1,0 +1,14 @@
+{
+  "task_id": "H_09_T05",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Check whether Hillcrest Manor is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/hidden/house_09.html",
+  "raw_output": "Not available",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}

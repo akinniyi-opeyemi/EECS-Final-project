@@ -1,0 +1,48 @@
+{
+  "website": "house_renting",
+  "agent": "internvl",
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/InternVL2-8B",
+  "mode": "vision_only",
+  "total_tasks": 264,
+  "evaluated_tasks": 264,
+  "missing_tasks": 0,
+  "baseline": "classic",
+  "success_rates": {
+    "classic": 0.5333,
+    "modern": 0.2738,
+    "hidden": 0.125
+  },
+  "temporal_degradation": {
+    "classic_to_modern": 0.2595,
+    "classic_to_hidden": 0.4083
+  },
+  "trs": 0.2344,
+  "task_type_results": {},
+  "perturbation_results": {
+    "click_to_reveal": {
+      "count": 24,
+      "success_rate": 0.0
+    },
+    "filter_navigation": {
+      "count": 12,
+      "success_rate": 0.3333333333333333
+    },
+    "tab_navigation": {
+      "count": 48,
+      "success_rate": 0.0
+    },
+    "tab_then_expand": {
+      "count": 24,
+      "success_rate": 0.0
+    },
+    "visible": {
+      "count": 156,
+      "success_rate": 0.4230769230769231
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 57,
+    "no_match": 194,
+    "exact_match_contained": 13
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "C_12_T03",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the application deadline for Birchwood Place.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/classic/house_12.html",
+  "raw_output": "August 20, 2025",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

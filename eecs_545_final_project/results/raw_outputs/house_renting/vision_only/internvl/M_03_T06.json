@@ -1,0 +1,14 @@
+{
+  "task_id": "M_03_T06",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the pet policy for Lakeside Condo. You may need to click a button to reveal this information.",
+  "interaction": "click_show_details_button",
+  "perturbation_type": "click_to_reveal",
+  "start_url": "http://localhost:8888/templates/modern/house_03.html",
+  "raw_output": "Not visible",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}

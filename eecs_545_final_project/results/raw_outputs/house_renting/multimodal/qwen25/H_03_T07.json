@@ -1,0 +1,14 @@
+{
+  "task_id": "H_03_T07",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the parking details for Lakeside Condo. You may need to navigate to the Details tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8888/templates/hidden/house_03.html",
+  "raw_output": "Street parking only",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "agent": "qwen25",
+  "mode": "multimodal"
+}

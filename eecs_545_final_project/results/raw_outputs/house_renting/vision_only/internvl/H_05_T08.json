@@ -1,0 +1,14 @@
+{
+  "task_id": "H_05_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Portland and identify Riverfront Studio.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8888/templates/hidden/index.html",
+  "raw_output": "Not visible",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}

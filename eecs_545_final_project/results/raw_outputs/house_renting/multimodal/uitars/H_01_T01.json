@@ -1,0 +1,14 @@
+{
+  "task_id": "H_01_T01",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the monthly rent for Maplewood Apartments.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/hidden/house_01.html",
+  "raw_output": "$1,450/month",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "H_05_T05",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Check whether Riverfront Studio is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/hidden/house_05.html",
+  "raw_output": "Available",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "agent": "qwen25",
+  "mode": "vision_only"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "C_01_T04",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the contact email address for Maplewood Apartments.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8888/templates/classic/house_01.html",
+  "raw_output": "Not visible",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "vision_only"
+}

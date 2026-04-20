@@ -1,0 +1,14 @@
+{
+  "task_id": "H_01_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Austin and identify Maplewood Apartments.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8888/templates/hidden/index.html",
+  "raw_output": "To find listings in Austin and identify Maplewood Apartments, I would click on the city filter in the sidebar and select \"Austin.\" Then, I would scroll down the rental listings to find Maplewood Apartments.",
+  "error": null,
+  "model": "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}
