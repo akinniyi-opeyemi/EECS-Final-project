@@ -3944,9 +3944,12 @@
     "interaction": "none",
     "prediction": "No, it is not currently available for rent.",
     "ground_truth": "Not Available",
-    "success": false,
-    "tier_matched": "no_match",
-    "match_details": {},
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "no, it is not currently available",
+      "score": 0.868
+    },
     "mode": "text_only",
     "model": "openai/gpt-oss-120b"
   },

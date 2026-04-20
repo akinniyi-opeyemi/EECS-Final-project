@@ -1300,7 +1300,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -1439,7 +1443,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -1628,7 +1636,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -3064,7 +3076,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -3203,7 +3219,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -3392,7 +3412,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -4825,7 +4849,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -4964,7 +4992,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -5153,7 +5185,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -6002,7 +6038,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -6141,7 +6181,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"
@@ -6330,7 +6374,11 @@
           "not currently available",
           "is not available",
           "unavailable",
-          "no longer available"
+          "no longer available",
+          "no, it is not available",
+          "no, it is not currently available",
+          "it is not available",
+          "unavailable for rent"
         ]
       },
       "reference_answer_raw_annotation": "Not Available"

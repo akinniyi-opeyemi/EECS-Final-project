@@ -7,15 +7,15 @@
   "missing_tasks": 0,
   "success_rates": {
     "classic": 1.0,
-    "modern": 0.9762,
+    "modern": 0.9881,
     "hidden": 1.0
   },
   "temporal_degradation": {
-    "classic_to_modern": 0.0238,
+    "classic_to_modern": 0.0119,
     "classic_to_hidden": 0.0,
-    "modern_to_hidden": -0.0238
+    "modern_to_hidden": -0.0119
   },
-  "trs": 0.9762,
+  "trs": 0.9881,
   "perturbation_results": {
     "click_to_reveal": {
       "count": 24,
@@ -35,14 +35,14 @@
     },
     "visible": {
       "count": 156,
-      "success_rate": 0.9871794871794872
+      "success_rate": 0.9935897435897436
     }
   },
   "tier_breakdown": {
     "exact_match": 182,
-    "fuzzy_string": 23,
+    "fuzzy_string": 24,
     "exact_match_contained": 39,
     "must_include": 18,
-    "no_match": 2
+    "no_match": 1
   }
 }
