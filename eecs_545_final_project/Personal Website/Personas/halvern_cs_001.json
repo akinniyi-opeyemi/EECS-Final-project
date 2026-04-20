@@ -1,0 +1,284 @@
+{
+  "persona_id": "halvern_cs_001",
+  "schema_version": "0.2",
+
+  "university": {
+    "name": "Halvern University",
+    "short_name": "Halvern",
+    "type": "R1 research university",
+    "domain": "halvern.edu",
+    "city": "Halvern",
+    "state": "OH",
+    "zip": "44820"
+  },
+
+  "name": {
+    "full": "Nivedita Okonkwo",
+    "first": "Nivedita",
+    "last": "Okonkwo",
+    "preferred": "Niv",
+    "title": "Associate Professor",
+    "pronouns": "she/her",
+    "honorifics": ["Ph.D."]
+  },
+
+  "department": {
+    "name": "Department of Computer Science",
+    "school": "College of Engineering",
+    "url_path": "/cs"
+  },
+
+  "research": {
+    "areas": [
+      "machine learning",
+      "distribution shift",
+      "trustworthy ML",
+      "representation learning"
+    ],
+    "one_liner": "I build machine learning systems that behave predictably when the world doesn't.",
+    "long_bio": "Nivedita Okonkwo is an Associate Professor of Computer Science at Halvern University, where she leads the Reliable Learning Group. Her research focuses on understanding and mitigating distribution shift in modern machine learning systems, with an emphasis on representation learning and certified robustness. Before joining Halvern in 2020, she completed her Ph.D. at Carnegie Mellon University and a postdoc at the Toyota Technological Institute at Chicago. Her work has been recognized by an NSF CAREER Award (2023) and a Sloan Research Fellowship (2024)."
+  },
+
+  "office": {
+    "building": "Ramsey Hall",
+    "room": "4208",
+    "floor": 4,
+    "hours": "Tuesdays 2:00–4:00 PM, or by appointment",
+    "mailing_address": {
+      "line1": "Department of Computer Science",
+      "line2": "Halvern University",
+      "street": "500 North University Avenue",
+      "building_line": "Ramsey Hall, Room 4208",
+      "city": "Halvern",
+      "state": "OH",
+      "zip": "44820",
+      "country": "USA"
+    }
+  },
+
+  "contact": {
+    "email": "nokonkwo@halvern.edu",
+    "email_secondary": "niv@halvern.edu",
+    "phone_office": "+1 (419) 555-0142",
+    "phone_lab": "+1 (419) 555-0178",
+    "fax": "+1 (419) 555-0199"
+  },
+
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Computer Science",
+      "institution": "Carnegie Mellon University",
+      "year": 2018,
+      "advisor": "Prof. Elena Brandt",
+      "thesis": "Learning Representations Robust to Covariate Shift"
+    },
+    {
+      "degree": "M.S.",
+      "field": "Computer Science",
+      "institution": "University of Illinois Urbana-Champaign",
+      "year": 2014
+    },
+    {
+      "degree": "B.Tech.",
+      "field": "Computer Science and Engineering",
+      "institution": "Indian Institute of Technology, Madras",
+      "year": 2012
+    }
+  ],
+
+  "positions": [
+    { "role": "Associate Professor",     "institution": "Halvern University",                         "start": 2024, "end": null },
+    { "role": "Assistant Professor",     "institution": "Halvern University",                         "start": 2020, "end": 2024 },
+    { "role": "Postdoctoral Researcher", "institution": "Toyota Technological Institute at Chicago",  "start": 2018, "end": 2020 }
+  ],
+
+  "awards": [
+    { "year": 2024, "name": "Sloan Research Fellowship",              "org": "Alfred P. Sloan Foundation" },
+    { "year": 2023, "name": "NSF CAREER Award",                       "org": "National Science Foundation" },
+    { "year": 2022, "name": "Outstanding Paper Award",                "org": "ICML" },
+    { "year": 2018, "name": "SCS Distinguished Dissertation Nominee", "org": "Carnegie Mellon University" }
+  ],
+
+  "publications": [
+    {
+      "id": "okonkwo2024certified",
+      "type": "article",
+      "title": "Certified Robustness via Smoothed Representations under Covariate Shift",
+      "authors": ["N. Okonkwo", "J. Park", "L. Haddad", "M. Chen"],
+      "venue": "NeurIPS",
+      "venue_full": "Advances in Neural Information Processing Systems",
+      "year": 2024,
+      "pdf_source": null,
+      "bibtex_source": null,
+      "code_url": null
+    },
+    {
+      "id": "park2024spurious",
+      "type": "article",
+      "title": "Disentangling Spurious and Causal Features via Representation Audits",
+      "authors": ["J. Park", "N. Okonkwo"],
+      "venue": "ICML",
+      "year": 2024,
+      "pdf_source": null
+    },
+    {
+      "id": "okonkwo2023atlas",
+      "type": "article",
+      "title": "ATLAS: A Benchmark for Subpopulation Shift in Medical Imaging",
+      "authors": ["N. Okonkwo", "R. Iwu", "S. Vogel"],
+      "venue": "NeurIPS Datasets and Benchmarks",
+      "year": 2023,
+      "pdf_source": null
+    },
+    {
+      "id": "haddad2023calibration",
+      "type": "article",
+      "title": "On the Calibration of Fine-Tuned Vision Transformers",
+      "authors": ["L. Haddad", "N. Okonkwo"],
+      "venue": "ICLR",
+      "year": 2023
+    },
+    {
+      "id": "okonkwo2022smooth",
+      "type": "article",
+      "title": "Smoothness Is Not Enough: Rethinking Lipschitz Constraints in Robust Learning",
+      "authors": ["N. Okonkwo", "T. Morales"],
+      "venue": "ICML",
+      "year": 2022,
+      "note": "Outstanding Paper Award"
+    },
+    {
+      "id": "chen2022failure",
+      "type": "article",
+      "title": "Failure Modes of Empirical Risk Minimization under Group Shift",
+      "authors": ["M. Chen", "N. Okonkwo", "E. Brandt"],
+      "venue": "AISTATS",
+      "year": 2022
+    },
+    {
+      "id": "okonkwo2021rep",
+      "type": "article",
+      "title": "Representation Stability as a Proxy for Generalization",
+      "authors": ["N. Okonkwo", "E. Brandt"],
+      "venue": "NeurIPS",
+      "year": 2021
+    },
+    {
+      "id": "okonkwo2020domain",
+      "type": "article",
+      "title": "A Geometric View of Domain Generalization",
+      "authors": ["N. Okonkwo", "K. Sato", "E. Brandt"],
+      "venue": "ICML",
+      "year": 2020
+    },
+    {
+      "id": "okonkwo2019certified",
+      "type": "article",
+      "title": "Randomized Smoothing with Learned Noise Distributions",
+      "authors": ["N. Okonkwo", "H. Lindqvist"],
+      "venue": "NeurIPS",
+      "year": 2019
+    },
+    {
+      "id": "okonkwo2018thesis",
+      "type": "article",
+      "title": "Learning Representations Robust to Covariate Shift",
+      "authors": ["N. Okonkwo"],
+      "venue": "Ph.D. Thesis, Carnegie Mellon University",
+      "year": 2018
+    }
+  ],
+
+  "teaching": [
+    {
+      "code": "CS 5891",
+      "title": "Trustworthy Machine Learning",
+      "level": "graduate",
+      "semester": "Fall 2025",
+      "room": "Ramsey Hall 1301",
+      "days": "MW 10:00–11:20 AM",
+      "syllabus_source": null
+    },
+    {
+      "code": "CS 3891",
+      "title": "Introduction to Machine Learning",
+      "level": "undergraduate",
+      "semester": "Spring 2025",
+      "room": "Baxter Hall 100",
+      "days": "TR 1:00–2:20 PM",
+      "syllabus_source": null
+    },
+    {
+      "code": "CS 5892",
+      "title": "Seminar on Distribution Shift",
+      "level": "graduate",
+      "semester": "Fall 2024",
+      "syllabus_source": null
+    }
+  ],
+
+  "group": {
+    "name": "Reliable Learning Group",
+    "url_path": "/group",
+    "group_photo_source": null,
+    "group_photo_caption": null,
+    "member_count": null,
+    "current_phd_students": [
+      { "name": "Jiho Park",    "year_started": 2021, "topic": "spurious correlations",         "undergrad": "Seoul National University" },
+      { "name": "Leila Haddad", "year_started": 2022, "topic": "calibration under shift" },
+      { "name": "Marcus Chen",  "year_started": 2023, "topic": "certified robustness" },
+      { "name": "Sofia Vogel",  "year_started": 2024, "topic": "benchmarks for medical ML" }
+    ],
+    "current_masters_students": [
+      { "name": "Rohan Iwu" },
+      { "name": "Tomás Morales" }
+    ],
+    "advisees": [],
+    "alumni": [
+      {
+        "name": "Hilde Lindqvist",
+        "degree": "Ph.D.",
+        "graduated": 2024,
+        "thesis": "Noise Distributions for Certified Robustness",
+        "first_position": "Research Scientist, Northwind AI"
+      },
+      {
+        "name": "Kenji Sato",
+        "degree": "Ph.D.",
+        "graduated": 2023,
+        "thesis": null,
+        "first_position": "Assistant Professor, Pacific State University"
+      }
+    ]
+  },
+
+  "prospective_students": {
+    "accepting": true,
+    "note": "I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
+  },
+
+  "social": {
+    "google_scholar": "https://scholar.google.com/citations?user=HALV-OKONKWO-7X",
+    "semantic_scholar": "https://www.semanticscholar.org/author/N-Okonkwo/999999",
+    "github": "https://github.com/nokonkwo-halvern",
+    "dblp": "https://dblp.org/pid/999/9999.html",
+    "orcid": "0000-0002-4718-6632",
+    "twitter": null,
+    "bluesky": null,
+    "linkedin": null,
+    "personal_blog": null
+  },
+
+  "assets": {
+    "photo_source": "images/halvern_cs_001_headshot.jpg",
+    "photo_alt": "Headshot of Nivedita Okonkwo",
+    "cv_source": null,
+    "cv_updated": null
+  },
+
+  "site_meta": {
+    "last_updated": "2025-09-12",
+    "copyright_line": "© 2020–2025 Nivedita Okonkwo. Built with care in Halvern, OH."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/xiangnongwu/Desktop/Personal Website/templates\")",
+      "Bash(touch \"/Users/xiangnongwu/Desktop/Personal Website/templates/__init__.py\")",
+      "Bash(python3 build.py halvern_cs_001 jekyll_alfolio)",
+      "Bash(python3 -c \"import re; print\\(len\\(re.findall\\(r'<article class=.pub.', open\\('publications.html'\\).read\\(\\)\\)\\)\\)\")",
+      "Bash(python3 -c \"import re; print\\(len\\(re.findall\\(r'<article class=.course-card.', open\\('teaching.html'\\).read\\(\\)\\)\\)\\)\")",
+      "Bash(python3 -c ':*)",
+      "Bash(python3 build.py thornfield_anth_001 hugo_papermod)",
+      "Bash(python3 build.py merrow_lit_001 notion)",
+      "Bash(python3 build.py halvern_econ_001 raw_html_1998)",
+      "Bash(python3 make_tasks.py)"
+    ]
+  }
+}

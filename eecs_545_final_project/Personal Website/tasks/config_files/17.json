@@ -1,0 +1,43 @@
+{
+  "task_id": 17,
+  "task_type": "T3_current_course",
+  "persona_id": "thornfield_anth_001",
+  "template": "hugo_papermod",
+  "sites": [
+    "thornfield_anth_001__hugo_papermod"
+  ],
+  "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "What course is {name} teaching this semester, and where does it take place?",
+  "intent_template_id": 3,
+  "instantiation_dict": {
+    "name": "Malcolm Reyes-Whittaker"
+  },
+  "intent": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "ANTH 101",
+        "Ashwood Hall 110"
+      ],
+      "fuzzy_match": [
+        "ANTH 101 — Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 — Ethnography of Work, in Ashwood Hall 208"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "ANTH 101 — Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 — Ethnography of Work, in Ashwood Hall 208"
+  }
+}

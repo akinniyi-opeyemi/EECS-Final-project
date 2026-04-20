@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HomeNest Evaluation Dashboard</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f1f5f9;color:#1e293b;}
+.topbar{background:#0f172a;padding:0 28px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;}
+.brand{color:#fff;font-size:1.1rem;font-weight:700;}
+.brand span{color:#38bdf8;}
+.topright{display:flex;align-items:center;gap:12px;}
+.load-btn{background:#1e40af;color:#fff;border:none;padding:7px 16px;border-radius:6px;font-size:.82rem;font-weight:600;cursor:pointer;}
+.load-btn:hover{background:#1d4ed8;}
+.badge{background:#fef3c7;color:#92400e;font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:20px;}
+.page{max-width:1400px;margin:0 auto;padding:28px 24px;}
+.agent-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
+.chip{padding:7px 18px;border-radius:20px;font-size:.82rem;font-weight:600;cursor:pointer;border:2px solid #e2e8f0;background:#fff;color:#475569;transition:all .15s;}
+.chip:hover{border-color:#94a3b8;}
+.chip.on{color:#fff;border-color:transparent;}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
+.card{background:#fff;border-radius:10px;padding:20px 22px;box-shadow:0 1px 6px rgba(0,0,0,.07);}
+.card-lbl{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#94a3b8;margin-bottom:8px;}
+.card-val{font-size:1.8rem;font-weight:800;}
+.card-sub{font-size:.78rem;color:#94a3b8;margin-top:4px;}
+.row2{display:grid;grid-template-columns:3fr 2fr;gap:20px;margin-bottom:20px;}
+.row1{display:grid;grid-template-columns:1fr;gap:20px;margin-bottom:20px;}
+.cc{background:#fff;border-radius:10px;padding:22px;box-shadow:0 1px 6px rgba(0,0,0,.07);}
+.cc h3{font-size:.9rem;font-weight:700;margin-bottom:14px;}
+.cc .sub{font-size:.78rem;color:#94a3b8;margin-bottom:12px;}
+.bsec{margin-bottom:18px;}
+.bsec-title{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+.brow{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
+.blbl{font-size:.73rem;color:#64748b;width:130px;flex-shrink:0;text-align:right;}
+.btrack{flex:1;background:#f1f5f9;border-radius:4px;height:22px;overflow:hidden;}
+.bfill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;}
+.bfill span{font-size:.72rem;font-weight:700;color:#fff;}
+.ditem{margin-bottom:14px;}
+.dhead{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:5px;}
+.dagent{font-weight:600;}
+.dval{font-weight:700;color:#dc2626;}
+.dtrack{background:#f1f5f9;border-radius:4px;height:10px;overflow:hidden;}
+.dfill{height:100%;border-radius:4px;background:linear-gradient(90deg,#fbbf24,#dc2626);}
+.dsub{font-size:.72rem;color:#94a3b8;margin-top:3px;}
+.leg{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;}
+.legitem{display:flex;align-items:center;gap:5px;font-size:.75rem;color:#475569;}
+.legdot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.hmwrap{overflow-x:auto;}
+.hmhead{display:flex;gap:3px;margin-bottom:4px;padding-left:124px;}
+.hmcol{font-size:.68rem;color:#94a3b8;width:48px;text-align:center;flex-shrink:0;}
+.hmrow{display:flex;align-items:center;gap:3px;margin-bottom:3px;}
+.hmrlbl{width:120px;flex-shrink:0;font-size:.72rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:4px;}
+.hmcell{width:48px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:#fff;flex-shrink:0;cursor:pointer;}
+.hmcell:hover{outline:2px solid #0f172a;outline-offset:-2px;}
+.tcard{background:#fff;border-radius:10px;padding:22px;box-shadow:0 1px 6px rgba(0,0,0,.07);margin-bottom:20px;overflow-x:auto;}
+.tcard h3{font-size:.9rem;font-weight:700;margin-bottom:16px;}
+table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:800px;}
+th{text-align:left;padding:9px 12px;border-bottom:2px solid #e2e8f0;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;}
+td{padding:9px 12px;border-bottom:1px solid #f1f5f9;}
+tr:hover td{background:#f8fafc;}
+#tip{position:fixed;background:#1e293b;color:#fff;padding:8px 12px;border-radius:6px;font-size:.78rem;pointer-events:none;display:none;z-index:9999;line-height:1.6;max-width:180px;}
+footer{text-align:center;padding:24px;font-size:.78rem;color:#94a3b8;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">&#127968; HomeNest <span>Evaluation Dashboard</span></div>
+  <div class="topright">
+    <span class="badge" id="badge">&#9679; Mock Data</span>
+    <input type="file" id="filein" accept=".json" multiple style="display:none"/>
+    <button class="load-btn" id="loadbtn">Load Results Files</button>
+    <span style="font-size:.72rem;color:#94a3b8;margin-left:4px">results_{agent}_{template}_{mode}.json</span>
+  </div>
+</div>
+
+<div class="page">
+  <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#94a3b8;margin-bottom:8px">Filter by Agent</p>
+  <div class="agent-bar" id="abar"></div>
+  <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#94a3b8;margin-bottom:8px;margin-top:8px">Filter by Input Mode</p>
+  <div class="agent-bar" id="modebar"></div>
+  <div class="cards" id="cards"></div>
+  <div class="row2">
+    <div class="cc"><h3>Success Rate by Template</h3><div id="tbars"></div></div>
+    <div class="cc"><h3>Robustness Drop (&#916;) &#8212; Classic vs Hidden</h3><p class="sub">Higher percentage = less robust agent.</p><div id="drops"></div></div>
+  </div>
+  <div class="row1">
+    <div class="cc">
+      <h3>Success Rate by Task Type</h3>
+      <p class="sub">T01-T05: all templates &nbsp;|&nbsp; T06-T07: Modern + Hidden &nbsp;|&nbsp; T08-T10: Hidden only</p>
+      <div class="leg" id="tleg"></div>
+      <svg id="tsvg" width="100%" height="240"></svg>
+    </div>
+  </div>
+  <div class="row1">
+    <div class="cc">
+      <h3>Success Rate by House &#8212; Heatmap</h3>
+      <p class="sub">Rows = agents &nbsp;|&nbsp; Columns = houses &nbsp;|&nbsp; Green = high SR &nbsp;|&nbsp; Red = low SR &nbsp;|&nbsp; Hover for details</p>
+      <div class="hmwrap"><div id="hmap"></div></div>
+    </div>
+  </div>
+  <div class="tcard">
+    <h3>Agent Comparison Summary</h3>
+    <table>
+      <thead><tr>
+        <th>Agent</th><th>Mode</th><th>Overall SR</th><th>Classic SR</th><th>Modern SR</th><th>Hidden SR</th>
+        <th>&#916; Classic&#8594;Modern</th><th>&#916; Modern&#8594;Hidden</th><th>&#916; Classic&#8594;Hidden</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+<div id="tip"></div>
+<footer>&copy; 2025 HomeNest Rentals Evaluation Dashboard &#8212; For research purposes only.</footer>
+
+<script>
+var AGENTS = [
+  {key:"gpt4v",    name:"GPT-4V",         color:"#8b5cf6"},
+  {key:"gemini",   name:"Gemini-2.1-Pro",  color:"#ec4899"},
+  {key:"qwen3",    name:"Qwen3-VL-30B",    color:"#06b6d4"},
+  {key:"uitars",   name:"UI-TARS-7B",      color:"#f97316"},
+  {key:"qwen2",    name:"Qwen2-VL-7B",     color:"#84cc16"},
+  {key:"cogagent", name:"CogAgent-9B",     color:"#64748b"}
+];
+
+var HOUSES = [
+  {id:"01",city:"Austin"},   {id:"02",city:"Denver"},    {id:"03",city:"Chicago"},
+  {id:"04",city:"Boston"},   {id:"05",city:"Portland"},  {id:"06",city:"Nashville"},
+  {id:"07",city:"Seattle"},  {id:"08",city:"Atlanta"},   {id:"09",city:"San Diego"},
+  {id:"10",city:"Raleigh"},  {id:"11",city:"Miami"},     {id:"12",city:"Mpls"}
+];
+
+var TASKS = ["T01","T02","T03","T04","T05","T06","T07","T08","T09","T10"];
+
+var DATA = {
+  gpt4v:    { sr_overall:0.764, sr_tmpl:{classic:0.92,modern:0.80,hidden:0.66}, sr_task:{T01:0.94,T02:0.95,T03:0.91,T04:0.93,T05:0.92,T06:0.78,T07:0.75,T08:0.62,T09:0.65,T10:0.58}, sr_house:{h01:0.88,h02:0.82,h03:0.79,h04:0.85,h05:0.91,h06:0.74,h07:0.83,h08:0.87,h09:0.70,h10:0.89,h11:0.76,h12:0.84}, drop:{cm:12.0,mh:14.0,ch:26.0} },
+  gemini:   { sr_overall:0.742, sr_tmpl:{classic:0.90,modern:0.78,hidden:0.63}, sr_task:{T01:0.92,T02:0.93,T03:0.89,T04:0.91,T05:0.90,T06:0.75,T07:0.72,T08:0.59,T09:0.62,T10:0.55}, sr_house:{h01:0.85,h02:0.80,h03:0.76,h04:0.82,h05:0.88,h06:0.71,h07:0.80,h08:0.84,h09:0.67,h10:0.86,h11:0.73,h12:0.81}, drop:{cm:12.0,mh:15.0,ch:27.0} },
+  qwen3:    { sr_overall:0.709, sr_tmpl:{classic:0.87,modern:0.74,hidden:0.59}, sr_task:{T01:0.89,T02:0.90,T03:0.86,T04:0.88,T05:0.87,T06:0.71,T07:0.68,T08:0.55,T09:0.58,T10:0.51}, sr_house:{h01:0.82,h02:0.77,h03:0.73,h04:0.79,h05:0.85,h06:0.68,h07:0.77,h08:0.81,h09:0.64,h10:0.83,h11:0.70,h12:0.78}, drop:{cm:13.0,mh:15.0,ch:28.0} },
+  uitars:   { sr_overall:0.722, sr_tmpl:{classic:0.83,modern:0.76,hidden:0.63}, sr_task:{T01:0.85,T02:0.86,T03:0.82,T04:0.84,T05:0.83,T06:0.74,T07:0.72,T08:0.60,T09:0.62,T10:0.55}, sr_house:{h01:0.79,h02:0.74,h03:0.81,h04:0.76,h05:0.82,h06:0.71,h07:0.78,h08:0.75,h09:0.69,h10:0.80,h11:0.73,h12:0.77}, drop:{cm:7.0,mh:13.0,ch:20.0} },
+  qwen2:    { sr_overall:0.659, sr_tmpl:{classic:0.80,modern:0.67,hidden:0.51}, sr_task:{T01:0.82,T02:0.83,T03:0.79,T04:0.81,T05:0.80,T06:0.64,T07:0.61,T08:0.47,T09:0.50,T10:0.43}, sr_house:{h01:0.76,h02:0.71,h03:0.68,h04:0.74,h05:0.80,h06:0.63,h07:0.72,h08:0.76,h09:0.59,h10:0.78,h11:0.65,h12:0.73}, drop:{cm:13.0,mh:16.0,ch:29.0} },
+  cogagent: { sr_overall:0.606, sr_tmpl:{classic:0.75,modern:0.62,hidden:0.45}, sr_task:{T01:0.77,T02:0.78,T03:0.74,T04:0.76,T05:0.75,T06:0.59,T07:0.56,T08:0.42,T09:0.45,T10:0.38}, sr_house:{h01:0.71,h02:0.66,h03:0.63,h04:0.69,h05:0.75,h06:0.58,h07:0.67,h08:0.71,h09:0.54,h10:0.73,h11:0.60,h12:0.68}, drop:{cm:13.0,mh:17.0,ch:30.0} }
+};
+
+function hkey(id){ return "h"+id; }
+
+var selected = AGENTS.map(function(a){ return a.key; });
+var MODES = [
+  {key:"text",   label:"Text Only",   color:"#2563eb"},
+  {key:"vision", label:"Vision Only",  color:"#d97706"},
+  {key:"multi",  label:"Multimodal",   color:"#16a34a"}
+];
+var selectedModes = ["text","vision","multi"];
+
+function pct(v){ return (v*100).toFixed(1)+"%"; }
+
+function agentByKey(key){
+  for(var i=0;i<AGENTS.length;i++) if(AGENTS[i].key===key) return AGENTS[i];
+  return {name:key,color:"#888"};
+}
+
+function srColor(v){
+  if(v>=0.85) return "#16a34a";
+  if(v>=0.70) return "#65a30d";
+  if(v>=0.55) return "#d97706";
+  if(v>=0.40) return "#ea580c";
+  return "#dc2626";
+}
+
+var tip = document.getElementById("tip");
+document.addEventListener("mousemove", function(e){
+  if(tip.style.display==="block"){
+    tip.style.left=(e.clientX+14)+"px";
+    tip.style.top=(e.clientY-10)+"px";
+  }
+});
+
+function addTip(el, text){
+  el.addEventListener("mouseenter", function(e){
+    tip.textContent = text;
+    tip.style.display = "block";
+    tip.style.left=(e.clientX+14)+"px";
+    tip.style.top=(e.clientY-10)+"px";
+  });
+  el.addEventListener("mouseleave", function(){ tip.style.display="none"; });
+}
+
+function toggleAgent(key){
+  var i=selected.indexOf(key);
+  if(i>-1){ if(selected.length===1) return; selected.splice(i,1); }
+  else { selected.push(key); }
+  renderAll();
+}
+
+function renderModeBar(){
+  var el=document.getElementById("modebar");
+  el.innerHTML="";
+  MODES.forEach(function(m){
+    var on=selectedModes.indexOf(m.key)>-1;
+    var btn=document.createElement("button");
+    btn.className="chip"+(on?" on":"");
+    btn.textContent=m.label;
+    if(on){ btn.style.background=m.color; btn.style.borderColor=m.color; }
+    (function(k){ btn.addEventListener("click",function(){ toggleMode(k); }); })(m.key);
+    el.appendChild(btn);
+  });
+}
+
+function toggleMode(key){
+  var i=selectedModes.indexOf(key);
+  if(i>-1){ if(selectedModes.length===1) return; selectedModes.splice(i,1); }
+  else { selectedModes.push(key); }
+  renderAll();
+}
+
+function renderAgentBar(){
+  var el=document.getElementById("abar");
+  el.innerHTML="";
+  AGENTS.forEach(function(ag){
+    var on=selected.indexOf(ag.key)>-1;
+    var btn=document.createElement("button");
+    btn.className="chip"+(on?" on":"");
+    btn.textContent=ag.name;
+    if(on){ btn.style.background=ag.color; btn.style.borderColor=ag.color; }
+    (function(k){ btn.addEventListener("click",function(){ toggleAgent(k); }); })(ag.key);
+    el.appendChild(btn);
+  });
+}
+
+function renderCards(){
+  var el=document.getElementById("cards");
+  var keys=activeKeys();
+  if(!keys.length) return;
+  var srs=keys.map(function(k){ return DATA[k].sr_overall; });
+  var avg=srs.reduce(function(a,b){return a+b;},0)/srs.length;
+  var best=keys.reduce(function(b,k){ return DATA[k].sr_overall>DATA[b].sr_overall?k:b; },keys[0]);
+  var drops=keys.map(function(k){ return DATA[k].drop.ch; });
+  var maxDrop=Math.max.apply(null,drops);
+  var cSRs=keys.map(function(k){ return DATA[k].sr_tmpl.classic||0; });
+  var avgC=cSRs.reduce(function(a,b){return a+b;},0)/cSRs.length;
+  el.innerHTML=[
+    mkCard("Avg Overall SR",pct(avg),keys.length+" run(s) selected","#2563eb"),
+    mkCard("Best Agent",agentByKey(best).name,pct(DATA[best].sr_overall)+" overall SR","#16a34a"),
+    mkCard("Avg Classic SR",pct(avgC),"Baseline template","#0f172a"),
+    mkCard("Max Robustness Drop",maxDrop.toFixed(1)+"%","Classic vs Hidden (worst agent)","#dc2626")
+  ].join("");
+}
+
+function mkCard(lbl,val,sub,col){
+  return '<div class="card"><div class="card-lbl">'+lbl+'</div><div class="card-val" style="color:'+col+'">'+val+'</div><div class="card-sub">'+sub+'</div></div>';
+}
+
+function activeKeys(){
+  // Returns selected agent keys filtered by currently selected modes
+  return selected.filter(function(k){
+    var d=DATA[k];
+    if(!d) return false;
+    var m=d.mode||"text";
+    return selectedModes.indexOf(m)>-1;
+  });
+}
+
+function renderTmplBars(){
+  var el=document.getElementById("tbars");
+  el.innerHTML="";
+  [{k:"classic",label:"Classic",col:"#2563eb"},{k:"modern",label:"Modern",col:"#d97706"},{k:"hidden",label:"Hidden",col:"#16a34a"}].forEach(function(tmpl){
+    var sec=document.createElement("div"); sec.className="bsec";
+    var title=document.createElement("div"); title.className="bsec-title"; title.style.color=tmpl.col; title.textContent=tmpl.label;
+    sec.appendChild(title);
+    activeKeys().forEach(function(key){
+      var ag=agentByKey(key);
+      var sr=DATA[key].sr_tmpl[tmpl.k];
+      var w=Math.round(sr*100);
+      var row=document.createElement("div"); row.className="brow";
+      var lbl=document.createElement("div"); lbl.className="blbl"; lbl.textContent=ag.name;
+      var track=document.createElement("div"); track.className="btrack";
+      var fill=document.createElement("div"); fill.className="bfill";
+      fill.style.width=w+"%"; fill.style.background=ag.color;
+      var span=document.createElement("span"); span.textContent=w+"%";
+      fill.appendChild(span); track.appendChild(fill);
+      row.appendChild(lbl); row.appendChild(track);
+      sec.appendChild(row);
+      addTip(track, ag.name+" on "+tmpl.label+": "+pct(sr));
+    });
+    el.appendChild(sec);
+  });
+}
+
+function renderDrops(){
+  var el=document.getElementById("drops");
+  el.innerHTML="";
+  activeKeys().forEach(function(key){
+    var ag=agentByKey(key);
+    var d=DATA[key].drop;
+    var w=Math.min(100,(d.ch/50)*100).toFixed(0);
+    var div=document.createElement("div"); div.className="ditem";
+    var head=document.createElement("div"); head.className="dhead";
+    var name=document.createElement("span"); name.className="dagent"; name.style.color=ag.color; name.textContent=ag.name;
+    var val=document.createElement("span"); val.className="dval"; val.textContent="\u0394 "+d.ch.toFixed(1)+"%";
+    head.appendChild(name); head.appendChild(val);
+    var track=document.createElement("div"); track.className="dtrack";
+    var fill=document.createElement("div"); fill.className="dfill"; fill.style.width=w+"%";
+    track.appendChild(fill);
+    var sub=document.createElement("div"); sub.className="dsub";
+    sub.textContent="C\u2192M: "+d.cm.toFixed(1)+"%   M\u2192H: "+d.mh.toFixed(1)+"%";
+    div.appendChild(head); div.appendChild(track); div.appendChild(sub);
+    el.appendChild(div);
+  });
+}
+
+function renderTaskChart(){
+  var svg=document.getElementById("tsvg");
+  var leg=document.getElementById("tleg");
+  var W=svg.clientWidth||900, H=240, pl=44, pr=16, pt=20, pb=30;
+  var cW=W-pl-pr, cH=H-pt-pb, n=TASKS.length;
+  var xs=TASKS.map(function(_,i){ return pl+i*(cW/(n-1)); });
+  leg.innerHTML="";
+  activeKeys().forEach(function(key){
+    var ag=agentByKey(key);
+    var item=document.createElement("div"); item.className="legitem";
+    var dot=document.createElement("div"); dot.className="legdot"; dot.style.background=ag.color;
+    item.appendChild(dot); item.appendChild(document.createTextNode(ag.name));
+    leg.appendChild(item);
+  });
+  var s="";
+  [{s:0,e:4,col:"rgba(37,99,235,.05)"},{s:5,e:6,col:"rgba(217,119,6,.07)"},{s:7,e:9,col:"rgba(22,163,74,.07)"}].forEach(function(z){
+    var x1=pl+(z.s===0?0:(z.s-.5)*(cW/(n-1)));
+    var x2=pl+(z.e===9?cW:(z.e+.5)*(cW/(n-1)));
+    s+='<rect x="'+x1+'" y="'+pt+'" width="'+(x2-x1)+'" height="'+cH+'" fill="'+z.col+'"/>';
+  });
+  [0,.25,.5,.75,1].forEach(function(v){
+    var y=pt+cH-v*cH;
+    s+='<line x1="'+pl+'" y1="'+y+'" x2="'+(pl+cW)+'" y2="'+y+'" stroke="#e2e8f0" stroke-width="1"/>';
+    s+='<text x="'+(pl-5)+'" y="'+(y+4)+'" text-anchor="end" font-size="10" fill="#94a3b8">'+Math.round(v*100)+'%</text>';
+  });
+  TASKS.forEach(function(t,i){
+    s+='<text x="'+xs[i]+'" y="'+(H-6)+'" text-anchor="middle" font-size="10" fill="#64748b">'+t+'</text>';
+  });
+  activeKeys().forEach(function(key){
+    var ag=agentByKey(key);
+    var pts=TASKS.map(function(t,i){ return {x:xs[i],y:pt+cH-DATA[key].sr_task[t]*cH,sr:DATA[key].sr_task[t],t:t}; });
+    var d=pts.map(function(p,i){ return (i===0?"M":"L")+p.x.toFixed(1)+","+p.y.toFixed(1); }).join(" ");
+    s+='<path d="'+d+'" fill="none" stroke="'+ag.color+'" stroke-width="2.5" stroke-linejoin="round"/>';
+    pts.forEach(function(p){
+      s+='<circle cx="'+p.x+'" cy="'+p.y+'" r="5" fill="'+ag.color+'" data-label="'+ag.name+' '+p.t+': '+pct(p.sr)+'" class="svgdot"/>';
+    });
+  });
+  svg.setAttribute("height",H);
+  svg.innerHTML=s;
+  svg.querySelectorAll(".svgdot").forEach(function(dot){
+    addTip(dot, dot.getAttribute("data-label"));
+  });
+}
+
+function renderHeatmap(){
+  var el=document.getElementById("hmap");
+  el.innerHTML="";
+  var head=document.createElement("div"); head.className="hmhead";
+  HOUSES.forEach(function(h){
+    var col=document.createElement("div"); col.className="hmcol"; col.textContent=h.city;
+    head.appendChild(col);
+  });
+  el.appendChild(head);
+  activeKeys().forEach(function(key){
+    var ag=agentByKey(key);
+    var row=document.createElement("div"); row.className="hmrow";
+    var rlbl=document.createElement("div"); rlbl.className="hmrlbl"; rlbl.style.color=ag.color; rlbl.textContent=ag.name;
+    row.appendChild(rlbl);
+    HOUSES.forEach(function(h){
+      var sr=DATA[key].sr_house[hkey(h.id)];
+      var cell=document.createElement("div"); cell.className="hmcell";
+      cell.style.background=srColor(sr); cell.textContent=Math.round(sr*100)+"%";
+      addTip(cell, ag.name+" | "+h.city+" | SR: "+pct(sr));
+      row.appendChild(cell);
+    });
+    el.appendChild(row);
+  });
+}
+
+function renderTable(){
+  var tb=document.getElementById("tbody");
+  tb.innerHTML="";
+  activeKeys().forEach(function(key){
+    var ag=agentByKey(key);
+    var d=DATA[key];
+    var tr=document.createElement("tr");
+    function td(content,color){
+      var el=document.createElement("td");
+      if(color) el.style.color=color;
+      el.innerHTML=content;
+      tr.appendChild(el);
+    }
+    td('<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:'+ag.color+';margin-right:6px;vertical-align:middle"></span><strong>'+ag.name+'</strong>');
+    var mColor={text:'#2563eb',vision:'#d97706',multi:'#16a34a'};
+    var mc=mColor[d.mode]||'#64748b';
+    td('<span style="font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:10px;background:'+mc+'22;color:'+mc+'">'+( d.mode||'text')+'</span>');
+    td('<strong>'+pct(d.sr_overall)+'</strong>');
+    td(pct(d.sr_tmpl.classic),"#2563eb");
+    td(pct(d.sr_tmpl.modern),"#d97706");
+    td(pct(d.sr_tmpl.hidden),"#16a34a");
+    td(d.drop.cm.toFixed(1)+"%");
+    td(d.drop.mh.toFixed(1)+"%");
+    td('<strong style="color:#dc2626">'+d.drop.ch.toFixed(1)+"%</strong>");
+    tb.appendChild(tr);
+  });
+}
+
+// Track whether real data has been loaded yet
+var realDataLoaded = false;
+
+// Agent colors to assign to real agents in order
+var REAL_COLORS = ["#8b5cf6","#ec4899","#06b6d4","#f97316","#84cc16","#64748b","#ef4444","#0ea5e9"];
+var colorIndex  = 0;
+
+document.getElementById("loadbtn").addEventListener("click", function(){
+  document.getElementById("filein").click();
+});
+
+document.getElementById("filein").addEventListener("change", function(e){
+  var files = Array.prototype.slice.call(e.target.files);
+  if(!files.length) return;
+
+  // On the very first real file load, wipe all mock data and agents
+  if(!realDataLoaded){
+    AGENTS.length  = 0;  // clear mock agents
+    selected.length = 0; // clear selection
+    Object.keys(DATA).forEach(function(k){ delete DATA[k]; }); // clear mock data
+    realDataLoaded = true;
+    colorIndex = 0;
+    var b = document.getElementById("badge");
+    b.textContent = "\u25cf Real Data";
+    b.style.background = "#dcfce7";
+    b.style.color = "#166534";
+  }
+
+  var loaded = 0;
+  files.forEach(function(file){
+    var reader = new FileReader();
+    reader.onload = function(ev){
+      try{
+        var json = JSON.parse(ev.target.result);
+        if(json.meta && json.results){
+
+          // Determine mode from meta field, fallback to filename parse
+          var mode = json.meta.mode || "text";
+
+          // Parse template scope from filename e.g. results_gpt4v_classic_text.json
+          var tmplScope = "all";
+          var fnMatch = file.name.match(/results_[^_]+_([^_]+)_(?:text|vision|multi)/);
+          if(fnMatch) tmplScope = fnMatch[1];
+
+          // Unique key = agent_slug + "_" + mode so same agent across modes = separate entries
+          var agentSlug = json.meta.agent.replace(/[^a-z0-9]/gi,"_").toLowerCase();
+          var key = agentSlug + "_" + mode;
+
+          // Label = "Agent Name (mode)" so it is self-describing in chips and charts
+          var modeLabel  = mode.charAt(0).toUpperCase() + mode.slice(1);
+          var agentLabel = json.meta.agent + " (" + modeLabel + ")";
+          if(tmplScope !== "all") agentLabel += " [" + tmplScope + "]";
+
+          var exists = AGENTS.filter(function(a){ return a.key===key; }).length > 0;
+          if(!exists){
+            var col = REAL_COLORS[colorIndex % REAL_COLORS.length];
+            colorIndex++;
+            AGENTS.push({key:key, name:agentLabel, color:col, mode:mode});
+          }
+          DATA[key] = {
+            mode       : mode,
+            sr_overall : json.meta.sr_overall,
+            sr_tmpl    : json.meta.sr_by_template,
+            sr_task    : buildTaskSR(json.results),
+            sr_house   : buildHouseSR(json.results),
+            drop       : {
+              cm : json.meta.robustness_drop ? json.meta.robustness_drop.classic_vs_modern : 0,
+              mh : json.meta.robustness_drop ? json.meta.robustness_drop.modern_vs_hidden  : 0,
+              ch : json.meta.robustness_drop ? json.meta.robustness_drop.classic_vs_hidden : 0
+            }
+          };
+          if(selected.indexOf(key) === -1) selected.push(key);
+        } else {
+          alert(file.name + ": unexpected format, skipping.");
+        }
+      } catch(err){
+        alert(file.name + ": parse error - " + err.message);
+      }
+      loaded++;
+      // Re-render once all files are processed
+      if(loaded === files.length){
+        var b = document.getElementById("badge");
+        b.textContent = "\u25cf Real Data (" + AGENTS.length + " run" + (AGENTS.length===1?"":"s") + " loaded)";
+        renderAll();
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  // Reset input so the same files can be re-selected if needed
+  e.target.value = "";
+});
+
+function renderAll(){
+  renderAgentBar(); renderModeBar(); renderCards(); renderTmplBars(); renderDrops();
+  renderTaskChart(); renderHeatmap(); renderTable();
+}
+
+document.addEventListener("DOMContentLoaded", renderAll);
+window.addEventListener("resize", renderTaskChart);
+</script>
+</body>
+</html>

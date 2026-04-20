@@ -1,0 +1,233 @@
+{
+  "persona_id": "merrow_lit_001",
+  "schema_version": "0.2",
+
+  "university": {
+    "name": "Merrow Institute of Technology",
+    "short_name": "MIoT",
+    "type": "technical institute",
+    "domain": "merrow.edu",
+    "city": "Merrow",
+    "state": "CA",
+    "zip": "94089"
+  },
+
+  "name": {
+    "full": "Yuki Abernathy",
+    "first": "Yuki",
+    "last": "Abernathy",
+    "preferred": "Yuki",
+    "title": "Assistant Professor",
+    "pronouns": "they/them",
+    "honorifics": ["Ph.D."]
+  },
+
+  "department": {
+    "name": "Program in Literature, Science, and Technology",
+    "school": "School of Humanities and Social Sciences",
+    "url_path": "/hss/lst"
+  },
+
+  "research": {
+    "areas": [
+      "twentieth-century American literature",
+      "literature and computation",
+      "science fiction studies",
+      "critical code studies",
+      "archival poetics"
+    ],
+    "one_liner": "I read novels like software and software like novels.",
+    "long_bio": "Yuki Abernathy is an Assistant Professor in the Program in Literature, Science, and Technology at Merrow Institute of Technology. Their research sits at the intersection of twentieth-century American fiction and the history of computation, with a particular interest in how mid-century writers imagined — and argued with — the machines being built around them. Their first book project, Compiled Fictions, traces the entanglement of postwar American novelists with early programming cultures at Bell Labs, RAND, and the Stanford AI Lab. Before joining Merrow in 2023, they completed a Ph.D. in English at Duke University and a postdoctoral fellowship in the Digital Humanities Initiative at the University of Virginia."
+  },
+
+  "office": {
+    "building": "Hale Building",
+    "room": "3N-17",
+    "floor": 3,
+    "hours": "Mondays 3:00–5:00 PM (in person) and Thursdays 11:00 AM–12:00 PM (virtual, by sign-up)",
+    "mailing_address": {
+      "line1": "Program in Literature, Science, and Technology",
+      "line2": "Merrow Institute of Technology",
+      "street": "77 Innovation Way",
+      "building_line": "Hale Building, Office 3N-17",
+      "city": "Merrow",
+      "state": "CA",
+      "zip": "94089",
+      "country": "USA"
+    }
+  },
+
+  "contact": {
+    "email": "abernathy@merrow.edu",
+    "email_secondary": null,
+    "phone_office": "+1 (650) 555-0133",
+    "phone_lab": null,
+    "fax": null
+  },
+
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "English",
+      "institution": "Duke University",
+      "year": 2021,
+      "advisor": "Prof. Harriet Nkomo",
+      "thesis": "Compiled Fictions: American Literature and the Programming Imagination, 1948–1984"
+    },
+    {
+      "degree": "M.A.",
+      "field": "English",
+      "institution": "Duke University",
+      "year": 2016
+    },
+    {
+      "degree": "B.A.",
+      "field": "Comparative Literature and Computer Science",
+      "institution": "Brown University",
+      "year": 2014,
+      "honors": "summa cum laude"
+    }
+  ],
+
+  "positions": [
+    { "role": "Assistant Professor", "institution": "Merrow Institute of Technology",                         "start": 2023, "end": null },
+    { "role": "Postdoctoral Fellow", "institution": "Digital Humanities Initiative, University of Virginia",  "start": 2021, "end": 2023 }
+  ],
+
+  "awards": [
+    { "year": 2024, "name": "MLA Prize for a First Article (Honorable Mention)", "org": "Modern Language Association" },
+    { "year": 2022, "name": "ACLS Emerging Voices Fellowship",                   "org": "American Council of Learned Societies" },
+    { "year": 2021, "name": "Duke English Dissertation Prize",                   "org": "Duke University" }
+  ],
+
+  "publications": [
+    {
+      "id": "abernathy2025compiled",
+      "type": "book",
+      "title": "Compiled Fictions: American Literature and the Programming Imagination, 1948–1984",
+      "authors": ["Y. Abernathy"],
+      "publisher": "Stanford University Press",
+      "year": 2025,
+      "note": "Forthcoming, Fall 2025"
+    },
+    {
+      "id": "abernathy2024pynchon",
+      "type": "article",
+      "title": "A Function Call Named Slothrop: Control Flow and Paranoia in Gravity's Rainbow",
+      "authors": ["Y. Abernathy"],
+      "venue": "American Literature",
+      "volume": "96",
+      "issue": "2",
+      "pages": "289–316",
+      "year": 2024,
+      "pdf_source": null
+    },
+    {
+      "id": "abernathy2023bell",
+      "type": "article",
+      "title": "Writing at Bell Labs: The Literary Lives of Early Technical Writers, 1955–1970",
+      "authors": ["Y. Abernathy"],
+      "venue": "Critical Inquiry",
+      "year": 2023,
+      "pdf_source": null
+    },
+    {
+      "id": "abernathy2022le",
+      "type": "article",
+      "title": "Ursula K. Le Guin Reads Fortran: On the Ethics of Syntax",
+      "authors": ["Y. Abernathy"],
+      "venue": "Science Fiction Studies",
+      "year": 2022
+    },
+    {
+      "id": "abernathy2022code",
+      "type": "chapter",
+      "title": "Reading the Compiler: A Method",
+      "book": "Debates in the Digital Humanities 2022",
+      "editors": ["M. Gold", "L. Klein"],
+      "publisher": "University of Minnesota Press",
+      "year": 2022
+    },
+    {
+      "id": "abernathy2020rand",
+      "type": "article",
+      "title": "The RAND Novel That Never Was: Fiction, Simulation, and the Cold War Imaginary",
+      "authors": ["Y. Abernathy"],
+      "venue": "Post45",
+      "year": 2020
+    }
+  ],
+
+  "teaching": [
+    {
+      "code": "LIT 21.014",
+      "title": "Introduction to Fiction",
+      "level": "undergraduate",
+      "semester": "Fall 2025",
+      "room": "Hale 2-190",
+      "days": "TR 9:30–11:00 AM",
+      "syllabus_source": null
+    },
+    {
+      "code": "LIT 21.S02",
+      "title": "Literature and the Computer",
+      "level": "undergraduate",
+      "semester": "Fall 2025",
+      "room": "Hale 3-270",
+      "days": "MW 2:00–3:30 PM",
+      "note": "Cross-listed with Science, Technology and Society (STS.440)",
+      "syllabus_source": null
+    },
+    {
+      "code": "LIT 21.735",
+      "title": "Graduate Seminar: Postwar American Fiction and the Machine",
+      "level": "graduate",
+      "semester": "Spring 2026",
+      "syllabus_source": null
+    }
+  ],
+
+  "group": {
+    "name": null,
+    "url_path": null,
+    "group_photo_source": null,
+    "group_photo_caption": null,
+    "member_count": null,
+    "current_phd_students": [],
+    "current_masters_students": [],
+    "advisees": [
+      { "name": "Robin Castellanos", "year": "UROP",          "topic": "text-generation systems and literary form" },
+      { "name": "Anh Pham",          "year": "senior thesis", "topic": "Octavia Butler and algorithmic prediction" }
+    ],
+    "alumni": []
+  },
+
+  "prospective_students": {
+    "accepting": true,
+    "note": "I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
+  },
+
+  "social": {
+    "google_scholar": null,
+    "semantic_scholar": null,
+    "github": "https://github.com/yabernathy",
+    "dblp": null,
+    "orcid": "0000-0001-7392-1184",
+    "twitter": null,
+    "bluesky": "https://bsky.app/profile/yabernathy.bsky.social",
+    "linkedin": null,
+    "personal_blog": "https://compiledfictions.net"
+  },
+
+  "assets": {
+    "photo_source": "images/merrow_lit_001_headshot.jpg",
+    "photo_alt": "Portrait of Yuki Abernathy",
+    "cv_source": null,
+    "cv_updated": null
+  },
+
+  "site_meta": {
+    "last_updated": "2025-09-10",
+    "copyright_line": "© Yuki Abernathy 2025"
+  }
+}

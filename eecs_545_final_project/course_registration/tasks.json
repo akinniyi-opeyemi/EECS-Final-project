@@ -1,0 +1,244 @@
+{
+  "tasks": [
+    {
+      "id": "find_cs310",
+      "category": "course_lookup",
+      "prompt": "Find CS 310 and report its title, instructor, meeting time, and seat count."
+    },
+    {
+      "id": "find_cs420_instructor",
+      "category": "course_lookup",
+      "prompt": "Find the instructor for CS 420."
+    },
+    {
+      "id": "find_mercer340",
+      "category": "course_lookup",
+      "prompt": "Find the course located in Mercer Hall 340."
+    },
+    {
+      "id": "find_ai_courses",
+      "category": "course_lookup",
+      "prompt": "List all AI courses currently shown."
+    },
+    {
+      "id": "find_evening_course",
+      "category": "course_lookup",
+      "prompt": "Identify the evening course and report its code and title."
+    },
+    {
+      "id": "find_full_course",
+      "category": "course_lookup",
+      "prompt": "Find the course that is full."
+    },
+    {
+      "id": "find_lowest_seats",
+      "category": "course_lookup",
+      "prompt": "Find the course with the fewest remaining seats and report the seat count."
+    },
+    {
+      "id": "filter_cs_only",
+      "category": "filtering",
+      "prompt": "Filter the course list to show only CS courses."
+    },
+    {
+      "id": "filter_ai_only",
+      "category": "filtering",
+      "prompt": "Filter the course list to show only AI courses."
+    },
+    {
+      "id": "filter_evening_only",
+      "category": "filtering",
+      "prompt": "Filter the course list to show only evening courses."
+    },
+    {
+      "id": "search_graphics",
+      "category": "filtering",
+      "prompt": "Search for graphics and identify the matching course."
+    },
+    {
+      "id": "search_systems",
+      "category": "filtering",
+      "prompt": "Search for systems and report all matching courses."
+    },
+    {
+      "id": "combine_filters",
+      "category": "filtering",
+      "prompt": "Apply department and time filters together to find AI courses offered in the afternoon."
+    },
+    {
+      "id": "reset_filters",
+      "category": "filtering",
+      "prompt": "Clear all filters and return to the full course list."
+    },
+    {
+      "id": "add_cs101",
+      "category": "add_drop",
+      "prompt": "Add CS 101 and verify that it appears in the selected courses area."
+    },
+    {
+      "id": "add_cs405",
+      "category": "add_drop",
+      "prompt": "Add CS 405 and verify that it was added successfully."
+    },
+    {
+      "id": "drop_cs355",
+      "category": "add_drop",
+      "prompt": "Drop CS 355 and verify that it no longer appears in the selected courses area."
+    },
+    {
+      "id": "add_two_drop_one",
+      "category": "add_drop",
+      "prompt": "Add two courses, then remove one of them and report the final selected set."
+    },
+    {
+      "id": "attempt_add_full_course",
+      "category": "add_drop",
+      "prompt": "Try to add the full course and report what happens."
+    },
+    {
+      "id": "detail_then_add",
+      "category": "add_drop",
+      "prompt": "Open a course's detail area first, then add that course from the available controls."
+    },
+    {
+      "id": "create_conflict",
+      "category": "warnings",
+      "prompt": "Add two courses with a time conflict and report the warning that appears."
+    },
+    {
+      "id": "find_low_seat_warning",
+      "category": "warnings",
+      "prompt": "Identify a selected course that triggers a low-seat warning."
+    },
+    {
+      "id": "check_current_conflict",
+      "category": "warnings",
+      "prompt": "Determine whether the currently selected schedule contains a time conflict."
+    },
+    {
+      "id": "add_conflict_then_remove",
+      "category": "warnings",
+      "prompt": "Add a course that creates a conflict, then remove it and confirm whether the warning disappears."
+    },
+    {
+      "id": "explain_cs310_warning",
+      "category": "warnings",
+      "prompt": "Explain why CS 310 may trigger a warning."
+    },
+    {
+      "id": "conflicts_allowed",
+      "category": "warnings",
+      "prompt": "Determine whether the interface allows adding conflicting courses anyway."
+    },
+    {
+      "id": "selected_monday_courses",
+      "category": "schedule",
+      "prompt": "List all currently selected courses that meet on Monday."
+    },
+    {
+      "id": "latest_selected_class",
+      "category": "schedule",
+      "prompt": "Identify the latest selected class in the schedule."
+    },
+    {
+      "id": "earliest_selected_class",
+      "category": "schedule",
+      "prompt": "Identify the earliest selected class in the schedule."
+    },
+    {
+      "id": "find_friday_only",
+      "category": "schedule",
+      "prompt": "Find any Friday-only class and report its code and time."
+    },
+    {
+      "id": "chronological_schedule",
+      "category": "schedule",
+      "prompt": "Report all selected courses in chronological order."
+    },
+    {
+      "id": "check_overlap_selected",
+      "category": "schedule",
+      "prompt": "Determine whether any selected courses overlap on the same day."
+    },
+    {
+      "id": "filter_add_confirm_schedule",
+      "category": "multi_step",
+      "prompt": "Filter to AI courses, add one course, then confirm that it appears in the schedule."
+    },
+    {
+      "id": "search_add_report",
+      "category": "multi_step",
+      "prompt": "Search for systems, add a matching course, then report its instructor and meeting time."
+    },
+    {
+      "id": "add_cs452_inspect_warnings",
+      "category": "multi_step",
+      "prompt": "Add CS 452, inspect the warnings, and explain why they appear."
+    },
+    {
+      "id": "build_8_credit_schedule",
+      "category": "multi_step",
+      "prompt": "Build a schedule totaling exactly 8 credits."
+    },
+    {
+      "id": "build_no_conflict_schedule",
+      "category": "multi_step",
+      "prompt": "Build a schedule with no time conflicts."
+    },
+    {
+      "id": "build_mixed_department_schedule",
+      "category": "multi_step",
+      "prompt": "Build a schedule containing one CS course, one AI course, and one DATA course."
+    },
+    {
+      "id": "add_highest_credit_not_full",
+      "category": "multi_step",
+      "prompt": "Find and add a highest-credit course that is not full."
+    },
+    {
+      "id": "compare_alert_locations",
+      "category": "cross_style",
+      "prompt": "Compare where alerts appear in the modern, retro, and 90s interfaces."
+    },
+    {
+      "id": "compare_schedule_access",
+      "category": "cross_style",
+      "prompt": "Compare how schedule information is accessed in the modern, retro, and 90s interfaces."
+    },
+    {
+      "id": "find_hardest_add_drop",
+      "category": "cross_style",
+      "prompt": "Determine which interface makes add/drop hardest and explain why."
+    },
+    {
+      "id": "verify_same_course_data",
+      "category": "cross_style",
+      "prompt": "Find the same course in all three interfaces and verify that the displayed course information matches."
+    },
+    {
+      "id": "infer_warning_source",
+      "category": "hard",
+      "prompt": "Infer which selected course is causing a low-seat warning without being told directly."
+    },
+    {
+      "id": "use_90s_detail_console",
+      "category": "hard",
+      "prompt": "In the 90s interface, load the correct course row and switch to the correct detail tab to find its alerts."
+    },
+    {
+      "id": "recover_from_wrong_filter",
+      "category": "hard",
+      "prompt": "After applying an incorrect filter, recover and complete the intended course-selection task."
+    },
+    {
+      "id": "hidden_action_flow",
+      "category": "hard",
+      "prompt": "Handle a workflow where add/drop is only available after loading or opening a course."
+    },
+    {
+      "id": "verify_with_two_signals",
+      "category": "hard",
+      "prompt": "Add a course and verify success using two different UI signals."
+    }
+  ]
+}

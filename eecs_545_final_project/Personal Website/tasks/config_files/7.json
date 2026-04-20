@@ -1,0 +1,43 @@
+{
+  "task_id": 7,
+  "task_type": "T3_current_course",
+  "persona_id": "halvern_econ_001",
+  "template": "raw_html_1998",
+  "sites": [
+    "halvern_econ_001__raw_html_1998"
+  ],
+  "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "What course is {name} teaching this semester, and where does it take place?",
+  "intent_template_id": 3,
+  "instantiation_dict": {
+    "name": "Dr. Gerhardt Vössing"
+  },
+  "intent": "What course is Dr. Gerhardt Vössing teaching this semester, and where does it take place?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "ECON 8301",
+        "Whitmore Hall 210"
+      ],
+      "fuzzy_match": [
+        "ECON 8301 — Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 — Game Theory and Economic Behavior, in Whitmore Hall 105"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "ECON 8301 — Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 — Game Theory and Economic Behavior, in Whitmore Hall 105"
+  }
+}

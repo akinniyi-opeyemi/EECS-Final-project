@@ -1,0 +1,40 @@
+{
+  "task_id": 8,
+  "task_type": "T4_accepting",
+  "persona_id": "halvern_econ_001",
+  "template": "raw_html_1998",
+  "sites": [
+    "halvern_econ_001__raw_html_1998"
+  ],
+  "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?",
+  "intent_template_id": 4,
+  "instantiation_dict": {
+    "name": "Dr. Gerhardt Vössing"
+  },
+  "intent": "Is Dr. Gerhardt Vössing taking prospective graduate students in the upcoming academic year?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": null,
+      "fuzzy_match": [
+        "No, Dr. Gerhardt Vössing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "No, Dr. Gerhardt Vössing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+  }
+}

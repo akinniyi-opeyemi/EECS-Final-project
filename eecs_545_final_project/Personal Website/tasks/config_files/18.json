@@ -1,0 +1,40 @@
+{
+  "task_id": 18,
+  "task_type": "T4_accepting",
+  "persona_id": "thornfield_anth_001",
+  "template": "hugo_papermod",
+  "sites": [
+    "thornfield_anth_001__hugo_papermod"
+  ],
+  "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?",
+  "intent_template_id": 4,
+  "instantiation_dict": {
+    "name": "Malcolm Reyes-Whittaker"
+  },
+  "intent": "Is Malcolm Reyes-Whittaker taking prospective graduate students in the upcoming academic year?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": null,
+      "fuzzy_match": [
+        "Not applicable — the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "Not applicable — the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+  }
+}

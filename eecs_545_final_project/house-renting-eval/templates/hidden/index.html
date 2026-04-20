@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HomeNest Rentals - Browse Listings</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fafaf9; color: #1c1917; }
+
+    nav { background: #14532d; padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 54px; }
+    .nav-brand { color: #fff; text-decoration: none; font-size: 1.15rem; font-weight: 700; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: #fff; }
+
+    .layout { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+
+    /* Sidebar */
+    .sidebar { background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; padding: 24px; position: sticky; top: 78px; }
+    .sidebar h2 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #78716c; margin-bottom: 20px; }
+    .filter-group { margin-bottom: 22px; }
+    .filter-group label { display: block; font-size: 0.82rem; font-weight: 600; color: #44403c; margin-bottom: 7px; }
+    .filter-group select, .filter-group input[type=range] { width: 100%; }
+    .filter-group select {
+      padding: 8px 10px;
+      border: 1px solid #d6d3d1;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      color: #1c1917;
+      background: #fafaf9;
+      font-family: inherit;
+    }
+    .filter-group select:focus { outline: none; border-color: #16a34a; }
+    .price-labels { display: flex; justify-content: space-between; font-size: 0.78rem; color: #78716c; margin-top: 4px; }
+    input[type=range] { accent-color: #16a34a; }
+
+    .btn-reset { width: 100%; padding: 9px; background: #f5f5f4; border: 1px solid #d6d3d1; border-radius: 6px; font-size: 0.85rem; font-weight: 600; color: #44403c; cursor: pointer; font-family: inherit; margin-top: 4px; }
+    .btn-reset:hover { background: #e7e5e4; }
+
+    .result-count { font-size: 0.82rem; color: #78716c; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e7e5e4; }
+    .result-count span { font-weight: 700; color: #16a34a; }
+
+    /* Listing rows */
+    .results h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; color: #1c1917; }
+    .listing-list { display: flex; flex-direction: column; gap: 16px; }
+
+    .listing-row {
+      background: #fff;
+      border: 1px solid #e7e5e4;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .listing-row:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .listing-row.unavailable { opacity: 0.5; }
+
+    .row-img { width: 220px; height: 160px; object-fit: cover; display: block; }
+
+    .row-body { padding: 18px 20px; display: flex; flex-direction: column; justify-content: space-between; }
+    .row-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+    .row-name { font-size: 1.05rem; font-weight: 700; color: #1c1917; }
+
+    .badge { font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+    .badge.available { background: #dcfce7; color: #166534; }
+    .badge.unavailable { background: #fee2e2; color: #991b1b; }
+
+    .row-address { font-size: 0.83rem; color: #78716c; margin-bottom: 12px; }
+
+    .row-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+    .tag { background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 4px; padding: 3px 10px; font-size: 0.8rem; color: #57534e; }
+
+    .row-footer { display: flex; justify-content: space-between; align-items: center; }
+    .row-rent { font-size: 1.1rem; font-weight: 800; color: #16a34a; }
+    .row-avail { font-size: 0.78rem; color: #a8a29e; }
+
+    .btn-view { background: #16a34a; color: #fff; padding: 8px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .btn-view:hover { background: #15803d; }
+    .btn-view.disabled { background: #d6d3d1; color: #a8a29e; pointer-events: none; }
+
+    .no-results { text-align: center; padding: 48px; color: #78716c; font-size: 0.95rem; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; }
+
+    footer { text-align: center; margin-top: 48px; padding: 24px; border-top: 1px solid #e7e5e4; font-size: 0.8rem; color: #a8a29e; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">&#127968; HomeNest</a>
+      <div class="nav-links">
+        <a href="index.html">Listings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Filter Listings</h2>
+
+      <div class="filter-group">
+        <label for="f-city">City</label>
+        <select id="f-city" onchange="applyFilters()">
+          <option value="">All Cities</option>
+          <option>Austin</option>
+          <option>Denver</option>
+          <option>Chicago</option>
+          <option>Boston</option>
+          <option>Portland</option>
+          <option>Nashville</option>
+          <option>Seattle</option>
+          <option>Atlanta</option>
+          <option>San Diego</option>
+          <option>Raleigh</option>
+          <option>Miami</option>
+          <option>Minneapolis</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="f-beds">Bedrooms</label>
+        <select id="f-beds" onchange="applyFilters()">
+          <option value="">Any</option>
+          <option value="Studio">Studio</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4+</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="f-status">Availability</label>
+        <select id="f-status" onchange="applyFilters()">
+          <option value="">All</option>
+          <option value="available">Available Only</option>
+          <option value="unavailable">Not Available</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="f-price">Max Rent: <strong id="price-label">$3,500/mo</strong></label>
+        <input type="range" id="f-price" min="1000" max="3500" step="50" value="3500" oninput="updatePrice(this.value)" onchange="applyFilters()" />
+        <div class="price-labels"><span>$1,000</span><span>$3,500</span></div>
+      </div>
+
+      <button class="btn-reset" onclick="resetFilters()">Reset Filters</button>
+      <div class="result-count">Showing <span id="count">12</span> of 12 listings</div>
+    </aside>
+
+    <div class="results">
+      <h2>Rental Listings</h2>
+      <div class="listing-list" id="listing-list"></div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 HomeNest Rentals. Static evaluation site. For research purposes only.</footer>
+
+  <script>
+    const listings = [
+  {
+    "id": "01",
+    "name": "Maplewood Apartments",
+    "address": "412 Maplewood Drive, Austin, TX 78701",
+    "city": "Austin",
+    "rent": "$1,450/month",
+    "rent_num": 1450,
+    "beds": "2",
+    "baths": "1",
+    "available": "August 1, 2025",
+    "lease": "12 months",
+    "parking": "1 spot included",
+    "pets": "No pets allowed",
+    "fee": "$50",
+    "deadline": "July 15, 2025",
+    "email": "rentals@maplewoodapts.com",
+    "phone": "+1 (512) 555-0187",
+    "status": "available"
+  },
+  {
+    "id": "02",
+    "name": "Sunset Ridge Home",
+    "address": "78 Sunset Ridge Road, Denver, CO 80203",
+    "city": "Denver",
+    "rent": "$2,200/month",
+    "rent_num": 2200,
+    "beds": "3",
+    "baths": "2",
+    "available": "July 15, 2025",
+    "lease": "12 months",
+    "parking": "2-car garage",
+    "pets": "Cats allowed, no dogs",
+    "fee": "$75",
+    "deadline": "July 1, 2025",
+    "email": "info@sunsetridgehomes.com",
+    "phone": "+1 (720) 555-0234",
+    "status": "available"
+  },
+  {
+    "id": "03",
+    "name": "Lakeside Condo",
+    "address": "1005 Lakeshore Blvd, Chicago, IL 60611",
+    "city": "Chicago",
+    "rent": "$1,800/month",
+    "rent_num": 1800,
+    "beds": "1",
+    "baths": "1",
+    "available": "N/A",
+    "lease": "12 months",
+    "parking": "Street parking only",
+    "pets": "No pets allowed",
+    "fee": "$60",
+    "deadline": "N/A",
+    "email": "leasing@lakesidecondo.com",
+    "phone": "+1 (312) 555-0399",
+    "status": "unavailable"
+  },
+  {
+    "id": "04",
+    "name": "The Elmwood",
+    "address": "22 Elmwood Street, Boston, MA 02115",
+    "city": "Boston",
+    "rent": "$2,600/month",
+    "rent_num": 2600,
+    "beds": "2",
+    "baths": "2",
+    "available": "August 15, 2025",
+    "lease": "12 months",
+    "parking": "1 spot included",
+    "pets": "Small pets allowed (under 25 lbs)",
+    "fee": "$80",
+    "deadline": "August 1, 2025",
+    "email": "rentals@theelmwood.com",
+    "phone": "+1 (617) 555-0451",
+    "status": "available"
+  },
+  {
+    "id": "05",
+    "name": "Riverfront Studio",
+    "address": "310 River Ave, Portland, OR 97201",
+    "city": "Portland",
+    "rent": "$1,100/month",
+    "rent_num": 1100,
+    "beds": "Studio",
+    "baths": "1",
+    "available": "July 1, 2025",
+    "lease": "6 months minimum",
+    "parking": "Bicycle storage available",
+    "pets": "No pets allowed",
+    "fee": "$40",
+    "deadline": "June 20, 2025",
+    "email": "hello@riverfrontstudio.com",
+    "phone": "+1 (503) 555-0512",
+    "status": "available"
+  },
+  {
+    "id": "06",
+    "name": "Oak Hill House",
+    "address": "54 Oak Hill Lane, Nashville, TN 37205",
+    "city": "Nashville",
+    "rent": "$1,750/month",
+    "rent_num": 1750,
+    "beds": "3",
+    "baths": "1",
+    "available": "N/A",
+    "lease": "12 months",
+    "parking": "Driveway, 2 cars",
+    "pets": "Dogs and cats allowed",
+    "fee": "$55",
+    "deadline": "N/A",
+    "email": "contact@oakhillnashville.com",
+    "phone": "+1 (615) 555-0628",
+    "status": "unavailable"
+  },
+  {
+    "id": "07",
+    "name": "Parkview Terrace",
+    "address": "800 Parkview Ave, Seattle, WA 98101",
+    "city": "Seattle",
+    "rent": "$2,400/month",
+    "rent_num": 2400,
+    "beds": "2",
+    "baths": "2",
+    "available": "September 15, 2025",
+    "lease": "12 months",
+    "parking": "1 covered spot included",
+    "pets": "Cats only",
+    "fee": "$70",
+    "deadline": "September 1, 2025",
+    "email": "leasing@parkviewterrace.com",
+    "phone": "+1 (206) 555-0745",
+    "status": "available"
+  },
+  {
+    "id": "08",
+    "name": "Cedar Grove Flat",
+    "address": "19 Cedar Grove Ct, Atlanta, GA 30301",
+    "city": "Atlanta",
+    "rent": "$1,350/month",
+    "rent_num": 1350,
+    "beds": "1",
+    "baths": "1",
+    "available": "July 15, 2025",
+    "lease": "12 months",
+    "parking": "1 spot included",
+    "pets": "No pets allowed",
+    "fee": "$45",
+    "deadline": "July 5, 2025",
+    "email": "info@cedargroveflats.com",
+    "phone": "+1 (404) 555-0863",
+    "status": "available"
+  },
+  {
+    "id": "09",
+    "name": "Hillcrest Manor",
+    "address": "500 Hillcrest Blvd, San Diego, CA 92101",
+    "city": "San Diego",
+    "rent": "$3,100/month",
+    "rent_num": 3100,
+    "beds": "4",
+    "baths": "3",
+    "available": "N/A",
+    "lease": "12 months",
+    "parking": "2-car garage + guest parking",
+    "pets": "Dogs and cats allowed",
+    "fee": "$100",
+    "deadline": "N/A",
+    "email": "rentals@hillcrestmanor.com",
+    "phone": "+1 (619) 555-0971",
+    "status": "unavailable"
+  },
+  {
+    "id": "10",
+    "name": "Pinewood Cottage",
+    "address": "33 Pinewood Trail, Raleigh, NC 27601",
+    "city": "Raleigh",
+    "rent": "$1,550/month",
+    "rent_num": 1550,
+    "beds": "2",
+    "baths": "1",
+    "available": "August 1, 2025",
+    "lease": "12 months",
+    "parking": "1 spot included",
+    "pets": "Small pets allowed (under 20 lbs)",
+    "fee": "$50",
+    "deadline": "July 18, 2025",
+    "email": "hello@pinewoodcottage.com",
+    "phone": "+1 (984) 555-0134",
+    "status": "available"
+  },
+  {
+    "id": "11",
+    "name": "Downtown Loft",
+    "address": "201 Brickell Ave, Miami, FL 33131",
+    "city": "Miami",
+    "rent": "$2,050/month",
+    "rent_num": 2050,
+    "beds": "1",
+    "baths": "1",
+    "available": "N/A",
+    "lease": "12 months",
+    "parking": "Valet parking available ($150/month)",
+    "pets": "No pets allowed",
+    "fee": "$65",
+    "deadline": "N/A",
+    "email": "leasing@downtownloftmiami.com",
+    "phone": "+1 (305) 555-0287",
+    "status": "unavailable"
+  },
+  {
+    "id": "12",
+    "name": "Birchwood Place",
+    "address": "88 Birchwood Circle, Minneapolis, MN 55401",
+    "city": "Minneapolis",
+    "rent": "$1,650/month",
+    "rent_num": 1650,
+    "beds": "2",
+    "baths": "2",
+    "available": "September 1, 2025",
+    "lease": "12 months",
+    "parking": "1 heated indoor spot included",
+    "pets": "Cats allowed, no dogs",
+    "fee": "$55",
+    "deadline": "August 20, 2025",
+    "email": "rentals@birchwoodplace.com",
+    "phone": "+1 (612) 555-0356",
+    "status": "available"
+  }
+];
+
+    function updatePrice(val) {
+      document.getElementById('price-label').textContent = '$' + parseInt(val).toLocaleString() + '/mo';
+    }
+
+    function applyFilters() {
+      var city    = document.getElementById('f-city').value;
+      var beds    = document.getElementById('f-beds').value;
+      var status  = document.getElementById('f-status').value;
+      var maxRent = parseInt(document.getElementById('f-price').value);
+
+      var filtered = listings.filter(function(h) {
+        if (city   && h.city !== city) return false;
+        if (beds   && h.beds !== beds) return false;
+        if (status && h.status !== status) return false;
+        if (h.rent_num > maxRent) return false;
+        return true;
+      });
+
+      renderList(filtered);
+      document.getElementById('count').textContent = filtered.length;
+    }
+
+    function resetFilters() {
+      document.getElementById('f-city').value   = '';
+      document.getElementById('f-beds').value   = '';
+      document.getElementById('f-status').value = '';
+      document.getElementById('f-price').value  = 3500;
+      updatePrice(3500);
+      applyFilters();
+    }
+
+    function renderList(items) {
+      var list = document.getElementById('listing-list');
+      if (items.length === 0) {
+        list.innerHTML = '<div class="no-results">No listings match your filters. Try adjusting the criteria.</div>';
+        return;
+      }
+      list.innerHTML = items.map(function(h) {
+        var isAvail   = h.status === 'available';
+        var badgeText = isAvail ? '&#10003; Available' : '&#10007; Not Available';
+        var availText = isAvail ? 'From ' + h.available : 'Not Available';
+        return '<div class="listing-row ' + (isAvail ? '' : 'unavailable') + '">'
+          + '<img class="row-img" src="../../assets/house_' + h.id + '.jpg" alt="' + h.name + '" />'
+          + '<div class="row-body">'
+          + '<div>'
+          + '<div class="row-top"><span class="row-name">' + h.name + '</span>'
+          + '<span class="badge ' + h.status + '">' + badgeText + '</span></div>'
+          + '<p class="row-address">&#128205; ' + h.address + '</p>'
+          + '<div class="row-tags">'
+          + '<span class="tag">&#127968; ' + h.beds + ' bed</span>'
+          + '<span class="tag">&#128703; ' + h.baths + ' bath</span>'
+          + '<span class="tag">&#128663; ' + h.parking + '</span>'
+          + '</div>'
+          + '</div>'
+          + '<div class="row-footer">'
+          + '<div><div class="row-rent">' + h.rent + '</div>'
+          + '<div class="row-avail">' + availText + '</div></div>'
+          + '<a class="btn-view ' + (isAvail ? '' : 'disabled') + '" href="house_' + h.id + '.html">View Details</a>'
+          + '</div></div></div>';
+      }).join('');
+    }
+
+    renderList(listings);
+  </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+{
+  "persona_id": "thornfield_anth_001",
+  "schema_version": "0.2",
+
+  "university": {
+    "name": "Thornfield College",
+    "short_name": "Thornfield",
+    "type": "small liberal arts college",
+    "domain": "thornfield.edu",
+    "city": "Thornfield",
+    "state": "VT",
+    "zip": "05753"
+  },
+
+  "name": {
+    "full": "Malcolm Reyes-Whittaker",
+    "first": "Malcolm",
+    "last": "Reyes-Whittaker",
+    "preferred": "Malcolm",
+    "title": "Professor",
+    "pronouns": "he/him",
+    "honorifics": ["Ph.D."]
+  },
+
+  "department": {
+    "name": "Department of Anthropology",
+    "school": "Division of Social Sciences",
+    "url_path": "/anthropology"
+  },
+
+  "research": {
+    "areas": [
+      "cultural anthropology",
+      "ethnography of labor",
+      "post-industrial communities",
+      "Appalachian studies",
+      "oral history"
+    ],
+    "one_liner": "I write about how communities make meaning after the factories close.",
+    "long_bio": "Malcolm Reyes-Whittaker is a cultural anthropologist whose work examines how post-industrial communities in Appalachia and northern New England reconstruct identity and livelihood after the collapse of extractive and manufacturing economies. His first book, Hollow Seams (2017), received the Margaret Mead Award. His current project, based on ten years of fieldwork in a former paper-mill town in Vermont, examines how oral history practices become sites of political contestation. Before joining Thornfield in 2012, he taught at the University of North Carolina at Chapel Hill and held a visiting appointment at the École des hautes études en sciences sociales in Paris."
+  },
+
+  "office": {
+    "building": "Ashwood Hall",
+    "room": "214",
+    "floor": 2,
+    "hours": "Wednesdays 1:00–3:00 PM and Fridays 10:00–11:30 AM",
+    "mailing_address": {
+      "line1": "Department of Anthropology",
+      "line2": "Thornfield College",
+      "street": "1 College Green",
+      "building_line": "Ashwood Hall, Room 214",
+      "city": "Thornfield",
+      "state": "VT",
+      "zip": "05753",
+      "country": "USA"
+    }
+  },
+
+  "contact": {
+    "email": "mreyeswhittaker@thornfield.edu",
+    "email_secondary": null,
+    "phone_office": "+1 (802) 555-0187",
+    "phone_lab": null,
+    "fax": null
+  },
+
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Anthropology",
+      "institution": "University of Michigan",
+      "year": 2009,
+      "advisor": "Prof. Ruth Delacroix",
+      "thesis": "Hollow Seams: Labor and Memory in the Coalfields of West Virginia"
+    },
+    {
+      "degree": "M.A.",
+      "field": "Anthropology",
+      "institution": "University of Michigan",
+      "year": 2005
+    },
+    {
+      "degree": "B.A.",
+      "field": "History and Sociology",
+      "institution": "Oberlin College",
+      "year": 2002,
+      "honors": "magna cum laude"
+    }
+  ],
+
+  "positions": [
+    { "role": "Professor",           "institution": "Thornfield College",                           "start": 2021, "end": null },
+    { "role": "Associate Professor", "institution": "Thornfield College",                           "start": 2016, "end": 2021 },
+    { "role": "Assistant Professor", "institution": "Thornfield College",                           "start": 2012, "end": 2016 },
+    { "role": "Visiting Scholar",    "institution": "École des hautes études en sciences sociales", "start": 2014, "end": 2015 },
+    { "role": "Postdoctoral Fellow", "institution": "University of North Carolina at Chapel Hill",  "start": 2009, "end": 2012 }
+  ],
+
+  "awards": [
+    { "year": 2018, "name": "Margaret Mead Award",                          "org": "American Anthropological Association",     "for": "Hollow Seams (Duke University Press, 2017)" },
+    { "year": 2016, "name": "ACLS Fellowship",                              "org": "American Council of Learned Societies" },
+    { "year": 2014, "name": "Fulbright Research Fellowship (France)",       "org": "U.S. Department of State" },
+    { "year": 2013, "name": "Thornfield College Teaching Excellence Award", "org": "Thornfield College" }
+  ],
+
+  "publications": [
+    {
+      "id": "reyeswhittaker2017hollow",
+      "type": "book",
+      "title": "Hollow Seams: Labor, Memory, and the Afterlife of Coal",
+      "authors": ["M. Reyes-Whittaker"],
+      "publisher": "Duke University Press",
+      "year": 2017,
+      "isbn": "978-0-8223-6XXX-X",
+      "note": "Winner, Margaret Mead Award, 2018"
+    },
+    {
+      "id": "reyeswhittaker2024mill",
+      "type": "article",
+      "title": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town",
+      "authors": ["M. Reyes-Whittaker"],
+      "venue": "American Ethnologist",
+      "volume": "51",
+      "issue": "3",
+      "pages": "412–430",
+      "year": 2024,
+      "pdf_source": null
+    },
+    {
+      "id": "reyeswhittaker2023oral",
+      "type": "article",
+      "title": "Whose Story Is It? Oral History as Political Practice in Post-Industrial New England",
+      "authors": ["M. Reyes-Whittaker", "J. Bellerose"],
+      "venue": "Cultural Anthropology",
+      "year": 2023,
+      "pdf_source": null
+    },
+    {
+      "id": "reyeswhittaker2021ruins",
+      "type": "chapter",
+      "title": "Ruins Without Romance: On Refusing the Picturesque",
+      "book": "Edges of Empire: New Directions in Industrial Heritage",
+      "editors": ["K. Abebe", "L. Tanaka"],
+      "publisher": "University of Chicago Press",
+      "year": 2021,
+      "pages": "87–112"
+    },
+    {
+      "id": "reyeswhittaker2020method",
+      "type": "article",
+      "title": "Slow Ethnography: Notes on Fieldwork at Ten-Year Intervals",
+      "authors": ["M. Reyes-Whittaker"],
+      "venue": "Anthropology and Humanism",
+      "year": 2020
+    },
+    {
+      "id": "reyeswhittaker2019review",
+      "type": "review",
+      "title": "Review of Ghostwork: Deindustrialization and the New Economy",
+      "authors": ["M. Reyes-Whittaker"],
+      "venue": "Journal of American History",
+      "year": 2019
+    },
+    {
+      "id": "reyeswhittaker2015paper",
+      "type": "article",
+      "title": "Between the Paper and the Pulp: Craft Identity Among Former Millworkers",
+      "authors": ["M. Reyes-Whittaker"],
+      "venue": "American Ethnologist",
+      "year": 2015
+    }
+  ],
+
+  "teaching": [
+    {
+      "code": "ANTH 101",
+      "title": "Introduction to Cultural Anthropology",
+      "level": "undergraduate",
+      "semester": "Fall 2025",
+      "room": "Ashwood Hall 110",
+      "days": "MWF 9:00–9:50 AM",
+      "syllabus_source": null
+    },
+    {
+      "code": "ANTH 324",
+      "title": "Ethnography of Work",
+      "level": "undergraduate",
+      "semester": "Fall 2025",
+      "room": "Ashwood Hall 208",
+      "days": "TR 2:30–3:50 PM",
+      "syllabus_source": null
+    },
+    {
+      "code": "ANTH 410",
+      "title": "Senior Seminar: Fieldwork and Its Discontents",
+      "level": "undergraduate",
+      "semester": "Spring 2026",
+      "syllabus_source": null
+    }
+  ],
+
+  "group": {
+    "name": null,
+    "url_path": null,
+    "group_photo_source": null,
+    "group_photo_caption": null,
+    "member_count": null,
+    "current_phd_students": [],
+    "current_masters_students": [],
+    "advisees": [
+      { "name": "Juniper Bellerose", "year": "senior thesis",   "topic": "oral histories of Franco-American mill families" },
+      { "name": "Dev Patel",         "year": "senior thesis",   "topic": "gentrification and displacement in Burlington" },
+      { "name": "Sam Okafor",        "year": "junior research", "topic": "material culture of roadside memorials" }
+    ],
+    "alumni": [
+      { "name": "Ingrid Sørensen", "degree": "B.A.", "graduated": 2023, "thesis": null, "first_position": "Ph.D. student, University of Chicago" },
+      { "name": "Marco DiLeo",     "degree": "B.A.", "graduated": 2022, "thesis": null, "first_position": "Research Associate, Vermont Folklife Center" }
+    ]
+  },
+
+  "prospective_students": {
+    "accepting": null,
+    "note": "Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+  },
+
+  "social": {
+    "google_scholar": "https://scholar.google.com/citations?user=THRN-RW-4K",
+    "semantic_scholar": null,
+    "github": null,
+    "dblp": null,
+    "orcid": "0000-0003-8821-4455",
+    "twitter": null,
+    "bluesky": "https://bsky.app/profile/mreyeswhittaker.bsky.social",
+    "linkedin": null,
+    "personal_blog": "https://slowethnography.wordpress.com"
+  },
+
+  "assets": {
+    "photo_source": "images/thornfield_anth_001_headshot.jpg",
+    "photo_alt": "Portrait of Malcolm Reyes-Whittaker",
+    "cv_source": null,
+    "cv_updated": null
+  },
+
+  "site_meta": {
+    "last_updated": "2025-08-20",
+    "copyright_line": "Malcolm Reyes-Whittaker · Thornfield College · Thornfield, Vermont"
+  }
+}

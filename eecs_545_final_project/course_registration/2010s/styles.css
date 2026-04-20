@@ -1,0 +1,291 @@
+body {
+  margin: 0;
+  background: #97afd0;
+  color: #000;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.page {
+  padding: 14px;
+}
+
+.shell {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  border: 1px solid #4c6584;
+  background: #dbe6f4;
+  box-shadow: 4px 4px 0 #6a7f9a;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #4c6584;
+  background: linear-gradient(#f7fbff, #bfd1e9);
+}
+
+.site-name {
+  color: #193d6b;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+h1 {
+  margin: 4px 0;
+  color: #0f2f57;
+  font-size: 28px;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+.tagline {
+  color: #456585;
+  font-size: 12px;
+}
+
+.status-box {
+  min-width: 220px;
+  border: 1px solid #6f88a7;
+  background: #eef4fb;
+  padding: 10px 12px;
+  line-height: 1.7;
+}
+
+.tabs {
+  padding: 8px 10px 0;
+  background: #dbe6f4;
+}
+
+.tab {
+  display: inline-block;
+  margin-right: 4px;
+  padding: 8px 12px 7px;
+  border: 1px solid #6b86a7;
+  border-bottom: none;
+  background: linear-gradient(#f8fbff, #d0dff0);
+  color: #25476f;
+  font-weight: bold;
+}
+
+.tab.active {
+  background: #fff;
+  position: relative;
+  top: 1px;
+}
+
+.layout {
+  width: 100%;
+  border-top: 1px solid #6b86a7;
+  background: #fff;
+}
+
+.sidebar,
+.main {
+  vertical-align: top;
+  padding: 10px;
+}
+
+.sidebar {
+  width: 250px;
+  background: #edf3fa;
+}
+
+.main {
+  background: #fff;
+}
+
+.panel {
+  margin-bottom: 12px;
+  border: 1px solid #7e97b4;
+  background: #f8fbff;
+}
+
+.panel-title {
+  padding: 8px 10px;
+  border-bottom: 1px solid #7e97b4;
+  background: linear-gradient(#2f6699, #1d4f7f);
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.panel-note {
+  float: right;
+  color: #d6e6f8;
+  font-weight: normal;
+}
+
+.panel-body {
+  padding: 10px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.field span {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+  color: #2a4767;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #7e97b4;
+  background: #fff;
+  color: #000;
+  font: inherit;
+}
+
+.portal-button,
+.mini-button {
+  border: 1px solid #6f88a7;
+  background: linear-gradient(#fffef2, #d7d4bc);
+  color: #2d2d2d;
+  font: inherit;
+  font-weight: bold;
+  padding: 5px 9px;
+  cursor: pointer;
+}
+
+.portal-button {
+  width: 100%;
+}
+
+.portal-button:disabled,
+.mini-button:disabled {
+  color: #777;
+  cursor: default;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.data-table th,
+.data-table td {
+  padding: 7px 8px;
+  border: 1px solid #b7c8db;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table th {
+  background: #d7e3f2;
+  color: #1d3f66;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.data-table tr:nth-child(even) td {
+  background: #f5f9fe;
+}
+
+.course-title {
+  font-weight: bold;
+  color: #0c345d;
+}
+
+.subtle {
+  color: #526a82;
+  margin-top: 3px;
+}
+
+.seat.good {
+  color: #086108;
+  font-weight: bold;
+}
+
+.seat.low {
+  color: #a15b00;
+  font-weight: bold;
+}
+
+.seat.full {
+  color: #a10000;
+  font-weight: bold;
+}
+
+.cart-item,
+.warning-item,
+.empty-state {
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #b7c8db;
+  background: #fff;
+}
+
+.cart-item:last-child,
+.warning-item:last-child,
+.empty-state:last-child {
+  margin-bottom: 0;
+}
+
+.cart-title {
+  font-weight: bold;
+  color: #0c345d;
+}
+
+.warning-item.notice {
+  background: #fff7db;
+  border-color: #d1b16a;
+}
+
+.warning-item.conflict {
+  background: #ffe6e6;
+  border-color: #d08c8c;
+}
+
+.warning-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 2px 6px;
+  border: 1px solid #888;
+  background: #eee;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.warning-item.notice .warning-label {
+  background: #f6e6ad;
+}
+
+.warning-item.conflict .warning-label {
+  background: #f0baba;
+}
+
+.schedule-table td:first-child {
+  width: 100px;
+  font-weight: bold;
+  background: #edf3fa;
+}
+
+@media (max-width: 1024px) {
+  .topbar {
+    flex-direction: column;
+  }
+
+  .layout,
+  .layout tbody,
+  .layout tr,
+  .layout td {
+    display: block;
+    width: 100%;
+  }
+
+  .sidebar,
+  .main {
+    padding: 8px;
+  }
+}

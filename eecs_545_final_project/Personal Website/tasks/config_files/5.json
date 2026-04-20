@@ -1,0 +1,40 @@
+{
+  "task_id": 5,
+  "task_type": "T1_recent_pub",
+  "persona_id": "halvern_econ_001",
+  "template": "raw_html_1998",
+  "sites": [
+    "halvern_econ_001__raw_html_1998"
+  ],
+  "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Find the title of the most recent publication of {name}.",
+  "intent_template_id": 1,
+  "instantiation_dict": {
+    "name": "Dr. Gerhardt Vössing"
+  },
+  "intent": "Find the title of the most recent publication of Dr. Gerhardt Vössing.",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "On the Existence of Equilibrium in Double Auctions with Interdependent Values"
+      ],
+      "fuzzy_match": null
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "On the Existence of Equilibrium in Double Auctions with Interdependent Values"
+  }
+}

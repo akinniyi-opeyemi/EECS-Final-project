@@ -1,0 +1,43 @@
+{
+  "task_id": 2,
+  "task_type": "T3_current_course",
+  "persona_id": "halvern_cs_001",
+  "template": "jekyll_alfolio",
+  "sites": [
+    "halvern_cs_001__jekyll_alfolio"
+  ],
+  "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "What course is {name} teaching this semester, and where does it take place?",
+  "intent_template_id": 3,
+  "instantiation_dict": {
+    "name": "Nivedita Okonkwo"
+  },
+  "intent": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "CS 5891",
+        "Ramsey Hall 1301"
+      ],
+      "fuzzy_match": [
+        "CS 5891 — Trustworthy Machine Learning, in Ramsey Hall 1301"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "CS 5891 — Trustworthy Machine Learning, in Ramsey Hall 1301"
+  }
+}

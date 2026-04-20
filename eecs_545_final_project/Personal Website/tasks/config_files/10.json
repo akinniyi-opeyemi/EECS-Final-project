@@ -1,0 +1,40 @@
+{
+  "task_id": 10,
+  "task_type": "T1_recent_pub",
+  "persona_id": "merrow_lit_001",
+  "template": "notion",
+  "sites": [
+    "merrow_lit_001__notion"
+  ],
+  "start_url": "http://localhost:8000/merrow_lit_001__notion/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Find the title of the most recent publication of {name}.",
+  "intent_template_id": 1,
+  "instantiation_dict": {
+    "name": "Yuki Abernathy"
+  },
+  "intent": "Find the title of the most recent publication of Yuki Abernathy.",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "Compiled Fictions: American Literature and the Programming Imagination, 1948–1984"
+      ],
+      "fuzzy_match": null
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "Compiled Fictions: American Literature and the Programming Imagination, 1948–1984"
+  }
+}

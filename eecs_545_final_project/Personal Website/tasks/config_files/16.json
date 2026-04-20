@@ -1,0 +1,42 @@
+{
+  "task_id": 16,
+  "task_type": "T2_office_hours",
+  "persona_id": "thornfield_anth_001",
+  "template": "hugo_papermod",
+  "sites": [
+    "thornfield_anth_001__hugo_papermod"
+  ],
+  "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "When does {name} hold office hours this semester?",
+  "intent_template_id": 2,
+  "instantiation_dict": {
+    "name": "Malcolm Reyes-Whittaker"
+  },
+  "intent": "When does Malcolm hold office hours this semester?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "Wednesday"
+      ],
+      "fuzzy_match": [
+        "Wednesdays 1:00–3:00 PM and Fridays 10:00–11:30 AM"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "Wednesdays 1:00–3:00 PM and Fridays 10:00–11:30 AM"
+  }
+}

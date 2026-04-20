@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – HomeNest Rentals</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Georgia, serif; background: #fff; color: #222; }
+
+    nav {
+      background: #222;
+      padding: 0 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 52px;
+    }
+    .nav-brand {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .nav-links a:hover { color: #fff; }
+
+    .page-body {
+      max-width: 860px;
+      margin: 48px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 1.9rem;
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      margin-top: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+    p { font-size: 0.95rem; line-height: 1.75; color: #333; margin-bottom: 14px; }
+
+    /* Locations */
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .location-card {
+      border: 1px solid #ddd;
+      padding: 14px 16px;
+      background: #fafafa;
+    }
+    .location-card .city { font-weight: bold; font-size: 0.95rem; }
+    .location-card .state { font-size: 0.82rem; color: #666; margin-top: 2px; }
+    .location-card .count { font-size: 0.82rem; color: #555; margin-top: 6px; }
+
+    /* Reviews */
+    .reviews { margin-top: 16px; display: flex; flex-direction: column; gap: 20px; }
+    .review-card {
+      border: 1px solid #ddd;
+      padding: 18px 20px;
+      background: #fafafa;
+    }
+    .review-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .reviewer-name { font-weight: bold; font-size: 0.95rem; }
+    .stars { color: #e2a800; font-size: 1rem; letter-spacing: 2px; }
+    .review-text { font-size: 0.92rem; line-height: 1.65; color: #444; }
+    .review-date { font-size: 0.78rem; color: #999; margin-top: 8px; }
+
+    footer {
+      max-width: 860px;
+      margin: 56px auto 32px auto;
+      padding: 0 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 14px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">HomeNest Rentals</a>
+      <div class="nav-links">
+        <a href="index.html">Listings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-body">
+    <h1>About HomeNest Rentals</h1>
+
+    <h2>Our History</h2>
+    <p>HomeNest Rentals was founded in 2011 by lifelong friends Marcus Webb and Diana Okafor, both of whom had firsthand experience navigating the frustrations of renting in a new city. After years of dealing with unresponsive landlords, misleading listings, and surprise fees, they set out to build something different: a rental platform built on transparency, trust, and tenant respect.</p>
+    <p>Starting with just 8 listings in Austin, Texas, HomeNest grew steadily through word of mouth. By 2015, we had expanded into three additional states and partnered with over 200 independent property owners who share our commitment to honest, well-maintained housing. Today, HomeNest manages over 1,400 active listings across 12 major US cities, and our team of 60 staff members is dedicated to matching renters with homes they are proud to live in.</p>
+    <p>Our mission has never changed: make renting straightforward, fair, and human. We vet every property before it goes live, enforce clear lease standards, and respond to every inquiry within one business day. Whether you are a first-time renter or relocating across the country, HomeNest is here to make the process feel manageable.</p>
+
+    <h2>Locations We Cover</h2>
+    <div class="locations-grid">
+      <div class="location-card">
+        <div class="city">Austin</div>
+        <div class="state">Texas</div>
+        <div class="count">142 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Denver</div>
+        <div class="state">Colorado</div>
+        <div class="count">118 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Chicago</div>
+        <div class="state">Illinois</div>
+        <div class="count">203 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Boston</div>
+        <div class="state">Massachusetts</div>
+        <div class="count">97 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Portland</div>
+        <div class="state">Oregon</div>
+        <div class="count">88 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Nashville</div>
+        <div class="state">Tennessee</div>
+        <div class="count">76 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Seattle</div>
+        <div class="state">Washington</div>
+        <div class="count">155 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Atlanta</div>
+        <div class="state">Georgia</div>
+        <div class="count">134 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">San Diego</div>
+        <div class="state">California</div>
+        <div class="count">109 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Raleigh</div>
+        <div class="state">North Carolina</div>
+        <div class="count">64 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Miami</div>
+        <div class="state">Florida</div>
+        <div class="count">178 active listings</div>
+      </div>
+      <div class="location-card">
+        <div class="city">Minneapolis</div>
+        <div class="state">Minnesota</div>
+        <div class="count">71 active listings</div>
+      </div>
+    </div>
+
+    <h2>What Our Renters Say</h2>
+    <div class="reviews">
+
+      <div class="review-card">
+        <div class="review-top">
+          <span class="reviewer-name">James Okonkwo</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="review-text">HomeNest made my move to Seattle incredibly smooth. The listing was exactly as described, the landlord was responsive, and there were no hidden fees anywhere in the process. I have recommended HomeNest to three colleagues already.</p>
+        <div class="review-date">March 2025 — Seattle, WA</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <span class="reviewer-name">Priya Venkataraman</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="review-text">I was relocating from India for a PhD program and was terrified about finding housing remotely. HomeNest's team answered every single one of my questions over email and helped me secure a place in Boston before I even landed. Truly outstanding service.</p>
+        <div class="review-date">August 2024 — Boston, MA</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <span class="reviewer-name">Carlos Mendez</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+        </div>
+        <p class="review-text">Great selection of properties in Miami. The contact form on the website worked perfectly and I heard back within a few hours. My only minor note is that I wish there were more photos per listing, but the overall experience was very positive.</p>
+        <div class="review-date">January 2025 — Miami, FL</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <span class="reviewer-name">Amara Diallo</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="review-text">I found my apartment in Atlanta through HomeNest two years ago and just renewed my lease. The platform is easy to navigate, the listings are honest, and whenever I have had a maintenance issue the team has followed up to make sure it was resolved. Highly recommend.</p>
+        <div class="review-date">November 2024 — Atlanta, GA</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <span class="reviewer-name">Rachel Thornton</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="review-text">After three frustrating experiences with other rental platforms, HomeNest was a breath of fresh air. No bait-and-switch pricing, no unanswered calls. The Raleigh listings were well organised and the application process took less than a week from start to finish.</p>
+        <div class="review-date">February 2025 — Raleigh, NC</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 HomeNest Rentals. All rights reserved. Static evaluation page. For research purposes only.
+  </footer>
+
+</body>
+</html>

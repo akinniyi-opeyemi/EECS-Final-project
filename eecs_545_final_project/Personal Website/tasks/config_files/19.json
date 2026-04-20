@@ -1,0 +1,40 @@
+{
+  "task_id": 19,
+  "task_type": "T5_twitter",
+  "persona_id": "thornfield_anth_001",
+  "template": "hugo_papermod",
+  "sites": [
+    "thornfield_anth_001__hugo_papermod"
+  ],
+  "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Find {name}'s Twitter account.",
+  "intent_template_id": 5,
+  "instantiation_dict": {
+    "name": "Malcolm Reyes-Whittaker"
+  },
+  "intent": "Find Malcolm Reyes-Whittaker's Twitter account.",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": null,
+      "fuzzy_match": [
+        "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
+  }
+}

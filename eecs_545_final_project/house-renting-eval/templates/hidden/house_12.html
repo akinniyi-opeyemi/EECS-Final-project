@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birchwood Place - HomeNest Rentals</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fafaf9; color: #1c1917; }
+
+    nav { background: #14532d; padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 54px; }
+    .nav-brand { color: #fff; text-decoration: none; font-size: 1.15rem; font-weight: 700; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: #fff; }
+
+    .page-body { max-width: 860px; margin: 40px auto; padding: 0 24px 48px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: #16a34a; text-decoration: none; font-weight: 600; margin-bottom: 24px; }
+    .back-link:hover { color: #15803d; }
+
+    .page-icon { font-size: 2.8rem; margin-bottom: 10px; }
+    h1 { font-size: 2rem; font-weight: 800; color: #1c1917; margin-bottom: 6px; }
+    .address-line { font-size: 0.92rem; color: #78716c; margin-bottom: 14px; }
+    .badge { display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 3px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .badge.available { background: #dcfce7; color: #166534; }
+    .badge.unavailable { background: #fee2e2; color: #991b1b; }
+
+    .unavailable-notice {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      color: #991b1b;
+      margin-bottom: 24px;
+    }
+
+    .house-photo { width: 100%; height: 340px; object-fit: cover; border-radius: 10px; display: block; margin-bottom: 32px; }
+
+    /* Tabs */
+    .tabs { display: flex; border-bottom: 1px solid #e7e5e4; margin-bottom: 28px; gap: 4px; }
+    .tab-btn {
+      padding: 9px 20px;
+      border: none;
+      background: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #78716c;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      font-family: inherit;
+    }
+    .tab-btn:hover { color: #1c1917; }
+    .tab-btn.active { color: #16a34a; font-weight: 700; border-bottom-color: #16a34a; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Notion property rows */
+    .prop-row { display: flex; padding: 10px 0; border-bottom: 1px solid #f5f5f4; font-size: 0.9rem; }
+    .prop-row:last-child { border-bottom: none; }
+    .prop-label { width: 200px; flex-shrink: 0; font-size: 0.82rem; color: #78716c; font-weight: 500; padding-top: 1px; }
+    .prop-value { color: #1c1917; font-weight: 500; }
+
+    /* Toggle blocks */
+    .toggle { margin-top: 20px; border: 1px solid #e7e5e4; border-radius: 8px; overflow: hidden; }
+    .toggle-hdr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 16px;
+      cursor: pointer;
+      user-select: none;
+      background: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1c1917;
+    }
+    .toggle-hdr:hover { background: #fafaf9; }
+    .toggle-arrow { font-size: 0.7rem; color: #78716c; transition: transform 0.2s; }
+    .toggle-arrow.open { transform: rotate(90deg); }
+    .toggle-body { display: none; padding: 4px 16px 14px; background: #fff; border-top: 1px solid #f5f5f4; }
+    .toggle-body.open { display: block; }
+
+    /* Callout */
+    .callout { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px 18px; display: flex; gap: 12px; font-size: 0.88rem; color: #166534; margin-top: 16px; line-height: 1.6; }
+    .callout-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+    footer { text-align: center; margin-top: 48px; padding: 24px; border-top: 1px solid #e7e5e4; font-size: 0.78rem; color: #a8a29e; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">&#127968; HomeNest</a>
+      <div class="nav-links">
+        <a href="index.html">Listings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-body">
+    <a class="back-link" href="index.html">&#8592; Back to listings</a>
+
+    <div class="page-icon">&#127968;</div>
+    <h1>Birchwood Place</h1>
+    <p class="address-line">&#128205; 88 Birchwood Circle, Minneapolis, MN 55401</p>
+    <span class="badge available">&#10003; Available</span>
+
+    
+
+    <img class="house-photo" src="../../assets/house_12.jpg" alt="Birchwood Place" />
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('overview', this)">Overview</button>
+      <button class="tab-btn" onclick="switchTab('details', this)">Details</button>
+      <button class="tab-btn" onclick="switchTab('contact', this)">Contact</button>
+      <button class="tab-btn" onclick="switchTab('apply', this)">Apply</button>
+    </div>
+
+    <!-- Overview -->
+    <div id="tab-overview" class="tab-panel active">
+      <div class="prop-row"><span class="prop-label">Monthly Rent</span><span class="prop-value">$1,650/month</span></div>
+      <div class="prop-row"><span class="prop-label">Bedrooms</span><span class="prop-value">2</span></div>
+      <div class="prop-row"><span class="prop-label">Bathrooms</span><span class="prop-value">2</span></div>
+      <div class="prop-row"><span class="prop-label">Available From</span><span class="prop-value">September 1, 2025</span></div>
+      <div class="prop-row"><span class="prop-label">Status</span><span class="prop-value">Available</span></div>
+    </div>
+
+    <!-- Details -->
+    <div id="tab-details" class="tab-panel">
+      <div class="prop-row"><span class="prop-label">Lease Duration</span><span class="prop-value">12 months</span></div>
+      <div class="prop-row"><span class="prop-label">Parking</span><span class="prop-value">1 heated indoor spot included</span></div>
+
+      <div class="toggle">
+        <div class="toggle-hdr" onclick="toggleBlock('pets')">
+          <span class="toggle-arrow" id="arrow-pets">&#9658;</span> Pet Policy
+        </div>
+        <div class="toggle-body" id="pets">
+          <div class="prop-row"><span class="prop-label">Pet Policy</span><span class="prop-value">Cats allowed, no dogs</span></div>
+        </div>
+      </div>
+
+      <div class="toggle">
+        <div class="toggle-hdr" onclick="toggleBlock('fees')">
+          <span class="toggle-arrow" id="arrow-fees">&#9658;</span> Fees &amp; Deadlines
+        </div>
+        <div class="toggle-body" id="fees">
+          <div class="prop-row"><span class="prop-label">Application Fee</span><span class="prop-value">$55</span></div>
+          <div class="prop-row"><span class="prop-label">Application Deadline</span><span class="prop-value">August 20, 2025</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="tab-contact" class="tab-panel">
+      <div class="prop-row"><span class="prop-label">Email</span><span class="prop-value">rentals@birchwoodplace.com</span></div>
+      <div class="prop-row"><span class="prop-label">Phone</span><span class="prop-value">+1 (612) 555-0356</span></div>
+      <div class="callout">
+        <span class="callout-icon">&#128172;</span>
+        <span>Our team is available Monday to Friday, 9am to 5pm CST. Email is the fastest way to reach us. We respond to all enquiries within one business day.</span>
+      </div>
+    </div>
+
+    <!-- Apply -->
+    <div id="tab-apply" class="tab-panel">
+      <div class="callout">
+        <span class="callout-icon">&#128203;</span>
+        <div>
+          <strong>How to Apply</strong><br/>
+          Email your application to rentals@birchwoodplace.com before <strong>August 20, 2025</strong>.
+          Include proof of income, a valid photo ID, and your $55 application fee payment confirmation.
+        </div>
+      </div>
+
+      <div class="toggle" style="margin-top: 20px;">
+        <div class="toggle-hdr" onclick="toggleBlock('required')">
+          <span class="toggle-arrow" id="arrow-required">&#9658;</span> Required Materials
+        </div>
+        <div class="toggle-body" id="required">
+          <div class="prop-row"><span class="prop-label">1.</span><span class="prop-value">Government-issued photo ID</span></div>
+          <div class="prop-row"><span class="prop-label">2.</span><span class="prop-value">Last 2 months of pay stubs or proof of income</span></div>
+          <div class="prop-row"><span class="prop-label">3.</span><span class="prop-value">Application fee payment confirmation ($55)</span></div>
+          <div class="prop-row"><span class="prop-label">4.</span><span class="prop-value">Completed rental application form</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 HomeNest Rentals. Static evaluation page. For research purposes only.</footer>
+
+  <script>
+    function switchTab(name, btn) {
+      document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.getElementById('tab-' + name).classList.add('active');
+      btn.classList.add('active');
+    }
+    function toggleBlock(id) {
+      document.getElementById(id).classList.toggle('open');
+      document.getElementById('arrow-' + id).classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

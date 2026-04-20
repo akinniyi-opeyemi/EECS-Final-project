@@ -1,0 +1,141 @@
+[
+  {
+    "task_id": "J01_classic",
+    "env_id": "job_site_classic",
+    "instruction": "Find the most recent job opening",
+    "evaluation": {
+      "type": "string_match",
+      "target": "most recent"
+    }
+  },
+  {
+    "task_id": "J01_modern",
+    "env_id": "job_site_modern",
+    "instruction": "Find the most recent job opening",
+    "evaluation": {
+      "type": "string_match",
+      "target": "most recent"
+    }
+  },
+  {
+    "task_id": "J01_notion",
+    "env_id": "job_site_notion",
+    "instruction": "Find the most recent job opening",
+    "evaluation": {
+      "type": "string_match",
+      "target": "recent"
+    }
+  },
+
+  {
+    "task_id": "J02_classic",
+    "env_id": "job_site_classic",
+    "instruction": "Find the application deadline for the most recent job",
+    "evaluation": {
+      "type": "regex",
+      "target": "May \\d{1,2}, 2026"
+    }
+  },
+  {
+    "task_id": "J02_modern",
+    "env_id": "job_site_modern",
+    "instruction": "Find the application deadline for the most recent job",
+    "evaluation": {
+      "type": "regex",
+      "target": "May \\d{1,2}, 2026"
+    }
+  },
+  {
+    "task_id": "J02_notion",
+    "env_id": "job_site_notion",
+    "instruction": "Find the application deadline for the most recent job",
+    "evaluation": {
+      "type": "regex",
+      "target": "May \\d{1,2}, 2026"
+    }
+  },
+
+  {
+    "task_id": "J03_classic",
+    "env_id": "job_site_classic",
+    "instruction": "Find how to apply for the job",
+    "evaluation": {
+      "type": "string_match",
+      "target": "@"
+    }
+  },
+  {
+    "task_id": "J03_modern",
+    "env_id": "job_site_modern",
+    "instruction": "Find how to apply for the job",
+    "evaluation": {
+      "type": "string_match",
+      "target": "@"
+    }
+  },
+  {
+    "task_id": "J03_notion",
+    "env_id": "job_site_notion",
+    "instruction": "Find how to apply for the job",
+    "evaluation": {
+      "type": "string_match",
+      "target": "apply"
+    }
+  },
+
+  {
+    "task_id": "J04_classic",
+    "env_id": "job_site_classic",
+    "instruction": "Find the required application materials",
+    "evaluation": {
+      "type": "string_match",
+      "target": "CV"
+    }
+  },
+  {
+    "task_id": "J04_modern",
+    "env_id": "job_site_modern",
+    "instruction": "Find the required application materials",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Resume"
+    }
+  },
+  {
+    "task_id": "J04_notion",
+    "env_id": "job_site_notion",
+    "instruction": "Find the required application materials",
+    "evaluation": {
+      "type": "string_match",
+      "target": "CV"
+    }
+  },
+
+  {
+    "task_id": "J05_classic",
+    "env_id": "job_site_classic",
+    "instruction": "Check whether the most recent job is still open",
+    "evaluation": {
+      "type": "string_match",
+      "target": "OPEN"
+    }
+  },
+  {
+    "task_id": "J05_modern",
+    "env_id": "job_site_modern",
+    "instruction": "Check whether the most recent job is still open",
+    "evaluation": {
+      "type": "string_match",
+      "target": "OPEN"
+    }
+  },
+  {
+    "task_id": "J05_notion",
+    "env_id": "job_site_notion",
+    "instruction": "Check whether the most recent job is still open",
+    "evaluation": {
+      "type": "string_match",
+      "target": "OPEN"
+    }
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "task_id": 13,
+  "task_type": "T4_accepting",
+  "persona_id": "merrow_lit_001",
+  "template": "notion",
+  "sites": [
+    "merrow_lit_001__notion"
+  ],
+  "start_url": "http://localhost:8000/merrow_lit_001__notion/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?",
+  "intent_template_id": 4,
+  "instantiation_dict": {
+    "name": "Yuki Abernathy"
+  },
+  "intent": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": null,
+      "fuzzy_match": [
+        "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
+  }
+}

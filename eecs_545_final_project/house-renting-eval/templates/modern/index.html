@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HomeNest Rentals - Find Your Home</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; }
+
+    nav {
+      background: #2563eb;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+    }
+    .nav-brand {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    .nav-links a:hover { color: #fff; }
+
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: #fff;
+      text-align: center;
+      padding: 56px 20px 48px;
+    }
+    .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
+    .hero p { font-size: 1rem; opacity: 0.88; }
+
+    .page-body { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.13); }
+    .card.unavailable { opacity: 0.55; }
+
+    .card-img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+    .card-name { font-size: 1.05rem; font-weight: 700; color: #1e293b; }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .badge.available { background: #dcfce7; color: #166534; }
+    .badge.unavailable { background: #fee2e2; color: #991b1b; }
+
+    .card-address { font-size: 0.83rem; color: #64748b; margin-bottom: 16px; }
+
+    .card-stats {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .stat {
+      background: #f1f5f9;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .card-rent { font-size: 1.15rem; font-weight: 800; color: #2563eb; }
+    .card-avail { font-size: 0.78rem; color: #94a3b8; }
+
+    .btn-view {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .btn-view:hover { background: #1d4ed8; }
+    .btn-view.disabled {
+      background: #cbd5e1;
+      color: #94a3b8;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+    }
+    .page-info { font-size: 0.88rem; color: #64748b; }
+    .page-btns { display: flex; gap: 10px; }
+    .page-btn {
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .page-btn:hover { background: #2563eb; color: #fff; border-color: #2563eb; }
+    .page-btn:disabled { opacity: 0.35; cursor: not-allowed; background: #fff; color: #1e293b; }
+
+    footer {
+      text-align: center;
+      margin-top: 56px;
+      padding: 24px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">&#127968; HomeNest</a>
+      <div class="nav-links">
+        <a href="index.html">Listings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Find Your Perfect Home</h1>
+    <p>Browse our curated rental listings across 12 major US cities</p>
+  </div>
+
+  <div class="page-body">
+    <p class="section-title">Current Listings</p>
+    <div class="grid" id="listing-grid"></div>
+
+    <div class="pagination">
+      <span class="page-info" id="page-info"></span>
+      <div class="page-btns">
+        <button class="page-btn" id="prev-btn" onclick="changePage(-1)">&#8592; Previous</button>
+        <button class="page-btn" id="next-btn" onclick="changePage(1)">Next &#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 HomeNest Rentals. Static evaluation site. For research purposes only.</footer>
+
+  <script>
+    const listings = [
+  {
+    "id": "01",
+    "name": "Maplewood Apartments",
+    "address": "412 Maplewood Drive, Austin, TX 78701",
+    "rent": "$1,450/month",
+    "beds": "2",
+    "baths": "1",
+    "available": "August 1, 2025",
+    "lease": "12 months",
+    "parking": "1 spot included",
+    "pets": "No pets allowed",
+    "fee": "$50",
+    "deadline": "July 15, 2025",
+    "email": "rentals@maplewoodapts.com",
+    "phone": "+1 (512) 555-0187",
+    "status": "available"
+  },
+  {
+    "id": "02",
+    "name": "Sunset Ridge Home",
+    "address": "78 Sunset Ridge Road, Denver, CO 80203",
+    "rent": "$2,200/month",
+    "beds": "3",
+    "baths": "2",
+    "available": "July 15, 2025",
+    "lease": "12 months",
+    "parking": "2-car garage",
+    "pets": "Cats allowed, no dogs",
+    "fee": "$75",
+    "deadline": "July 1, 2025",
+    "email": "info@sunsetridgehomes.com",
+    "phone": "+1 (720) 555-0234",
+    "status": "available"
+  },
+  {
+    "id": "03",
+    "name": "Lakeside Condo",
+    "address": "1005 Lakeshore Blvd, Chicago, IL 60611",
+    "rent": "$1,800/month",
+    "beds": "1",
+    "baths": "1",
+    "available": "N/A",
+    "lease": "12 months",
+    "parking": "Street parking only",
+    "pets": "No pets allowed",
+    "fee": "$60",
+    "deadline": "N/A",
+    "email": "leasing@lakesidecondo.com",
+    "phone": "+1 (312) 555-0399",
+    "status": "unavailable"
+  },
+  {
+    "id": "04",
+    "name": "The Elmwood",
+    "address": "22 Elmwood Street, Boston, MA 02115",
+    "rent": "$2,600/month",
+    "beds": "2",
+    "baths": "2",
+    "available": "August 15, 2025",
+    "lease": "12 months",
+    "parking": "1 spot included",
+    "pets": "Small pets allowed (under 25 lbs)",
+    "fee": "$80",
+    "deadline": "August 1, 2025",
+    "email": "rentals@theelmwood.com",
+    "phone": "+1 (617) 555-0451",
+    "status": "available"
+  },
+  {
+    "id": "05",
+    "name": "Riverfront Studio",
+    "address": "310 River Ave, Portland, OR 97201",
+    "rent": "$1,100/month",
+    "beds": "Studio",
+    "baths": "1",
+    "available": "July 1, 2025",
+    "lease": "6 months minimum",
+    "parking": "Bicycle storage available",
+    "pets": "No pets allowed",
+    "fee": "$40",
+    "deadline": "June 20, 2025",
+    "email": "hello@riverfrontstudio.com",
+    "phone": "+1 (503) 555-0512",
+    "status": "available"
+  },
+  {
+    "id": "06",
+    "name": "Oak Hill House",
+    "address": "54 Oak Hill Lane, Nashville, TN 37205",
+    "rent": "$1,750/month",
+    "beds": "3",
+    "baths": "1",
+    "available": "N/A",
+    "lease": "12 months",
+    "parking": "Driveway, 2 cars",
+    "pets": "Dogs and cats allowed",
+    "fee": "$55",
+    "deadline": "N/A",
+    "email": "contact@oakhillnashville.com",
+    "phone": "+1 (615) 555-0628",
+    "status": "unavailable"
+  },
+  {
+    "id": "07",
+    "name": "Parkview Terrace",
+    "address": "800 Parkview Ave, Seattle, WA 98101",
+    "rent": "$2,400/month",
+    "beds": "2",
+    "baths": "2",
+    "available": "September 15, 2025",
+    "lease": "12 months",
+    "parking": "1 covered spot included",
+    "pets": "Cats only",
+    "fee": "$70",
+    "deadline": "September 1, 2025",
+    "email": "leasing@parkviewterrace.com",
+    "phone": "+1 (206) 555-0745",
+    "status": "available"
+  },
+  {
+    "id": "08",
+    "name": "Cedar Grove Flat",
+    "address": "19 Cedar Grove Ct, Atlanta, GA 30301",
+    "rent": "$1,350/month",
+    "beds": "1",
+    "baths": "1",
+    "available": "July 15, 2025",
+    "lease": "12 months",
+    "parking": "1 spot included",
+    "pets": "No pets allowed",
+    "fee": "$45",
+    "deadline": "July 5, 2025",
+    "email": "info@cedargroveflats.com",
+    "phone": "+1 (404) 555-0863",
+    "status": "available"
+  },
+  {
+    "id": "09",
+    "name": "Hillcrest Manor",
+    "address": "500 Hillcrest Blvd, San Diego, CA 92101",
+    "rent": "$3,100/month",
+    "beds": "4",
+    "baths": "3",
+    "available": "N/A",
+    "lease": "12 months",
+    "parking": "2-car garage + guest parking",
+    "pets": "Dogs and cats allowed",
+    "fee": "$100",
+    "deadline": "N/A",
+    "email": "rentals@hillcrestmanor.com",
+    "phone": "+1 (619) 555-0971",
+    "status": "unavailable"
+  },
+  {
+    "id": "10",
+    "name": "Pinewood Cottage",
+    "address": "33 Pinewood Trail, Raleigh, NC 27601",
+    "rent": "$1,550/month",
+    "beds": "2",
+    "baths": "1",
+    "available": "August 1, 2025",
+    "lease": "12 months",
+    "parking": "1 spot included",
+    "pets": "Small pets allowed (under 20 lbs)",
+    "fee": "$50",
+    "deadline": "July 18, 2025",
+    "email": "hello@pinewoodcottage.com",
+    "phone": "+1 (984) 555-0134",
+    "status": "available"
+  },
+  {
+    "id": "11",
+    "name": "Downtown Loft",
+    "address": "201 Brickell Ave, Miami, FL 33131",
+    "rent": "$2,050/month",
+    "beds": "1",
+    "baths": "1",
+    "available": "N/A",
+    "lease": "12 months",
+    "parking": "Valet parking available ($150/month)",
+    "pets": "No pets allowed",
+    "fee": "$65",
+    "deadline": "N/A",
+    "email": "leasing@downtownloftmiami.com",
+    "phone": "+1 (305) 555-0287",
+    "status": "unavailable"
+  },
+  {
+    "id": "12",
+    "name": "Birchwood Place",
+    "address": "88 Birchwood Circle, Minneapolis, MN 55401",
+    "rent": "$1,650/month",
+    "beds": "2",
+    "baths": "2",
+    "available": "September 1, 2025",
+    "lease": "12 months",
+    "parking": "1 heated indoor spot included",
+    "pets": "Cats allowed, no dogs",
+    "fee": "$55",
+    "deadline": "August 20, 2025",
+    "email": "rentals@birchwoodplace.com",
+    "phone": "+1 (612) 555-0356",
+    "status": "available"
+  }
+];
+    const PER_PAGE = 4;
+    let currentPage = 0;
+    const totalPages = Math.ceil(listings.length / PER_PAGE);
+
+    function renderPage() {
+      const grid = document.getElementById('listing-grid');
+      const start = currentPage * PER_PAGE;
+      const slice = listings.slice(start, start + PER_PAGE);
+      grid.innerHTML = slice.map(function(h) {
+        var isAvail = h.status === 'available';
+        var badgeClass = isAvail ? 'available' : 'unavailable';
+        var badgeText  = isAvail ? '&#10003; Available' : '&#10007; Not Available';
+        var btnClass   = isAvail ? '' : 'disabled';
+        var availText  = isAvail ? ('From ' + h.available) : 'Not Available';
+        return '<div class="card ' + (isAvail ? '' : 'unavailable') + '">'
+          + '<img class="card-img" src="../../assets/house_' + h.id + '.jpg" alt="' + h.name + '" />'
+          + '<div class="card-body">'
+          + '<div class="card-top">'
+          + '<span class="card-name">' + h.name + '</span>'
+          + '<span class="badge ' + badgeClass + '">' + badgeText + '</span>'
+          + '</div>'
+          + '<p class="card-address">&#128205; ' + h.address + '</p>'
+          + '<div class="card-stats">'
+          + '<span class="stat">&#127968; ' + h.beds + ' bed</span>'
+          + '<span class="stat">&#128703; ' + h.baths + ' bath</span>'
+          + '</div>'
+          + '<div class="card-footer">'
+          + '<div><div class="card-rent">' + h.rent + '</div>'
+          + '<div class="card-avail">' + availText + '</div></div>'
+          + '<a class="btn-view ' + btnClass + '" href="house_' + h.id + '.html">View Details</a>'
+          + '</div>'
+          + '</div></div>';
+      }).join('');
+
+      document.getElementById('page-info').textContent =
+        'Showing ' + (start+1) + '-' + Math.min(start+PER_PAGE, listings.length) + ' of ' + listings.length + ' listings';
+      document.getElementById('prev-btn').disabled = currentPage === 0;
+      document.getElementById('next-btn').disabled = currentPage === totalPages - 1;
+    }
+
+    function changePage(dir) {
+      currentPage += dir;
+      renderPage();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    renderPage();
+  </script>
+</body>
+</html>

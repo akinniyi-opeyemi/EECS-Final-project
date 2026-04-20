@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Registration Sandbox 2000s</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <table class="shell" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <div class="topbar">
+              <div>
+                <div class="site-name">Atlas University Student Portal</div>
+                <h1>Course Registration Sandbox</h1>
+                <div class="tagline">Built for VLM evaluation.</div>
+              </div>
+              <div class="status-box">
+                <div><strong>Term:</strong> Spring 2026</div>
+                <div><strong>User:</strong> demo_student</div>
+                <div><strong>Mode:</strong> Add/Drop</div>
+              </div>
+            </div>
+
+            <div class="tabs">
+              <span class="tab active">Registration</span>
+              <span class="tab">Schedule</span>
+              <span class="tab">Billing</span>
+              <span class="tab">Help</span>
+            </div>
+
+            <table class="layout" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="sidebar">
+                  <div class="panel">
+                    <div class="panel-title">Quick Filters</div>
+                    <div class="panel-body">
+                      <label class="field">
+                        <span>Department</span>
+                        <select id="department-filter"></select>
+                      </label>
+
+                      <label class="field">
+                        <span>Time</span>
+                        <select id="time-filter">
+                          <option value="all">All</option>
+                          <option value="morning">Morning</option>
+                          <option value="midday">Midday</option>
+                          <option value="afternoon">Afternoon</option>
+                          <option value="evening">Evening</option>
+                        </select>
+                      </label>
+
+                      <label class="field">
+                        <span>Keyword</span>
+                        <input
+                          id="search-filter"
+                          type="text"
+                          placeholder="systems, AI, graphics"
+                        />
+                      </label>
+
+                      <button id="reset-filters" class="portal-button" type="button">
+                        Clear Filters
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="panel">
+                    <div class="panel-title">Summary</div>
+                    <div class="panel-body stats">
+                      <div>Open Courses: <strong id="open-course-count">0</strong></div>
+                      <div>Selected Credits: <strong id="selected-credit-count">0</strong></div>
+                      <div>Warnings: <strong id="warning-count">0</strong></div>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="main">
+                  <div class="panel">
+                    <div class="panel-title">
+                      Available Courses
+                      <span id="visible-course-count" class="panel-note">0 records</span>
+                    </div>
+                    <div class="panel-body">
+                      <table class="data-table" cellspacing="0" cellpadding="0">
+                        <thead>
+                          <tr>
+                            <th>Course</th>
+                            <th>Dept</th>
+                            <th>Time</th>
+                            <th>Instructor</th>
+                            <th>Seats</th>
+                            <th>Cr</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="course-table-body"></tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="panel">
+                    <div class="panel-title">Weekly Schedule</div>
+                    <div class="panel-body">
+                      <table class="data-table schedule-table" cellspacing="0" cellpadding="0">
+                        <thead>
+                          <tr>
+                            <th>Day</th>
+                            <th>Selected Courses</th>
+                          </tr>
+                        </thead>
+                        <tbody id="schedule-list"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="sidebar">
+                  <div class="panel">
+                    <div class="panel-title">
+                      Add / Drop Cart
+                      <span id="cart-count" class="panel-note">0 selected</span>
+                    </div>
+                    <div id="cart-list" class="panel-body"></div>
+                  </div>
+
+                  <div class="panel">
+                    <div class="panel-title">Warnings</div>
+                    <div id="warning-list" class="panel-body"></div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

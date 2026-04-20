@@ -1,0 +1,42 @@
+{
+  "task_id": 6,
+  "task_type": "T2_office_hours",
+  "persona_id": "halvern_econ_001",
+  "template": "raw_html_1998",
+  "sites": [
+    "halvern_econ_001__raw_html_1998"
+  ],
+  "start_url": "http://localhost:8000/halvern_econ_001__raw_html_1998/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "When does {name} hold office hours this semester?",
+  "intent_template_id": 2,
+  "instantiation_dict": {
+    "name": "Dr. Gerhardt Vössing"
+  },
+  "intent": "When does Gerhardt hold office hours this semester?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "Monday"
+      ],
+      "fuzzy_match": [
+        "Mondays and Wednesdays, 3:30-5:00 PM"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "Mondays and Wednesdays, 3:30-5:00 PM"
+  }
+}

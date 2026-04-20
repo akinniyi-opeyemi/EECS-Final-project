@@ -1,0 +1,40 @@
+{
+  "task_id": 15,
+  "task_type": "T1_recent_pub",
+  "persona_id": "thornfield_anth_001",
+  "template": "hugo_papermod",
+  "sites": [
+    "thornfield_anth_001__hugo_papermod"
+  ],
+  "start_url": "http://localhost:8000/thornfield_anth_001__hugo_papermod/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Find the title of the most recent publication of {name}.",
+  "intent_template_id": 1,
+  "instantiation_dict": {
+    "name": "Malcolm Reyes-Whittaker"
+  },
+  "intent": "Find the title of the most recent publication of Malcolm Reyes-Whittaker.",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town"
+      ],
+      "fuzzy_match": null
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "env_id": "job_site_classic",
+    "start_url": "http://localhost:8000/job_site_1_classic.html"
+  },
+  {
+    "env_id": "job_site_modern",
+    "start_url": "http://localhost:8000/job_site_2_modern.html"
+  },
+  {
+    "env_id": "job_site_notion",
+    "start_url": "http://localhost:8000/job_site_3_notion.html"
+  }
+]

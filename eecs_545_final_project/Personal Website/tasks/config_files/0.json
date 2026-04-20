@@ -1,0 +1,40 @@
+{
+  "task_id": 0,
+  "task_type": "T1_recent_pub",
+  "persona_id": "halvern_cs_001",
+  "template": "jekyll_alfolio",
+  "sites": [
+    "halvern_cs_001__jekyll_alfolio"
+  ],
+  "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Find the title of the most recent publication of {name}.",
+  "intent_template_id": 1,
+  "instantiation_dict": {
+    "name": "Nivedita Okonkwo"
+  },
+  "intent": "Find the title of the most recent publication of Nivedita Okonkwo.",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "Certified Robustness via Smoothed Representations under Covariate Shift"
+      ],
+      "fuzzy_match": null
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "Certified Robustness via Smoothed Representations under Covariate Shift"
+  }
+}

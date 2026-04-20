@@ -1,0 +1,32 @@
+{
+  "as_of_date": "2025-10-15",
+  "base_url": "http://localhost:8000",
+  "task_count": 20,
+  "task_types": [
+    {
+      "id": 1,
+      "key": "T1_recent_pub",
+      "intent_template": "Find the title of the most recent publication of {name}."
+    },
+    {
+      "id": 2,
+      "key": "T2_office_hours",
+      "intent_template": "When does {name} hold office hours this semester?"
+    },
+    {
+      "id": 3,
+      "key": "T3_current_course",
+      "intent_template": "What course is {name} teaching this semester, and where does it take place?"
+    },
+    {
+      "id": 4,
+      "key": "T4_accepting",
+      "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?"
+    },
+    {
+      "id": 5,
+      "key": "T5_twitter",
+      "intent_template": "Find {name}'s Twitter account."
+    }
+  ]
+}

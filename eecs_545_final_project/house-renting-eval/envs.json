@@ -1,0 +1,362 @@
+[
+  {
+    "env_id": "classic_index",
+    "template": "classic",
+    "description": "Classic template landing page with paginated grid of listings",
+    "start_url": "http://localhost:8000/templates/classic/index.html",
+    "interaction_type": "none",
+    "notes": "All listings visible as flat cards, 4 per page, Previous/Next pagination"
+  },
+  {
+    "env_id": "classic_house_01",
+    "template": "classic",
+    "description": "Classic template detail page for Maplewood Apartments",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_02",
+    "template": "classic",
+    "description": "Classic template detail page for Sunset Ridge Home",
+    "start_url": "http://localhost:8000/templates/classic/house_02.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_03",
+    "template": "classic",
+    "description": "Classic template detail page for Lakeside Condo",
+    "start_url": "http://localhost:8000/templates/classic/house_03.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_04",
+    "template": "classic",
+    "description": "Classic template detail page for The Elmwood",
+    "start_url": "http://localhost:8000/templates/classic/house_04.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_05",
+    "template": "classic",
+    "description": "Classic template detail page for Riverfront Studio",
+    "start_url": "http://localhost:8000/templates/classic/house_05.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_06",
+    "template": "classic",
+    "description": "Classic template detail page for Oak Hill House",
+    "start_url": "http://localhost:8000/templates/classic/house_06.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_07",
+    "template": "classic",
+    "description": "Classic template detail page for Parkview Terrace",
+    "start_url": "http://localhost:8000/templates/classic/house_07.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_08",
+    "template": "classic",
+    "description": "Classic template detail page for Cedar Grove Flat",
+    "start_url": "http://localhost:8000/templates/classic/house_08.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_09",
+    "template": "classic",
+    "description": "Classic template detail page for Hillcrest Manor",
+    "start_url": "http://localhost:8000/templates/classic/house_09.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_10",
+    "template": "classic",
+    "description": "Classic template detail page for Pinewood Cottage",
+    "start_url": "http://localhost:8000/templates/classic/house_10.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_11",
+    "template": "classic",
+    "description": "Classic template detail page for Downtown Loft",
+    "start_url": "http://localhost:8000/templates/classic/house_11.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_house_12",
+    "template": "classic",
+    "description": "Classic template detail page for Birchwood Place",
+    "start_url": "http://localhost:8000/templates/classic/house_12.html",
+    "interaction_type": "none",
+    "notes": "All fields visible immediately in plain tables. No clicks required."
+  },
+  {
+    "env_id": "classic_about",
+    "template": "classic",
+    "description": "Classic template About page",
+    "start_url": "http://localhost:8000/templates/classic/about.html",
+    "interaction_type": "none",
+    "notes": "Company history, locations, and reviews. All content visible."
+  },
+  {
+    "env_id": "classic_contact",
+    "template": "classic",
+    "description": "Classic template Contact page",
+    "start_url": "http://localhost:8000/templates/classic/contact.html",
+    "interaction_type": "form_submission",
+    "notes": "Contact form with mailto submission. Company details visible at bottom."
+  },
+  {
+    "env_id": "modern_index",
+    "template": "modern",
+    "description": "Modern template landing page with card-based grid of listings",
+    "start_url": "http://localhost:8000/templates/modern/index.html",
+    "interaction_type": "none",
+    "notes": "Card-based layout with hero banner. 4 per page, Previous/Next pagination."
+  },
+  {
+    "env_id": "modern_house_01",
+    "template": "modern",
+    "description": "Modern template detail page for Maplewood Apartments",
+    "start_url": "http://localhost:8000/templates/modern/house_01.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_02",
+    "template": "modern",
+    "description": "Modern template detail page for Sunset Ridge Home",
+    "start_url": "http://localhost:8000/templates/modern/house_02.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_03",
+    "template": "modern",
+    "description": "Modern template detail page for Lakeside Condo",
+    "start_url": "http://localhost:8000/templates/modern/house_03.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_04",
+    "template": "modern",
+    "description": "Modern template detail page for The Elmwood",
+    "start_url": "http://localhost:8000/templates/modern/house_04.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_05",
+    "template": "modern",
+    "description": "Modern template detail page for Riverfront Studio",
+    "start_url": "http://localhost:8000/templates/modern/house_05.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_06",
+    "template": "modern",
+    "description": "Modern template detail page for Oak Hill House",
+    "start_url": "http://localhost:8000/templates/modern/house_06.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_07",
+    "template": "modern",
+    "description": "Modern template detail page for Parkview Terrace",
+    "start_url": "http://localhost:8000/templates/modern/house_07.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_08",
+    "template": "modern",
+    "description": "Modern template detail page for Cedar Grove Flat",
+    "start_url": "http://localhost:8000/templates/modern/house_08.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_09",
+    "template": "modern",
+    "description": "Modern template detail page for Hillcrest Manor",
+    "start_url": "http://localhost:8000/templates/modern/house_09.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_10",
+    "template": "modern",
+    "description": "Modern template detail page for Pinewood Cottage",
+    "start_url": "http://localhost:8000/templates/modern/house_10.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_11",
+    "template": "modern",
+    "description": "Modern template detail page for Downtown Loft",
+    "start_url": "http://localhost:8000/templates/modern/house_11.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_house_12",
+    "template": "modern",
+    "description": "Modern template detail page for Birchwood Place",
+    "start_url": "http://localhost:8000/templates/modern/house_12.html",
+    "interaction_type": "click_to_reveal",
+    "notes": "Rent, beds, baths, available date visible immediately. Pet policy, parking, fees and contact hidden behind expandable + sections. Agent must click to reveal."
+  },
+  {
+    "env_id": "modern_about",
+    "template": "modern",
+    "description": "Modern template About page",
+    "start_url": "http://localhost:8000/templates/modern/about.html",
+    "interaction_type": "none",
+    "notes": "Card-based layout. Company history, locations grid, and reviews all visible."
+  },
+  {
+    "env_id": "modern_contact",
+    "template": "modern",
+    "description": "Modern template Contact page",
+    "start_url": "http://localhost:8000/templates/modern/contact.html",
+    "interaction_type": "form_submission",
+    "notes": "Styled contact form with mailto submission. Company info in info boxes below."
+  },
+  {
+    "env_id": "hidden_index",
+    "template": "hidden",
+    "description": "Hidden template landing page with sidebar filters and vertical list",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "interaction_type": "sidebar_filter",
+    "notes": "Left sidebar with city, bedrooms, availability, and max rent filters. Listings shown as horizontal rows. Agent must use filters to narrow results. No pagination."
+  },
+  {
+    "env_id": "hidden_house_01",
+    "template": "hidden",
+    "description": "Hidden template detail page for Maplewood Apartments",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_02",
+    "template": "hidden",
+    "description": "Hidden template detail page for Sunset Ridge Home",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_03",
+    "template": "hidden",
+    "description": "Hidden template detail page for Lakeside Condo",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_04",
+    "template": "hidden",
+    "description": "Hidden template detail page for The Elmwood",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_05",
+    "template": "hidden",
+    "description": "Hidden template detail page for Riverfront Studio",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_06",
+    "template": "hidden",
+    "description": "Hidden template detail page for Oak Hill House",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_07",
+    "template": "hidden",
+    "description": "Hidden template detail page for Parkview Terrace",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_08",
+    "template": "hidden",
+    "description": "Hidden template detail page for Cedar Grove Flat",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_09",
+    "template": "hidden",
+    "description": "Hidden template detail page for Hillcrest Manor",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_10",
+    "template": "hidden",
+    "description": "Hidden template detail page for Pinewood Cottage",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_11",
+    "template": "hidden",
+    "description": "Hidden template detail page for Downtown Loft",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_house_12",
+    "template": "hidden",
+    "description": "Hidden template detail page for Birchwood Place",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "interaction_type": "tabs_and_toggles",
+    "notes": "Content split across 4 tabs: Overview, Details, Contact, Apply. Pet policy and fees further hidden inside collapsible toggle sections within the Details tab. Agent must navigate tabs and expand toggles."
+  },
+  {
+    "env_id": "hidden_about",
+    "template": "hidden",
+    "description": "Hidden template About page",
+    "start_url": "http://localhost:8000/templates/hidden/about.html",
+    "interaction_type": "none",
+    "notes": "Notion-inspired minimal layout. All content visible in sections."
+  },
+  {
+    "env_id": "hidden_contact",
+    "template": "hidden",
+    "description": "Hidden template Contact page",
+    "start_url": "http://localhost:8000/templates/hidden/contact.html",
+    "interaction_type": "form_submission",
+    "notes": "Minimal Notion-style contact form with mailto submission. Company details in property rows below a divider."
+  }
+]

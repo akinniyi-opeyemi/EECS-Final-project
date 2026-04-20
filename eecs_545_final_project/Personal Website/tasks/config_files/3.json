@@ -1,0 +1,40 @@
+{
+  "task_id": 3,
+  "task_type": "T4_accepting",
+  "persona_id": "halvern_cs_001",
+  "template": "jekyll_alfolio",
+  "sites": [
+    "halvern_cs_001__jekyll_alfolio"
+  ],
+  "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Is {name} taking prospective graduate students in the upcoming academic year?",
+  "intent_template_id": 4,
+  "instantiation_dict": {
+    "name": "Nivedita Okonkwo"
+  },
+  "intent": "Is Nivedita Okonkwo taking prospective graduate students in the upcoming academic year?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": null,
+      "fuzzy_match": [
+        "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
+  }
+}

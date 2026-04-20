@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Registration Sandbox - 90s</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="masthead">
+        <div class="masthead-left">
+          <div class="sysline">ATLAS UNIVERSITY REGISTRAR ACCESS NODE v4.6</div>
+          <h1>COURSE REGISTRATION SANDBOX</h1>
+          <div class="subtitle">Built for VLM evaluation.</div>
+        </div>
+        <div class="login-box">
+          <div>ID: DEMO_STUDENT</div>
+          <div>TERM: SP26</div>
+          <div>STAT: ACTIVE</div>
+        </div>
+      </div>
+
+      <div class="notice-strip">
+        Use add/drop controls carefully. Warnings may appear in separate status panels.
+      </div>
+
+      <table class="outer-grid" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="left-col">
+            <div class="box">
+              <div class="box-title">FILT / SRCH</div>
+              <div class="box-body">
+                <label class="field">
+                  <span>DEPT</span>
+                  <select id="department-filter"></select>
+                </label>
+                <label class="field">
+                  <span>TSEG</span>
+                  <select id="time-filter">
+                    <option value="all">ALL</option>
+                    <option value="morning">AM</option>
+                    <option value="midday">MID</option>
+                    <option value="afternoon">PM</option>
+                    <option value="evening">EVE</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>TEXT</span>
+                  <input id="search-filter" type="text" />
+                </label>
+                <button id="reset-filters" class="flat-button" type="button">
+                  CLR
+                </button>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="box-title">SYS COUNTS</div>
+              <div class="box-body compact-list">
+                <div>OPEN SEC: <strong id="open-course-count">0</strong></div>
+                <div>CR-HRS: <strong id="selected-credit-count">0</strong></div>
+                <div>ALERTS: <strong id="warning-count">0</strong></div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="box-title">ROW HELP</div>
+              <div class="box-body notes">
+                <div>1. Click a row to load its detail console.</div>
+                <div>2. REG OPS contains the add/drop action.</div>
+                <div>3. ALERTS shows warnings for the loaded course.</div>
+                <div>4. WEEK VIEW shows current registered schedule.</div>
+              </div>
+            </div>
+          </td>
+
+          <td class="main-col">
+            <div class="box">
+              <div class="box-title">
+                COURSE LISTING
+                <span id="visible-course-count" class="count-chip">0 REC</span>
+              </div>
+              <div class="box-body no-pad">
+                <table class="course-table" cellspacing="0" cellpadding="0">
+                  <thead>
+                    <tr>
+                      <th>CRN / TITLE</th>
+                      <th>DP</th>
+                      <th>MTG</th>
+                      <th>INST</th>
+                      <th>SEAT</th>
+                      <th>CR</th>
+                      <th>VIEW</th>
+                    </tr>
+                  </thead>
+                  <tbody id="course-table-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </td>
+
+          <td class="right-col">
+            <div class="box">
+              <div class="box-title">
+                DETAIL CONSOLE
+                <span id="cart-count" class="count-chip">0 SEL</span>
+              </div>
+              <div class="box-body detail-head">
+                <div id="detail-course-name" class="detail-course-name">NO COURSE LOADED</div>
+                <div id="detail-course-meta" class="subtle">Select a row from the listing.</div>
+              </div>
+              <div class="detail-tabs">
+                <button class="detail-tab active" data-mode="ops" type="button">REG OPS</button>
+                <button class="detail-tab" data-mode="alerts" type="button">ALERTS</button>
+                <button class="detail-tab" data-mode="week" type="button">WEEK VIEW</button>
+              </div>
+              <div id="detail-panel" class="box-body queue-body"></div>
+            </div>
+
+            <div class="box">
+              <div class="box-title">USER NOTES</div>
+              <div class="box-body notes">
+                <div>1. ADD actions apply instantly.</div>
+                <div>2. DROP removes item from queue.</div>
+                <div>3. Conflicts are not blocked automatically.</div>
+                <div>4. Low seat warnings are advisory only.</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

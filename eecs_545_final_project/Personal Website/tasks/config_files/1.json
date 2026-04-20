@@ -1,0 +1,42 @@
+{
+  "task_id": 1,
+  "task_type": "T2_office_hours",
+  "persona_id": "halvern_cs_001",
+  "template": "jekyll_alfolio",
+  "sites": [
+    "halvern_cs_001__jekyll_alfolio"
+  ],
+  "start_url": "http://localhost:8000/halvern_cs_001__jekyll_alfolio/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "When does {name} hold office hours this semester?",
+  "intent_template_id": 2,
+  "instantiation_dict": {
+    "name": "Nivedita Okonkwo"
+  },
+  "intent": "When does Niv hold office hours this semester?",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": [
+        "Tuesday"
+      ],
+      "fuzzy_match": [
+        "Tuesdays 2:00–4:00 PM, or by appointment"
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "Tuesdays 2:00–4:00 PM, or by appointment"
+  }
+}

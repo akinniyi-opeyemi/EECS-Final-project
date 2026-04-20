@@ -1,0 +1,3170 @@
+[
+  {
+    "task_id": "C_01_T01",
+    "template": "classic",
+    "env_id": "classic_house_01",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "instruction": "Find the monthly rent for Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,450/month"
+    }
+  },
+  {
+    "task_id": "C_01_T02",
+    "template": "classic",
+    "env_id": "classic_house_01",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "instruction": "Find the number of bedrooms in Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "C_01_T03",
+    "template": "classic",
+    "env_id": "classic_house_01",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "instruction": "Find the application deadline for Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 15, 2025"
+    }
+  },
+  {
+    "task_id": "C_01_T04",
+    "template": "classic",
+    "env_id": "classic_house_01",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "instruction": "Find the contact email address for Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@maplewoodapts.com"
+    }
+  },
+  {
+    "task_id": "C_01_T05",
+    "template": "classic",
+    "env_id": "classic_house_01",
+    "start_url": "http://localhost:8000/templates/classic/house_01.html",
+    "instruction": "Check whether Maplewood Apartments is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_01_T01",
+    "template": "modern",
+    "env_id": "modern_house_01",
+    "start_url": "http://localhost:8000/templates/modern/house_01.html",
+    "instruction": "Find the monthly rent for Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,450/month"
+    }
+  },
+  {
+    "task_id": "M_01_T02",
+    "template": "modern",
+    "env_id": "modern_house_01",
+    "start_url": "http://localhost:8000/templates/modern/house_01.html",
+    "instruction": "Find the number of bedrooms in Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "M_01_T03",
+    "template": "modern",
+    "env_id": "modern_house_01",
+    "start_url": "http://localhost:8000/templates/modern/house_01.html",
+    "instruction": "Find the application deadline for Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 15, 2025"
+    }
+  },
+  {
+    "task_id": "M_01_T04",
+    "template": "modern",
+    "env_id": "modern_house_01",
+    "start_url": "http://localhost:8000/templates/modern/house_01.html",
+    "instruction": "Find the contact email address for Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@maplewoodapts.com"
+    }
+  },
+  {
+    "task_id": "M_01_T05",
+    "template": "modern",
+    "env_id": "modern_house_01",
+    "start_url": "http://localhost:8000/templates/modern/house_01.html",
+    "instruction": "Check whether Maplewood Apartments is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_01_T06",
+    "template": "modern",
+    "env_id": "modern_house_01",
+    "start_url": "http://localhost:8000/templates/modern/house_01.html",
+    "instruction": "Find the pet policy for Maplewood Apartments. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "M_01_T07",
+    "template": "modern",
+    "env_id": "modern_house_01",
+    "start_url": "http://localhost:8000/templates/modern/house_01.html",
+    "instruction": "Find the parking details for Maplewood Apartments. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 spot included"
+    }
+  },
+  {
+    "task_id": "H_01_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Find the monthly rent for Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,450/month"
+    }
+  },
+  {
+    "task_id": "H_01_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Find the number of bedrooms in Maplewood Apartments.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "H_01_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Find the application deadline for Maplewood Apartments. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 15, 2025"
+    }
+  },
+  {
+    "task_id": "H_01_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Find the contact email address for Maplewood Apartments. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@maplewoodapts.com"
+    }
+  },
+  {
+    "task_id": "H_01_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Check whether Maplewood Apartments is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "H_01_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Find the pet policy for Maplewood Apartments. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "H_01_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Find the parking details for Maplewood Apartments. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 spot included"
+    }
+  },
+  {
+    "task_id": "H_01_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Austin and identify Maplewood Apartments.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Maplewood Apartments"
+    }
+  },
+  {
+    "task_id": "H_01_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Find the lease duration for Maplewood Apartments. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_01_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_01",
+    "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+    "instruction": "Find the application fee for Maplewood Apartments. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$50"
+    }
+  },
+  {
+    "task_id": "C_02_T01",
+    "template": "classic",
+    "env_id": "classic_house_02",
+    "start_url": "http://localhost:8000/templates/classic/house_02.html",
+    "instruction": "Find the monthly rent for Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,200/month"
+    }
+  },
+  {
+    "task_id": "C_02_T02",
+    "template": "classic",
+    "env_id": "classic_house_02",
+    "start_url": "http://localhost:8000/templates/classic/house_02.html",
+    "instruction": "Find the number of bedrooms in Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "3"
+    }
+  },
+  {
+    "task_id": "C_02_T03",
+    "template": "classic",
+    "env_id": "classic_house_02",
+    "start_url": "http://localhost:8000/templates/classic/house_02.html",
+    "instruction": "Find the application deadline for Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 1, 2025"
+    }
+  },
+  {
+    "task_id": "C_02_T04",
+    "template": "classic",
+    "env_id": "classic_house_02",
+    "start_url": "http://localhost:8000/templates/classic/house_02.html",
+    "instruction": "Find the contact email address for Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "info@sunsetridgehomes.com"
+    }
+  },
+  {
+    "task_id": "C_02_T05",
+    "template": "classic",
+    "env_id": "classic_house_02",
+    "start_url": "http://localhost:8000/templates/classic/house_02.html",
+    "instruction": "Check whether Sunset Ridge Home is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_02_T01",
+    "template": "modern",
+    "env_id": "modern_house_02",
+    "start_url": "http://localhost:8000/templates/modern/house_02.html",
+    "instruction": "Find the monthly rent for Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,200/month"
+    }
+  },
+  {
+    "task_id": "M_02_T02",
+    "template": "modern",
+    "env_id": "modern_house_02",
+    "start_url": "http://localhost:8000/templates/modern/house_02.html",
+    "instruction": "Find the number of bedrooms in Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "3"
+    }
+  },
+  {
+    "task_id": "M_02_T03",
+    "template": "modern",
+    "env_id": "modern_house_02",
+    "start_url": "http://localhost:8000/templates/modern/house_02.html",
+    "instruction": "Find the application deadline for Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 1, 2025"
+    }
+  },
+  {
+    "task_id": "M_02_T04",
+    "template": "modern",
+    "env_id": "modern_house_02",
+    "start_url": "http://localhost:8000/templates/modern/house_02.html",
+    "instruction": "Find the contact email address for Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "info@sunsetridgehomes.com"
+    }
+  },
+  {
+    "task_id": "M_02_T05",
+    "template": "modern",
+    "env_id": "modern_house_02",
+    "start_url": "http://localhost:8000/templates/modern/house_02.html",
+    "instruction": "Check whether Sunset Ridge Home is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_02_T06",
+    "template": "modern",
+    "env_id": "modern_house_02",
+    "start_url": "http://localhost:8000/templates/modern/house_02.html",
+    "instruction": "Find the pet policy for Sunset Ridge Home. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Cats allowed, no dogs"
+    }
+  },
+  {
+    "task_id": "M_02_T07",
+    "template": "modern",
+    "env_id": "modern_house_02",
+    "start_url": "http://localhost:8000/templates/modern/house_02.html",
+    "instruction": "Find the parking details for Sunset Ridge Home. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2-car garage"
+    }
+  },
+  {
+    "task_id": "H_02_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Find the monthly rent for Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,200/month"
+    }
+  },
+  {
+    "task_id": "H_02_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Find the number of bedrooms in Sunset Ridge Home.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "3"
+    }
+  },
+  {
+    "task_id": "H_02_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Find the application deadline for Sunset Ridge Home. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 1, 2025"
+    }
+  },
+  {
+    "task_id": "H_02_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Find the contact email address for Sunset Ridge Home. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "info@sunsetridgehomes.com"
+    }
+  },
+  {
+    "task_id": "H_02_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Check whether Sunset Ridge Home is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "H_02_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Find the pet policy for Sunset Ridge Home. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Cats allowed, no dogs"
+    }
+  },
+  {
+    "task_id": "H_02_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Find the parking details for Sunset Ridge Home. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2-car garage"
+    }
+  },
+  {
+    "task_id": "H_02_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Denver and identify Sunset Ridge Home.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Sunset Ridge Home"
+    }
+  },
+  {
+    "task_id": "H_02_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Find the lease duration for Sunset Ridge Home. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_02_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_02",
+    "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+    "instruction": "Find the application fee for Sunset Ridge Home. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$75"
+    }
+  },
+  {
+    "task_id": "C_03_T01",
+    "template": "classic",
+    "env_id": "classic_house_03",
+    "start_url": "http://localhost:8000/templates/classic/house_03.html",
+    "instruction": "Find the monthly rent for Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,800/month"
+    }
+  },
+  {
+    "task_id": "C_03_T02",
+    "template": "classic",
+    "env_id": "classic_house_03",
+    "start_url": "http://localhost:8000/templates/classic/house_03.html",
+    "instruction": "Find the number of bedrooms in Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "C_03_T03",
+    "template": "classic",
+    "env_id": "classic_house_03",
+    "start_url": "http://localhost:8000/templates/classic/house_03.html",
+    "instruction": "Find the application deadline for Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "C_03_T04",
+    "template": "classic",
+    "env_id": "classic_house_03",
+    "start_url": "http://localhost:8000/templates/classic/house_03.html",
+    "instruction": "Find the contact email address for Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@lakesidecondo.com"
+    }
+  },
+  {
+    "task_id": "C_03_T05",
+    "template": "classic",
+    "env_id": "classic_house_03",
+    "start_url": "http://localhost:8000/templates/classic/house_03.html",
+    "instruction": "Check whether Lakeside Condo is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "M_03_T01",
+    "template": "modern",
+    "env_id": "modern_house_03",
+    "start_url": "http://localhost:8000/templates/modern/house_03.html",
+    "instruction": "Find the monthly rent for Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,800/month"
+    }
+  },
+  {
+    "task_id": "M_03_T02",
+    "template": "modern",
+    "env_id": "modern_house_03",
+    "start_url": "http://localhost:8000/templates/modern/house_03.html",
+    "instruction": "Find the number of bedrooms in Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "M_03_T03",
+    "template": "modern",
+    "env_id": "modern_house_03",
+    "start_url": "http://localhost:8000/templates/modern/house_03.html",
+    "instruction": "Find the application deadline for Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "M_03_T04",
+    "template": "modern",
+    "env_id": "modern_house_03",
+    "start_url": "http://localhost:8000/templates/modern/house_03.html",
+    "instruction": "Find the contact email address for Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@lakesidecondo.com"
+    }
+  },
+  {
+    "task_id": "M_03_T05",
+    "template": "modern",
+    "env_id": "modern_house_03",
+    "start_url": "http://localhost:8000/templates/modern/house_03.html",
+    "instruction": "Check whether Lakeside Condo is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "M_03_T06",
+    "template": "modern",
+    "env_id": "modern_house_03",
+    "start_url": "http://localhost:8000/templates/modern/house_03.html",
+    "instruction": "Find the pet policy for Lakeside Condo. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "M_03_T07",
+    "template": "modern",
+    "env_id": "modern_house_03",
+    "start_url": "http://localhost:8000/templates/modern/house_03.html",
+    "instruction": "Find the parking details for Lakeside Condo. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Street parking only"
+    }
+  },
+  {
+    "task_id": "H_03_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Find the monthly rent for Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,800/month"
+    }
+  },
+  {
+    "task_id": "H_03_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Find the number of bedrooms in Lakeside Condo.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "H_03_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Find the application deadline for Lakeside Condo. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "H_03_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Find the contact email address for Lakeside Condo. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@lakesidecondo.com"
+    }
+  },
+  {
+    "task_id": "H_03_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Check whether Lakeside Condo is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "H_03_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Find the pet policy for Lakeside Condo. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "H_03_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Find the parking details for Lakeside Condo. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Street parking only"
+    }
+  },
+  {
+    "task_id": "H_03_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Chicago and identify Lakeside Condo.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Lakeside Condo"
+    }
+  },
+  {
+    "task_id": "H_03_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Find the lease duration for Lakeside Condo. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_03_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_03",
+    "start_url": "http://localhost:8000/templates/hidden/house_03.html",
+    "instruction": "Find the application fee for Lakeside Condo. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$60"
+    }
+  },
+  {
+    "task_id": "C_04_T01",
+    "template": "classic",
+    "env_id": "classic_house_04",
+    "start_url": "http://localhost:8000/templates/classic/house_04.html",
+    "instruction": "Find the monthly rent for The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,600/month"
+    }
+  },
+  {
+    "task_id": "C_04_T02",
+    "template": "classic",
+    "env_id": "classic_house_04",
+    "start_url": "http://localhost:8000/templates/classic/house_04.html",
+    "instruction": "Find the number of bedrooms in The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "C_04_T03",
+    "template": "classic",
+    "env_id": "classic_house_04",
+    "start_url": "http://localhost:8000/templates/classic/house_04.html",
+    "instruction": "Find the application deadline for The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "August 1, 2025"
+    }
+  },
+  {
+    "task_id": "C_04_T04",
+    "template": "classic",
+    "env_id": "classic_house_04",
+    "start_url": "http://localhost:8000/templates/classic/house_04.html",
+    "instruction": "Find the contact email address for The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@theelmwood.com"
+    }
+  },
+  {
+    "task_id": "C_04_T05",
+    "template": "classic",
+    "env_id": "classic_house_04",
+    "start_url": "http://localhost:8000/templates/classic/house_04.html",
+    "instruction": "Check whether The Elmwood is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_04_T01",
+    "template": "modern",
+    "env_id": "modern_house_04",
+    "start_url": "http://localhost:8000/templates/modern/house_04.html",
+    "instruction": "Find the monthly rent for The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,600/month"
+    }
+  },
+  {
+    "task_id": "M_04_T02",
+    "template": "modern",
+    "env_id": "modern_house_04",
+    "start_url": "http://localhost:8000/templates/modern/house_04.html",
+    "instruction": "Find the number of bedrooms in The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "M_04_T03",
+    "template": "modern",
+    "env_id": "modern_house_04",
+    "start_url": "http://localhost:8000/templates/modern/house_04.html",
+    "instruction": "Find the application deadline for The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "August 1, 2025"
+    }
+  },
+  {
+    "task_id": "M_04_T04",
+    "template": "modern",
+    "env_id": "modern_house_04",
+    "start_url": "http://localhost:8000/templates/modern/house_04.html",
+    "instruction": "Find the contact email address for The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@theelmwood.com"
+    }
+  },
+  {
+    "task_id": "M_04_T05",
+    "template": "modern",
+    "env_id": "modern_house_04",
+    "start_url": "http://localhost:8000/templates/modern/house_04.html",
+    "instruction": "Check whether The Elmwood is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_04_T06",
+    "template": "modern",
+    "env_id": "modern_house_04",
+    "start_url": "http://localhost:8000/templates/modern/house_04.html",
+    "instruction": "Find the pet policy for The Elmwood. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Small pets allowed (under 25 lbs)"
+    }
+  },
+  {
+    "task_id": "M_04_T07",
+    "template": "modern",
+    "env_id": "modern_house_04",
+    "start_url": "http://localhost:8000/templates/modern/house_04.html",
+    "instruction": "Find the parking details for The Elmwood. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 spot included"
+    }
+  },
+  {
+    "task_id": "H_04_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Find the monthly rent for The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,600/month"
+    }
+  },
+  {
+    "task_id": "H_04_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Find the number of bedrooms in The Elmwood.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "H_04_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Find the application deadline for The Elmwood. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "August 1, 2025"
+    }
+  },
+  {
+    "task_id": "H_04_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Find the contact email address for The Elmwood. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@theelmwood.com"
+    }
+  },
+  {
+    "task_id": "H_04_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Check whether The Elmwood is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "H_04_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Find the pet policy for The Elmwood. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Small pets allowed (under 25 lbs)"
+    }
+  },
+  {
+    "task_id": "H_04_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Find the parking details for The Elmwood. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 spot included"
+    }
+  },
+  {
+    "task_id": "H_04_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Boston and identify The Elmwood.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "The Elmwood"
+    }
+  },
+  {
+    "task_id": "H_04_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Find the lease duration for The Elmwood. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_04_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_04",
+    "start_url": "http://localhost:8000/templates/hidden/house_04.html",
+    "instruction": "Find the application fee for The Elmwood. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$80"
+    }
+  },
+  {
+    "task_id": "C_05_T01",
+    "template": "classic",
+    "env_id": "classic_house_05",
+    "start_url": "http://localhost:8000/templates/classic/house_05.html",
+    "instruction": "Find the monthly rent for Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,100/month"
+    }
+  },
+  {
+    "task_id": "C_05_T02",
+    "template": "classic",
+    "env_id": "classic_house_05",
+    "start_url": "http://localhost:8000/templates/classic/house_05.html",
+    "instruction": "Find the number of bedrooms in Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Studio"
+    }
+  },
+  {
+    "task_id": "C_05_T03",
+    "template": "classic",
+    "env_id": "classic_house_05",
+    "start_url": "http://localhost:8000/templates/classic/house_05.html",
+    "instruction": "Find the application deadline for Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "June 20, 2025"
+    }
+  },
+  {
+    "task_id": "C_05_T04",
+    "template": "classic",
+    "env_id": "classic_house_05",
+    "start_url": "http://localhost:8000/templates/classic/house_05.html",
+    "instruction": "Find the contact email address for Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "hello@riverfrontstudio.com"
+    }
+  },
+  {
+    "task_id": "C_05_T05",
+    "template": "classic",
+    "env_id": "classic_house_05",
+    "start_url": "http://localhost:8000/templates/classic/house_05.html",
+    "instruction": "Check whether Riverfront Studio is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_05_T01",
+    "template": "modern",
+    "env_id": "modern_house_05",
+    "start_url": "http://localhost:8000/templates/modern/house_05.html",
+    "instruction": "Find the monthly rent for Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,100/month"
+    }
+  },
+  {
+    "task_id": "M_05_T02",
+    "template": "modern",
+    "env_id": "modern_house_05",
+    "start_url": "http://localhost:8000/templates/modern/house_05.html",
+    "instruction": "Find the number of bedrooms in Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Studio"
+    }
+  },
+  {
+    "task_id": "M_05_T03",
+    "template": "modern",
+    "env_id": "modern_house_05",
+    "start_url": "http://localhost:8000/templates/modern/house_05.html",
+    "instruction": "Find the application deadline for Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "June 20, 2025"
+    }
+  },
+  {
+    "task_id": "M_05_T04",
+    "template": "modern",
+    "env_id": "modern_house_05",
+    "start_url": "http://localhost:8000/templates/modern/house_05.html",
+    "instruction": "Find the contact email address for Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "hello@riverfrontstudio.com"
+    }
+  },
+  {
+    "task_id": "M_05_T05",
+    "template": "modern",
+    "env_id": "modern_house_05",
+    "start_url": "http://localhost:8000/templates/modern/house_05.html",
+    "instruction": "Check whether Riverfront Studio is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_05_T06",
+    "template": "modern",
+    "env_id": "modern_house_05",
+    "start_url": "http://localhost:8000/templates/modern/house_05.html",
+    "instruction": "Find the pet policy for Riverfront Studio. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "M_05_T07",
+    "template": "modern",
+    "env_id": "modern_house_05",
+    "start_url": "http://localhost:8000/templates/modern/house_05.html",
+    "instruction": "Find the parking details for Riverfront Studio. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Bicycle storage available"
+    }
+  },
+  {
+    "task_id": "H_05_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Find the monthly rent for Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,100/month"
+    }
+  },
+  {
+    "task_id": "H_05_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Find the number of bedrooms in Riverfront Studio.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Studio"
+    }
+  },
+  {
+    "task_id": "H_05_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Find the application deadline for Riverfront Studio. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "June 20, 2025"
+    }
+  },
+  {
+    "task_id": "H_05_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Find the contact email address for Riverfront Studio. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "hello@riverfrontstudio.com"
+    }
+  },
+  {
+    "task_id": "H_05_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Check whether Riverfront Studio is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "H_05_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Find the pet policy for Riverfront Studio. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "H_05_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Find the parking details for Riverfront Studio. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Bicycle storage available"
+    }
+  },
+  {
+    "task_id": "H_05_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Portland and identify Riverfront Studio.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Riverfront Studio"
+    }
+  },
+  {
+    "task_id": "H_05_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Find the lease duration for Riverfront Studio. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "6 months minimum"
+    }
+  },
+  {
+    "task_id": "H_05_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_05",
+    "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+    "instruction": "Find the application fee for Riverfront Studio. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$40"
+    }
+  },
+  {
+    "task_id": "C_06_T01",
+    "template": "classic",
+    "env_id": "classic_house_06",
+    "start_url": "http://localhost:8000/templates/classic/house_06.html",
+    "instruction": "Find the monthly rent for Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,750/month"
+    }
+  },
+  {
+    "task_id": "C_06_T02",
+    "template": "classic",
+    "env_id": "classic_house_06",
+    "start_url": "http://localhost:8000/templates/classic/house_06.html",
+    "instruction": "Find the number of bedrooms in Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "3"
+    }
+  },
+  {
+    "task_id": "C_06_T03",
+    "template": "classic",
+    "env_id": "classic_house_06",
+    "start_url": "http://localhost:8000/templates/classic/house_06.html",
+    "instruction": "Find the application deadline for Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "C_06_T04",
+    "template": "classic",
+    "env_id": "classic_house_06",
+    "start_url": "http://localhost:8000/templates/classic/house_06.html",
+    "instruction": "Find the contact email address for Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "contact@oakhillnashville.com"
+    }
+  },
+  {
+    "task_id": "C_06_T05",
+    "template": "classic",
+    "env_id": "classic_house_06",
+    "start_url": "http://localhost:8000/templates/classic/house_06.html",
+    "instruction": "Check whether Oak Hill House is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "M_06_T01",
+    "template": "modern",
+    "env_id": "modern_house_06",
+    "start_url": "http://localhost:8000/templates/modern/house_06.html",
+    "instruction": "Find the monthly rent for Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,750/month"
+    }
+  },
+  {
+    "task_id": "M_06_T02",
+    "template": "modern",
+    "env_id": "modern_house_06",
+    "start_url": "http://localhost:8000/templates/modern/house_06.html",
+    "instruction": "Find the number of bedrooms in Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "3"
+    }
+  },
+  {
+    "task_id": "M_06_T03",
+    "template": "modern",
+    "env_id": "modern_house_06",
+    "start_url": "http://localhost:8000/templates/modern/house_06.html",
+    "instruction": "Find the application deadline for Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "M_06_T04",
+    "template": "modern",
+    "env_id": "modern_house_06",
+    "start_url": "http://localhost:8000/templates/modern/house_06.html",
+    "instruction": "Find the contact email address for Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "contact@oakhillnashville.com"
+    }
+  },
+  {
+    "task_id": "M_06_T05",
+    "template": "modern",
+    "env_id": "modern_house_06",
+    "start_url": "http://localhost:8000/templates/modern/house_06.html",
+    "instruction": "Check whether Oak Hill House is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "M_06_T06",
+    "template": "modern",
+    "env_id": "modern_house_06",
+    "start_url": "http://localhost:8000/templates/modern/house_06.html",
+    "instruction": "Find the pet policy for Oak Hill House. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Dogs and cats allowed"
+    }
+  },
+  {
+    "task_id": "M_06_T07",
+    "template": "modern",
+    "env_id": "modern_house_06",
+    "start_url": "http://localhost:8000/templates/modern/house_06.html",
+    "instruction": "Find the parking details for Oak Hill House. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Driveway, 2 cars"
+    }
+  },
+  {
+    "task_id": "H_06_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Find the monthly rent for Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,750/month"
+    }
+  },
+  {
+    "task_id": "H_06_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Find the number of bedrooms in Oak Hill House.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "3"
+    }
+  },
+  {
+    "task_id": "H_06_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Find the application deadline for Oak Hill House. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "H_06_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Find the contact email address for Oak Hill House. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "contact@oakhillnashville.com"
+    }
+  },
+  {
+    "task_id": "H_06_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Check whether Oak Hill House is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "H_06_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Find the pet policy for Oak Hill House. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Dogs and cats allowed"
+    }
+  },
+  {
+    "task_id": "H_06_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Find the parking details for Oak Hill House. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Driveway, 2 cars"
+    }
+  },
+  {
+    "task_id": "H_06_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Nashville and identify Oak Hill House.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Oak Hill House"
+    }
+  },
+  {
+    "task_id": "H_06_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Find the lease duration for Oak Hill House. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_06_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_06",
+    "start_url": "http://localhost:8000/templates/hidden/house_06.html",
+    "instruction": "Find the application fee for Oak Hill House. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$55"
+    }
+  },
+  {
+    "task_id": "C_07_T01",
+    "template": "classic",
+    "env_id": "classic_house_07",
+    "start_url": "http://localhost:8000/templates/classic/house_07.html",
+    "instruction": "Find the monthly rent for Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,400/month"
+    }
+  },
+  {
+    "task_id": "C_07_T02",
+    "template": "classic",
+    "env_id": "classic_house_07",
+    "start_url": "http://localhost:8000/templates/classic/house_07.html",
+    "instruction": "Find the number of bedrooms in Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "C_07_T03",
+    "template": "classic",
+    "env_id": "classic_house_07",
+    "start_url": "http://localhost:8000/templates/classic/house_07.html",
+    "instruction": "Find the application deadline for Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "September 1, 2025"
+    }
+  },
+  {
+    "task_id": "C_07_T04",
+    "template": "classic",
+    "env_id": "classic_house_07",
+    "start_url": "http://localhost:8000/templates/classic/house_07.html",
+    "instruction": "Find the contact email address for Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@parkviewterrace.com"
+    }
+  },
+  {
+    "task_id": "C_07_T05",
+    "template": "classic",
+    "env_id": "classic_house_07",
+    "start_url": "http://localhost:8000/templates/classic/house_07.html",
+    "instruction": "Check whether Parkview Terrace is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_07_T01",
+    "template": "modern",
+    "env_id": "modern_house_07",
+    "start_url": "http://localhost:8000/templates/modern/house_07.html",
+    "instruction": "Find the monthly rent for Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,400/month"
+    }
+  },
+  {
+    "task_id": "M_07_T02",
+    "template": "modern",
+    "env_id": "modern_house_07",
+    "start_url": "http://localhost:8000/templates/modern/house_07.html",
+    "instruction": "Find the number of bedrooms in Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "M_07_T03",
+    "template": "modern",
+    "env_id": "modern_house_07",
+    "start_url": "http://localhost:8000/templates/modern/house_07.html",
+    "instruction": "Find the application deadline for Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "September 1, 2025"
+    }
+  },
+  {
+    "task_id": "M_07_T04",
+    "template": "modern",
+    "env_id": "modern_house_07",
+    "start_url": "http://localhost:8000/templates/modern/house_07.html",
+    "instruction": "Find the contact email address for Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@parkviewterrace.com"
+    }
+  },
+  {
+    "task_id": "M_07_T05",
+    "template": "modern",
+    "env_id": "modern_house_07",
+    "start_url": "http://localhost:8000/templates/modern/house_07.html",
+    "instruction": "Check whether Parkview Terrace is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_07_T06",
+    "template": "modern",
+    "env_id": "modern_house_07",
+    "start_url": "http://localhost:8000/templates/modern/house_07.html",
+    "instruction": "Find the pet policy for Parkview Terrace. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Cats only"
+    }
+  },
+  {
+    "task_id": "M_07_T07",
+    "template": "modern",
+    "env_id": "modern_house_07",
+    "start_url": "http://localhost:8000/templates/modern/house_07.html",
+    "instruction": "Find the parking details for Parkview Terrace. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 covered spot included"
+    }
+  },
+  {
+    "task_id": "H_07_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Find the monthly rent for Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,400/month"
+    }
+  },
+  {
+    "task_id": "H_07_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Find the number of bedrooms in Parkview Terrace.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "H_07_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Find the application deadline for Parkview Terrace. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "September 1, 2025"
+    }
+  },
+  {
+    "task_id": "H_07_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Find the contact email address for Parkview Terrace. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@parkviewterrace.com"
+    }
+  },
+  {
+    "task_id": "H_07_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Check whether Parkview Terrace is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "H_07_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Find the pet policy for Parkview Terrace. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Cats only"
+    }
+  },
+  {
+    "task_id": "H_07_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Find the parking details for Parkview Terrace. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 covered spot included"
+    }
+  },
+  {
+    "task_id": "H_07_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Seattle and identify Parkview Terrace.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Parkview Terrace"
+    }
+  },
+  {
+    "task_id": "H_07_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Find the lease duration for Parkview Terrace. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_07_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_07",
+    "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+    "instruction": "Find the application fee for Parkview Terrace. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$70"
+    }
+  },
+  {
+    "task_id": "C_08_T01",
+    "template": "classic",
+    "env_id": "classic_house_08",
+    "start_url": "http://localhost:8000/templates/classic/house_08.html",
+    "instruction": "Find the monthly rent for Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,350/month"
+    }
+  },
+  {
+    "task_id": "C_08_T02",
+    "template": "classic",
+    "env_id": "classic_house_08",
+    "start_url": "http://localhost:8000/templates/classic/house_08.html",
+    "instruction": "Find the number of bedrooms in Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "C_08_T03",
+    "template": "classic",
+    "env_id": "classic_house_08",
+    "start_url": "http://localhost:8000/templates/classic/house_08.html",
+    "instruction": "Find the application deadline for Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 5, 2025"
+    }
+  },
+  {
+    "task_id": "C_08_T04",
+    "template": "classic",
+    "env_id": "classic_house_08",
+    "start_url": "http://localhost:8000/templates/classic/house_08.html",
+    "instruction": "Find the contact email address for Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "info@cedargroveflats.com"
+    }
+  },
+  {
+    "task_id": "C_08_T05",
+    "template": "classic",
+    "env_id": "classic_house_08",
+    "start_url": "http://localhost:8000/templates/classic/house_08.html",
+    "instruction": "Check whether Cedar Grove Flat is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_08_T01",
+    "template": "modern",
+    "env_id": "modern_house_08",
+    "start_url": "http://localhost:8000/templates/modern/house_08.html",
+    "instruction": "Find the monthly rent for Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,350/month"
+    }
+  },
+  {
+    "task_id": "M_08_T02",
+    "template": "modern",
+    "env_id": "modern_house_08",
+    "start_url": "http://localhost:8000/templates/modern/house_08.html",
+    "instruction": "Find the number of bedrooms in Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "M_08_T03",
+    "template": "modern",
+    "env_id": "modern_house_08",
+    "start_url": "http://localhost:8000/templates/modern/house_08.html",
+    "instruction": "Find the application deadline for Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 5, 2025"
+    }
+  },
+  {
+    "task_id": "M_08_T04",
+    "template": "modern",
+    "env_id": "modern_house_08",
+    "start_url": "http://localhost:8000/templates/modern/house_08.html",
+    "instruction": "Find the contact email address for Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "info@cedargroveflats.com"
+    }
+  },
+  {
+    "task_id": "M_08_T05",
+    "template": "modern",
+    "env_id": "modern_house_08",
+    "start_url": "http://localhost:8000/templates/modern/house_08.html",
+    "instruction": "Check whether Cedar Grove Flat is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_08_T06",
+    "template": "modern",
+    "env_id": "modern_house_08",
+    "start_url": "http://localhost:8000/templates/modern/house_08.html",
+    "instruction": "Find the pet policy for Cedar Grove Flat. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "M_08_T07",
+    "template": "modern",
+    "env_id": "modern_house_08",
+    "start_url": "http://localhost:8000/templates/modern/house_08.html",
+    "instruction": "Find the parking details for Cedar Grove Flat. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 spot included"
+    }
+  },
+  {
+    "task_id": "H_08_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Find the monthly rent for Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,350/month"
+    }
+  },
+  {
+    "task_id": "H_08_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Find the number of bedrooms in Cedar Grove Flat.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "H_08_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Find the application deadline for Cedar Grove Flat. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 5, 2025"
+    }
+  },
+  {
+    "task_id": "H_08_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Find the contact email address for Cedar Grove Flat. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "info@cedargroveflats.com"
+    }
+  },
+  {
+    "task_id": "H_08_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Check whether Cedar Grove Flat is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "H_08_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Find the pet policy for Cedar Grove Flat. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "H_08_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Find the parking details for Cedar Grove Flat. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 spot included"
+    }
+  },
+  {
+    "task_id": "H_08_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Atlanta and identify Cedar Grove Flat.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Cedar Grove Flat"
+    }
+  },
+  {
+    "task_id": "H_08_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Find the lease duration for Cedar Grove Flat. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_08_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_08",
+    "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+    "instruction": "Find the application fee for Cedar Grove Flat. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$45"
+    }
+  },
+  {
+    "task_id": "C_09_T01",
+    "template": "classic",
+    "env_id": "classic_house_09",
+    "start_url": "http://localhost:8000/templates/classic/house_09.html",
+    "instruction": "Find the monthly rent for Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$3,100/month"
+    }
+  },
+  {
+    "task_id": "C_09_T02",
+    "template": "classic",
+    "env_id": "classic_house_09",
+    "start_url": "http://localhost:8000/templates/classic/house_09.html",
+    "instruction": "Find the number of bedrooms in Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "4"
+    }
+  },
+  {
+    "task_id": "C_09_T03",
+    "template": "classic",
+    "env_id": "classic_house_09",
+    "start_url": "http://localhost:8000/templates/classic/house_09.html",
+    "instruction": "Find the application deadline for Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "C_09_T04",
+    "template": "classic",
+    "env_id": "classic_house_09",
+    "start_url": "http://localhost:8000/templates/classic/house_09.html",
+    "instruction": "Find the contact email address for Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@hillcrestmanor.com"
+    }
+  },
+  {
+    "task_id": "C_09_T05",
+    "template": "classic",
+    "env_id": "classic_house_09",
+    "start_url": "http://localhost:8000/templates/classic/house_09.html",
+    "instruction": "Check whether Hillcrest Manor is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "M_09_T01",
+    "template": "modern",
+    "env_id": "modern_house_09",
+    "start_url": "http://localhost:8000/templates/modern/house_09.html",
+    "instruction": "Find the monthly rent for Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$3,100/month"
+    }
+  },
+  {
+    "task_id": "M_09_T02",
+    "template": "modern",
+    "env_id": "modern_house_09",
+    "start_url": "http://localhost:8000/templates/modern/house_09.html",
+    "instruction": "Find the number of bedrooms in Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "4"
+    }
+  },
+  {
+    "task_id": "M_09_T03",
+    "template": "modern",
+    "env_id": "modern_house_09",
+    "start_url": "http://localhost:8000/templates/modern/house_09.html",
+    "instruction": "Find the application deadline for Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "M_09_T04",
+    "template": "modern",
+    "env_id": "modern_house_09",
+    "start_url": "http://localhost:8000/templates/modern/house_09.html",
+    "instruction": "Find the contact email address for Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@hillcrestmanor.com"
+    }
+  },
+  {
+    "task_id": "M_09_T05",
+    "template": "modern",
+    "env_id": "modern_house_09",
+    "start_url": "http://localhost:8000/templates/modern/house_09.html",
+    "instruction": "Check whether Hillcrest Manor is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "M_09_T06",
+    "template": "modern",
+    "env_id": "modern_house_09",
+    "start_url": "http://localhost:8000/templates/modern/house_09.html",
+    "instruction": "Find the pet policy for Hillcrest Manor. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Dogs and cats allowed"
+    }
+  },
+  {
+    "task_id": "M_09_T07",
+    "template": "modern",
+    "env_id": "modern_house_09",
+    "start_url": "http://localhost:8000/templates/modern/house_09.html",
+    "instruction": "Find the parking details for Hillcrest Manor. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2-car garage + guest parking"
+    }
+  },
+  {
+    "task_id": "H_09_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Find the monthly rent for Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$3,100/month"
+    }
+  },
+  {
+    "task_id": "H_09_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Find the number of bedrooms in Hillcrest Manor.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "4"
+    }
+  },
+  {
+    "task_id": "H_09_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Find the application deadline for Hillcrest Manor. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "H_09_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Find the contact email address for Hillcrest Manor. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@hillcrestmanor.com"
+    }
+  },
+  {
+    "task_id": "H_09_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Check whether Hillcrest Manor is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "H_09_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Find the pet policy for Hillcrest Manor. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Dogs and cats allowed"
+    }
+  },
+  {
+    "task_id": "H_09_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Find the parking details for Hillcrest Manor. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2-car garage + guest parking"
+    }
+  },
+  {
+    "task_id": "H_09_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in San Diego and identify Hillcrest Manor.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Hillcrest Manor"
+    }
+  },
+  {
+    "task_id": "H_09_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Find the lease duration for Hillcrest Manor. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_09_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_09",
+    "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+    "instruction": "Find the application fee for Hillcrest Manor. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$100"
+    }
+  },
+  {
+    "task_id": "C_10_T01",
+    "template": "classic",
+    "env_id": "classic_house_10",
+    "start_url": "http://localhost:8000/templates/classic/house_10.html",
+    "instruction": "Find the monthly rent for Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,550/month"
+    }
+  },
+  {
+    "task_id": "C_10_T02",
+    "template": "classic",
+    "env_id": "classic_house_10",
+    "start_url": "http://localhost:8000/templates/classic/house_10.html",
+    "instruction": "Find the number of bedrooms in Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "C_10_T03",
+    "template": "classic",
+    "env_id": "classic_house_10",
+    "start_url": "http://localhost:8000/templates/classic/house_10.html",
+    "instruction": "Find the application deadline for Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 18, 2025"
+    }
+  },
+  {
+    "task_id": "C_10_T04",
+    "template": "classic",
+    "env_id": "classic_house_10",
+    "start_url": "http://localhost:8000/templates/classic/house_10.html",
+    "instruction": "Find the contact email address for Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "hello@pinewoodcottage.com"
+    }
+  },
+  {
+    "task_id": "C_10_T05",
+    "template": "classic",
+    "env_id": "classic_house_10",
+    "start_url": "http://localhost:8000/templates/classic/house_10.html",
+    "instruction": "Check whether Pinewood Cottage is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_10_T01",
+    "template": "modern",
+    "env_id": "modern_house_10",
+    "start_url": "http://localhost:8000/templates/modern/house_10.html",
+    "instruction": "Find the monthly rent for Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,550/month"
+    }
+  },
+  {
+    "task_id": "M_10_T02",
+    "template": "modern",
+    "env_id": "modern_house_10",
+    "start_url": "http://localhost:8000/templates/modern/house_10.html",
+    "instruction": "Find the number of bedrooms in Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "M_10_T03",
+    "template": "modern",
+    "env_id": "modern_house_10",
+    "start_url": "http://localhost:8000/templates/modern/house_10.html",
+    "instruction": "Find the application deadline for Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 18, 2025"
+    }
+  },
+  {
+    "task_id": "M_10_T04",
+    "template": "modern",
+    "env_id": "modern_house_10",
+    "start_url": "http://localhost:8000/templates/modern/house_10.html",
+    "instruction": "Find the contact email address for Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "hello@pinewoodcottage.com"
+    }
+  },
+  {
+    "task_id": "M_10_T05",
+    "template": "modern",
+    "env_id": "modern_house_10",
+    "start_url": "http://localhost:8000/templates/modern/house_10.html",
+    "instruction": "Check whether Pinewood Cottage is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_10_T06",
+    "template": "modern",
+    "env_id": "modern_house_10",
+    "start_url": "http://localhost:8000/templates/modern/house_10.html",
+    "instruction": "Find the pet policy for Pinewood Cottage. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Small pets allowed (under 20 lbs)"
+    }
+  },
+  {
+    "task_id": "M_10_T07",
+    "template": "modern",
+    "env_id": "modern_house_10",
+    "start_url": "http://localhost:8000/templates/modern/house_10.html",
+    "instruction": "Find the parking details for Pinewood Cottage. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 spot included"
+    }
+  },
+  {
+    "task_id": "H_10_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Find the monthly rent for Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,550/month"
+    }
+  },
+  {
+    "task_id": "H_10_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Find the number of bedrooms in Pinewood Cottage.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "H_10_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Find the application deadline for Pinewood Cottage. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "July 18, 2025"
+    }
+  },
+  {
+    "task_id": "H_10_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Find the contact email address for Pinewood Cottage. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "hello@pinewoodcottage.com"
+    }
+  },
+  {
+    "task_id": "H_10_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Check whether Pinewood Cottage is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "H_10_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Find the pet policy for Pinewood Cottage. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Small pets allowed (under 20 lbs)"
+    }
+  },
+  {
+    "task_id": "H_10_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Find the parking details for Pinewood Cottage. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 spot included"
+    }
+  },
+  {
+    "task_id": "H_10_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Raleigh and identify Pinewood Cottage.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Pinewood Cottage"
+    }
+  },
+  {
+    "task_id": "H_10_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Find the lease duration for Pinewood Cottage. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_10_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_10",
+    "start_url": "http://localhost:8000/templates/hidden/house_10.html",
+    "instruction": "Find the application fee for Pinewood Cottage. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$50"
+    }
+  },
+  {
+    "task_id": "C_11_T01",
+    "template": "classic",
+    "env_id": "classic_house_11",
+    "start_url": "http://localhost:8000/templates/classic/house_11.html",
+    "instruction": "Find the monthly rent for Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,050/month"
+    }
+  },
+  {
+    "task_id": "C_11_T02",
+    "template": "classic",
+    "env_id": "classic_house_11",
+    "start_url": "http://localhost:8000/templates/classic/house_11.html",
+    "instruction": "Find the number of bedrooms in Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "C_11_T03",
+    "template": "classic",
+    "env_id": "classic_house_11",
+    "start_url": "http://localhost:8000/templates/classic/house_11.html",
+    "instruction": "Find the application deadline for Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "C_11_T04",
+    "template": "classic",
+    "env_id": "classic_house_11",
+    "start_url": "http://localhost:8000/templates/classic/house_11.html",
+    "instruction": "Find the contact email address for Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@downtownloftmiami.com"
+    }
+  },
+  {
+    "task_id": "C_11_T05",
+    "template": "classic",
+    "env_id": "classic_house_11",
+    "start_url": "http://localhost:8000/templates/classic/house_11.html",
+    "instruction": "Check whether Downtown Loft is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "M_11_T01",
+    "template": "modern",
+    "env_id": "modern_house_11",
+    "start_url": "http://localhost:8000/templates/modern/house_11.html",
+    "instruction": "Find the monthly rent for Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,050/month"
+    }
+  },
+  {
+    "task_id": "M_11_T02",
+    "template": "modern",
+    "env_id": "modern_house_11",
+    "start_url": "http://localhost:8000/templates/modern/house_11.html",
+    "instruction": "Find the number of bedrooms in Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "M_11_T03",
+    "template": "modern",
+    "env_id": "modern_house_11",
+    "start_url": "http://localhost:8000/templates/modern/house_11.html",
+    "instruction": "Find the application deadline for Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "M_11_T04",
+    "template": "modern",
+    "env_id": "modern_house_11",
+    "start_url": "http://localhost:8000/templates/modern/house_11.html",
+    "instruction": "Find the contact email address for Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@downtownloftmiami.com"
+    }
+  },
+  {
+    "task_id": "M_11_T05",
+    "template": "modern",
+    "env_id": "modern_house_11",
+    "start_url": "http://localhost:8000/templates/modern/house_11.html",
+    "instruction": "Check whether Downtown Loft is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "M_11_T06",
+    "template": "modern",
+    "env_id": "modern_house_11",
+    "start_url": "http://localhost:8000/templates/modern/house_11.html",
+    "instruction": "Find the pet policy for Downtown Loft. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "M_11_T07",
+    "template": "modern",
+    "env_id": "modern_house_11",
+    "start_url": "http://localhost:8000/templates/modern/house_11.html",
+    "instruction": "Find the parking details for Downtown Loft. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Valet parking available ($150/month)"
+    }
+  },
+  {
+    "task_id": "H_11_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Find the monthly rent for Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$2,050/month"
+    }
+  },
+  {
+    "task_id": "H_11_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Find the number of bedrooms in Downtown Loft.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1"
+    }
+  },
+  {
+    "task_id": "H_11_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Find the application deadline for Downtown Loft. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "N/A"
+    }
+  },
+  {
+    "task_id": "H_11_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Find the contact email address for Downtown Loft. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "leasing@downtownloftmiami.com"
+    }
+  },
+  {
+    "task_id": "H_11_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Check whether Downtown Loft is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Not Available"
+    }
+  },
+  {
+    "task_id": "H_11_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Find the pet policy for Downtown Loft. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "No pets allowed"
+    }
+  },
+  {
+    "task_id": "H_11_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Find the parking details for Downtown Loft. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Valet parking available ($150/month)"
+    }
+  },
+  {
+    "task_id": "H_11_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Miami and identify Downtown Loft.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Downtown Loft"
+    }
+  },
+  {
+    "task_id": "H_11_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Find the lease duration for Downtown Loft. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_11_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_11",
+    "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+    "instruction": "Find the application fee for Downtown Loft. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$65"
+    }
+  },
+  {
+    "task_id": "C_12_T01",
+    "template": "classic",
+    "env_id": "classic_house_12",
+    "start_url": "http://localhost:8000/templates/classic/house_12.html",
+    "instruction": "Find the monthly rent for Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,650/month"
+    }
+  },
+  {
+    "task_id": "C_12_T02",
+    "template": "classic",
+    "env_id": "classic_house_12",
+    "start_url": "http://localhost:8000/templates/classic/house_12.html",
+    "instruction": "Find the number of bedrooms in Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "C_12_T03",
+    "template": "classic",
+    "env_id": "classic_house_12",
+    "start_url": "http://localhost:8000/templates/classic/house_12.html",
+    "instruction": "Find the application deadline for Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "August 20, 2025"
+    }
+  },
+  {
+    "task_id": "C_12_T04",
+    "template": "classic",
+    "env_id": "classic_house_12",
+    "start_url": "http://localhost:8000/templates/classic/house_12.html",
+    "instruction": "Find the contact email address for Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@birchwoodplace.com"
+    }
+  },
+  {
+    "task_id": "C_12_T05",
+    "template": "classic",
+    "env_id": "classic_house_12",
+    "start_url": "http://localhost:8000/templates/classic/house_12.html",
+    "instruction": "Check whether Birchwood Place is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_12_T01",
+    "template": "modern",
+    "env_id": "modern_house_12",
+    "start_url": "http://localhost:8000/templates/modern/house_12.html",
+    "instruction": "Find the monthly rent for Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,650/month"
+    }
+  },
+  {
+    "task_id": "M_12_T02",
+    "template": "modern",
+    "env_id": "modern_house_12",
+    "start_url": "http://localhost:8000/templates/modern/house_12.html",
+    "instruction": "Find the number of bedrooms in Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "M_12_T03",
+    "template": "modern",
+    "env_id": "modern_house_12",
+    "start_url": "http://localhost:8000/templates/modern/house_12.html",
+    "instruction": "Find the application deadline for Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "August 20, 2025"
+    }
+  },
+  {
+    "task_id": "M_12_T04",
+    "template": "modern",
+    "env_id": "modern_house_12",
+    "start_url": "http://localhost:8000/templates/modern/house_12.html",
+    "instruction": "Find the contact email address for Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@birchwoodplace.com"
+    }
+  },
+  {
+    "task_id": "M_12_T05",
+    "template": "modern",
+    "env_id": "modern_house_12",
+    "start_url": "http://localhost:8000/templates/modern/house_12.html",
+    "instruction": "Check whether Birchwood Place is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "M_12_T06",
+    "template": "modern",
+    "env_id": "modern_house_12",
+    "start_url": "http://localhost:8000/templates/modern/house_12.html",
+    "instruction": "Find the pet policy for Birchwood Place. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Cats allowed, no dogs"
+    }
+  },
+  {
+    "task_id": "M_12_T07",
+    "template": "modern",
+    "env_id": "modern_house_12",
+    "start_url": "http://localhost:8000/templates/modern/house_12.html",
+    "instruction": "Find the parking details for Birchwood Place. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 heated indoor spot included"
+    }
+  },
+  {
+    "task_id": "H_12_T01",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Find the monthly rent for Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$1,650/month"
+    }
+  },
+  {
+    "task_id": "H_12_T02",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Find the number of bedrooms in Birchwood Place.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "2"
+    }
+  },
+  {
+    "task_id": "H_12_T03",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Find the application deadline for Birchwood Place. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "August 20, 2025"
+    }
+  },
+  {
+    "task_id": "H_12_T04",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Find the contact email address for Birchwood Place. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "rentals@birchwoodplace.com"
+    }
+  },
+  {
+    "task_id": "H_12_T05",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Check whether Birchwood Place is currently available for rent.",
+    "interaction": "none",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Available"
+    }
+  },
+  {
+    "task_id": "H_12_T06",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Find the pet policy for Birchwood Place. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Cats allowed, no dogs"
+    }
+  },
+  {
+    "task_id": "H_12_T07",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Find the parking details for Birchwood Place. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "1 heated indoor spot included"
+    }
+  },
+  {
+    "task_id": "H_12_T08",
+    "template": "hidden",
+    "env_id": "hidden_index",
+    "start_url": "http://localhost:8000/templates/hidden/index.html",
+    "instruction": "Use the city filter to find listings in Minneapolis and identify Birchwood Place.",
+    "interaction": "use_sidebar_city_filter",
+    "evaluation": {
+      "type": "string_match",
+      "target": "Birchwood Place"
+    }
+  },
+  {
+    "task_id": "H_12_T09",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Find the lease duration for Birchwood Place. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "evaluation": {
+      "type": "string_match",
+      "target": "12 months"
+    }
+  },
+  {
+    "task_id": "H_12_T10",
+    "template": "hidden",
+    "env_id": "hidden_house_12",
+    "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+    "instruction": "Find the application fee for Birchwood Place. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "evaluation": {
+      "type": "string_match",
+      "target": "$55"
+    }
+  }
+]

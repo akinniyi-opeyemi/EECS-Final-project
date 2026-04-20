@@ -1,0 +1,40 @@
+{
+  "task_id": 14,
+  "task_type": "T5_twitter",
+  "persona_id": "merrow_lit_001",
+  "template": "notion",
+  "sites": [
+    "merrow_lit_001__notion"
+  ],
+  "start_url": "http://localhost:8000/merrow_lit_001__notion/",
+  "geolocation": null,
+  "require_login": false,
+  "storage_state": null,
+  "intent_template": "Find {name}'s Twitter account.",
+  "intent_template_id": 5,
+  "instantiation_dict": {
+    "name": "Yuki Abernathy"
+  },
+  "intent": "Find Yuki Abernathy's Twitter account.",
+  "require_reset": false,
+  "viewport_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "eval": {
+    "eval_types": [
+      "string_match"
+    ],
+    "reference_answers": {
+      "exact_match": null,
+      "must_include": null,
+      "fuzzy_match": [
+        "The page does not list a Twitter account for Yuki Abernathy."
+      ]
+    },
+    "reference_url": "",
+    "program_html": [],
+    "string_note": "",
+    "reference_answer_raw_annotation": "The page does not list a Twitter account for Yuki Abernathy."
+  }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexa AI Careers</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #141b34;
+      --panel-2: #1b2445;
+      --text: #eef2ff;
+      --muted: #b7bfdc;
+      --accent: #7dd3fc;
+      --success: #22c55e;
+      --warning: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0f1d 0%, #111a33 100%);
+      color: var(--text);
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .brand {
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 18px;
+    }
+    .hero {
+      padding: 28px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+    .hero p {
+      color: var(--muted);
+      max-width: 760px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.24);
+    }
+    .label-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .badge.open { background: rgba(34,197,94,0.15); color: #86efac; }
+    .badge.closed { background: rgba(245,158,11,0.15); color: #fcd34d; }
+    .badge.deadline { background: rgba(125,211,252,0.14); color: #bae6fd; }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    h1, h2, h3 { margin-top: 0; }
+    ul { padding-left: 18px; }
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    button, .btn {
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .primary {
+      background: var(--accent);
+      color: #062032;
+    }
+    .secondary {
+      background: var(--panel-2);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    #applyInfo {
+      margin-top: 14px;
+      display: none;
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--panel-2);
+      color: var(--text);
+    }
+    .section-title {
+      margin: 34px 0 16px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">Nexa AI Careers</div>
+      <div class="nav">
+        <a href="#roles">Roles</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#apply">Apply</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Join our agent evaluation team</h1>
+      <p>
+        We build reliable AI systems for real-world web workflows. Explore openings in research,
+        evaluation, and interactive systems.
+      </p>
+    </section>
+
+    <h2 id="roles" class="section-title">Featured Openings</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="label-row">
+          <span class="badge open">OPEN</span>
+          <span class="badge deadline">Deadline: May 20, 2026</span>
+        </div>
+        <h3>Research Engineer — Job Application Agents</h3>
+        <div class="meta">Posted Apr 12, 2026 · Remote/Hybrid · Most recent role</div>
+        <p>
+          Build evaluation pipelines for agents interacting with career portals and application workflows.
+        </p>
+        <h4>Required Materials</h4>
+        <ul>
+          <li>Resume</li>
+          <li>Transcript</li>
+          <li>Short statement of interest</li>
+          <li>Portfolio or GitHub</li>
+        </ul>
+        <div class="actions" id="apply">
+          <button class="primary" onclick="toggleApplyInfo()">View Apply Instructions</button>
+          <a class="btn secondary" href="#benefits">Team Benefits</a>
+        </div>
+        <div id="applyInfo">
+          Apply by emailing
+          <a href="mailto:careers@nexa-ai.example" style="color:#7dd3fc;">careers@nexa-ai.example</a>
+          and include the subject:
+          <strong>Research Engineer Application</strong>.
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="label-row">
+          <span class="badge closed">CLOSED</span>
+          <span class="badge deadline">Deadline: Mar 18, 2026</span>
+        </div>
+        <h3>ML Intern — Synthetic Website Generation</h3>
+        <div class="meta">Posted Feb 15, 2026 · Onsite</div>
+        <p>Create controlled UI variants for robustness testing.</p>
+      </article>
+    </div>
+
+    <h2 id="benefits" class="section-title">Benefits</h2>
+    <div class="card">
+      Flexible collaboration, compute budget, publication support, and mentorship.
+    </div>
+  </div>
+
+  <script>
+    function toggleApplyInfo() {
+      const box = document.getElementById('applyInfo');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

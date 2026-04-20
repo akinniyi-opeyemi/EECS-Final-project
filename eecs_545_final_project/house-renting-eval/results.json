@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "agent": "GPT-OSS-120B (UMich)",
+    "model_id": "openai/gpt-oss-120b",
+    "timestamp": "2026-04-16 03:40:46",
+    "total_tasks": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0,
+    "sr_overall": 0.0,
+    "sr_by_template": {
+      "classic": 0.0,
+      "modern": 0,
+      "hidden": 0
+    },
+    "robustness_drop": {
+      "classic_vs_modern": 0.0,
+      "modern_vs_hidden": 0,
+      "classic_vs_hidden": 0.0
+    }
+  },
+  "results": [
+    {
+      "task_id": "C_01_T01",
+      "template": "classic",
+      "agent": "GPT-OSS-120B (UMich)",
+      "instruction": "Find the monthly rent for Maplewood Apartments.",
+      "start_url": "http://localhost:8000/templates/classic/house_01.html",
+      "interaction": "none",
+      "expected": "$1,450/month",
+      "predicted": "NOT FOUND",
+      "status": "FAIL",
+      "elapsed_s": 5.29
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Spring 2026 Registration Sandbox</p>
+          <h1>Course Registration Sandbox</h1>
+          <p class="hero-subtitle">Built for VLM evaluation.</p>
+          <p class="hero-text">
+            Browse mock CS offerings, filter the table, add or drop classes,
+            inspect the weekly schedule, and surface warnings like time
+            conflicts or limited seats.
+          </p>
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-label">Open Courses</span>
+              <strong id="open-course-count">0</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Selected Credits</span>
+              <strong id="selected-credit-count">0</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Active Warnings</span>
+              <strong id="warning-count">0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="hero-orb" aria-hidden="true">
+          <div class="orb-ring orb-ring-a"></div>
+          <div class="orb-ring orb-ring-b"></div>
+          <div class="orb-core"></div>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel filters-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Controls</p>
+              <h2>Filters</h2>
+            </div>
+            <button id="reset-filters" class="ghost-button" type="button">
+              Reset
+            </button>
+          </div>
+
+          <div class="filter-grid">
+            <label class="field">
+              <span>Department</span>
+              <select id="department-filter"></select>
+            </label>
+            <label class="field">
+              <span>Time of Day</span>
+              <select id="time-filter">
+                <option value="all">All times</option>
+                <option value="morning">Morning</option>
+                <option value="midday">Midday</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
+            </label>
+            <label class="field field-search">
+              <span>Search</span>
+              <input
+                id="search-filter"
+                type="search"
+                placeholder="Try: systems, graphics, AI"
+              />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel course-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Catalog</p>
+              <h2>Course Table</h2>
+            </div>
+            <span id="visible-course-count" class="panel-badge">0 courses</span>
+          </div>
+
+          <div class="table-wrap">
+            <table class="course-table">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Department</th>
+                  <th>Time</th>
+                  <th>Instructor</th>
+                  <th>Seats</th>
+                  <th>Credits</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="course-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="stack-right">
+          <section class="panel cart-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Selection</p>
+                <h2>Add / Drop Cart</h2>
+              </div>
+              <span id="cart-count" class="panel-badge">0 selected</span>
+            </div>
+            <div id="cart-list" class="cart-list"></div>
+          </section>
+
+          <section class="panel warning-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Attention</p>
+                <h2>Warnings</h2>
+              </div>
+            </div>
+            <div id="warning-list" class="warning-list"></div>
+          </section>
+        </section>
+
+        <section class="panel schedule-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Calendar</p>
+              <h2>Schedule View</h2>
+            </div>
+            <span class="panel-badge">Mon-Fri</span>
+          </div>
+          <div id="schedule-grid" class="schedule-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+body {
+  margin: 0;
+  background: #b9b9b9;
+  color: #000;
+  font-family: "MS Sans Serif", Tahoma, Geneva, sans-serif;
+  font-size: 11px;
+}
+
+.page {
+  width: min(1280px, calc(100% - 12px));
+  margin: 6px auto;
+  border: 2px solid #5d5d5d;
+  background: #c0c0c0;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-bottom: 2px solid #707070;
+  background: linear-gradient(90deg, #102d72, #405fbe 60%, #8ba2dd);
+  color: #fff;
+}
+
+.sysline {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 3px 0 1px;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  color: #d8e4ff;
+  font-size: 11px;
+}
+
+.login-box {
+  min-width: 170px;
+  padding: 6px 8px;
+  border: 2px outset #d6d6d6;
+  background: #c7d4f5;
+  color: #111;
+  line-height: 1.6;
+}
+
+.notice-strip {
+  padding: 4px 8px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #6b6b6b;
+  background: #ffffcc;
+  color: #222;
+}
+
+.outer-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.left-col,
+.main-col,
+.right-col {
+  vertical-align: top;
+  padding: 6px;
+}
+
+.left-col,
+.right-col {
+  width: 215px;
+}
+
+.box {
+  margin-bottom: 6px;
+  border: 2px outset #dfdfdf;
+  background: #c0c0c0;
+}
+
+.box-title {
+  padding: 4px 6px;
+  border-bottom: 1px solid #7a7a7a;
+  background: linear-gradient(90deg, #0a2f86, #2f59b7);
+  color: #fff;
+  font-weight: bold;
+}
+
+.count-chip {
+  float: right;
+  color: #f2f6ff;
+}
+
+.box-body {
+  padding: 6px;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.field {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.field span {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  border: 2px inset #dcdcdc;
+  background: #fff;
+  padding: 2px 3px;
+  font: inherit;
+}
+
+.flat-button,
+.row-button,
+.queue-button,
+.detail-tab {
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #666;
+  border-bottom: 2px solid #666;
+  background: #c0c0c0;
+  color: #111;
+  font: inherit;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.flat-button {
+  width: 100%;
+}
+
+.row-button:disabled,
+.flat-button:disabled,
+.queue-button:disabled {
+  color: #777;
+  cursor: default;
+}
+
+.detail-tab.active {
+  background: #d9d9d9;
+}
+
+.course-table,
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.course-table th,
+.course-table td,
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #7d7d7d;
+  padding: 4px 5px;
+  vertical-align: top;
+}
+
+.course-table th,
+.schedule-table th {
+  background: #d9d9d9;
+  text-align: left;
+  font-size: 10px;
+}
+
+.course-table tbody tr:nth-child(even) td,
+.schedule-table tbody tr:nth-child(even) td {
+  background: #eaeaea;
+}
+
+.course-row {
+  cursor: pointer;
+}
+
+.course-row.is-active td {
+  background: #dce6ff !important;
+}
+
+.crn-title {
+  font-weight: bold;
+}
+
+.subtle {
+  color: #333;
+  margin-top: 2px;
+}
+
+.seat-ok {
+  color: #0b5d0b;
+  font-weight: bold;
+}
+
+.seat-low {
+  color: #8a4e00;
+  font-weight: bold;
+}
+
+.seat-full {
+  color: #9d0000;
+  font-weight: bold;
+}
+
+.queue-item,
+.warning-item,
+.empty-state {
+  margin-bottom: 6px;
+  padding: 5px;
+  border: 1px solid #8a8a8a;
+  background: #efefef;
+}
+
+.detail-head {
+  border-bottom: 1px solid #8a8a8a;
+  background: #d7d7d7;
+}
+
+.detail-course-name {
+  font-weight: bold;
+  color: #001c72;
+}
+
+.detail-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 6px;
+  border-bottom: 1px solid #8a8a8a;
+  background: #c8c8c8;
+}
+
+.ops-grid {
+  display: grid;
+  gap: 6px;
+}
+
+.ops-box {
+  padding: 5px;
+  border: 1px solid #8a8a8a;
+  background: #efefef;
+}
+
+.mini-label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.queue-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.queue-code {
+  color: #001c72;
+}
+
+.queue-op {
+  font-size: 10px;
+  color: #5e0000;
+}
+
+.warning-item.notice {
+  background: #fff7bf;
+}
+
+.warning-item.conflict {
+  background: #ffd5d5;
+}
+
+.warning-code {
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.compact-list div,
+.notes div {
+  margin-bottom: 3px;
+}
+
+@media (max-width: 1040px) {
+  .masthead {
+    flex-direction: column;
+  }
+
+  .outer-grid,
+  .outer-grid tbody,
+  .outer-grid tr,
+  .outer-grid td {
+    display: block;
+    width: 100%;
+  }
+}

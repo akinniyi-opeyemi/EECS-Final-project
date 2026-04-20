@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cedar Grove Flat - HomeNest Rentals</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; }
+
+    nav {
+      background: #2563eb;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+    }
+    .nav-brand {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    .nav-links a:hover { color: #fff; }
+
+    .page-body { max-width: 860px; margin: 40px auto; padding: 0 24px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; color: #2563eb; text-decoration: none; margin-bottom: 24px; font-weight: 500; }
+    .back-link:hover { color: #1d4ed8; }
+
+    .property-header { margin-bottom: 6px; }
+    .property-header h1 { font-size: 1.9rem; font-weight: 800; color: #1e293b; margin-bottom: 6px; }
+    .address-line { font-size: 0.95rem; color: #64748b; margin-bottom: 12px; }
+
+    .badge { display: inline-block; font-size: 0.8rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; }
+    .badge.available { background: #dcfce7; color: #166534; }
+    .badge.unavailable { background: #fee2e2; color: #991b1b; }
+
+    .unavailable-notice {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 4px solid #ef4444;
+      color: #991b1b;
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .house-photo { width: 100%; height: 360px; object-fit: cover; border-radius: 12px; display: block; margin-bottom: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .stat-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .stat-box .val { font-size: 1.2rem; font-weight: 800; color: #2563eb; }
+    .stat-box .lbl { font-size: 0.75rem; color: #94a3b8; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .section-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header h2 { font-size: 1rem; font-weight: 700; color: #1e293b; }
+    .toggle-icon { font-size: 1.1rem; color: #2563eb; font-weight: 700; transition: transform 0.2s; }
+    .toggle-icon.open { transform: rotate(45deg); }
+
+    .section-body { display: none; padding: 0 20px 20px; }
+    .section-body.open { display: block; }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.92rem;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label { color: #64748b; font-weight: 500; }
+    .info-value { color: #1e293b; font-weight: 600; text-align: right; }
+
+    .always-visible {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .always-visible h2 { font-size: 1rem; font-weight: 700; margin-bottom: 14px; color: #1e293b; }
+
+    footer { text-align: center; margin-top: 48px; padding: 24px; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">&#127968; HomeNest</a>
+      <div class="nav-links">
+        <a href="index.html">Listings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-body">
+    <a class="back-link" href="index.html">&#8592; Back to listings</a>
+
+    <div class="property-header">
+      <h1>Cedar Grove Flat</h1>
+      <p class="address-line">&#128205; 19 Cedar Grove Ct, Atlanta, GA 30301</p>
+      <span class="badge available">&#10003; Available</span>
+    </div>
+
+    
+
+    <img class="house-photo" src="../../assets/house_08.jpg" alt="Cedar Grove Flat" />
+
+    <div class="quick-stats">
+      <div class="stat-box"><div class="val">$1,350</div><div class="lbl">Monthly Rent</div></div>
+      <div class="stat-box"><div class="val">1</div><div class="lbl">Bedrooms</div></div>
+      <div class="stat-box"><div class="val">1</div><div class="lbl">Bathrooms</div></div>
+      <div class="stat-box"><div class="val">Jul 2025</div><div class="lbl">Available From</div></div>
+    </div>
+
+    <!-- Always visible: full rent and address -->
+    <div class="always-visible">
+      <h2>Overview</h2>
+      <div class="info-row"><span class="info-label">Monthly Rent</span><span class="info-value">$1,350/month</span></div>
+      <div class="info-row"><span class="info-label">Available From</span><span class="info-value">July 15, 2025</span></div>
+      <div class="info-row"><span class="info-label">Lease Duration</span><span class="info-value">12 months</span></div>
+    </div>
+
+    <!-- Hidden: property details -->
+    <div class="section-card">
+      <div class="section-header" onclick="toggleSection('details')">
+        <h2>Property Details</h2>
+        <span class="toggle-icon" id="icon-details">+</span>
+      </div>
+      <div class="section-body" id="details">
+        <div class="info-row"><span class="info-label">Parking</span><span class="info-value">1 spot included</span></div>
+        <div class="info-row"><span class="info-label">Pet Policy</span><span class="info-value">No pets allowed</span></div>
+        <div class="info-row"><span class="info-label">Application Fee</span><span class="info-value">$45</span></div>
+        <div class="info-row"><span class="info-label">Application Deadline</span><span class="info-value">July 5, 2025</span></div>
+      </div>
+    </div>
+
+    <!-- Hidden: contact info -->
+    <div class="section-card">
+      <div class="section-header" onclick="toggleSection('contact')">
+        <h2>Contact Information</h2>
+        <span class="toggle-icon" id="icon-contact">+</span>
+      </div>
+      <div class="section-body" id="contact">
+        <div class="info-row"><span class="info-label">Email</span><span class="info-value">info@cedargroveflats.com</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-value">+1 (404) 555-0863</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>&copy; 2025 HomeNest Rentals. Static evaluation page. For research purposes only.</footer>
+
+  <script>
+    function toggleSection(id) {
+      var body = document.getElementById(id);
+      var icon = document.getElementById('icon-' + id);
+      body.classList.toggle('open');
+      icon.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

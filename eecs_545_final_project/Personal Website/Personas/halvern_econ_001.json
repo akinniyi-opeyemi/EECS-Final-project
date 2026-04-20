@@ -1,0 +1,285 @@
+{
+  "persona_id": "halvern_econ_001",
+  "schema_version": "0.2",
+
+  "university": {
+    "name": "Halvern University",
+    "short_name": "Halvern",
+    "type": "R1 research university",
+    "domain": "halvern.edu",
+    "city": "Halvern",
+    "state": "OH",
+    "zip": "44820"
+  },
+
+  "name": {
+    "full": "Dr. Gerhardt Vössing",
+    "first": "Gerhardt",
+    "last": "Vössing",
+    "preferred": "Gerhardt",
+    "title": "Professor",
+    "pronouns": "he/him",
+    "honorifics": ["Ph.D."]
+  },
+
+  "department": {
+    "name": "Department of Economics",
+    "school": "College of Arts and Sciences",
+    "url_path": "/econ"
+  },
+
+  "research": {
+    "areas": [
+      "microeconomic theory",
+      "mechanism design",
+      "auction theory",
+      "general equilibrium",
+      "mathematical economics"
+    ],
+    "one_liner": "Microeconomic theory and the design of economic institutions.",
+    "long_bio": "Gerhardt Vössing is Professor of Economics at Halvern University, where he has taught since 1991. His research is in microeconomic theory, with particular emphasis on mechanism design, auction theory, and the foundations of general equilibrium. Before Halvern, he held positions at the University of Bonn and was a visiting member of the Institute for Advanced Study. He received his Ph.D. from Princeton University in 1987 under the supervision of the late Hugo Sonnenschein. He has served as co-editor of Econometrica (2002-2007) and as an associate editor of the Journal of Economic Theory and Games and Economic Behavior. He is a Fellow of the Econometric Society."
+  },
+
+  "office": {
+    "building": "Whitmore Hall",
+    "room": "318",
+    "floor": 3,
+    "hours": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "mailing_address": {
+      "line1": "Department of Economics",
+      "line2": "Halvern University",
+      "street": "212 Commerce Street",
+      "building_line": "Whitmore Hall, Room 318",
+      "city": "Halvern",
+      "state": "OH",
+      "zip": "44820",
+      "country": "USA"
+    }
+  },
+
+  "contact": {
+    "email": "vossing@econ.halvern.edu",
+    "email_secondary": null,
+    "phone_office": "+1 (419) 555-0164",
+    "phone_lab": null,
+    "fax": "+1 (419) 555-0189"
+  },
+
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Economics",
+      "institution": "Princeton University",
+      "year": 1987,
+      "advisor": "Prof. Hugo Sonnenschein",
+      "thesis": "Essays on Mechanism Design under Incomplete Information"
+    },
+    {
+      "degree": "Diplom",
+      "field": "Volkswirtschaftslehre",
+      "institution": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+      "year": 1982
+    }
+  ],
+
+  "positions": [
+    { "role": "Professor",                    "institution": "Halvern University",                "start": 1998, "end": null },
+    { "role": "Associate Professor",          "institution": "Halvern University",                "start": 1994, "end": 1998 },
+    { "role": "Assistant Professor",          "institution": "Halvern University",                "start": 1991, "end": 1994 },
+    { "role": "Member",                       "institution": "Institute for Advanced Study",      "start": 1990, "end": 1991 },
+    { "role": "Wissenschaftlicher Mitarbeiter", "institution": "University of Bonn",              "start": 1987, "end": 1990 }
+  ],
+
+  "awards": [
+    { "year": 2008, "name": "Fellow of the Econometric Society",         "org": "Econometric Society" },
+    { "year": 2001, "name": "Alfred P. Sloan Research Fellowship",       "org": "Alfred P. Sloan Foundation" },
+    { "year": 1998, "name": "Halvern University Distinguished Teaching Award", "org": "Halvern University" }
+  ],
+
+  "publications": [
+    {
+      "id": "vossing2019equilibrium",
+      "type": "article",
+      "title": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+      "authors": ["G. Vössing"],
+      "venue": "Econometrica",
+      "volume": "87",
+      "issue": "4",
+      "pages": "1201-1238",
+      "year": 2019,
+      "pdf_source": null
+    },
+    {
+      "id": "vossing2015mechanism",
+      "type": "article",
+      "title": "Approximately Optimal Mechanisms with Multidimensional Types",
+      "authors": ["G. Vössing", "A. Marchetti"],
+      "venue": "Journal of Economic Theory",
+      "year": 2015,
+      "pdf_source": null
+    },
+    {
+      "id": "vossing2012robust",
+      "type": "article",
+      "title": "Robust Implementation in Direct Mechanisms",
+      "authors": ["G. Vössing"],
+      "venue": "Review of Economic Studies",
+      "year": 2012,
+      "pdf_source": null
+    },
+    {
+      "id": "marchetti2010bargaining",
+      "type": "article",
+      "title": "Sequential Bargaining with Incomplete Information: A Revisionist Account",
+      "authors": ["A. Marchetti", "G. Vössing"],
+      "venue": "Games and Economic Behavior",
+      "year": 2010
+    },
+    {
+      "id": "vossing2007survey",
+      "type": "article",
+      "title": "A Survey of Recent Developments in Mechanism Design (with applications to auctions and matching)",
+      "authors": ["G. Vössing"],
+      "venue": "Journal of Economic Literature",
+      "year": 2007,
+      "note": "Invited survey"
+    },
+    {
+      "id": "vossing2003equilibrium",
+      "type": "article",
+      "title": "Equilibrium Selection in Coordination Games: A Global Games Approach",
+      "authors": ["G. Vössing", "P. Okafor"],
+      "venue": "Econometrica",
+      "year": 2003
+    },
+    {
+      "id": "vossing2000incentive",
+      "type": "article",
+      "title": "Incentive Compatibility and the Bayesian Revelation Principle Revisited",
+      "authors": ["G. Vössing"],
+      "venue": "Journal of Economic Theory",
+      "year": 2000
+    },
+    {
+      "id": "vossing1996double",
+      "type": "article",
+      "title": "Double Auctions with Asymmetric Information: A Theoretical Investigation",
+      "authors": ["G. Vössing", "H. Sonnenschein"],
+      "venue": "Econometrica",
+      "year": 1996
+    },
+    {
+      "id": "vossing1993existence",
+      "type": "article",
+      "title": "On the Existence of Walrasian Equilibrium in Economies with a Continuum of Traders",
+      "authors": ["G. Vössing"],
+      "venue": "Journal of Mathematical Economics",
+      "year": 1993
+    },
+    {
+      "id": "vossing1990dissertation",
+      "type": "article",
+      "title": "Essays on Mechanism Design under Incomplete Information",
+      "authors": ["G. Vössing"],
+      "venue": "Ph.D. Dissertation, Princeton University",
+      "year": 1987
+    }
+  ],
+
+  "teaching": [
+    {
+      "code": "ECON 8301",
+      "title": "Microeconomic Theory I (Ph.D. core)",
+      "level": "graduate",
+      "semester": "Fall 2025",
+      "room": "Whitmore Hall 210",
+      "days": "TR 9:30-10:45 AM",
+      "syllabus_source": null
+    },
+    {
+      "code": "ECON 8302",
+      "title": "Microeconomic Theory II (Ph.D. core)",
+      "level": "graduate",
+      "semester": "Spring 2025",
+      "room": "Whitmore Hall 210",
+      "days": "TR 9:30-10:45 AM",
+      "syllabus_source": null
+    },
+    {
+      "code": "ECON 4500",
+      "title": "Game Theory and Economic Behavior",
+      "level": "undergraduate",
+      "semester": "Fall 2025",
+      "room": "Whitmore Hall 105",
+      "days": "MW 1:00-2:15 PM",
+      "syllabus_source": null
+    }
+  ],
+
+  "group": {
+    "name": null,
+    "url_path": null,
+    "group_photo_source": null,
+    "group_photo_caption": null,
+    "member_count": null,
+    "current_phd_students": [
+      { "name": "Anika Marchetti",    "year_started": 2020, "topic": "dynamic mechanism design" },
+      { "name": "Priyanka Okafor",    "year_started": 2022, "topic": "auction theory with budget constraints" },
+      { "name": "Thomas Lindqvist",   "year_started": 2023, "topic": "matching markets" }
+    ],
+    "current_masters_students": [],
+    "advisees": [],
+    "alumni": [
+      {
+        "name": "Elena Brandt",
+        "degree": "Ph.D.",
+        "graduated": 2003,
+        "thesis": "Three Essays on Auction Theory",
+        "first_position": "Assistant Professor, Carnegie Mellon University"
+      },
+      {
+        "name": "Rajesh Venkataraman",
+        "degree": "Ph.D.",
+        "graduated": 2008,
+        "thesis": null,
+        "first_position": "Economist, Federal Reserve Bank of New York"
+      },
+      {
+        "name": "Marie-Claire Dubois",
+        "degree": "Ph.D.",
+        "graduated": 2014,
+        "thesis": "Robust Mechanisms for Public Good Provision",
+        "first_position": "Assistant Professor, Toulouse School of Economics"
+      }
+    ]
+  },
+
+  "prospective_students": {
+    "accepting": false,
+    "note": "I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+  },
+
+  "social": {
+    "google_scholar": null,
+    "semantic_scholar": null,
+    "github": null,
+    "dblp": null,
+    "orcid": null,
+    "twitter": null,
+    "bluesky": null,
+    "linkedin": null,
+    "personal_blog": null
+  },
+
+  "assets": {
+    "photo_source": "images/halvern_econ_001_headshot.jpg",
+    "photo_alt": "Photograph of Professor Gerhardt Vössing",
+    "cv_source": null,
+    "cv_updated": null
+  },
+
+  "site_meta": {
+    "last_updated": "2021-03-14",
+    "copyright_line": "Last modified: March 14, 2021."
+  }
+}
