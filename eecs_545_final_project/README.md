@@ -273,42 +273,52 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 | multimodal | TBD | TBD | TBD | TBD |
 | vision_only | TBD | TBD | TBD | TBD |
 
-### RQ I: Temporal Degradation by Agent (vision_only, house_renting)
+---
 
-| Agent | Classic | Modern | Hidden | TRS |
-|---|---|---|---|---|
-| gpt-oss-120B (text-only) | 100.0% | 98.8% | 100.0% | 0.988 |
-| Qwen3-VL-30B | 60.0% | 22.6% | 14.2% | 0.236 |
-| UI-TARS-7B | 58.3% | 27.4% | 24.2% | 0.414 |
-| Qwen2.5-VL-7B | 60.0% | 23.8% | 15.0% | 0.250 |
-| InternVL2-8B | TBD | TBD | TBD | TBD |
+### RQ I: Cross-Agent Comparison (vision_only, house_renting)
 
-**Key finding: GUI specialization outperforms scale.**
-UI-TARS-7B (TRS=0.414) is significantly more robust than
-Qwen3-VL-30B (TRS=0.236) despite being 4x smaller.
-Qwen2.5-VL-7B (TRS=0.250) matches Qwen3-VL-30B (TRS=0.236)
-despite being 4x smaller, suggesting diminishing returns
-from scaling within the same model family.
+| Agent | Params | Type | Classic | Modern | Hidden | TRS |
+|---|---|---|---|---|---|---|
+| gpt-oss-120B | 120B | text-only | 100.0% | 98.8% | 100.0% | 0.988 |
+| Qwen3-VL-30B | 30B | general vision | 60.0% | 22.6% | 14.2% | 0.236 |
+| UI-TARS-7B | 7B | GUI-specialized | 58.3% | 27.4% | 24.2% | **0.414** |
+| Qwen2.5-VL-7B | 7B | general vision | 60.0% | 23.8% | 15.0% | 0.250 |
+| InternVL2-8B | 8B | general vision | 53.3% | 27.4% | 12.5% | 0.234 |
 
-### RQ I: Temporal Degradation by Agent (vision_only, personal_website)
+**Key finding 1:** UI-TARS-7B (TRS=0.414) is the most robust vision agent despite being 4x smaller than Qwen3-VL-30B (TRS=0.236). GUI specialization matters more than model size for temporal robustness.
+
+**Key finding 2:** Qwen2.5-VL-7B (TRS=0.250) matches Qwen3-VL-30B (TRS=0.236) despite being 4x smaller. Scaling within the same model family yields minimal robustness gains.
+
+**Key finding 3:** click_to_reveal and tab_navigation achieve 0% success rate across ALL vision agents, confirming these represent fundamental interaction barriers that no vision agent can overcome without actual browser interaction.
+
+### RQ I: Cross-Agent Comparison (multimodal, house_renting)
+
+| Agent | Params | Type | Classic | Modern | Hidden | TRS |
+|---|---|---|---|---|---|---|
+| Qwen3-VL-30B | 30B | general vision | 93.3% | 73.8% | 97.5% | 0.791 |
+| UI-TARS-7B | 7B | GUI-specialized | TBD | TBD | TBD | TBD |
+| Qwen2.5-VL-7B | 7B | general vision | TBD | TBD | TBD | TBD |
+| InternVL2-8B | 8B | general vision | TBD | TBD | TBD | TBD |
+
+### RQ I: Cross-Agent Comparison (vision_only, personal_website)
 
 | Agent | raw_html_1998 | hugo_papermod | notion | jekyll_alfolio | TRS |
 |---|---|---|---|---|---|
-| gpt-oss-120B (text-only) | 95.0% | 95.0% | 90.0% | 80.0% | 0.842 |
 | Qwen3-VL-30B | 60.0% | 40.0% | 30.0% | 60.0% | 0.500 |
 | UI-TARS-7B | TBD | TBD | TBD | TBD | TBD |
 | Qwen2.5-VL-7B | TBD | TBD | TBD | TBD | TBD |
 | InternVL2-8B | TBD | TBD | TBD | TBD | TBD |
 
-### RQ I: Temporal Degradation by Agent (vision_only, course_registration)
+### RQ I: Cross-Agent Comparison (multimodal, personal_website)
 
-| Agent | 2000s | 2010s | modern | TRS |
-|---|---|---|---|---|
-| gpt-oss-120B (text-only) | TBD | TBD | TBD | TBD |
-| Qwen3-VL-30B | TBD | TBD | TBD | TBD |
-| UI-TARS-7B | TBD | TBD | TBD | TBD |
-| Qwen2.5-VL-7B | TBD | TBD | TBD | TBD |
-| InternVL2-8B | TBD | TBD | TBD | TBD |
+| Agent | raw_html_1998 | hugo_papermod | notion | jekyll_alfolio | TRS |
+|---|---|---|---|---|---|
+| Qwen3-VL-30B | 75.0% | 85.0% | 80.0% | 65.0% | 0.867 |
+| UI-TARS-7B | TBD | TBD | TBD | TBD | TBD |
+| Qwen2.5-VL-7B | TBD | TBD | TBD | TBD | TBD |
+| InternVL2-8B | TBD | TBD | TBD | TBD | TBD |
+
+---
 
 ### RQ II: Test-Time Interventions (house_renting, vision_only, Qwen3-VL-30B)
 
@@ -318,6 +328,8 @@ from scaling within the same model family.
 | memory | 69 | 35.9% | 23 | +24.0% |
 | CoT | 12 | 6.2% | 29 | -8.8% |
 
+**Key finding:** Memory intervention recovers 35.9% of vision-only failures with +24% net improvement on house_renting. CoT is harmful (-8.8% net) due to high hallucination rate on hidden content tasks.
+
 ### RQ II: Test-Time Interventions (personal_website, vision_only, Qwen3-VL-30B)
 
 | Strategy | Recovered | Rate | Hallucinated | Net |
@@ -326,14 +338,38 @@ from scaling within the same model family.
 | memory | 0 | 0.0% | 31 | -73.8% |
 | CoT | 1 | 2.4% | 8 | -16.7% |
 
+**Key finding:** Memory intervention is actively harmful on personal_website (-73.8% net) because failures are caused by information being on a different page entirely (navigation failures) rather than visibility failures. Agent hallucinates plausible answers instead of admitting the information is not found.
+
+### RQ II: Recovery Rate by Perturbation Type (house_renting, vision_only)
+
+| Perturbation | Memory | CoT |
+|---|---|---|
+| visible | 60% | 9% |
+| tab_navigation | 23% | 0% |
+| tab_then_expand | 17% | 0% |
+| filter_navigation | 14% | 57% |
+| click_to_reveal | 0% | 0% |
+
+**Key finding:** click_to_reveal is an irreducible failure mode. Neither memory nor CoT can recover these failures because the information is fundamentally inaccessible without browser interaction.
+
+---
+
 ### RQ III: Failure Mode Taxonomy (vision_only, house_renting)
 
 | Category | Count | % of failures | Description |
 |---|---|---|---|
-| Viewport limitation | 24 | 12.5% | Information below 720px fold |
-| Interaction limitation | 144 | 75.0% | Content behind buttons or tabs |
-| Navigation limitation | 7 | 3.6% | Requires sidebar filter |
-| Wrong content retrieved | 17 | 8.9% | Agent found wrong information |
+| Viewport limitation | 24 | 12.5% | Information below 720px fold, requires scrolling |
+| Interaction limitation | 144 | 75.0% | Content behind buttons, tabs, or toggles |
+| Navigation limitation | 7 | 3.6% | Requires sidebar filter interaction |
+| Wrong content retrieved | 17 | 8.9% | Agent found content but wrong answer |
+
+### RQ III: Failure Mode Taxonomy (vision_only, personal_website)
+
+| Category | Count | % of failures | Description |
+|---|---|---|---|
+| Navigation (multi-page) | 28 | 66.7% | Information on teaching.html or publications.html |
+| Visual reading failure | 8 | 19.0% | Text too small or below fold |
+| Wrong content retrieved | 6 | 14.3% | Agent found wrong course or publication |
 
 ## Failure Analysis
 
@@ -357,7 +393,7 @@ If you use this benchmark, please cite:
 ```
 @misc{eecs545_gui_robustness_2026,
   title  = {GUI Agent Temporal Robustness Benchmark},
-  author = {group members},
+  author = {Zuchen Li, Opeyemi Akinniyi, Carol Kang, Hao Yin, Xiangnong Wu },
   year   = {2026},
   note   = {EECS 545 Final Project, University of Michigan}
 }
