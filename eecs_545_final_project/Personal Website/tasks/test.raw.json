@@ -156,9 +156,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
+          "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
@@ -198,7 +223,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Nivedita Okonkwo."
+          "The page does not list a Twitter account for Nivedita Okonkwo.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Nivedita Okonkwo."
@@ -361,9 +394,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
+          "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
@@ -403,7 +461,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Nivedita Okonkwo."
+          "The page does not list a Twitter account for Nivedita Okonkwo.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Nivedita Okonkwo."
@@ -566,9 +632,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
+          "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
@@ -608,7 +699,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Nivedita Okonkwo."
+          "The page does not list a Twitter account for Nivedita Okonkwo.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Nivedita Okonkwo."
@@ -771,9 +870,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
+          "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed."
@@ -813,7 +937,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Nivedita Okonkwo."
+          "The page does not list a Twitter account for Nivedita Okonkwo.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Nivedita Okonkwo."
@@ -976,9 +1108,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
@@ -1018,7 +1175,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
+          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
@@ -1181,9 +1346,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
@@ -1223,7 +1413,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
+          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
@@ -1386,9 +1584,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
@@ -1428,7 +1651,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
+          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
@@ -1591,9 +1822,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
+          "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang."
@@ -1633,7 +1889,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
+          "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing."
@@ -1796,9 +2060,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
+          "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
@@ -1838,7 +2127,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Yuki Abernathy."
+          "The page does not list a Twitter account for Yuki Abernathy.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Yuki Abernathy."
@@ -2001,9 +2298,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
+          "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
@@ -2043,7 +2365,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Yuki Abernathy."
+          "The page does not list a Twitter account for Yuki Abernathy.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Yuki Abernathy."
@@ -2206,9 +2536,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
+          "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
@@ -2248,7 +2603,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Yuki Abernathy."
+          "The page does not list a Twitter account for Yuki Abernathy.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Yuki Abernathy."
@@ -2411,9 +2774,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
+          "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program."
@@ -2453,7 +2841,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Yuki Abernathy."
+          "The page does not list a Twitter account for Yuki Abernathy.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Yuki Abernathy."
@@ -2616,9 +3012,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
@@ -2658,7 +3079,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
+          "The page does not list a Twitter account for Malcolm Reyes-Whittaker.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
@@ -2821,9 +3250,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
@@ -2863,7 +3317,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
+          "The page does not list a Twitter account for Malcolm Reyes-Whittaker.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
@@ -3026,9 +3488,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
@@ -3068,7 +3555,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
+          "The page does not list a Twitter account for Malcolm Reyes-Whittaker.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
@@ -3231,9 +3726,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "not"
+        ],
         "fuzzy_match": [
-          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
+          "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project.",
+          "yes, accepting phd students",
+          "yes, she is accepting",
+          "yes, he is accepting",
+          "yes, they are accepting",
+          "accepting ph.d. students",
+          "accepting phd students for fall",
+          "is accepting graduate students",
+          "not accepting new graduate students",
+          "not taking new phd students",
+          "not accepting",
+          "no, not accepting",
+          "not applicable",
+          "not taking new ph.d. students",
+          "not taking prospective graduate students",
+          "not taking students",
+          "no, he is not taking",
+          "no, she is not taking",
+          "no, they are not taking",
+          "not accepting new phd",
+          "not accepting new ph.d",
+          "undergraduate only",
+          "co-advise",
+          "co advise"
         ]
       },
       "reference_answer_raw_annotation": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project."
@@ -3273,7 +3793,15 @@
         "exact_match": null,
         "must_include": [],
         "fuzzy_match": [
-          "The page does not list a Twitter account for Malcolm Reyes-Whittaker."
+          "The page does not list a Twitter account for Malcolm Reyes-Whittaker.",
+          "not found",
+          "no twitter account",
+          "twitter not listed",
+          "does not list a twitter",
+          "no twitter",
+          "not listed",
+          "twitter account not found",
+          "no social media listed"
         ]
       },
       "reference_answer_raw_annotation": "The page does not list a Twitter account for Malcolm Reyes-Whittaker."

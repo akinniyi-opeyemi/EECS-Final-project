@@ -1,0 +1,55 @@
+{
+  "website": "personal_website",
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only",
+  "total_tasks": 80,
+  "evaluated_tasks": 80,
+  "missing_tasks": 0,
+  "baseline": "raw_html_1998",
+  "success_rates": {
+    "jekyll_alfolio": 0.8,
+    "raw_html_1998": 0.95,
+    "notion": 0.9,
+    "hugo_papermod": 0.95
+  },
+  "temporal_degradation": {
+    "raw_html_1998_to_jekyll_alfolio": 0.15,
+    "raw_html_1998_to_notion": 0.05,
+    "raw_html_1998_to_hugo_papermod": 0.0
+  },
+  "trs": 0.8421,
+  "task_type_results": {
+    "T1_recent_pub": {
+      "count": 16,
+      "success_rate": 1.0
+    },
+    "T2_office_hours": {
+      "count": 16,
+      "success_rate": 1.0
+    },
+    "T3_current_course": {
+      "count": 16,
+      "success_rate": 0.5625
+    },
+    "T4_accepting": {
+      "count": 16,
+      "success_rate": 0.9375
+    },
+    "T5_twitter": {
+      "count": 16,
+      "success_rate": 1.0
+    }
+  },
+  "perturbation_results": {
+    "framework_style": {
+      "count": 80,
+      "success_rate": 0.9
+    }
+  },
+  "tier_breakdown": {
+    "must_include": 43,
+    "no_match": 8,
+    "fuzzy_string": 27,
+    "semantic_match": 2
+  }
+}
