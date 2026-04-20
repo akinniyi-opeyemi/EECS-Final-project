@@ -96,9 +96,9 @@ TRS = 0.0  → complete failure
 |---|---|---|---|---|
 | gpt_oss | openai/gpt-oss-120b | 120B | text-only | class server |
 | qwen_vl | Qwen/Qwen3-VL-30B-A3B-Instruct | 30B | general vision | class server |
-| uitars | bytedance-research/UI-TARS-7B-DPO | 7B | GUI-specialized | Great Lakes |
-| qwen25 | Qwen/Qwen2.5-VL-7B-Instruct | 7B | general vision | Great Lakes |
-| internvl | OpenGVLab/InternVL2-8B | 8B | general vision | Great Lakes |
+| uitars | bytedance-research/UI-TARS-7B-DPO | 7B | GUI-specialized | Great Lakes / Bridges-2 |
+| qwen25 | Qwen/Qwen2.5-VL-7B-Instruct | 7B | general vision | Great Lakes / Bridges-2 |
+| internvl | OpenGVLab/InternVL2-8B | 8B | general vision | Great Lakes / Bridges-2 |
 
 ### Input Modes
 
@@ -129,6 +129,26 @@ module load python3.11-anaconda/2024.02
 conda activate eecs545_gl
 pip install vllm openai playwright rapidfuzz sentence-transformers
 playwright install chromium
+
+# request GPU node
+srun --partition=spgpu --gres=gpu:1 --mem=40G --time=4:00:00 --pty bash
+```
+
+### Bridges-2 (NSF ACCESS)
+
+```bash
+# login
+ssh akinniyi@bridges2.psc.edu
+
+# setup
+source /ocean/projects/tra260004p/akinniyi/miniconda3/etc/profile.d/conda.sh
+conda activate eecs545_b2
+module load cuda
+pip install vllm openai playwright rapidfuzz sentence-transformers
+playwright install chromium
+
+# request GPU node
+srun --partition=GPU-shared --gres=gpu:v100-32:1 --mem=16G --time=10:00:00 --pty bash
 ```
 
 ### Environment Variables
@@ -138,34 +158,34 @@ export OPENAI_BASE_URL="http://promaxgb10-d473.eecs.umich.edu:8000/v1"
 export OPENAI_API_KEY="your_key"
 export QWEN_BASE_URL="http://promaxgb10-d668.eecs.umich.edu:8000/v1"
 export QWEN_API_KEY="your_key"
-export UITARS_BASE_URL="http://gl1501:8001/v1"
+export UITARS_BASE_URL="http://localhost:8001/v1"
 export UITARS_API_KEY="local"
-export QWEN25_BASE_URL="http://gl1501:8002/v1"
+export QWEN25_BASE_URL="http://localhost:8002/v1"
 export QWEN25_API_KEY="local"
-export INTERNVL_BASE_URL="http://gl1501:8003/v1"
+export INTERNVL_BASE_URL="http://localhost:8003/v1"
 export INTERNVL_API_KEY="local"
 ```
 
 ---
 
-## Serving Models on Great Lakes
+## Serving Models on Great Lakes / Bridges-2
 
 ```bash
 # UI-TARS-7B on port 8001
 python -m vllm.entrypoints.openai.api_server \
-    --model /scratch/.../models/UI-TARS-7B-DPO \
+    --model /path/to/models/UI-TARS-7B-DPO \
     --port 8001 --host 0.0.0.0 \
     --max-model-len 4096 --dtype bfloat16
 
 # Qwen2.5-VL-7B on port 8002
 python -m vllm.entrypoints.openai.api_server \
-    --model /scratch/.../models/Qwen2.5-VL-7B-Instruct \
+    --model /path/to/models/Qwen2.5-VL-7B-Instruct \
     --port 8002 --host 0.0.0.0 \
     --max-model-len 4096 --dtype bfloat16
 
 # InternVL2-8B on port 8003 (requires --trust-remote-code)
 python -m vllm.entrypoints.openai.api_server \
-    --model /scratch/.../models/InternVL2-8B \
+    --model /path/to/models/InternVL2-8B \
     --port 8003 --host 0.0.0.0 \
     --max-model-len 4096 --dtype bfloat16 \
     --trust-remote-code
@@ -176,16 +196,16 @@ python -m vllm.entrypoints.openai.api_server \
 ## Running Inference
 
 ```bash
-# Start website server
+# start website server
 cd house-renting-eval && python -m http.server 8888
 
-# Run inference
+# run inference
 python scripts/infer.py \
     --website house_renting \
     --mode vision_only \
     --agent uitars
 
-# All combinations
+# all combinations
 for agent in gpt_oss qwen_vl uitars qwen25 internvl; do
     python scripts/infer.py --website house_renting --mode vision_only --agent $agent
 done
@@ -207,7 +227,7 @@ python scripts/evaluate.py \
 ## Running RQ II Interventions
 
 ```bash
-# Run memory and CoT on failed tasks
+# run memory and CoT on failed tasks
 python scripts/infer_rq2.py \
     --website house_renting \
     --mode vision_only \
@@ -218,7 +238,7 @@ python scripts/infer_rq2.py \
     --mode vision_only \
     --strategy cot
 
-# Evaluate interventions
+# evaluate interventions
 python scripts/evaluate_rq2.py \
     --website house_renting \
     --mode vision_only
@@ -229,17 +249,17 @@ python scripts/evaluate_rq2.py \
 ## Generating Visualizations
 
 ```bash
-# Per-website dashboard
+# per-website dashboard
 python scripts/visualize.py --website house_renting
 python scripts/visualize.py --website personal_website
 
-# Cross-mode comparison
+# cross-mode comparison
 python scripts/visualize.py --website all
 
-# Comprehensive dashboard (3 websites, all modes)
+# comprehensive dashboard (3 websites, all modes)
 python scripts/visualize_comprehensive.py
 
-# Cross-agent comparison
+# cross-agent comparison
 python scripts/visualize_agents.py
 
 # RQ II intervention results
@@ -458,4 +478,4 @@ Information lives on a linked page (teaching.html, publications.html). Agent onl
 ## Acknowledgments
 
 Class API access provided by EECS 545 course staff, University of Michigan.
-Compute provided by University of Michigan Advanced Research Computing (ARC).
+Compute provided by University of Michigan Advanced Research Computing (ARC) and NSF ACCESS Bridges-2 (allocation tra260004p).
