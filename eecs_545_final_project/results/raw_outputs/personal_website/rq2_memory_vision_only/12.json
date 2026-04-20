@@ -1,0 +1,14 @@
+{
+  "task_id": "12",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_cs_001__notion/",
+  "raw_output": "The screenshot does not provide information about the course Nivedita Okonkwo is teaching this semester or its location.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

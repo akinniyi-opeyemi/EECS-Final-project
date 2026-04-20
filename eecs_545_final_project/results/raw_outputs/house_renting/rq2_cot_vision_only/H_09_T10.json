@@ -1,0 +1,14 @@
+{
+  "task_id": "H_09_T10",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the application fee for Hillcrest Manor. You may need to navigate to the Details tab and expand the Fees section.",
+  "interaction": "click_details_tab_then_fees_toggle",
+  "perturbation_type": "tab_then_expand",
+  "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+  "raw_output": "The application fee for Hillcrest Manor is not visible in the current screenshot. To find it, I would need to navigate to the Details tab and expand the Fees section. However, based on the information provided in this image, the application fee cannot be determined.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

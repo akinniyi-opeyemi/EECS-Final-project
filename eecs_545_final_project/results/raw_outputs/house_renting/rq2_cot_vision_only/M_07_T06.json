@@ -1,0 +1,14 @@
+{
+  "task_id": "M_07_T06",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the pet policy for Parkview Terrace. You may need to click a button to reveal this information.",
+  "interaction": "click_show_details_button",
+  "perturbation_type": "click_to_reveal",
+  "start_url": "http://localhost:8000/templates/modern/house_07.html",
+  "raw_output": "Not visible in the screenshot.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

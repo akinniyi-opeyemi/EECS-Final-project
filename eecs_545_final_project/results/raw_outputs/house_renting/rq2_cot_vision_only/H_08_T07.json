@@ -1,0 +1,14 @@
+{
+  "task_id": "H_08_T07",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the parking details for Cedar Grove Flat. You may need to navigate to the Details tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+  "raw_output": "Click on the \"Details\" tab to find the parking details.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

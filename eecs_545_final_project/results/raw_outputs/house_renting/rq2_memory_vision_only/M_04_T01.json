@@ -1,0 +1,14 @@
+{
+  "task_id": "M_04_T01",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the monthly rent for The Elmwood.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_04.html",
+  "raw_output": "$2,600/month",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

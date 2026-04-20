@@ -1,0 +1,14 @@
+{
+  "task_id": "C_04_T04",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the contact email address for The Elmwood.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/classic/house_04.html",
+  "raw_output": "Not available in the image.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

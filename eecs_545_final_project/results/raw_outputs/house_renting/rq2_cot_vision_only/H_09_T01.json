@@ -1,0 +1,14 @@
+{
+  "task_id": "H_09_T01",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the monthly rent for Hillcrest Manor.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+  "raw_output": "Not available",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

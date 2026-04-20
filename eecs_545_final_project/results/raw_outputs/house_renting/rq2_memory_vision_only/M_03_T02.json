@@ -1,0 +1,14 @@
+{
+  "task_id": "M_03_T02",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the number of bedrooms in Lakeside Condo.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_03.html",
+  "raw_output": "Not available",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

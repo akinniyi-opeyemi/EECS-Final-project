@@ -1,0 +1,14 @@
+{
+  "task_id": "H_02_T04",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the contact email address for Sunset Ridge Home. You may need to navigate to the correct tab.",
+  "interaction": "click_contact_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_02.html",
+  "raw_output": "Not available in the screenshot.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

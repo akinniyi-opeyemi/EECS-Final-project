@@ -1,0 +1,14 @@
+{
+  "task_id": "M_05_T03",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the application deadline for Riverfront Studio.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_05.html",
+  "raw_output": "Jul 2025",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "20",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "Find the title of the most recent publication of Dr. Gerhardt V\u00f6ssing.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_econ_001__jekyll_alfolio/",
+  "raw_output": "Cannot determine from the provided information.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "H_11_T06",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the pet policy for Downtown Loft. You may need to navigate to the Details tab and expand a section.",
+  "interaction": "click_details_tab_then_toggle",
+  "perturbation_type": "tab_then_expand",
+  "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+  "raw_output": "Not available",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

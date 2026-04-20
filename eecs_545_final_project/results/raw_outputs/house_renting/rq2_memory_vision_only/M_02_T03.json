@@ -1,0 +1,14 @@
+{
+  "task_id": "M_02_T03",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the application deadline for Sunset Ridge Home.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_02.html",
+  "raw_output": "July 2025",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

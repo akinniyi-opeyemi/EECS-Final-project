@@ -1,0 +1,14 @@
+{
+  "task_id": "56",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "When does Yuki hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/merrow_lit_001__hugo_papermod/",
+  "raw_output": "Not specified",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

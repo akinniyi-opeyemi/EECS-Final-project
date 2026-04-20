@@ -1,0 +1,14 @@
+{
+  "task_id": "37",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_econ_001__hugo_papermod/",
+  "raw_output": "The course and location are not visible in the provided screenshot.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

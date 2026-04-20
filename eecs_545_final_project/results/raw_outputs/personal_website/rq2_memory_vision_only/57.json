@@ -1,0 +1,14 @@
+{
+  "task_id": "57",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/merrow_lit_001__hugo_papermod/",
+  "raw_output": "The screenshot does not provide information about the course Yuki Abernathy is teaching this semester or its location.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

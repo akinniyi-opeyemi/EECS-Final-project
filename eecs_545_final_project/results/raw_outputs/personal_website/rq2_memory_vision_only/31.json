@@ -1,0 +1,14 @@
+{
+  "task_id": "31",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "When does Gerhardt hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_econ_001__notion/",
+  "raw_output": "Not specified in the provided text.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

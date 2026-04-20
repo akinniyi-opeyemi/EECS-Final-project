@@ -1,0 +1,14 @@
+{
+  "task_id": "H_09_T03",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the application deadline for Hillcrest Manor. You may need to navigate to the correct tab.",
+  "interaction": "click_apply_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+  "raw_output": "Not available",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

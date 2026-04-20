@@ -1,0 +1,14 @@
+{
+  "task_id": "45",
+  "website": "personal_website",
+  "template": "raw_html_1998",
+  "instruction": "Find the title of the most recent publication of Yuki Abernathy.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/merrow_lit_001__raw_html_1998/",
+  "raw_output": "Not available on the page.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "cot"
+}

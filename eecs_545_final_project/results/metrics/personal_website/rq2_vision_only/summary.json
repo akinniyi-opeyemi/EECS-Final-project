@@ -1,0 +1,21 @@
+{
+  "website": "personal_website",
+  "mode": "vision_only",
+  "vanilla_failed": 42,
+  "strategies": {
+    "memory": {
+      "evaluated": 42,
+      "recovered": 0,
+      "recovery_rate": 0.0,
+      "hallucinated": 31,
+      "hallucination_rate": 0.7381
+    },
+    "cot": {
+      "evaluated": 42,
+      "recovered": 1,
+      "recovery_rate": 0.0238,
+      "hallucinated": 8,
+      "hallucination_rate": 0.1905
+    }
+  }
+}

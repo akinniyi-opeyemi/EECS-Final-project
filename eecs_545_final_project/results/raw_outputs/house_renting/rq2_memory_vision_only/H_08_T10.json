@@ -1,0 +1,14 @@
+{
+  "task_id": "H_08_T10",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the application fee for Cedar Grove Flat. You may need to navigate to the Details tab and expand the Fees section.",
+  "interaction": "click_details_tab_then_fees_toggle",
+  "perturbation_type": "tab_then_expand",
+  "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+  "raw_output": "$100",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

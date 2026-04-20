@@ -1,0 +1,14 @@
+{
+  "task_id": "H_01_T09",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the lease duration for Maplewood Apartments. You may need to navigate to the correct tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+  "raw_output": "The lease duration for Maplewood Apartments is not visible in the provided screenshot. To find this information, you would need to navigate to the \"Details\" tab or a similar section of the listing.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

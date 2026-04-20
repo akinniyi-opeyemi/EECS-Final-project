@@ -1,0 +1,14 @@
+{
+  "task_id": "60",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "Find the title of the most recent publication of Malcolm Reyes-Whittaker.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/thornfield_anth_001__jekyll_alfolio/",
+  "raw_output": "Hollow Seams (2017)",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}

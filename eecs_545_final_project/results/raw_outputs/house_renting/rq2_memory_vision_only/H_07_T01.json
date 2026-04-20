@@ -1,0 +1,14 @@
+{
+  "task_id": "H_07_T01",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the monthly rent for Parkview Terrace.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/hidden/house_07.html",
+  "raw_output": "$1,450/month",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "strategy": "memory"
+}
