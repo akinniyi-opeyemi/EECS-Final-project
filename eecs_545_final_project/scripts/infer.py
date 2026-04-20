@@ -11,8 +11,8 @@ from playwright.sync_api import sync_playwright
 # ============================================================
 # CONFIGURATION
 # ============================================================
-# TASK_FILE   = Path("house-renting-eval/tasks.json")
-TASK_FILE   = Path("house-renting-eval/tasks_test.json")
+TASK_FILE   = Path("house-renting-eval/tasks.json")
+#TASK_FILE   = Path("house-renting-eval/tasks_test.json")
 OUTPUT_DIR  = Path("results/raw_outputs/house_renting")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

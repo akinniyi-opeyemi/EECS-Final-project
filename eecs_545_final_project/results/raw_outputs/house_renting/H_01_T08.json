@@ -1,0 +1,13 @@
+{
+  "task_id": "H_01_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Austin and identify Maplewood Apartments.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Maplewood Apartments \u2013 412\u202fMaplewood\u202fDrive, Austin, TX\u202f78701 \u2013 2\u202fbed, 1\u202fbath, 1\u202fparking spot included \u2013 $1,450/month \u2013 Available from August\u202f1,\u202f2025.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

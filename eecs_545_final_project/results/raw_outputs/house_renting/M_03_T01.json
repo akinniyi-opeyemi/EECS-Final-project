@@ -1,0 +1,13 @@
+{
+  "task_id": "M_03_T01",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the monthly rent for Lakeside Condo.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_03.html",
+  "raw_output": "$1,800/month",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

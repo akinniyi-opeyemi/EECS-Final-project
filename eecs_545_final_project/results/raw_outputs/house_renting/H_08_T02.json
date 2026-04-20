@@ -1,0 +1,13 @@
+{
+  "task_id": "H_08_T02",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the number of bedrooms in Cedar Grove Flat.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/hidden/house_08.html",
+  "raw_output": "1",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

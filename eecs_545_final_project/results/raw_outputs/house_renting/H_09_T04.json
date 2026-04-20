@@ -1,0 +1,13 @@
+{
+  "task_id": "H_09_T04",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the contact email address for Hillcrest Manor. You may need to navigate to the correct tab.",
+  "interaction": "click_contact_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+  "raw_output": "rentals@hillcrestmanor.com",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

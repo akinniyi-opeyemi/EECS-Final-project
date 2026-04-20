@@ -1,0 +1,13 @@
+{
+  "task_id": "H_09_T07",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the parking details for Hillcrest Manor. You may need to navigate to the Details tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_09.html",
+  "raw_output": "2-car garage + guest parking",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

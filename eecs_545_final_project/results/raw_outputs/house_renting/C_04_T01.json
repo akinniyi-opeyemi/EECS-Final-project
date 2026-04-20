@@ -1,0 +1,13 @@
+{
+  "task_id": "C_04_T01",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the monthly rent for The Elmwood.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/classic/house_04.html",
+  "raw_output": "$2,600/month",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

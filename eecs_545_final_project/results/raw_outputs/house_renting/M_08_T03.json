@@ -1,0 +1,13 @@
+{
+  "task_id": "M_08_T03",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the application deadline for Cedar Grove Flat.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_08.html",
+  "raw_output": "July\u202f5,\u202f2025",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

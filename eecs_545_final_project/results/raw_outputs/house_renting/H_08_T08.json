@@ -1,0 +1,13 @@
+{
+  "task_id": "H_08_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Atlanta and identify Cedar Grove Flat.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Cedar Grove Flat\u202f\u2713\u202fAvailable\u202f\ud83d\udccd\u202f19\u202fCedar\u202fGrove\u202fCt,\u202fAtlanta,\u202fGA\u202f30301\u202f\ud83c\udfe0\u202f1\u202fbed\u202f\ud83d\udebf\u202f1\u202fbath\u202f\ud83d\ude97\u202f1\u202fspot\u202fincluded\u202f$1,350/month\u202fFrom\u202fJuly\u202f15,\u202f2025",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

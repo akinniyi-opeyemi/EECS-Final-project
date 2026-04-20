@@ -1,0 +1,13 @@
+{
+  "task_id": "C_11_T04",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the contact email address for Downtown Loft.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/classic/house_11.html",
+  "raw_output": "leasing@downtownloftmiami.com",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "M_04_T03",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the application deadline for The Elmwood.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_04.html",
+  "raw_output": "August\u202f1,\u202f2025",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

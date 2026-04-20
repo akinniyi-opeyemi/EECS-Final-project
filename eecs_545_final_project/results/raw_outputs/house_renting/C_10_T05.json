@@ -1,0 +1,13 @@
+{
+  "task_id": "C_10_T05",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Check whether Pinewood Cottage is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/classic/house_10.html",
+  "raw_output": "Yes, it is currently available.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

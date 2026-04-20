@@ -1,0 +1,13 @@
+{
+  "task_id": "M_06_T06",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the pet policy for Oak Hill House. You may need to click a button to reveal this information.",
+  "interaction": "click_show_details_button",
+  "perturbation_type": "click_to_reveal",
+  "start_url": "http://localhost:8000/templates/modern/house_06.html",
+  "raw_output": "Dogs and cats allowed",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "H_07_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Seattle and identify Parkview Terrace.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Parkview Terrace\u202f\u2713\u202fAvailable\u202f\ud83d\udccd\u202f800\u202fParkview\u202fAve,\u202fSeattle,\u202fWA\u202f98101\u202f\ud83c\udfe0\u202f2\u202fbed\u202f\ud83d\udebf\u202f2\u202fbath\u202f\ud83d\ude97\u202f1\u202fcovered\u202fspot\u202fincluded\u202f$2,400/month\u202fFrom\u202fSeptember\u202f15,\u202f2025",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

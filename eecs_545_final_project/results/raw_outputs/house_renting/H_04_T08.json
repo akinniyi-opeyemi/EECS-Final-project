@@ -1,0 +1,13 @@
+{
+  "task_id": "H_04_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Boston and identify The Elmwood.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "The Elmwood\u202f\u2713\u202fAvailable\u202f\ud83d\udccd\u202f22 Elmwood Street, Boston, MA\u202f02115\u202f\ud83c\udfe0\u202f2\u202fbed\u202f\ud83d\udebf\u202f2\u202fbath\u202f\ud83d\ude97\u202f1\u202fspot included\u202f$2,600/month\u202fFrom\u202fAugust\u202f15,\u202f2025",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

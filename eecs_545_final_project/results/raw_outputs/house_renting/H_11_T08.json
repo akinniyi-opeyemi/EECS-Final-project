@@ -1,0 +1,13 @@
+{
+  "task_id": "H_11_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Miami and identify Downtown Loft.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Downtown Loft \u2013 Not Available \u2013 \ud83d\udccd 201 Brickell Ave, Miami, FL\u202f33131 \u2013 1\u202fbed \u2022 1\u202fbath \u2013 $2,050/month (Valet parking $150/month)",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

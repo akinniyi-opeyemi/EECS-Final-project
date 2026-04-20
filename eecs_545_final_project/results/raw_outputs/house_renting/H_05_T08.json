@@ -1,0 +1,13 @@
+{
+  "task_id": "H_05_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Portland and identify Riverfront Studio.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Riverfront Studio\u202f\u2713\u202fAvailable \u2013 310 River Ave, Portland, OR\u202f97201 \u2013 Studio bed, 1\u202fbath, bicycle storage available \u2013 $1,100/month \u2013 From July\u202f1,\u202f2025.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

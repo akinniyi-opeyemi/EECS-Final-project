@@ -1,0 +1,13 @@
+{
+  "task_id": "M_06_T03",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the application deadline for Oak Hill House.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_06.html",
+  "raw_output": "N/A",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

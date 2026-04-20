@@ -1,0 +1,4545 @@
+[
+  {
+    "task_id": "C_01_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "$1,450/month",
+    "ground_truth": "$1,450/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,450/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_01_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_01_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "July\u202f15,\u202f2025",
+    "ground_truth": "July 15, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 15, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_01_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "rentals@maplewoodapts.com",
+    "ground_truth": "rentals@maplewoodapts.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@maplewoodapts.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_01_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Maplewood Apartments is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_01_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "$1,450/month",
+    "ground_truth": "$1,450/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,450/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_01_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_01_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "July\u202f15,\u202f2025",
+    "ground_truth": "July 15, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 15, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_01_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "rentals@maplewoodapts.com",
+    "ground_truth": "rentals@maplewoodapts.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@maplewoodapts.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_01_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Maplewood Apartments is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_01_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Maplewood Apartments. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_01_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Maplewood Apartments. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "1 spot included",
+    "ground_truth": "1 spot included",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1 spot included"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "$1,450/month",
+    "ground_truth": "$1,450/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,450/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Maplewood Apartments.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Maplewood Apartments. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "July\u202f15,\u202f2025",
+    "ground_truth": "July 15, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 15, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Maplewood Apartments. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "rentals@maplewoodapts.com",
+    "ground_truth": "rentals@maplewoodapts.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@maplewoodapts.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Maplewood Apartments is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Maplewood Apartments. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Maplewood Apartments. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "1 spot included",
+    "ground_truth": "1 spot included",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1 spot included"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Austin and identify Maplewood Apartments.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Maplewood Apartments \u2013 412\u202fMaplewood\u202fDrive, Austin, TX\u202f78701 \u2013 2\u202fbed, 1\u202fbath, 1\u202fparking spot included \u2013 $1,450/month \u2013 Available from August\u202f1,\u202f2025.",
+    "ground_truth": "Maplewood Apartments",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Maplewood Apartments"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Maplewood Apartments. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_01_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Maplewood Apartments. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$50",
+    "ground_truth": "$50",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$50"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_02_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "$2,200/month",
+    "ground_truth": "$2,200/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,200/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_02_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "3",
+    "ground_truth": "3",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "3"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_02_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "July 1, 2025",
+    "ground_truth": "July 1, 2025",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "July 1, 2025"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_02_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "info@sunsetridgehomes.com",
+    "ground_truth": "info@sunsetridgehomes.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "info@sunsetridgehomes.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_02_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Sunset Ridge Home is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_02_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "$2,200/month",
+    "ground_truth": "$2,200/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,200/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_02_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "3",
+    "ground_truth": "3",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "3"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_02_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "July\u202f1,\u202f2025",
+    "ground_truth": "July 1, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 1, 2025",
+      "score": 0.833
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_02_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "info@sunsetridgehomes.com",
+    "ground_truth": "info@sunsetridgehomes.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "info@sunsetridgehomes.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_02_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Sunset Ridge Home is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_02_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Sunset Ridge Home. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Cats allowed, no dogs",
+    "ground_truth": "Cats allowed, no dogs",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Cats allowed, no dogs"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_02_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Sunset Ridge Home. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "2-car garage",
+    "ground_truth": "2-car garage",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2-car garage"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "$2,200/month",
+    "ground_truth": "$2,200/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,200/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Sunset Ridge Home.",
+    "interaction": "none",
+    "prediction": "3",
+    "ground_truth": "3",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "3"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Sunset Ridge Home. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "July\u202f1,\u202f2025",
+    "ground_truth": "July 1, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 1, 2025",
+      "score": 0.833
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Sunset Ridge Home. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "info@sunsetridgehomes.com",
+    "ground_truth": "info@sunsetridgehomes.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "info@sunsetridgehomes.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Sunset Ridge Home is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Sunset Ridge Home. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "Cats allowed, no dogs",
+    "ground_truth": "Cats allowed, no dogs",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Cats allowed, no dogs"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Sunset Ridge Home. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "2\u2011car garage",
+    "ground_truth": "2-car garage",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "2-car garage",
+      "score": 0.917
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Denver and identify Sunset Ridge Home.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Sunset Ridge Home \u2013 Available \u2013 78 Sunset Ridge Road, Denver, CO\u202f80203 \u2013 3\u202fbed, 2\u202fbath, 2\u2011car garage \u2013 $2,200/month \u2013 From July\u202f15,\u202f2025",
+    "ground_truth": "Sunset Ridge Home",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Sunset Ridge Home"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Sunset Ridge Home. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_02_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Sunset Ridge Home. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$75",
+    "ground_truth": "$75",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$75"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_03_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "$1,800/month",
+    "ground_truth": "$1,800/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,800/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_03_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_03_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_03_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "leasing@lakesidecondo.com",
+    "ground_truth": "leasing@lakesidecondo.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@lakesidecondo.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_03_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Lakeside Condo is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_03_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "$1,800/month",
+    "ground_truth": "$1,800/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,800/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_03_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_03_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_03_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "leasing@lakesidecondo.com",
+    "ground_truth": "leasing@lakesidecondo.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@lakesidecondo.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_03_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Lakeside Condo is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not Available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_03_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Lakeside Condo. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_03_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Lakeside Condo. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Street parking only",
+    "ground_truth": "Street parking only",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Street parking only"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "$1,800/month",
+    "ground_truth": "$1,800/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,800/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Lakeside Condo.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Lakeside Condo. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Lakeside Condo. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "leasing@lakesidecondo.com",
+    "ground_truth": "leasing@lakesidecondo.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@lakesidecondo.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Lakeside Condo is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Lakeside Condo. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Lakeside Condo. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "Street parking only",
+    "ground_truth": "Street parking only",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Street parking only"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Chicago and identify Lakeside Condo.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Lakeside Condo \u2013 1005 Lakeshore Blvd, Chicago, IL\u202f60611 \u2013 1\u202fbed, 1\u202fbath, street parking only \u2013 $1,800/month \u2013 Not Available.",
+    "ground_truth": "Lakeside Condo",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Lakeside Condo"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Lakeside Condo. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_03_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Lakeside Condo. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$60",
+    "ground_truth": "$60",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$60"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_04_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for The Elmwood.",
+    "interaction": "none",
+    "prediction": "$2,600/month",
+    "ground_truth": "$2,600/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,600/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_04_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in The Elmwood.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_04_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for The Elmwood.",
+    "interaction": "none",
+    "prediction": "August 1, 2025",
+    "ground_truth": "August 1, 2025",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "August 1, 2025"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_04_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for The Elmwood.",
+    "interaction": "none",
+    "prediction": "rentals@theelmwood.com",
+    "ground_truth": "rentals@theelmwood.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@theelmwood.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_04_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether The Elmwood is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_04_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for The Elmwood.",
+    "interaction": "none",
+    "prediction": "$2,600/month",
+    "ground_truth": "$2,600/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,600/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_04_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in The Elmwood.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_04_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for The Elmwood.",
+    "interaction": "none",
+    "prediction": "August\u202f1,\u202f2025",
+    "ground_truth": "August 1, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "August 1, 2025",
+      "score": 0.857
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_04_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for The Elmwood.",
+    "interaction": "none",
+    "prediction": "rentals@theelmwood.com",
+    "ground_truth": "rentals@theelmwood.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@theelmwood.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_04_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether The Elmwood is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is available.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_04_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for The Elmwood. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Small pets allowed (under 25\u202flbs)",
+    "ground_truth": "Small pets allowed (under 25 lbs)",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "Small pets allowed (under 25 lbs)",
+      "score": 0.97
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_04_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for The Elmwood. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "1 spot included",
+    "ground_truth": "1 spot included",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1 spot included"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for The Elmwood.",
+    "interaction": "none",
+    "prediction": "$2,600/month",
+    "ground_truth": "$2,600/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,600/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in The Elmwood.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for The Elmwood. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "August\u202f1,\u202f2025",
+    "ground_truth": "August 1, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "August 1, 2025",
+      "score": 0.857
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for The Elmwood. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "rentals@theelmwood.com",
+    "ground_truth": "rentals@theelmwood.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@theelmwood.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether The Elmwood is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for The Elmwood. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "Small pets allowed (under 25\u202flbs)",
+    "ground_truth": "Small pets allowed (under 25 lbs)",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "Small pets allowed (under 25 lbs)",
+      "score": 0.97
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for The Elmwood. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "1 spot included",
+    "ground_truth": "1 spot included",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1 spot included"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Boston and identify The Elmwood.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "The Elmwood\u202f\u2713\u202fAvailable\u202f\ud83d\udccd\u202f22 Elmwood Street, Boston, MA\u202f02115\u202f\ud83c\udfe0\u202f2\u202fbed\u202f\ud83d\udebf\u202f2\u202fbath\u202f\ud83d\ude97\u202f1\u202fspot included\u202f$2,600/month\u202fFrom\u202fAugust\u202f15,\u202f2025",
+    "ground_truth": "The Elmwood",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "The Elmwood"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for The Elmwood. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_04_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for The Elmwood. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$80",
+    "ground_truth": "$80",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$80"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_05_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "$1,100/month",
+    "ground_truth": "$1,100/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,100/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_05_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "Studio",
+    "ground_truth": "Studio",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Studio"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_05_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "June\u202f20,\u202f2025",
+    "ground_truth": "June 20, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "June 20, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_05_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "hello@riverfrontstudio.com",
+    "ground_truth": "hello@riverfrontstudio.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "hello@riverfrontstudio.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_05_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Riverfront Studio is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Available",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_05_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "$1,100/month",
+    "ground_truth": "$1,100/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,100/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_05_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "Not visible",
+    "ground_truth": "Studio",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_05_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "June\u202f20,\u202f2025",
+    "ground_truth": "June 20, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "June 20, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_05_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "hello@riverfrontstudio.com",
+    "ground_truth": "hello@riverfrontstudio.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "hello@riverfrontstudio.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_05_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Riverfront Studio is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_05_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Riverfront Studio. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_05_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Riverfront Studio. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Bicycle storage available",
+    "ground_truth": "Bicycle storage available",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Bicycle storage available"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "$1,100/month",
+    "ground_truth": "$1,100/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,100/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Riverfront Studio.",
+    "interaction": "none",
+    "prediction": "Studio",
+    "ground_truth": "Studio",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Studio"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Riverfront Studio. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "June\u202f20,\u202f2025",
+    "ground_truth": "June 20, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "June 20, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Riverfront Studio. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "hello@riverfrontstudio.com",
+    "ground_truth": "hello@riverfrontstudio.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "hello@riverfrontstudio.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Riverfront Studio is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, Riverfront Studio is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Riverfront Studio. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Riverfront Studio. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "Bicycle storage available",
+    "ground_truth": "Bicycle storage available",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Bicycle storage available"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Portland and identify Riverfront Studio.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Riverfront Studio\u202f\u2713\u202fAvailable \u2013 310 River Ave, Portland, OR\u202f97201 \u2013 Studio bed, 1\u202fbath, bicycle storage available \u2013 $1,100/month \u2013 From July\u202f1,\u202f2025.",
+    "ground_truth": "Riverfront Studio",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Riverfront Studio"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Riverfront Studio. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "6 months minimum",
+    "ground_truth": "6 months minimum",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "6 months minimum"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_05_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Riverfront Studio. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$40",
+    "ground_truth": "$40",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$40"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_06_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Oak Hill House.",
+    "interaction": "none",
+    "prediction": "$1,750/month",
+    "ground_truth": "$1,750/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,750/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_06_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Oak Hill House.",
+    "interaction": "none",
+    "prediction": "3",
+    "ground_truth": "3",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "3"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_06_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Oak Hill House.",
+    "interaction": "none",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_06_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Oak Hill House.",
+    "interaction": "none",
+    "prediction": "contact@oakhillnashville.com",
+    "ground_truth": "contact@oakhillnashville.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "contact@oakhillnashville.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_06_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Oak Hill House is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_06_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Oak Hill House.",
+    "interaction": "none",
+    "prediction": "$1,750/month",
+    "ground_truth": "$1,750/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,750/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_06_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Oak Hill House.",
+    "interaction": "none",
+    "prediction": "3",
+    "ground_truth": "3",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "3"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_06_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Oak Hill House.",
+    "interaction": "none",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_06_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Oak Hill House.",
+    "interaction": "none",
+    "prediction": "contact@oakhillnashville.com",
+    "ground_truth": "contact@oakhillnashville.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "contact@oakhillnashville.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_06_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Oak Hill House is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not available.",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_06_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Oak Hill House. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Dogs and cats allowed",
+    "ground_truth": "Dogs and cats allowed",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Dogs and cats allowed"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_06_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Oak Hill House. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Click the \u201cProperty Details\u201d button to expand the section; the parking details are \u201cDriveway, 2 cars\u201d.",
+    "ground_truth": "Driveway, 2 cars",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Driveway, 2 cars"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Oak Hill House.",
+    "interaction": "none",
+    "prediction": "$1,750/month",
+    "ground_truth": "$1,750/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,750/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Oak Hill House.",
+    "interaction": "none",
+    "prediction": "3",
+    "ground_truth": "3",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "3"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Oak Hill House. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Oak Hill House. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "contact@oakhillnashville.com",
+    "ground_truth": "contact@oakhillnashville.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "contact@oakhillnashville.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Oak Hill House is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not Available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Oak Hill House. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "Dogs and cats allowed",
+    "ground_truth": "Dogs and cats allowed",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Dogs and cats allowed"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Oak Hill House. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "Driveway, 2 cars",
+    "ground_truth": "Driveway, 2 cars",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Driveway, 2 cars"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Nashville and identify Oak Hill House.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Oak Hill House \u2013 Not Available \u2013 54 Oak Hill Lane, Nashville, TN\u202f37205 \u2013 3\u202fbed, 1\u202fbath \u2013 $1,750/month.",
+    "ground_truth": "Oak Hill House",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Oak Hill House"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Oak Hill House. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_06_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Oak Hill House. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$55",
+    "ground_truth": "$55",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$55"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_07_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "$2,400/month",
+    "ground_truth": "$2,400/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,400/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_07_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_07_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "September 1, 2025",
+    "ground_truth": "September 1, 2025",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "September 1, 2025"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_07_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "leasing@parkviewterrace.com",
+    "ground_truth": "leasing@parkviewterrace.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@parkviewterrace.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_07_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Parkview Terrace is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_07_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "$2,400/month",
+    "ground_truth": "$2,400/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,400/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_07_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_07_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "September 1, 2025",
+    "ground_truth": "September 1, 2025",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "September 1, 2025"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_07_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "leasing@parkviewterrace.com",
+    "ground_truth": "leasing@parkviewterrace.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@parkviewterrace.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_07_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Parkview Terrace is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is listed as available (available from September\u202f15,\u202f2025).",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_07_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Parkview Terrace. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Cats only",
+    "ground_truth": "Cats only",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Cats only"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_07_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Parkview Terrace. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "1 covered spot included",
+    "ground_truth": "1 covered spot included",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "1 covered spot included"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "$2,400/month",
+    "ground_truth": "$2,400/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,400/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Parkview Terrace.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Parkview Terrace. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "September 1, 2025",
+    "ground_truth": "September 1, 2025",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "September 1, 2025"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Parkview Terrace. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "leasing@parkviewterrace.com",
+    "ground_truth": "leasing@parkviewterrace.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@parkviewterrace.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Parkview Terrace is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Parkview Terrace. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "Cats only",
+    "ground_truth": "Cats only",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Cats only"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Parkview Terrace. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "1 covered spot included",
+    "ground_truth": "1 covered spot included",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "1 covered spot included"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Seattle and identify Parkview Terrace.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Parkview Terrace\u202f\u2713\u202fAvailable\u202f\ud83d\udccd\u202f800\u202fParkview\u202fAve,\u202fSeattle,\u202fWA\u202f98101\u202f\ud83c\udfe0\u202f2\u202fbed\u202f\ud83d\udebf\u202f2\u202fbath\u202f\ud83d\ude97\u202f1\u202fcovered\u202fspot\u202fincluded\u202f$2,400/month\u202fFrom\u202fSeptember\u202f15,\u202f2025",
+    "ground_truth": "Parkview Terrace",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Parkview Terrace"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Parkview Terrace. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_07_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Parkview Terrace. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$70",
+    "ground_truth": "$70",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$70"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_08_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "$1,350/month",
+    "ground_truth": "$1,350/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,350/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_08_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_08_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "July\u202f5,\u202f2025",
+    "ground_truth": "July 5, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 5, 2025",
+      "score": 0.833
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_08_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "info@cedargroveflats.com",
+    "ground_truth": "info@cedargroveflats.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "info@cedargroveflats.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_08_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Cedar Grove Flat is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_08_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "$1,350/month",
+    "ground_truth": "$1,350/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,350/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_08_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_08_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "July\u202f5,\u202f2025",
+    "ground_truth": "July 5, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 5, 2025",
+      "score": 0.833
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_08_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "info@cedargroveflats.com",
+    "ground_truth": "info@cedargroveflats.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "info@cedargroveflats.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_08_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Cedar Grove Flat is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_08_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Cedar Grove Flat. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_08_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Cedar Grove Flat. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "1 spot included",
+    "ground_truth": "1 spot included",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1 spot included"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "$1,350/month",
+    "ground_truth": "$1,350/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,350/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Cedar Grove Flat.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Cedar Grove Flat. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "July\u202f5,\u202f2025",
+    "ground_truth": "July 5, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 5, 2025",
+      "score": 0.833
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Cedar Grove Flat. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "info@cedargroveflats.com",
+    "ground_truth": "info@cedargroveflats.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "info@cedargroveflats.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Cedar Grove Flat is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Cedar Grove Flat. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Cedar Grove Flat. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "1 spot included",
+    "ground_truth": "1 spot included",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1 spot included"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Atlanta and identify Cedar Grove Flat.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Cedar Grove Flat\u202f\u2713\u202fAvailable\u202f\ud83d\udccd\u202f19\u202fCedar\u202fGrove\u202fCt,\u202fAtlanta,\u202fGA\u202f30301\u202f\ud83c\udfe0\u202f1\u202fbed\u202f\ud83d\udebf\u202f1\u202fbath\u202f\ud83d\ude97\u202f1\u202fspot\u202fincluded\u202f$1,350/month\u202fFrom\u202fJuly\u202f15,\u202f2025",
+    "ground_truth": "Cedar Grove Flat",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Cedar Grove Flat"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Cedar Grove Flat. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_08_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Cedar Grove Flat. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$45",
+    "ground_truth": "$45",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$45"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_09_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "$3,100/month",
+    "ground_truth": "$3,100/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$3,100/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_09_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "4",
+    "ground_truth": "4",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "4"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_09_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_09_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "rentals@hillcrestmanor.com",
+    "ground_truth": "rentals@hillcrestmanor.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@hillcrestmanor.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_09_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Hillcrest Manor is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_09_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "$3,100/month",
+    "ground_truth": "$3,100/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$3,100/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_09_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "4",
+    "ground_truth": "4",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "4"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_09_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_09_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "rentals@hillcrestmanor.com",
+    "ground_truth": "rentals@hillcrestmanor.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@hillcrestmanor.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_09_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Hillcrest Manor is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_09_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Hillcrest Manor. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Dogs and cats allowed",
+    "ground_truth": "Dogs and cats allowed",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Dogs and cats allowed"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_09_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Hillcrest Manor. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "2-car garage + guest parking",
+    "ground_truth": "2-car garage + guest parking",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "2-car garage + guest parking"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "$3,100/month",
+    "ground_truth": "$3,100/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$3,100/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Hillcrest Manor.",
+    "interaction": "none",
+    "prediction": "4",
+    "ground_truth": "4",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "4"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Hillcrest Manor. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Hillcrest Manor. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "rentals@hillcrestmanor.com",
+    "ground_truth": "rentals@hillcrestmanor.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@hillcrestmanor.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Hillcrest Manor is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not Available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Hillcrest Manor. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "Dogs and cats allowed",
+    "ground_truth": "Dogs and cats allowed",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Dogs and cats allowed"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Hillcrest Manor. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "2-car garage + guest parking",
+    "ground_truth": "2-car garage + guest parking",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "2-car garage + guest parking"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in San Diego and identify Hillcrest Manor.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Hillcrest Manor \u2013 Not Available \u2013 500 Hillcrest Blvd, San Diego, CA\u202f92101 \u2013 4\u202fbed, 3\u202fbath \u2013 2\u2011car garage\u202f+\u202fguest parking \u2013 $3,100/month.",
+    "ground_truth": "Hillcrest Manor",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Hillcrest Manor"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Hillcrest Manor. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_09_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Hillcrest Manor. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$100",
+    "ground_truth": "$100",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$100"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_10_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "$1,550/month",
+    "ground_truth": "$1,550/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,550/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_10_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_10_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "July\u202f18,\u202f2025",
+    "ground_truth": "July 18, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 18, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_10_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "hello@pinewoodcottage.com",
+    "ground_truth": "hello@pinewoodcottage.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "hello@pinewoodcottage.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_10_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Pinewood Cottage is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_10_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "$1,550/month",
+    "ground_truth": "$1,550/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,550/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_10_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "2 Bedrooms",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_10_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "July\u202f18,\u202f2025",
+    "ground_truth": "July 18, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 18, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_10_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "hello@pinewoodcottage.com",
+    "ground_truth": "hello@pinewoodcottage.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "hello@pinewoodcottage.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_10_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Pinewood Cottage is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_10_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Pinewood Cottage. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Small pets allowed (under 20\u202flbs)",
+    "ground_truth": "Small pets allowed (under 20 lbs)",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "Small pets allowed (under 20 lbs)",
+      "score": 0.97
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_10_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Pinewood Cottage. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "1 spot included",
+    "ground_truth": "1 spot included",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1 spot included"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "$1,550/month",
+    "ground_truth": "$1,550/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,550/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Pinewood Cottage.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Pinewood Cottage. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "July\u202f18,\u202f2025",
+    "ground_truth": "July 18, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "July 18, 2025",
+      "score": 0.846
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Pinewood Cottage. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "hello@pinewoodcottage.com",
+    "ground_truth": "hello@pinewoodcottage.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "hello@pinewoodcottage.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Pinewood Cottage is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Pinewood Cottage. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "Small pets allowed (under 20\u202flbs)",
+    "ground_truth": "Small pets allowed (under 20 lbs)",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "Small pets allowed (under 20 lbs)",
+      "score": 0.97
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Pinewood Cottage. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "1 spot included",
+    "ground_truth": "1 spot included",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1 spot included"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Raleigh and identify Pinewood Cottage.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Pinewood Cottage\u202f\u2713\u202fAvailable\u202f\ud83d\udccd\u202f33\u202fPinewood\u202fTrail,\u202fRaleigh,\u202fNC\u202f27601\u202f\ud83c\udfe0\u202f2\u202fbed\u202f\ud83d\udebf\u202f1\u202fbath\u202f\ud83d\ude97\u202f1\u202fspot\u202fincluded\u202f$1,550/month\u202fFrom\u202fAugust\u202f1,\u202f2025",
+    "ground_truth": "Pinewood Cottage",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Pinewood Cottage"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Pinewood Cottage. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_10_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Pinewood Cottage. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$50",
+    "ground_truth": "$50",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$50"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_11_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Downtown Loft.",
+    "interaction": "none",
+    "prediction": "$2,050/month",
+    "ground_truth": "$2,050/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,050/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_11_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Downtown Loft.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_11_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Downtown Loft.",
+    "interaction": "none",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_11_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Downtown Loft.",
+    "interaction": "none",
+    "prediction": "leasing@downtownloftmiami.com",
+    "ground_truth": "leasing@downtownloftmiami.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@downtownloftmiami.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_11_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Downtown Loft is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not available.",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_11_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Downtown Loft.",
+    "interaction": "none",
+    "prediction": "$2,050/month",
+    "ground_truth": "$2,050/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,050/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_11_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Downtown Loft.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_11_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Downtown Loft.",
+    "interaction": "none",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_11_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Downtown Loft.",
+    "interaction": "none",
+    "prediction": "leasing@downtownloftmiami.com",
+    "ground_truth": "leasing@downtownloftmiami.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@downtownloftmiami.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_11_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Downtown Loft is currently available for rent.",
+    "interaction": "none",
+    "prediction": "No, it is not currently available for rent.",
+    "ground_truth": "Not Available",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_11_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Downtown Loft. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_11_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Downtown Loft. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Valet parking available ($150/month)",
+    "ground_truth": "Valet parking available ($150/month)",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Valet parking available ($150/month)"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Downtown Loft.",
+    "interaction": "none",
+    "prediction": "$2,050/month",
+    "ground_truth": "$2,050/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$2,050/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Downtown Loft.",
+    "interaction": "none",
+    "prediction": "1",
+    "ground_truth": "1",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "1"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Downtown Loft. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "N/A",
+    "ground_truth": "N/A",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "N/A"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Downtown Loft. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "leasing@downtownloftmiami.com",
+    "ground_truth": "leasing@downtownloftmiami.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "leasing@downtownloftmiami.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Downtown Loft is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Not Available",
+    "ground_truth": "Not Available",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Not Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Downtown Loft. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "No pets allowed",
+    "ground_truth": "No pets allowed",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "No pets allowed"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Downtown Loft. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "Valet parking available ($150/month)",
+    "ground_truth": "Valet parking available ($150/month)",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Valet parking available ($150/month)"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Miami and identify Downtown Loft.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Downtown Loft \u2013 Not Available \u2013 \ud83d\udccd 201 Brickell Ave, Miami, FL\u202f33131 \u2013 1\u202fbed \u2022 1\u202fbath \u2013 $2,050/month (Valet parking $150/month)",
+    "ground_truth": "Downtown Loft",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Downtown Loft"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Downtown Loft. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_11_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Downtown Loft. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$65",
+    "ground_truth": "$65",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$65"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_12_T01",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Birchwood Place.",
+    "interaction": "none",
+    "prediction": "$1,650/month",
+    "ground_truth": "$1,650/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,650/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_12_T02",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Birchwood Place.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_12_T03",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Birchwood Place.",
+    "interaction": "none",
+    "prediction": "August\u202f20,\u202f2025",
+    "ground_truth": "August 20, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "August 20, 2025",
+      "score": 0.867
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_12_T04",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Birchwood Place.",
+    "interaction": "none",
+    "prediction": "rentals@birchwoodplace.com",
+    "ground_truth": "rentals@birchwoodplace.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@birchwoodplace.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "C_12_T05",
+    "website": "house_renting",
+    "template": "classic",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Birchwood Place is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_12_T01",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Birchwood Place.",
+    "interaction": "none",
+    "prediction": "$1,650/month",
+    "ground_truth": "$1,650/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,650/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_12_T02",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Birchwood Place.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_12_T03",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the application deadline for Birchwood Place.",
+    "interaction": "none",
+    "prediction": "August\u202f20,\u202f2025",
+    "ground_truth": "August 20, 2025",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "August 20, 2025",
+      "score": 0.867
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_12_T04",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Find the contact email address for Birchwood Place.",
+    "interaction": "none",
+    "prediction": "rentals@birchwoodplace.com",
+    "ground_truth": "rentals@birchwoodplace.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@birchwoodplace.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_12_T05",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Birchwood Place is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, it is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_12_T06",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the pet policy for Birchwood Place. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "Cats allowed, no dogs",
+    "ground_truth": "Cats allowed, no dogs",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Cats allowed, no dogs"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "M_12_T07",
+    "website": "house_renting",
+    "template": "modern",
+    "perturbation_type": "click_to_reveal",
+    "instruction": "Find the parking details for Birchwood Place. You may need to click a button to reveal this information.",
+    "interaction": "click_show_details_button",
+    "prediction": "1 heated indoor spot included",
+    "ground_truth": "1 heated indoor spot included",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "1 heated indoor spot included"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T01",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the monthly rent for Birchwood Place.",
+    "interaction": "none",
+    "prediction": "$1,650/month",
+    "ground_truth": "$1,650/month",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$1,650/month"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T02",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Find the number of bedrooms in Birchwood Place.",
+    "interaction": "none",
+    "prediction": "2",
+    "ground_truth": "2",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "2"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T03",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the application deadline for Birchwood Place. You may need to navigate to the correct tab.",
+    "interaction": "click_apply_tab",
+    "prediction": "August 20, 2025",
+    "ground_truth": "August 20, 2025",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "August 20, 2025"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T04",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the contact email address for Birchwood Place. You may need to navigate to the correct tab.",
+    "interaction": "click_contact_tab",
+    "prediction": "rentals@birchwoodplace.com",
+    "ground_truth": "rentals@birchwoodplace.com",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "rentals@birchwoodplace.com"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T05",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "visible",
+    "instruction": "Check whether Birchwood Place is currently available for rent.",
+    "interaction": "none",
+    "prediction": "Yes, Birchwood Place is currently available for rent.",
+    "ground_truth": "Available",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Available"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T06",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the pet policy for Birchwood Place. You may need to navigate to the Details tab and expand a section.",
+    "interaction": "click_details_tab_then_toggle",
+    "prediction": "Cats allowed, no dogs",
+    "ground_truth": "Cats allowed, no dogs",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Cats allowed, no dogs"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T07",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the parking details for Birchwood Place. You may need to navigate to the Details tab.",
+    "interaction": "click_details_tab",
+    "prediction": "1 heated indoor spot included",
+    "ground_truth": "1 heated indoor spot included",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "1 heated indoor spot included"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T08",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "filter_navigation",
+    "instruction": "Use the city filter to find listings in Minneapolis and identify Birchwood Place.",
+    "interaction": "use_sidebar_city_filter",
+    "prediction": "Birchwood Place \u2013\u202f\ud83d\udccd\u202f88 Birchwood Circle, Minneapolis, MN\u202f55401 \u2013\u202f\ud83c\udfe0\u202f2\u202fbed \u2022\u202f2\u202fbath \u2022\u202f1 heated indoor spot \u2013\u202f$1,650/month \u2013\u202fAvailable from\u202fSeptember\u202f1,\u202f2025.",
+    "ground_truth": "Birchwood Place",
+    "success": true,
+    "tier_matched": "exact_match_contained",
+    "match_details": {
+      "matched": "Birchwood Place"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T09",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_navigation",
+    "instruction": "Find the lease duration for Birchwood Place. You may need to navigate to the correct tab.",
+    "interaction": "click_details_tab",
+    "prediction": "12 months",
+    "ground_truth": "12 months",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "12 months"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "H_12_T10",
+    "website": "house_renting",
+    "template": "hidden",
+    "perturbation_type": "tab_then_expand",
+    "instruction": "Find the application fee for Birchwood Place. You may need to navigate to the Details tab and expand the Fees section.",
+    "interaction": "click_details_tab_then_fees_toggle",
+    "prediction": "$55",
+    "ground_truth": "$55",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "$55"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "task_id": "H_12_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Minneapolis and identify Birchwood Place.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Birchwood Place \u2013\u202f\ud83d\udccd\u202f88 Birchwood Circle, Minneapolis, MN\u202f55401 \u2013\u202f\ud83c\udfe0\u202f2\u202fbed \u2022\u202f2\u202fbath \u2022\u202f1 heated indoor spot \u2013\u202f$1,650/month \u2013\u202fAvailable from\u202fSeptember\u202f1,\u202f2025.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

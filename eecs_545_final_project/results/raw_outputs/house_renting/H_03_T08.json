@@ -1,0 +1,13 @@
+{
+  "task_id": "H_03_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Chicago and identify Lakeside Condo.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Lakeside Condo \u2013 1005 Lakeshore Blvd, Chicago, IL\u202f60611 \u2013 1\u202fbed, 1\u202fbath, street parking only \u2013 $1,800/month \u2013 Not Available.",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

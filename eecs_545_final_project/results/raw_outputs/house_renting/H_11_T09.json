@@ -1,0 +1,13 @@
+{
+  "task_id": "H_11_T09",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the lease duration for Downtown Loft. You may need to navigate to the correct tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_11.html",
+  "raw_output": "12 months",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

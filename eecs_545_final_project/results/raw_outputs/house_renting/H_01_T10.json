@@ -1,0 +1,13 @@
+{
+  "task_id": "H_01_T10",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the application fee for Maplewood Apartments. You may need to navigate to the Details tab and expand the Fees section.",
+  "interaction": "click_details_tab_then_fees_toggle",
+  "perturbation_type": "tab_then_expand",
+  "start_url": "http://localhost:8000/templates/hidden/house_01.html",
+  "raw_output": "$50",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}

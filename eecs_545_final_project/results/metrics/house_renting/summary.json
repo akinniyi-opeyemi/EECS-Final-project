@@ -1,0 +1,48 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only",
+  "website": "house_renting",
+  "total_tasks": 264,
+  "evaluated_tasks": 264,
+  "missing_tasks": 0,
+  "success_rates": {
+    "classic": 1.0,
+    "modern": 0.9762,
+    "hidden": 1.0
+  },
+  "temporal_degradation": {
+    "classic_to_modern": 0.0238,
+    "classic_to_hidden": 0.0,
+    "modern_to_hidden": -0.0238
+  },
+  "trs": 0.9762,
+  "perturbation_results": {
+    "click_to_reveal": {
+      "count": 24,
+      "success_rate": 1.0
+    },
+    "filter_navigation": {
+      "count": 12,
+      "success_rate": 1.0
+    },
+    "tab_navigation": {
+      "count": 48,
+      "success_rate": 1.0
+    },
+    "tab_then_expand": {
+      "count": 24,
+      "success_rate": 1.0
+    },
+    "visible": {
+      "count": 156,
+      "success_rate": 0.9871794871794872
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 182,
+    "fuzzy_string": 23,
+    "exact_match_contained": 39,
+    "must_include": 18,
+    "no_match": 2
+  }
+}

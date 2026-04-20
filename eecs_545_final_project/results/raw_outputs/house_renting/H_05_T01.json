@@ -1,0 +1,13 @@
+{
+  "task_id": "H_05_T01",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the monthly rent for Riverfront Studio.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+  "raw_output": "$1,100/month",
+  "error": null,
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only"
+}
