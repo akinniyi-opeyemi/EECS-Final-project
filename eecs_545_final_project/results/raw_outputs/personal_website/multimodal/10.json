@@ -1,0 +1,13 @@
+{
+  "task_id": "10",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "Find the title of the most recent publication of Nivedita Okonkwo.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_cs_001__notion/",
+  "raw_output": "Certified Robustness via Smoothed Representations under Covariate Shift",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "multimodal"
+}

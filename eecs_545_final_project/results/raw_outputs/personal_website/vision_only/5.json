@@ -1,0 +1,13 @@
+{
+  "task_id": "5",
+  "website": "personal_website",
+  "template": "raw_html_1998",
+  "instruction": "Find the title of the most recent publication of Nivedita Okonkwo.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_cs_001__raw_html_1998/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

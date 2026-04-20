@@ -1,0 +1,54 @@
+{
+  "website": "personal_website",
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "multimodal",
+  "total_tasks": 80,
+  "evaluated_tasks": 80,
+  "missing_tasks": 0,
+  "baseline": "raw_html_1998",
+  "success_rates": {
+    "raw_html_1998": 0.75,
+    "hugo_papermod": 0.85,
+    "notion": 0.8,
+    "jekyll_alfolio": 0.65
+  },
+  "temporal_degradation": {
+    "raw_html_1998_to_hugo_papermod": -0.1,
+    "raw_html_1998_to_notion": -0.05,
+    "raw_html_1998_to_jekyll_alfolio": 0.1
+  },
+  "trs": 0.8667,
+  "task_type_results": {
+    "T1_recent_pub": {
+      "count": 16,
+      "success_rate": 0.875
+    },
+    "T2_office_hours": {
+      "count": 16,
+      "success_rate": 1.0
+    },
+    "T3_current_course": {
+      "count": 16,
+      "success_rate": 0.6875
+    },
+    "T4_accepting": {
+      "count": 16,
+      "success_rate": 0.25
+    },
+    "T5_twitter": {
+      "count": 16,
+      "success_rate": 1.0
+    }
+  },
+  "perturbation_results": {
+    "framework_style": {
+      "count": 80,
+      "success_rate": 0.7625
+    }
+  },
+  "tier_breakdown": {
+    "must_include": 45,
+    "no_match": 19,
+    "fuzzy_string": 16
+  }
+}

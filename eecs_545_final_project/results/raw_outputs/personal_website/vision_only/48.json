@@ -1,0 +1,13 @@
+{
+  "task_id": "48",
+  "website": "personal_website",
+  "template": "raw_html_1998",
+  "instruction": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/merrow_lit_001__raw_html_1998/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

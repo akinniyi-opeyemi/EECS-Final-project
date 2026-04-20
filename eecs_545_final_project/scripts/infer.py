@@ -7,7 +7,7 @@
 #   python scripts/infer.py --website house_renting --mode vision_only
 #   python scripts/infer.py --website house_renting --mode multimodal --test
 
-import json, os, time, argparse, base64, io
+import json, os, time, argparse, base64
 from pathlib import Path
 from openai import OpenAI
 from playwright.sync_api import sync_playwright
@@ -39,18 +39,15 @@ args = parser.parse_args()
 # ============================================================
 # MODEL CONFIGURATION
 # ============================================================
-# text-only uses gpt-oss-120B
-# multimodal and vision-only use Qwen3-VL-30B
-
 if args.mode == "text_only":
-    MODEL    = "openai/gpt-oss-120b"
-    client   = OpenAI(
+    MODEL  = "openai/gpt-oss-120b"
+    client = OpenAI(
         base_url=os.environ["OPENAI_BASE_URL"],
         api_key=os.environ["OPENAI_API_KEY"]
     )
 else:
-    MODEL    = "Qwen/Qwen3-VL-30B-A3B-Instruct"
-    client   = OpenAI(
+    MODEL  = "Qwen/Qwen3-VL-30B-A3B-Instruct"
+    client = OpenAI(
         base_url=os.environ["QWEN_BASE_URL"],
         api_key=os.environ["QWEN_API_KEY"]
     )
@@ -186,7 +183,7 @@ def get_screenshot_b64(url):
             page.wait_for_timeout(1500)
             screenshot_bytes = page.screenshot(full_page=False)
         except Exception as e:
-            print(f"\n  screenshot error: {e}", end=" ")
+            print(f"\n  screenshot error: {type(e).__name__}: {e}", end=" ")
             screenshot_bytes = None
         finally:
             browser.close()
@@ -222,32 +219,31 @@ def build_content(page_text, screenshot_b64,
     hint = interaction_hints.get(interaction, "")
 
     if args.mode == "text_only":
-        text = page_text
+        text = page_text or ""
         if len(text) > 6000:
             text = text[:6000] + "\n...[truncated]"
         return f"Page content:\n{text}\n{hint}\n\nTask: {instruction}\n\nAnswer:"
 
     elif args.mode == "vision_only":
-        # screenshot only, no text
-        content = []
-        if screenshot_b64:
-            content.append({
+        if not screenshot_b64:
+            return None
+        return [
+            {
                 "type": "image_url",
                 "image_url": {
                     "url": f"data:image/png;base64,{screenshot_b64}"
                 }
-            })
-        content.append({
-            "type": "text",
-            "text": f"{hint}\n\nTask: {instruction}\n\nAnswer:"
-        })
-        return content
+            },
+            {
+                "type": "text",
+                "text": f"{hint}\n\nTask: {instruction}\n\nAnswer:"
+            }
+        ]
 
     else:  # multimodal
-        text = page_text
-    if len(text) > 5000:
-        text = text[:5000] + "\n...[truncated]"
-        
+        text = page_text or ""
+        if len(text) > 5000:
+            text = text[:5000] + "\n...[truncated]"
         content = []
         if screenshot_b64:
             content.append({
@@ -298,16 +294,41 @@ def run_task(task):
         page_text, screenshot_b64, instruction, interaction
     )
 
+    # handle None content (screenshot failed in vision mode)
+    if content is None:
+        result = {
+            "task_id":           task_id,
+            "website":           args.website,
+            "template":          task.get("template", ""),
+            "instruction":       instruction,
+            "interaction":       interaction,
+            "perturbation_type": task.get("perturbation_type", ""),
+            "start_url":         url,
+            "raw_output":        None,
+            "error":             "screenshot capture failed",
+            "model":             MODEL,
+            "mode":              args.mode
+        }
+        with open(output_path, "w") as f:
+            json.dump(result, f, indent=2)
+        return result, "error"
+
     # build messages
     if isinstance(content, str):
+        # text-only: system message works fine
         messages = [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user",   "content": content}
         ]
     else:
+        # vision modes: Qwen3-VL does not accept system messages
+        # with image content, inject system prompt as first text block
+        content_with_system = [{
+            "type": "text",
+            "text": SYSTEM_PROMPT
+        }] + content
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user",   "content": content}
+            {"role": "user", "content": content_with_system}
         ]
 
     # run inference
@@ -378,8 +399,9 @@ for i, task in enumerate(tasks):
     if status == "skipped":
         print("skipped")
         stats["skipped"] += 1
-    elif result and result["error"]:
-        print(f"ERROR: {result['error'][:60]}")
+    elif status == "error" or (result and result.get("error")):
+        err = result["error"][:60] if result and result.get("error") else "unknown"
+        print(f"ERROR: {err}")
         stats["error"] += 1
     else:
         out = result['raw_output'][:50] if result and result['raw_output'] else 'None'

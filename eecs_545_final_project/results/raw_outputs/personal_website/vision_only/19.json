@@ -1,0 +1,13 @@
+{
+  "task_id": "19",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "Find Nivedita Okonkwo's Twitter account.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_cs_001__hugo_papermod/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

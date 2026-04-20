@@ -1,0 +1,13 @@
+{
+  "task_id": "11",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "When does Niv hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:8003/sites/halvern_cs_001__notion/",
+  "raw_output": "Tuesdays 2:00\u20134:00 PM, or by appointment",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "multimodal"
+}
