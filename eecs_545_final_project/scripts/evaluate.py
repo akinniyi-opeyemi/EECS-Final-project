@@ -1,10 +1,8 @@
 # scripts/evaluate.py
 # Configurable evaluation script for all four websites.
 # Usage:
-#   python scripts/evaluate.py --website house_renting
-#   python scripts/evaluate.py --website personal_website
-#   python scripts/evaluate.py --website job_application
-#   python scripts/evaluate.py --website course_registration
+#   python scripts/evaluate.py --website house_renting --mode vision_only --agent uitars
+#   python scripts/evaluate.py --website house_renting --mode vision_only --agent qwen_vl
 
 import json, argparse
 from pathlib import Path
@@ -20,13 +18,17 @@ parser.add_argument(
     required=True,
     choices=["house_renting", "personal_website",
              "job_application", "course_registration"],
-    help="Which website to evaluate"
 )
 parser.add_argument(
     "--mode",
     default="text_only",
     choices=["text_only", "multimodal", "vision_only"],
-    help="Which inference mode to evaluate"
+)
+parser.add_argument(
+    "--agent",
+    default="qwen_vl",
+    choices=["gpt_oss", "qwen_vl", "uitars", "qwen25", "internvl"],
+    help="Which agent results to evaluate"
 )
 args = parser.parse_args()
 
@@ -34,43 +36,42 @@ args = parser.parse_args()
 # WEBSITE CONFIGURATIONS
 # ============================================================
 CONFIGS = {
-   "house_renting": {
-    "task_file":      Path("house-renting-eval/tasks.json"),
-    "raw_output_dir": Path(f"results/raw_outputs/house_renting/{args.mode}"),
-    "results_dir":    Path(f"results/metrics/house_renting/{args.mode}"),
-    "templates":      ["classic", "modern", "hidden"],
-    "baseline":       "classic",
+    "house_renting": {
+        "task_file":      Path("house-renting-eval/tasks.json"),
+        "raw_output_dir": Path(f"results/raw_outputs/house_renting/{args.mode}/{args.agent}"),
+        "results_dir":    Path(f"results/metrics/house_renting/{args.mode}/{args.agent}"),
+        "templates":      ["classic", "modern", "hidden"],
+        "baseline":       "classic",
     },
     "personal_website": {
         "task_file":      Path("Personal Website/tasks/test.raw.json"),
-        "raw_output_dir": Path(f"results/raw_outputs/personal_website/{args.mode}"),
-        "results_dir":    Path(f"results/metrics/personal_website/{args.mode}"),
-        "templates":      ["raw_html_1998", "hugo_papermod",
-                        "notion", "jekyll_alfolio"],
+        "raw_output_dir": Path(f"results/raw_outputs/personal_website/{args.mode}/{args.agent}"),
+        "results_dir":    Path(f"results/metrics/personal_website/{args.mode}/{args.agent}"),
+        "templates":      ["raw_html_1998", "hugo_papermod", "notion", "jekyll_alfolio"],
         "baseline":       "raw_html_1998",
     },
     "job_application": {
         "task_file":      Path("job_application/tasks.json"),
-        "raw_output_dir": Path(f"results/raw_outputs/job_application/{args.mode}"),
-        "results_dir":    Path(f"results/metrics/job_application/{args.mode}"),
+        "raw_output_dir": Path(f"results/raw_outputs/job_application/{args.mode}/{args.agent}"),
+        "results_dir":    Path(f"results/metrics/job_application/{args.mode}/{args.agent}"),
         "templates":      ["classic", "modern", "notion"],
         "baseline":       "classic",
     },
     "course_registration": {
         "task_file":      Path("course_registration/tasks.json"),
-        "raw_output_dir": Path(f"results/raw_outputs/course_registration/{args.mode}"),
-        "results_dir":    Path(f"results/metrics/course_registration/{args.mode}"),
+        "raw_output_dir": Path(f"results/raw_outputs/course_registration/{args.mode}/{args.agent}"),
+        "results_dir":    Path(f"results/metrics/course_registration/{args.mode}/{args.agent}"),
         "templates":      ["2000s", "2010s", "modern"],
         "baseline":       "2000s",
     },
 }
 
-config        = CONFIGS[args.website]
-TASK_FILE     = config["task_file"]
-RAW_DIR       = config["raw_output_dir"]
-RESULTS_DIR   = config["results_dir"]
-TEMPLATES     = config["templates"]
-BASELINE      = config["baseline"]
+config      = CONFIGS[args.website]
+TASK_FILE   = config["task_file"]
+RAW_DIR     = config["raw_output_dir"]
+RESULTS_DIR = config["results_dir"]
+TEMPLATES   = config["templates"]
+BASELINE    = config["baseline"]
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 FUZZY_THRESHOLD    = 0.75
@@ -84,7 +85,7 @@ embedder = SentenceTransformer("all-MiniLM-L6-v2")
 print("Ready.\n")
 
 # ============================================================
-# FUNCTION 1: Three-tier evaluation
+# EVALUATION FUNCTION
 # ============================================================
 def evaluate_prediction(prediction, reference_answers):
     if not prediction:
@@ -92,7 +93,6 @@ def evaluate_prediction(prediction, reference_answers):
 
     prediction = prediction.strip()
 
-    # tier 1: exact match
     exact = reference_answers.get("exact_match")
     if exact:
         if prediction.lower() == exact.lower():
@@ -100,38 +100,27 @@ def evaluate_prediction(prediction, reference_answers):
         if exact.lower() in prediction.lower():
             return True, "exact_match_contained", {"matched": exact}
 
-    # tier 2: must_include
     must = reference_answers.get("must_include") or []
     if must:
         if all(kw.lower() in prediction.lower() for kw in must):
             return True, "must_include", {"keywords": must}
 
-    # tier 3a: fuzzy string match
     fuzzy_refs = reference_answers.get("fuzzy_match") or []
     for ref in fuzzy_refs:
         score = fuzz.ratio(prediction.lower(), ref.lower()) / 100
         if score >= FUZZY_THRESHOLD:
-            return True, "fuzzy_string", {
-                "matched": ref, "score": round(score, 3)
-            }
+            return True, "fuzzy_string", {"matched": ref, "score": round(score, 3)}
 
-    # tier 3b: semantic similarity
     if fuzzy_refs:
         pred_emb = embedder.encode(prediction, convert_to_tensor=True)
         for ref in fuzzy_refs:
             ref_emb = embedder.encode(ref, convert_to_tensor=True)
             sim = float(util.cos_sim(pred_emb, ref_emb))
             if sim >= SEMANTIC_THRESHOLD:
-                return True, "semantic_match", {
-                    "matched": ref, "score": round(sim, 3)
-                }
+                return True, "semantic_match", {"matched": ref, "score": round(sim, 3)}
 
     return False, "no_match", {}
 
-
-# ============================================================
-# FUNCTION 2: Metrics
-# ============================================================
 def success_rate(results):
     if not results:
         return 0.0
@@ -146,12 +135,12 @@ def compute_trs(sr_baseline, all_sr_values):
     max_deg = max(sr_baseline - sr for sr in all_sr_values)
     return round(1 - (max_deg / sr_baseline), 4)
 
-
 # ============================================================
-# MAIN: Load and evaluate
+# MAIN
 # ============================================================
 print(f"Website:  {args.website}")
 print(f"Mode:     {args.mode}")
+print(f"Agent:    {args.agent}")
 print(f"Tasks:    {TASK_FILE}")
 print(f"Outputs:  {RAW_DIR}\n")
 
@@ -159,14 +148,10 @@ with open(TASK_FILE) as f:
     tasks = json.load(f)
 
 task_lookup = {str(t["task_id"]): t for t in tasks}
-
-raw_files = list(RAW_DIR.glob("*.json"))
+raw_files   = list(RAW_DIR.glob("*.json"))
 print(f"Found {len(raw_files)} raw output files")
 print(f"Total tasks: {len(tasks)}\n")
 
-# ============================================================
-# EVALUATE EACH TASK
-# ============================================================
 evaluated = []
 missing   = []
 
@@ -181,11 +166,10 @@ for task in tasks:
     with open(out_file) as f:
         raw = json.load(f)
 
-    prediction       = raw.get("raw_output", "")
-    ref_answers      = task["eval"]["reference_answers"]
-    raw_annotation   = task["eval"].get("reference_answer_raw_annotation", "")
+    prediction     = raw.get("raw_output", "")
+    ref_answers    = task["eval"]["reference_answers"]
+    raw_annotation = task["eval"].get("reference_answer_raw_annotation", "")
 
-    # skip unverified tasks (course_registration)
     if not task["eval"].get("verified", True) and not raw_annotation:
         missing.append(task_id)
         continue
@@ -195,8 +179,8 @@ for task in tasks:
     evaluated.append({
         "task_id":           task_id,
         "website":           args.website,
+        "agent":             raw.get("agent", args.agent),
         "template":          task.get("template", ""),
-        "template_style":    task.get("template_style", ""),
         "perturbation_type": task.get("perturbation_type", ""),
         "task_type":         task.get("task_type", ""),
         "instruction":       task.get("instruction") or task.get("intent", ""),
@@ -206,16 +190,13 @@ for task in tasks:
         "success":           success,
         "tier_matched":      tier,
         "match_details":     details,
-        "mode":              raw.get("mode", "text_only"),
+        "mode":              raw.get("mode", args.mode),
         "model":             raw.get("model", "")
     })
 
 print(f"Evaluated: {len(evaluated)}")
 print(f"Missing:   {len(missing)}")
 
-# ============================================================
-# METRICS BY TEMPLATE
-# ============================================================
 template_results = {}
 for template in TEMPLATES:
     t_results = [e for e in evaluated if e["template"] == template]
@@ -225,9 +206,6 @@ for template in TEMPLATES:
         "success_rate": success_rate(t_results)
     }
 
-# ============================================================
-# METRICS BY TASK TYPE (personal_website and course_registration)
-# ============================================================
 task_types = sorted(set(e["task_type"] for e in evaluated if e["task_type"]))
 task_type_results = {}
 for tt in task_types:
@@ -237,12 +215,8 @@ for tt in task_types:
         "success_rate": success_rate(tt_results)
     }
 
-# ============================================================
-# METRICS BY PERTURBATION TYPE
-# ============================================================
 perturbation_types = sorted(set(
-    e["perturbation_type"] for e in evaluated
-    if e["perturbation_type"]
+    e["perturbation_type"] for e in evaluated if e["perturbation_type"]
 ))
 perturbation_results = {}
 for ptype in perturbation_types:
@@ -252,15 +226,10 @@ for ptype in perturbation_types:
         "success_rate": success_rate(p_results)
     }
 
-# ============================================================
-# TEMPORAL DEGRADATION AND TRS
-# ============================================================
 sr_by_template = {
     t: template_results[t]["success_rate"]
-    for t in TEMPLATES
-    if t in template_results
+    for t in TEMPLATES if t in template_results
 }
-
 sr_baseline = sr_by_template.get(BASELINE, 0)
 other_srs   = [sr for t, sr in sr_by_template.items() if t != BASELINE]
 trs         = compute_trs(sr_baseline, other_srs) if other_srs else 1.0
@@ -272,11 +241,8 @@ for template in TEMPLATES:
             sr_baseline, sr_by_template[template]
         )
 
-# ============================================================
-# PRINT RESULTS
-# ============================================================
 print(f"\n{'='*50}")
-print(f"EVALUATION RESULTS: {args.website} (text-only)")
+print(f"EVALUATION RESULTS: {args.website} ({args.mode}, {args.agent})")
 print(f"{'='*50}")
 
 print(f"\nSUCCESS RATES BY TEMPLATE:")
@@ -293,52 +259,39 @@ for label, deg in degradation.items():
     print(f"  {label:<35} {deg:+.1%}  {direction}")
 
 print(f"\nTEMPORAL ROBUSTNESS SCORE (TRS): {trs:.3f}")
-print(f"  (1.0 = perfect robustness, 0.0 = complete failure)")
-
-if task_type_results:
-    print(f"\nSUCCESS RATES BY TASK TYPE:")
-    for tt, data in sorted(task_type_results.items(),
-                           key=lambda x: x[1]["success_rate"],
-                           reverse=True):
-        print(f"  {tt:<25} {data['success_rate']:.1%}  ({data['count']} tasks)")
 
 if perturbation_results:
     print(f"\nSUCCESS RATES BY PERTURBATION TYPE:")
     for ptype, data in sorted(perturbation_results.items(),
-                               key=lambda x: x[1]["success_rate"],
-                               reverse=True):
+                               key=lambda x: x[1]["success_rate"], reverse=True):
         print(f"  {ptype:<25} {data['success_rate']:.1%}  ({data['count']} tasks)")
 
-print(f"\nMATCH TIER BREAKDOWN:")
 tier_counts = {}
 for e in evaluated:
     tier = e["tier_matched"]
     tier_counts[tier] = tier_counts.get(tier, 0) + 1
-for tier, count in sorted(tier_counts.items(),
-                           key=lambda x: x[1], reverse=True):
+
+print(f"\nMATCH TIER BREAKDOWN:")
+for tier, count in sorted(tier_counts.items(), key=lambda x: x[1], reverse=True):
     pct = count / len(evaluated) * 100 if evaluated else 0
     print(f"  {tier:<25} {count:3d}  ({pct:.1f}%)")
 
-# ============================================================
-# SAVE RESULTS
-# ============================================================
 per_task_path = RESULTS_DIR / "per_task_results.json"
 with open(per_task_path, "w") as f:
     json.dump(evaluated, f, indent=2)
 
 summary = {
-    "website":         args.website,
-    "model":           evaluated[0]["model"] if evaluated else "",
-    "mode":            args.mode,
-
-    "total_tasks":     len(tasks),
-    "evaluated_tasks": len(evaluated),
-    "missing_tasks":   len(missing),
-    "baseline":        BASELINE,
-    "success_rates":   {t: round(sr_by_template.get(t, 0), 4)
-                        for t in TEMPLATES},
+    "website":          args.website,
+    "agent":            args.agent,
+    "model":            evaluated[0]["model"] if evaluated else "",
+    "mode":             args.mode,
+    "total_tasks":      len(tasks),
+    "evaluated_tasks":  len(evaluated),
+    "missing_tasks":    len(missing),
+    "baseline":         BASELINE,
+    "success_rates":    {t: round(sr_by_template.get(t, 0), 4) for t in TEMPLATES},
     "temporal_degradation": degradation,
-    "trs":             trs,
+    "trs":              trs,
     "task_type_results":    task_type_results,
     "perturbation_results": perturbation_results,
     "tier_breakdown":       tier_counts

@@ -1,11 +1,14 @@
 # scripts/infer.py
 # Configurable inference script for all four websites.
 # Supports text-only, multimodal, and vision-only modes.
+# Supports multiple agents via --agent flag.
 # Usage:
-#   python scripts/infer.py --website house_renting --mode text_only
-#   python scripts/infer.py --website house_renting --mode multimodal
-#   python scripts/infer.py --website house_renting --mode vision_only
-#   python scripts/infer.py --website house_renting --mode multimodal --test
+#   python scripts/infer.py --website house_renting --mode vision_only --agent qwen_vl
+#   python scripts/infer.py --website house_renting --mode vision_only --agent uitars
+#   python scripts/infer.py --website house_renting --mode vision_only --agent qwen25
+#   python scripts/infer.py --website house_renting --mode vision_only --agent internvl
+#   python scripts/infer.py --website house_renting --mode text_only --agent gpt_oss
+#   python scripts/infer.py --website house_renting --mode vision_only --agent uitars --test
 
 import json, os, time, argparse, base64
 from pathlib import Path
@@ -21,13 +24,17 @@ parser.add_argument(
     required=True,
     choices=["house_renting", "personal_website",
              "job_application", "course_registration"],
-    help="Which website to run inference on"
 )
 parser.add_argument(
     "--mode",
     required=True,
     choices=["text_only", "multimodal", "vision_only"],
-    help="Input mode for the agent"
+)
+parser.add_argument(
+    "--agent",
+    required=True,
+    choices=["gpt_oss", "qwen_vl", "uitars", "qwen25", "internvl"],
+    help="Which agent to use"
 )
 parser.add_argument(
     "--test",
@@ -37,20 +44,57 @@ parser.add_argument(
 args = parser.parse_args()
 
 # ============================================================
-# MODEL CONFIGURATION
+# AGENT CONFIGURATIONS
 # ============================================================
-if args.mode == "text_only":
-    MODEL  = "openai/gpt-oss-120b"
-    client = OpenAI(
-        base_url=os.environ["OPENAI_BASE_URL"],
-        api_key=os.environ["OPENAI_API_KEY"]
-    )
-else:
-    MODEL  = "Qwen/Qwen3-VL-30B-A3B-Instruct"
-    client = OpenAI(
-        base_url=os.environ["QWEN_BASE_URL"],
-        api_key=os.environ["QWEN_API_KEY"]
-    )
+AGENT_CONFIGS = {
+    "gpt_oss": {
+        "model":    "openai/gpt-oss-120b",
+        "base_url": os.environ.get("OPENAI_BASE_URL", ""),
+        "api_key":  os.environ.get("OPENAI_API_KEY", ""),
+        "vision":   False,
+    },
+    "qwen_vl": {
+        "model":    "Qwen/Qwen3-VL-30B-A3B-Instruct",
+        "base_url": os.environ.get("QWEN_BASE_URL", ""),
+        "api_key":  os.environ.get("QWEN_API_KEY", ""),
+        "vision":   True,
+    },
+    "uitars": {
+        "model":    "bytedance-research/UI-TARS-7B-DPO",
+        "base_url": os.environ.get("UITARS_BASE_URL", "http://localhost:8001/v1"),
+        "api_key":  os.environ.get("UITARS_API_KEY", "local"),
+        "vision":   True,
+    },
+    "qwen25": {
+        "model":    "Qwen/Qwen2.5-VL-7B-Instruct",
+        "base_url": os.environ.get("QWEN25_BASE_URL", "http://localhost:8002/v1"),
+        "api_key":  os.environ.get("QWEN25_API_KEY", "local"),
+        "vision":   True,
+    },
+    "internvl": {
+        "model":    "OpenGVLab/InternVL2-8B",
+        "base_url": os.environ.get("INTERNVL_BASE_URL", "http://localhost:8003/v1"),
+        "api_key":  os.environ.get("INTERNVL_API_KEY", "local"),
+        "vision":   True,
+    }
+}
+
+agent_config = AGENT_CONFIGS[args.agent]
+MODEL        = agent_config["model"]
+AGENT_VISION = agent_config["vision"]
+
+# validate mode vs agent
+if args.mode != "text_only" and not AGENT_VISION:
+    print(f"WARNING: agent {args.agent} does not support vision.")
+    print(f"Only text_only mode is supported for this agent.")
+    if args.mode != "text_only":
+        print("Switching to text_only mode.")
+        args.mode = "text_only"
+
+client = OpenAI(
+    base_url=agent_config["base_url"],
+    api_key=agent_config["api_key"]
+)
 
 TEMPERATURE = 0.0
 MAX_TOKENS  = 500
@@ -62,7 +106,7 @@ PAUSE       = 1.5
 CONFIGS = {
     "house_renting": {
         "task_file":  Path("house-renting-eval/tasks.json"),
-        "output_dir": Path(f"results/raw_outputs/house_renting/{args.mode}"),
+        "output_dir": Path(f"results/raw_outputs/house_renting/{args.mode}/{args.agent}"),
         "system_prompt_text": """You are a web agent evaluating rental property listings.
 You are given the text content of a web page and a task.
 Find the specific information requested and return it concisely.
@@ -85,7 +129,7 @@ Rules:
     },
     "personal_website": {
         "task_file":  Path("Personal Website/tasks/test.raw.json"),
-        "output_dir": Path(f"results/raw_outputs/personal_website/{args.mode}"),
+        "output_dir": Path(f"results/raw_outputs/personal_website/{args.mode}/{args.agent}"),
         "system_prompt_text": """You are a web agent evaluating academic personal websites.
 You are given the text content of a single web page and a task.
 Find the specific information requested and return it concisely.
@@ -109,7 +153,7 @@ Rules:
     },
     "job_application": {
         "task_file":  Path("job_application/tasks.json"),
-        "output_dir": Path(f"results/raw_outputs/job_application/{args.mode}"),
+        "output_dir": Path(f"results/raw_outputs/job_application/{args.mode}/{args.agent}"),
         "system_prompt_text": """You are a web agent evaluating job application websites.
 Find the specific information requested and return it concisely.
 Return ONLY the answer, no explanation.
@@ -122,7 +166,7 @@ Return ONLY the answer, no explanation.
     },
     "course_registration": {
         "task_file":  Path("course_registration/tasks.json"),
-        "output_dir": Path(f"results/raw_outputs/course_registration/{args.mode}"),
+        "output_dir": Path(f"results/raw_outputs/course_registration/{args.mode}/{args.agent}"),
         "system_prompt_text": """You are a web agent evaluating a course registration system.
 Find the specific information requested and return it concisely.
 Return ONLY the answer, no explanation.
@@ -174,7 +218,6 @@ def get_page_text(url):
 # FUNCTION 2: Capture screenshot
 # ============================================================
 def get_screenshot_b64(url):
-    """Capture screenshot and return as base64 string."""
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(viewport={"width": 1280, "height": 720})
@@ -187,7 +230,6 @@ def get_screenshot_b64(url):
             screenshot_bytes = None
         finally:
             browser.close()
-
     if screenshot_bytes:
         return base64.b64encode(screenshot_bytes).decode()
     return None
@@ -198,7 +240,6 @@ def get_screenshot_b64(url):
 # ============================================================
 def build_content(page_text, screenshot_b64,
                   instruction, interaction="none"):
-    """Build message content based on mode."""
 
     interaction_hints = {
         "click_show_details_button":
@@ -230,9 +271,7 @@ def build_content(page_text, screenshot_b64,
         return [
             {
                 "type": "image_url",
-                "image_url": {
-                    "url": f"data:image/png;base64,{screenshot_b64}"
-                }
+                "image_url": {"url": f"data:image/png;base64,{screenshot_b64}"}
             },
             {
                 "type": "text",
@@ -248,9 +287,7 @@ def build_content(page_text, screenshot_b64,
         if screenshot_b64:
             content.append({
                 "type": "image_url",
-                "image_url": {
-                    "url": f"data:image/png;base64,{screenshot_b64}"
-                }
+                "image_url": {"url": f"data:image/png;base64,{screenshot_b64}"}
             })
         content.append({
             "type": "text",
@@ -269,11 +306,9 @@ def run_task(task):
     interaction = task.get("interaction", "none")
 
     output_path = OUTPUT_DIR / f"{task_id}.json"
-
     if output_path.exists():
         return None, "skipped"
 
-    # get page content based on mode
     page_text      = None
     screenshot_b64 = None
 
@@ -289,12 +324,8 @@ def run_task(task):
         except Exception as e:
             screenshot_b64 = None
 
-    # build prompt content
-    content = build_content(
-        page_text, screenshot_b64, instruction, interaction
-    )
+    content = build_content(page_text, screenshot_b64, instruction, interaction)
 
-    # handle None content (screenshot failed in vision mode)
     if content is None:
         result = {
             "task_id":           task_id,
@@ -307,31 +338,22 @@ def run_task(task):
             "raw_output":        None,
             "error":             "screenshot capture failed",
             "model":             MODEL,
+            "agent":             args.agent,
             "mode":              args.mode
         }
         with open(output_path, "w") as f:
             json.dump(result, f, indent=2)
         return result, "error"
 
-    # build messages
     if isinstance(content, str):
-        # text-only: system message works fine
         messages = [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user",   "content": content}
         ]
     else:
-        # vision modes: Qwen3-VL does not accept system messages
-        # with image content, inject system prompt as first text block
-        content_with_system = [{
-            "type": "text",
-            "text": SYSTEM_PROMPT
-        }] + content
-        messages = [
-            {"role": "user", "content": content_with_system}
-        ]
+        content_with_system = [{"type": "text", "text": SYSTEM_PROMPT}] + content
+        messages = [{"role": "user", "content": content_with_system}]
 
-    # run inference
     try:
         response = client.chat.completions.create(
             model=MODEL,
@@ -356,6 +378,7 @@ def run_task(task):
         "raw_output":        raw_output,
         "error":             error,
         "model":             MODEL,
+        "agent":             args.agent,
         "mode":              args.mode
     }
 
@@ -370,6 +393,7 @@ def run_task(task):
 # ============================================================
 print(f"Website:  {args.website}")
 print(f"Mode:     {args.mode}")
+print(f"Agent:    {args.agent}")
 print(f"Model:    {MODEL}")
 print(f"Tasks:    {TASK_FILE}")
 print(f"Output:   {OUTPUT_DIR}")
