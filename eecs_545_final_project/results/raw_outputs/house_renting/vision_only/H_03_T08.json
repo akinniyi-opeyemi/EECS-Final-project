@@ -1,0 +1,13 @@
+{
+  "task_id": "H_03_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Chicago and identify Lakeside Condo.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "1. Click on the 'City' dropdown in the filter panel on the left.\n2. Select 'Chicago' from the list of cities.\n3. Scroll down to locate the 'Lakeside Condo' listing.\n4. The price for Lakeside Condo is $1,800/month.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

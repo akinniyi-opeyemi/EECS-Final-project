@@ -1,0 +1,13 @@
+{
+  "task_id": "H_09_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in San Diego and identify Hillcrest Manor.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Click on the 'City' dropdown in the filter panel and select 'San Diego'. Then, scroll through the listings to find 'Hillcrest Manor'.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "M_05_T05",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Check whether Riverfront Studio is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_05.html",
+  "raw_output": "Yes, it is available.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "multimodal"
+}

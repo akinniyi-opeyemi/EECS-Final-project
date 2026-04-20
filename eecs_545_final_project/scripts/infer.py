@@ -1,77 +1,16 @@
 # scripts/infer.py
 # Configurable inference script for all four websites.
+# Supports text-only, multimodal, and vision-only modes.
 # Usage:
-#   python scripts/infer.py --website house_renting
-#   python scripts/infer.py --website personal_website
-#   python scripts/infer.py --website job_application
-#   python scripts/infer.py --website course_registration
-#   python scripts/infer.py --website house_renting --test
-#   (--test runs only first 3 tasks)
+#   python scripts/infer.py --website house_renting --mode text_only
+#   python scripts/infer.py --website house_renting --mode multimodal
+#   python scripts/infer.py --website house_renting --mode vision_only
+#   python scripts/infer.py --website house_renting --mode multimodal --test
 
-import json, os, time, argparse
+import json, os, time, argparse, base64, io
 from pathlib import Path
 from openai import OpenAI
 from playwright.sync_api import sync_playwright
-
-# ============================================================
-# WEBSITE CONFIGURATIONS
-# ============================================================
-CONFIGS = {
-    "house_renting": {
-        "task_file":  Path("house-renting-eval/tasks.json"),
-        "output_dir": Path("results/raw_outputs/house_renting"),
-        "system_prompt": """You are a web agent evaluating rental property listings.
-You are given the text content of a web page and a task.
-Find the specific information requested and return it concisely.
-
-Rules:
-- Return ONLY the answer, no explanation
-- Be precise: return exact values like '$1,450/month' not 'fourteen fifty'
-- If information is not visible, say 'Not visible'
-"""
-    },
-    "personal_website": {
-        "task_file":  Path("Personal Website/tasks/test.raw.json"),
-        "output_dir": Path("results/raw_outputs/personal_website"),
-        "system_prompt": """You are a web agent evaluating academic personal websites.
-You are given the text content of a web page and a task.
-Find the specific information requested and return it concisely.
-
-Rules:
-- Return ONLY the answer, no explanation
-- If information is not on this page, it may be on a linked page
-  like publications or teaching
-- If information is not found anywhere, say 'Not found'
-- Be precise with names, titles, and dates
-"""
-    },
-    "job_application": {
-        "task_file":  Path("job_application/tasks.json"),
-        "output_dir": Path("results/raw_outputs/job_application"),
-        "system_prompt": """You are a web agent evaluating job application websites.
-You are given the text content of a web page and a task.
-Find the specific information requested and return it concisely.
-
-Rules:
-- Return ONLY the answer, no explanation
-- If information requires clicking a button, note that
-- Be precise with job titles, dates, and requirements
-"""
-    },
-    "course_registration": {
-        "task_file":  Path("course_registration/tasks_v2.json"),
-        "output_dir": Path("results/raw_outputs/course_registration"),
-        "system_prompt": """You are a web agent evaluating a course registration system.
-You are given the text content of a web page and a task.
-Find the specific information requested and return it concisely.
-
-Rules:
-- Return ONLY the answer, no explanation
-- Course codes, instructor names, and times must be exact
-- If a filter or search is needed, describe what you would do
-"""
-    }
-}
 
 # ============================================================
 # ARGUMENT PARSING
@@ -80,8 +19,15 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--website",
     required=True,
-    choices=list(CONFIGS.keys()),
+    choices=["house_renting", "personal_website",
+             "job_application", "course_registration"],
     help="Which website to run inference on"
+)
+parser.add_argument(
+    "--mode",
+    required=True,
+    choices=["text_only", "multimodal", "vision_only"],
+    help="Input mode for the agent"
 )
 parser.add_argument(
     "--test",
@@ -90,23 +36,117 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-config     = CONFIGS[args.website]
-TASK_FILE  = config["task_file"]
-OUTPUT_DIR = config["output_dir"]
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-SYSTEM_PROMPT = config["system_prompt"]
-
 # ============================================================
 # MODEL CONFIGURATION
 # ============================================================
-MODEL       = "openai/gpt-oss-120b"
+# text-only uses gpt-oss-120B
+# multimodal and vision-only use Qwen3-VL-30B
+
+if args.mode == "text_only":
+    MODEL    = "openai/gpt-oss-120b"
+    client   = OpenAI(
+        base_url=os.environ["OPENAI_BASE_URL"],
+        api_key=os.environ["OPENAI_API_KEY"]
+    )
+else:
+    MODEL    = "Qwen/Qwen3-VL-30B-A3B-Instruct"
+    client   = OpenAI(
+        base_url=os.environ["QWEN_BASE_URL"],
+        api_key=os.environ["QWEN_API_KEY"]
+    )
+
 TEMPERATURE = 0.0
 MAX_TOKENS  = 500
-PAUSE       = 1.0
+PAUSE       = 1.5
 
-client = OpenAI(
-    base_url=os.environ["OPENAI_BASE_URL"],
-    api_key=os.environ["OPENAI_API_KEY"]
+# ============================================================
+# WEBSITE CONFIGURATIONS
+# ============================================================
+CONFIGS = {
+    "house_renting": {
+        "task_file":  Path("house-renting-eval/tasks.json"),
+        "output_dir": Path(f"results/raw_outputs/house_renting/{args.mode}"),
+        "system_prompt_text": """You are a web agent evaluating rental property listings.
+You are given the text content of a web page and a task.
+Find the specific information requested and return it concisely.
+
+Rules:
+- Return ONLY the answer, no explanation
+- Be precise: return exact values like '$1,450/month' not 'fourteen fifty'
+- If information is not visible, say 'Not visible'
+""",
+        "system_prompt_vision": """You are a web agent evaluating rental property listings.
+You are given a screenshot of a web page and a task.
+Find the specific information requested and return it concisely.
+
+Rules:
+- Return ONLY the answer, no explanation
+- Be precise: return exact values like '$1,450/month'
+- If information requires clicking or expanding something, say what you would do
+- If information is not visible in the screenshot, say 'Not visible'
+"""
+    },
+    "personal_website": {
+        "task_file":  Path("Personal Website/tasks/test.raw.json"),
+        "output_dir": Path(f"results/raw_outputs/personal_website/{args.mode}"),
+        "system_prompt_text": """You are a web agent evaluating academic personal websites.
+You are given the text content of a single web page and a task.
+Find the specific information requested and return it concisely.
+
+Rules:
+- Return ONLY the answer, no explanation
+- You can only see the text of the current page
+- If the information is not on this page, say 'Not found'
+- Be precise with names, titles, and dates
+""",
+        "system_prompt_vision": """You are a web agent evaluating academic personal websites.
+You are given a screenshot of a web page and a task.
+Find the specific information requested and return it concisely.
+
+Rules:
+- Return ONLY the answer, no explanation
+- Look carefully at all text visible in the screenshot
+- If information is not visible, say 'Not found'
+- Be precise with names, titles, and dates
+"""
+    },
+    "job_application": {
+        "task_file":  Path("job_application/tasks.json"),
+        "output_dir": Path(f"results/raw_outputs/job_application/{args.mode}"),
+        "system_prompt_text": """You are a web agent evaluating job application websites.
+Find the specific information requested and return it concisely.
+Return ONLY the answer, no explanation.
+""",
+        "system_prompt_vision": """You are a web agent evaluating job application websites.
+You are given a screenshot of the page.
+Find the specific information requested and return it concisely.
+Return ONLY the answer, no explanation.
+"""
+    },
+    "course_registration": {
+        "task_file":  Path("course_registration/tasks.json"),
+        "output_dir": Path(f"results/raw_outputs/course_registration/{args.mode}"),
+        "system_prompt_text": """You are a web agent evaluating a course registration system.
+Find the specific information requested and return it concisely.
+Return ONLY the answer, no explanation.
+""",
+        "system_prompt_vision": """You are a web agent evaluating a course registration system.
+You are given a screenshot of the page.
+Find the specific information requested and return it concisely.
+Return ONLY the answer, no explanation.
+"""
+    }
+}
+
+config        = CONFIGS[args.website]
+TASK_FILE     = config["task_file"]
+OUTPUT_DIR    = config["output_dir"]
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+SYSTEM_PROMPT = (
+    config["system_prompt_text"]
+    if args.mode == "text_only"
+    else config["system_prompt_vision"]
 )
 
 # ============================================================
@@ -134,11 +174,34 @@ def get_page_text(url):
 
 
 # ============================================================
-# FUNCTION 2: Build prompt
+# FUNCTION 2: Capture screenshot
 # ============================================================
-def build_prompt(page_text, instruction, interaction="none"):
-    if len(page_text) > 6000:
-        page_text = page_text[:6000] + "\n...[truncated]"
+def get_screenshot_b64(url):
+    """Capture screenshot and return as base64 string."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page(viewport={"width": 1280, "height": 720})
+        try:
+            page.goto(url, timeout=15000, wait_until="domcontentloaded")
+            page.wait_for_timeout(1500)
+            screenshot_bytes = page.screenshot(full_page=False)
+        except Exception as e:
+            print(f"\n  screenshot error: {e}", end=" ")
+            screenshot_bytes = None
+        finally:
+            browser.close()
+
+    if screenshot_bytes:
+        return base64.b64encode(screenshot_bytes).decode()
+    return None
+
+
+# ============================================================
+# FUNCTION 3: Build prompt content
+# ============================================================
+def build_content(page_text, screenshot_b64,
+                  instruction, interaction="none"):
+    """Build message content based on mode."""
 
     interaction_hints = {
         "click_show_details_button":
@@ -158,20 +221,53 @@ def build_prompt(page_text, instruction, interaction="none"):
     }
     hint = interaction_hints.get(interaction, "")
 
-    return f"""Page content:
-{page_text}
-{hint}
+    if args.mode == "text_only":
+        text = page_text
+        if len(text) > 6000:
+            text = text[:6000] + "\n...[truncated]"
+        return f"Page content:\n{text}\n{hint}\n\nTask: {instruction}\n\nAnswer:"
 
-Task: {instruction}
+    elif args.mode == "vision_only":
+        # screenshot only, no text
+        content = []
+        if screenshot_b64:
+            content.append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/png;base64,{screenshot_b64}"
+                }
+            })
+        content.append({
+            "type": "text",
+            "text": f"{hint}\n\nTask: {instruction}\n\nAnswer:"
+        })
+        return content
 
-Answer:"""
+    else:  # multimodal
+        text = page_text
+    if len(text) > 5000:
+        text = text[:5000] + "\n...[truncated]"
+        
+        content = []
+        if screenshot_b64:
+            content.append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/png;base64,{screenshot_b64}"
+                }
+            })
+        content.append({
+            "type": "text",
+            "text": f"Page text:\n{text}\n{hint}\n\nTask: {instruction}\n\nAnswer:"
+        })
+        return content
 
 
 # ============================================================
-# FUNCTION 3: Run one task
+# FUNCTION 4: Run one task
 # ============================================================
 def run_task(task):
-    task_id     = task["task_id"]
+    task_id     = str(task["task_id"])
     url         = task.get("start_url", "")
     instruction = task.get("instruction") or task.get("intent", "")
     interaction = task.get("interaction", "none")
@@ -181,20 +277,44 @@ def run_task(task):
     if output_path.exists():
         return None, "skipped"
 
-    try:
-        page_text = get_page_text(url)
-    except Exception as e:
-        page_text = f"ERROR: {e}"
+    # get page content based on mode
+    page_text      = None
+    screenshot_b64 = None
 
-    prompt = build_prompt(page_text, instruction, interaction)
+    if args.mode in ["text_only", "multimodal"]:
+        try:
+            page_text = get_page_text(url)
+        except Exception as e:
+            page_text = f"ERROR: {e}"
 
+    if args.mode in ["multimodal", "vision_only"]:
+        try:
+            screenshot_b64 = get_screenshot_b64(url)
+        except Exception as e:
+            screenshot_b64 = None
+
+    # build prompt content
+    content = build_content(
+        page_text, screenshot_b64, instruction, interaction
+    )
+
+    # build messages
+    if isinstance(content, str):
+        messages = [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user",   "content": content}
+        ]
+    else:
+        messages = [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user",   "content": content}
+        ]
+
+    # run inference
     try:
         response = client.chat.completions.create(
             model=MODEL,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user",   "content": prompt}
-            ],
+            messages=messages,
             temperature=TEMPERATURE,
             max_tokens=MAX_TOKENS
         )
@@ -205,7 +325,7 @@ def run_task(task):
         error = str(e)
 
     result = {
-        "task_id":           str(task_id),
+        "task_id":           task_id,
         "website":           args.website,
         "template":          task.get("template", ""),
         "instruction":       instruction,
@@ -215,7 +335,7 @@ def run_task(task):
         "raw_output":        raw_output,
         "error":             error,
         "model":             MODEL,
-        "mode":              "text_only"
+        "mode":              args.mode
     }
 
     with open(output_path, "w") as f:
@@ -228,12 +348,12 @@ def run_task(task):
 # MAIN
 # ============================================================
 print(f"Website:  {args.website}")
+print(f"Mode:     {args.mode}")
+print(f"Model:    {MODEL}")
 print(f"Tasks:    {TASK_FILE}")
 print(f"Output:   {OUTPUT_DIR}")
-print(f"Model:    {MODEL}")
-print(f"Mode:     text-only")
 if args.test:
-    print(f"Mode:     TEST (first 3 tasks only)")
+    print(f"          TEST MODE (first 3 tasks only)")
 print()
 
 with open(TASK_FILE) as f:
@@ -259,7 +379,7 @@ for i, task in enumerate(tasks):
         print("skipped")
         stats["skipped"] += 1
     elif result and result["error"]:
-        print(f"ERROR: {result['error'][:50]}")
+        print(f"ERROR: {result['error'][:60]}")
         stats["error"] += 1
     else:
         out = result['raw_output'][:50] if result and result['raw_output'] else 'None'

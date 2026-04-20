@@ -1,0 +1,13 @@
+{
+  "task_id": "M_01_T02",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the number of bedrooms in Maplewood Apartments.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/modern/house_01.html",
+  "raw_output": "2",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "multimodal"
+}

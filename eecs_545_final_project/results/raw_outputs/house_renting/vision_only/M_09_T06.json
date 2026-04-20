@@ -1,0 +1,13 @@
+{
+  "task_id": "M_09_T06",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the pet policy for Hillcrest Manor. You may need to click a button to reveal this information.",
+  "interaction": "click_show_details_button",
+  "perturbation_type": "click_to_reveal",
+  "start_url": "http://localhost:8000/templates/modern/house_09.html",
+  "raw_output": "Not visible",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

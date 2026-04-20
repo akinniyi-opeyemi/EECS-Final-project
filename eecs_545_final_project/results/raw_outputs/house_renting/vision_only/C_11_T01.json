@@ -1,0 +1,13 @@
+{
+  "task_id": "C_11_T01",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the monthly rent for Downtown Loft.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:8000/templates/classic/house_11.html",
+  "raw_output": "$2,050/month",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

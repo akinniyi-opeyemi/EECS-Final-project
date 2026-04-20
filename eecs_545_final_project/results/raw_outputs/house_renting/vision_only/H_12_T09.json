@@ -1,0 +1,13 @@
+{
+  "task_id": "H_12_T09",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the lease duration for Birchwood Place. You may need to navigate to the correct tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_12.html",
+  "raw_output": "Not visible",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

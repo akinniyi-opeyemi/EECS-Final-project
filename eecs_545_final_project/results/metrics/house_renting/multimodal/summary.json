@@ -1,0 +1,48 @@
+{
+  "website": "house_renting",
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "multimodal",
+  "total_tasks": 264,
+  "evaluated_tasks": 264,
+  "missing_tasks": 0,
+  "baseline": "classic",
+  "success_rates": {
+    "classic": 0.9333,
+    "modern": 0.7381,
+    "hidden": 0.975
+  },
+  "temporal_degradation": {
+    "classic_to_modern": 0.1952,
+    "classic_to_hidden": -0.0417
+  },
+  "trs": 0.7908,
+  "task_type_results": {},
+  "perturbation_results": {
+    "click_to_reveal": {
+      "count": 24,
+      "success_rate": 0.2916666666666667
+    },
+    "filter_navigation": {
+      "count": 12,
+      "success_rate": 1.0
+    },
+    "tab_navigation": {
+      "count": 48,
+      "success_rate": 0.9375
+    },
+    "tab_then_expand": {
+      "count": 24,
+      "success_rate": 1.0
+    },
+    "visible": {
+      "count": 156,
+      "success_rate": 0.9423076923076923
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 196,
+    "exact_match_contained": 27,
+    "no_match": 29,
+    "must_include": 12
+  }
+}

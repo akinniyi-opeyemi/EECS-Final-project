@@ -1,0 +1,13 @@
+{
+  "task_id": "H_05_T07",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the parking details for Riverfront Studio. You may need to navigate to the Details tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/house_05.html",
+  "raw_output": "Bicycle storage available",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "multimodal"
+}

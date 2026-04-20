@@ -1,0 +1,13 @@
+{
+  "task_id": "H_08_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Atlanta and identify Cedar Grove Flat.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "Filter by city: Atlanta. The listing is Cedar Grove Flat.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "multimodal"
+}

@@ -22,38 +22,44 @@ parser.add_argument(
              "job_application", "course_registration"],
     help="Which website to evaluate"
 )
+parser.add_argument(
+    "--mode",
+    default="text_only",
+    choices=["text_only", "multimodal", "vision_only"],
+    help="Which inference mode to evaluate"
+)
 args = parser.parse_args()
 
 # ============================================================
 # WEBSITE CONFIGURATIONS
 # ============================================================
 CONFIGS = {
-    "house_renting": {
-        "task_file":      Path("house-renting-eval/tasks.json"),
-        "raw_output_dir": Path("results/raw_outputs/house_renting"),
-        "results_dir":    Path("results/metrics/house_renting"),
-        "templates":      ["classic", "modern", "hidden"],
-        "baseline":       "classic",
+   "house_renting": {
+    "task_file":      Path("house-renting-eval/tasks.json"),
+    "raw_output_dir": Path(f"results/raw_outputs/house_renting/{args.mode}"),
+    "results_dir":    Path(f"results/metrics/house_renting/{args.mode}"),
+    "templates":      ["classic", "modern", "hidden"],
+    "baseline":       "classic",
     },
     "personal_website": {
         "task_file":      Path("Personal Website/tasks/test.raw.json"),
-        "raw_output_dir": Path("results/raw_outputs/personal_website"),
-        "results_dir":    Path("results/metrics/personal_website"),
-        "templates":      ["jekyll_alfolio", "raw_html_1998",
-                           "notion", "hugo_papermod"],
+        "raw_output_dir": Path(f"results/raw_outputs/personal_website/{args.mode}"),
+        "results_dir":    Path(f"results/metrics/personal_website/{args.mode}"),
+        "templates":      ["raw_html_1998", "hugo_papermod",
+                        "notion", "jekyll_alfolio"],
         "baseline":       "raw_html_1998",
     },
     "job_application": {
         "task_file":      Path("job_application/tasks.json"),
-        "raw_output_dir": Path("results/raw_outputs/job_application"),
-        "results_dir":    Path("results/metrics/job_application"),
+        "raw_output_dir": Path(f"results/raw_outputs/job_application/{args.mode}"),
+        "results_dir":    Path(f"results/metrics/job_application/{args.mode}"),
         "templates":      ["classic", "modern", "notion"],
         "baseline":       "classic",
     },
     "course_registration": {
         "task_file":      Path("course_registration/tasks.json"),
-        "raw_output_dir": Path("results/raw_outputs/course_registration"),
-        "results_dir":    Path("results/metrics/course_registration"),
+        "raw_output_dir": Path(f"results/raw_outputs/course_registration/{args.mode}"),
+        "results_dir":    Path(f"results/metrics/course_registration/{args.mode}"),
         "templates":      ["2000s", "2010s", "modern"],
         "baseline":       "2000s",
     },
@@ -145,6 +151,7 @@ def compute_trs(sr_baseline, all_sr_values):
 # MAIN: Load and evaluate
 # ============================================================
 print(f"Website:  {args.website}")
+print(f"Mode:     {args.mode}")
 print(f"Tasks:    {TASK_FILE}")
 print(f"Outputs:  {RAW_DIR}\n")
 
@@ -322,7 +329,8 @@ with open(per_task_path, "w") as f:
 summary = {
     "website":         args.website,
     "model":           evaluated[0]["model"] if evaluated else "",
-    "mode":            "text_only",
+    "mode":            args.mode,
+
     "total_tasks":     len(tasks),
     "evaluated_tasks": len(evaluated),
     "missing_tasks":   len(missing),

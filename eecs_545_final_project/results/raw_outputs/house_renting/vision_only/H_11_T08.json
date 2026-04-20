@@ -1,0 +1,13 @@
+{
+  "task_id": "H_11_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Miami and identify Downtown Loft.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:8000/templates/hidden/index.html",
+  "raw_output": "1. Click on the 'City' dropdown in the filter panel on the left.\n2. Select 'Miami' from the list of cities.\n3. Scroll through the listings to find 'Downtown Loft' and note its details.",
+  "error": null,
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only"
+}

@@ -410,6 +410,143 @@ def generate_dashboard(website):
     if has_perturbation:
         plot_perturbation_results(website, summary)
 
+# ============================================================
+# CHART 7: Cross-mode comparison for one website
+# ============================================================
+def plot_cross_mode_comparison(website):
+    """
+    Compare text_only, multimodal, vision_only
+    success rates across templates.
+    """
+    config    = CONFIGS[website]
+    templates = config["templates"]
+    modes     = ["text_only", "multimodal", "vision_only"]
+    mode_colors = {
+        "text_only":   "#2ecc71",
+        "multimodal":  "#3498db",
+        "vision_only": "#e74c3c"
+    }
+
+    # load summaries for each mode
+    summaries = {}
+    for mode in modes:
+        summary_path = Path(f"results/metrics/{website}/{mode}/summary.json")
+        if summary_path.exists():
+            with open(summary_path) as f:
+                summaries[mode] = json.load(f)
+        else:
+            print(f"  No results for {website}/{mode}, skipping")
+
+    if len(summaries) < 2:
+        print(f"  Need at least 2 modes to compare")
+        return
+
+    available_modes = list(summaries.keys())
+
+    # ---- Chart A: grouped bar chart by template ----
+    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+    fig.suptitle(
+        f"{config['title']} — Cross-Mode Comparison",
+        fontsize=15, fontweight="bold"
+    )
+
+    # grouped bars
+    ax = axes[0]
+    x    = np.arange(len(templates))
+    width = 0.25
+    offsets = np.linspace(
+        -(len(available_modes)-1)*width/2,
+        (len(available_modes)-1)*width/2,
+        len(available_modes)
+    )
+
+    for i, mode in enumerate(available_modes):
+        sr = summaries[mode]["success_rates"]
+        values = [sr.get(t, 0) * 100 for t in templates]
+        bars = ax.bar(
+            x + offsets[i], values,
+            width, label=mode.replace("_", " "),
+            color=mode_colors[mode],
+            edgecolor="white", linewidth=1.2
+        )
+        for bar, val in zip(bars, values):
+            ax.text(
+                bar.get_x() + bar.get_width()/2,
+                bar.get_height() + 0.5,
+                f"{val:.0f}%",
+                ha="center", va="bottom",
+                fontsize=8, fontweight="bold"
+            )
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(templates, rotation=15, ha="right")
+    ax.set_ylim(0, 115)
+    ax.set_ylabel("Success Rate (%)", fontsize=12)
+    ax.set_title("Success Rate by Template and Mode", fontsize=12)
+    ax.legend(fontsize=10)
+    ax.grid(axis="y", alpha=0.3)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    # ---- Chart B: TRS comparison ----
+    ax2 = axes[1]
+    trs_values = [summaries[m]["trs"] for m in available_modes]
+    mode_labels = [m.replace("_", " ") for m in available_modes]
+    colors = [mode_colors[m] for m in available_modes]
+
+    bars = ax2.bar(
+        mode_labels, trs_values,
+        color=colors, edgecolor="white",
+        linewidth=1.5, width=0.4
+    )
+
+    for bar, val in zip(bars, trs_values):
+        ax2.text(
+            bar.get_x() + bar.get_width()/2,
+            bar.get_height() + 0.01,
+            f"{val:.3f}",
+            ha="center", va="bottom",
+            fontsize=12, fontweight="bold"
+        )
+
+    ax2.axhline(
+        y=1.0, color="gray", linestyle="--",
+        linewidth=1, alpha=0.5,
+        label="Perfect robustness"
+    )
+    ax2.set_ylim(0, 1.15)
+    ax2.set_ylabel("TRS", fontsize=12)
+    ax2.set_title("Temporal Robustness Score by Mode", fontsize=12)
+    ax2.legend(fontsize=10)
+    ax2.grid(axis="y", alpha=0.3)
+    ax2.spines["top"].set_visible(False)
+    ax2.spines["right"].set_visible(False)
+
+    plt.tight_layout()
+    path = VIZ_DIR / f"{website}_cross_mode_comparison.png"
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"Saved: {path}")
+
+    # ---- Print summary table ----
+    print(f"\nCross-mode summary for {website}:")
+    print(f"{'Template':<20}", end="")
+    for mode in available_modes:
+        print(f"{mode.replace('_',' '):<15}", end="")
+    print()
+    print("-" * (20 + 15 * len(available_modes)))
+    for t in templates:
+        print(f"{t:<20}", end="")
+        for mode in available_modes:
+            sr = summaries[mode]["success_rates"].get(t, 0)
+            val_str = f"{sr:.1%}"
+            print(f"{val_str:<15}", end="")
+        print()
+    print(f"\n{'TRS':<20}", end="")
+    for mode in available_modes:
+        print(f"{summaries[mode]['trs']:<15.3f}", end="")
+    print()
+
 
 # ============================================================
 # MAIN
@@ -417,7 +554,6 @@ def generate_dashboard(website):
 print(f"Generating visualizations for: {args.website}\n")
 
 if args.website == "all":
-    # generate for all websites that have results
     summaries = {}
     for website in ["house_renting", "personal_website",
                     "job_application", "course_registration"]:
@@ -425,12 +561,13 @@ if args.website == "all":
         if summary:
             generate_dashboard(website)
             summaries[website] = summary
-
-    # cross-website TRS comparison
+        # cross-mode comparison for each website
+        plot_cross_mode_comparison(website)
     if len(summaries) > 1:
         plot_trs_comparison(summaries)
         print(f"\nCross-website comparison saved")
 else:
     generate_dashboard(args.website)
+    plot_cross_mode_comparison(args.website)
 
 print(f"\nAll visualizations saved to: {VIZ_DIR}")
