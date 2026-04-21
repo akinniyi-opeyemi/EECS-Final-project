@@ -2,9 +2,9 @@
 # RQ II: Test-time intervention strategies
 # Runs memory and CoT agents on failed tasks from vanilla
 # Usage:
-#   python scripts/infer_rq2.py --website house_renting --mode vision_only --strategy memory
-#   python scripts/infer_rq2.py --website house_renting --mode vision_only --strategy cot
-#   python scripts/infer_rq2.py --website house_renting --mode vision_only --strategy all
+#   python scripts/infer_rq2.py --website house_renting --mode vision_only --agent qwen_vl --strategy memory
+#   python scripts/infer_rq2.py --website house_renting --mode vision_only --agent uitars --strategy cot
+#   python scripts/infer_rq2.py --website house_renting --mode vision_only --agent uitars --strategy all
 
 import json, os, time, argparse, base64
 from pathlib import Path
@@ -20,6 +20,9 @@ parser.add_argument("--website", required=True,
     choices=["house_renting", "personal_website"])
 parser.add_argument("--mode", required=True,
     choices=["text_only", "multimodal", "vision_only"])
+parser.add_argument("--agent", required=True,
+    choices=["gpt_oss", "qwen_vl", "uitars", "qwen25", "internvl"],
+    help="Which agent to use")
 parser.add_argument("--strategy", required=True,
     choices=["memory", "cot", "all"])
 parser.add_argument("--test", action="store_true",
@@ -27,20 +30,48 @@ parser.add_argument("--test", action="store_true",
 args = parser.parse_args()
 
 # ============================================================
-# MODEL
+# AGENT CONFIGURATIONS
 # ============================================================
-if args.mode == "text_only":
-    MODEL  = "openai/gpt-oss-120b"
-    client = OpenAI(
-        base_url=os.environ["OPENAI_BASE_URL"],
-        api_key=os.environ["OPENAI_API_KEY"]
-    )
-else:
-    MODEL  = "Qwen/Qwen3-VL-30B-A3B-Instruct"
-    client = OpenAI(
-        base_url=os.environ["QWEN_BASE_URL"],
-        api_key=os.environ["QWEN_API_KEY"]
-    )
+AGENT_CONFIGS = {
+    "gpt_oss": {
+        "model":    "openai/gpt-oss-120b",
+        "base_url": os.environ.get("OPENAI_BASE_URL", ""),
+        "api_key":  os.environ.get("OPENAI_API_KEY", ""),
+        "vision":   False,
+    },
+    "qwen_vl": {
+        "model":    "Qwen/Qwen3-VL-30B-A3B-Instruct",
+        "base_url": os.environ.get("QWEN_BASE_URL", ""),
+        "api_key":  os.environ.get("QWEN_API_KEY", ""),
+        "vision":   True,
+    },
+    "uitars": {
+        "model":    "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+        "base_url": os.environ.get("UITARS_BASE_URL", "http://localhost:8001/v1"),
+        "api_key":  os.environ.get("UITARS_API_KEY", "local"),
+        "vision":   True,
+    },
+    "qwen25": {
+        "model":    "/ocean/projects/tra260004p/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+        "base_url": os.environ.get("QWEN25_BASE_URL", "http://localhost:8002/v1"),
+        "api_key":  os.environ.get("QWEN25_API_KEY", "local"),
+        "vision":   True,
+    },
+    "internvl": {
+        "model":    "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+        "base_url": os.environ.get("INTERNVL_BASE_URL", "http://localhost:8003/v1"),
+        "api_key":  os.environ.get("INTERNVL_API_KEY", "local"),
+        "vision":   True,
+    }
+}
+
+agent_config = AGENT_CONFIGS[args.agent]
+MODEL        = agent_config["model"]
+
+client = OpenAI(
+    base_url=agent_config["base_url"],
+    api_key=agent_config["api_key"]
+)
 
 TEMPERATURE = 0.0
 MAX_TOKENS  = 600
@@ -50,7 +81,7 @@ PAUSE       = 1.5
 # WEBSITE CONFIG
 # ============================================================
 TASK_FILES = {
-    "house_renting":   Path("house-renting-eval/tasks.json"),
+    "house_renting":    Path("house-renting-eval/tasks.json"),
     "personal_website": Path("Personal Website/tasks/test.raw.json")
 }
 
@@ -68,19 +99,25 @@ SYSTEM_PROMPTS = {
 # ============================================================
 # LOAD FAILED TASKS FROM VANILLA RUN
 # ============================================================
-def load_failed_tasks(website, mode):
+def load_failed_tasks(website, mode, agent):
     """Load tasks that vanilla agent failed on."""
-    metrics_path = Path(f"results/metrics/{website}/{mode}/per_task_results.json")
+    metrics_path = Path(f"results/metrics/{website}/{mode}/{agent}/per_task_results.json")
+
+    # fall back to old path without agent subfolder (qwen_vl, gpt_oss)
+    if not metrics_path.exists():
+        metrics_path = Path(f"results/metrics/{website}/{mode}/per_task_results.json")
+
     if not metrics_path.exists():
         print(f"No vanilla results found at {metrics_path}")
-        print(f"Run vanilla inference first: python scripts/infer.py --website {website} --mode {mode}")
+        print(f"Run vanilla inference first:")
+        print(f"  python scripts/infer.py --website {website} --mode {mode} --agent {agent}")
         exit(1)
 
     with open(metrics_path) as f:
         results = json.load(f)
 
     failed_ids = {r["task_id"] for r in results if not r["success"]}
-    print(f"Found {len(failed_ids)} failed tasks from vanilla {mode}")
+    print(f"Found {len(failed_ids)} failed tasks from vanilla {mode} ({agent})")
 
     with open(TASK_FILES[website]) as f:
         all_tasks = json.load(f)
@@ -154,7 +191,6 @@ def run_strategy(task, strategy_name, output_dir):
     }
     hint = interaction_hints.get(interaction, "")
 
-    # get page content
     page_text      = None
     screenshot_b64 = None
 
@@ -164,10 +200,8 @@ def run_strategy(task, strategy_name, output_dir):
     if args.mode in ["multimodal", "vision_only"]:
         screenshot_b64 = get_screenshot_b64(url)
 
-    # select agent
     agent = memory_agent if strategy_name == "memory" else cot_agent
 
-    # build content
     sys_key = "text_only" if args.mode == "text_only" else "vision"
     system_prompt = SYSTEM_PROMPTS[args.website][sys_key]
 
@@ -184,7 +218,6 @@ def run_strategy(task, strategy_name, output_dir):
         content_with_system = [{"type": "text", "text": system_prompt}] + content
         messages = [{"role": "user", "content": content_with_system}]
 
-    # run inference
     try:
         response = client.chat.completions.create(
             model=MODEL,
@@ -194,7 +227,6 @@ def run_strategy(task, strategy_name, output_dir):
         )
         raw_output = response.choices[0].message.content.strip()
 
-        # parse CoT output
         if strategy_name == "cot":
             raw_output = cot_agent.parse_cot_output(raw_output)
 
@@ -214,6 +246,7 @@ def run_strategy(task, strategy_name, output_dir):
         "raw_output":        raw_output,
         "error":             error,
         "model":             MODEL,
+        "agent":             args.agent,
         "mode":              args.mode,
         "strategy":          strategy_name
     }
@@ -231,7 +264,7 @@ strategies = (["memory", "cot"]
               if args.strategy == "all"
               else [args.strategy])
 
-failed_tasks = load_failed_tasks(args.website, args.mode)
+failed_tasks = load_failed_tasks(args.website, args.mode, args.agent)
 
 if args.test:
     failed_tasks = failed_tasks[:5]
@@ -239,6 +272,7 @@ if args.test:
 
 print(f"Website:   {args.website}")
 print(f"Mode:      {args.mode}")
+print(f"Agent:     {args.agent}")
 print(f"Strategy:  {args.strategy}")
 print(f"Model:     {MODEL}")
 print(f"Tasks:     {len(failed_tasks)} failed tasks to retry")
@@ -246,7 +280,7 @@ print()
 
 for strategy_name in strategies:
     output_dir = Path(
-        f"results/raw_outputs/{args.website}/rq2_{strategy_name}_{args.mode}"
+        f"results/raw_outputs/{args.website}/rq2_{strategy_name}_{args.mode}_{args.agent}"
     )
     output_dir.mkdir(parents=True, exist_ok=True)
 
