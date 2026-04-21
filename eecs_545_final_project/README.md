@@ -189,6 +189,8 @@ python -m vllm.entrypoints.openai.api_server \
     --port 8003 --host 0.0.0.0 \
     --max-model-len 4096 --dtype bfloat16 \
     --trust-remote-code
+
+# Note: use --dtype half instead of bfloat16 on V100 nodes
 ```
 
 ---
@@ -319,27 +321,31 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 | Qwen3-VL-30B | 30B | general vision | 93.3% | 73.8% | 97.5% | 0.791 |
 | UI-TARS-7B | 7B | GUI-specialized | 98.3% | 96.4% | 96.7% | **0.981** |
 | Qwen2.5-VL-7B | 7B | general vision | 93.3% | 78.6% | 94.2% | 0.842 |
-| InternVL2-8B | 8B | general vision | TBD | TBD | TBD | TBD |
+| InternVL2-8B | 8B | general vision | 93.3% | 92.9% | 87.5% | 0.938 |
 
-**Key finding:** UI-TARS-7B achieves TRS=0.981 in multimodal mode, nearly matching text-only performance (TRS=0.988). This combines visual GUI understanding with DOM text extraction, effectively solving the interaction barrier. click_to_reveal tasks achieve 100% success rate in multimodal mode for UI-TARS versus 0% in vision-only mode.
+**Key finding:** UI-TARS-7B achieves TRS=0.981 in multimodal mode, nearly matching text-only performance (TRS=0.988). InternVL2-8B also performs strongly (TRS=0.938), suggesting multimodal mode significantly benefits all agents by resolving interaction barriers via DOM text extraction.
 
 ### RQ I: Cross-Agent Comparison (vision_only, personal_website)
 
 | Agent | raw_html_1998 | hugo_papermod | notion | jekyll_alfolio | TRS |
 |---|---|---|---|---|---|
 | Qwen3-VL-30B | 60.0% | 40.0% | 30.0% | 60.0% | 0.500 |
-| UI-TARS-7B | TBD | TBD | TBD | TBD | TBD |
-| Qwen2.5-VL-7B | TBD | TBD | TBD | TBD | TBD |
-| InternVL2-8B | TBD | TBD | TBD | TBD | TBD |
+| UI-TARS-7B | 60.0% | 40.0% | 25.0% | 60.0% | 0.417 |
+| Qwen2.5-VL-7B | 60.0% | 40.0% | 30.0% | 60.0% | 0.500 |
+| InternVL2-8B | 60.0% | 40.0% | 25.0% | 60.0% | 0.417 |
+
+**Key finding:** All vision agents converge to similar TRS (0.417-0.500) on personal_website. Framework style perturbations affect all agents equally because failures are dominated by navigation limitations (information on linked pages) rather than visual complexity. GUI specialization provides no advantage here.
 
 ### RQ I: Cross-Agent Comparison (multimodal, personal_website)
 
 | Agent | raw_html_1998 | hugo_papermod | notion | jekyll_alfolio | TRS |
 |---|---|---|---|---|---|
 | Qwen3-VL-30B | 75.0% | 85.0% | 80.0% | 65.0% | 0.867 |
-| UI-TARS-7B | TBD | TBD | TBD | TBD | TBD |
-| Qwen2.5-VL-7B | TBD | TBD | TBD | TBD | TBD |
-| InternVL2-8B | TBD | TBD | TBD | TBD | TBD |
+| UI-TARS-7B | 80.0% | 85.0% | 70.0% | 70.0% | 0.875 |
+| Qwen2.5-VL-7B | 70.0% | 70.0% | 80.0% | 65.0% | **0.929** |
+| InternVL2-8B | 75.0% | 70.0% | 80.0% | 60.0% | 0.800 |
+
+**Key finding:** Qwen2.5-VL-7B achieves the highest TRS on personal_website multimodal (0.929), outperforming UI-TARS (0.875). This suggests Qwen2.5 handles academic text-heavy content better than GUI-specialized models when DOM text is available.
 
 ---
 
@@ -419,17 +425,17 @@ Text-only agents bypass UI complexity entirely via DOM extraction, achieving nea
 
 A 7B GUI-specialized model outperforms a 30B general vision model by 76% in TRS. Domain specialization is more important than parameter count for temporal robustness.
 
-### Finding 3: UI-TARS multimodal is the optimal configuration
+### Finding 3: UI-TARS multimodal is the optimal configuration for interaction-heavy websites
 
-| Agent | Mode | TRS |
+| Agent | Mode | TRS (house_renting) |
 |---|---|---|
 | gpt-oss-120B | text_only | 0.988 |
 | UI-TARS-7B | multimodal | **0.981** |
+| InternVL2-8B | multimodal | 0.938 |
 | Qwen2.5-VL-7B | multimodal | 0.842 |
 | Qwen3-VL-30B | multimodal | 0.791 |
-| UI-TARS-7B | vision_only | 0.414 |
 
-UI-TARS in multimodal mode nearly matches text-only performance (TRS=0.981 vs 0.988) while using a 17x smaller model. This combination of GUI specialization with DOM text access resolves interaction barriers completely.
+UI-TARS in multimodal mode nearly matches text-only performance (TRS=0.981 vs 0.988) while using a 17x smaller model.
 
 ### Finding 4: click_to_reveal and tab_navigation are irreducible barriers in vision-only mode
 
@@ -443,6 +449,14 @@ All five vision agents score 0% on click_to_reveal and tab_navigation perturbati
 | personal_website | Navigation failures | -73.8% |
 
 Memory intervention is beneficial when information exists on the page but the agent missed it. It is actively harmful when failures are caused by information being on a different page.
+
+### Finding 6: Agent ranking differs by website and mode
+
+On house_renting, UI-TARS dominates in both vision_only (TRS=0.414) and multimodal (TRS=0.981) modes. On personal_website multimodal, Qwen2.5-VL-7B outperforms all agents including UI-TARS (TRS=0.929 vs 0.875). GUI specialization is most valuable for interaction-heavy websites but less critical for text-heavy academic content where general vision models perform comparably.
+
+### Finding 7: Vision agents converge on navigation-dominated websites
+
+On personal_website vision_only, all agents cluster at TRS=0.417-0.500 regardless of size or specialization. When the primary failure mode is navigation (information on a linked page), neither GUI specialization nor model scale provides an advantage. This suggests failure mode type is a stronger predictor of robustness than model architecture.
 
 ---
 
