@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv
+env/
+venv/
+.conda/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Large result files
+results/raw_outputs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Model files
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+*.incomplete
+
+# Cache
+.cache/
+__pycache__/
+*.pyc
