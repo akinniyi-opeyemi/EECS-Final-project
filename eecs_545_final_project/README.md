@@ -233,17 +233,20 @@ python scripts/evaluate.py \
 python scripts/infer_rq2.py \
     --website house_renting \
     --mode vision_only \
+    --agent uitars \
     --strategy memory
 
 python scripts/infer_rq2.py \
     --website house_renting \
     --mode vision_only \
+    --agent uitars \
     --strategy cot
 
 # evaluate interventions
 python scripts/evaluate_rq2.py \
     --website house_renting \
-    --mode vision_only
+    --mode vision_only \
+    --agent uitars
 ```
 
 ---
@@ -334,7 +337,7 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 | Qwen2.5-VL-7B | 60.0% | 40.0% | 30.0% | 60.0% | 0.500 |
 | InternVL2-8B | 60.0% | 40.0% | 25.0% | 60.0% | 0.417 |
 
-**Key finding:** All vision agents converge to similar TRS (0.417-0.500) on personal_website. Framework style perturbations affect all agents equally because failures are dominated by navigation limitations (information on linked pages) rather than visual complexity. GUI specialization provides no advantage here.
+**Key finding:** All vision agents converge to similar TRS (0.417-0.500) on personal_website. Framework style perturbations affect all agents equally because failures are dominated by navigation limitations rather than visual complexity. GUI specialization provides no advantage here.
 
 ### RQ I: Cross-Agent Comparison (multimodal, personal_website)
 
@@ -349,37 +352,39 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 
 ---
 
-### RQ II: Test-Time Interventions (house_renting, vision_only, Qwen3-VL-30B)
+### RQ II: Test-Time Interventions (house_renting, vision_only)
 
-| Strategy | Recovered | Rate | Hallucinated | Net |
+| Agent | Memory Recovered | Memory Rate | Memory Hallucinated | CoT Recovered | CoT Rate | CoT Hallucinated |
+|---|---|---|---|---|---|---|
+| Qwen3-VL-30B | 69 | 35.9% | 23 | 12 | 6.2% | 29 |
+| UI-TARS-7B | 41 | 23.2% | 104 | 7 | 4.0% | 65 |
+| Qwen2.5-VL-7B | 99 | **52.1%** | 60 | 8 | 4.2% | 10 |
+| InternVL2-8B | 81 | 41.8% | 107 | 22 | 11.3% | 44 |
+
+**Key finding:** Memory intervention effectiveness varies significantly by agent. Qwen2.5-VL-7B achieves the highest memory recovery rate (52.1%) with the lowest hallucination rate among recovering agents. UI-TARS-7B has the lowest memory recovery (23.2%) despite being the most robust vision agent, suggesting GUI specialization does not transfer to memory-augmented interventions. CoT is consistently weak across all agents (4-11%).
+
+### RQ II: Test-Time Interventions (personal_website, vision_only)
+
+| Agent | Memory Recovered | Memory Rate | Memory Hallucinated | CoT Recovered | CoT Rate | CoT Hallucinated |
+|---|---|---|---|---|---|---|
+| Qwen3-VL-30B | 0 | 0.0% | 31 | 1 | 2.4% | 8 |
+| UI-TARS-7B | 3 | 7.1% | 28 | 3 | 7.1% | 23 |
+| Qwen2.5-VL-7B | 2 | 4.8% | 40 | 3 | 7.1% | 23 |
+| InternVL2-8B | 4 | 9.5% | 38 | 3 | 7.1% | 23 |
+
+**Key finding:** All agents show minimal recovery on personal_website (0-9.5%), confirming that navigation-type failures are irreducible regardless of agent architecture or intervention strategy. High hallucination rates indicate interventions cause agents to fabricate answers rather than admit information is unavailable.
+
+### RQ II: Memory Recovery Rate by Perturbation Type (house_renting, vision_only)
+
+| Perturbation | Qwen3-VL | UI-TARS | Qwen2.5 | InternVL |
 |---|---|---|---|---|
-| vanilla | 0 | 0.0% | 0 | 0.0% |
-| memory | 69 | 35.9% | 23 | +24.0% |
-| CoT | 12 | 6.2% | 29 | -8.8% |
+| visible | 60% | 23% | 70% | 60% |
+| tab_navigation | 23% | 10% | 38% | 25% |
+| tab_then_expand | 17% | 50% | 29% | 29% |
+| filter_navigation | 14% | 0% | 100% | 0% |
+| click_to_reveal | 0% | 33% | 25% | 33% |
 
-**Key finding:** Memory intervention recovers 35.9% of vision-only failures with +24% net improvement on house_renting. CoT is harmful (-8.8% net) due to high hallucination rate on hidden content tasks.
-
-### RQ II: Test-Time Interventions (personal_website, vision_only, Qwen3-VL-30B)
-
-| Strategy | Recovered | Rate | Hallucinated | Net |
-|---|---|---|---|---|
-| vanilla | 0 | 0.0% | 0 | 0.0% |
-| memory | 0 | 0.0% | 31 | -73.8% |
-| CoT | 1 | 2.4% | 8 | -16.7% |
-
-**Key finding:** Memory intervention is actively harmful on personal_website (-73.8% net) because failures are caused by information being on a different page entirely. Agent hallucinates plausible answers instead of admitting the information is not found.
-
-### RQ II: Recovery Rate by Perturbation Type (house_renting, vision_only)
-
-| Perturbation | Memory | CoT |
-|---|---|---|
-| visible | 60% | 9% |
-| tab_navigation | 23% | 0% |
-| tab_then_expand | 17% | 0% |
-| filter_navigation | 14% | 57% |
-| click_to_reveal | 0% | 0% |
-
-**Key finding:** click_to_reveal is an irreducible failure mode. Neither memory nor CoT can recover these failures because the information is fundamentally inaccessible without browser interaction.
+**Key finding:** click_to_reveal recovery varies by agent (0-33%) unlike tab_navigation which shows partial recovery for some agents. Qwen2.5 achieves 100% filter_navigation recovery, suggesting its text understanding handles sidebar filter context better than other agents.
 
 ---
 
@@ -441,22 +446,29 @@ UI-TARS in multimodal mode nearly matches text-only performance (TRS=0.981 vs 0.
 
 All five vision agents score 0% on click_to_reveal and tab_navigation perturbations. These represent fundamental limitations of static screenshot evaluation that cannot be overcome without actual browser interaction. Multimodal agents resolve these barriers via DOM text extraction.
 
-### Finding 5: Memory intervention effectiveness depends on failure mode type
+### Finding 5: Memory intervention effectiveness depends on both failure mode type and agent architecture
 
-| Website | Failure type | Memory net |
-|---|---|---|
-| house_renting | Visibility failures | +24.0% |
-| personal_website | Navigation failures | -73.8% |
+| Agent | Website | Memory Rate | Notes |
+|---|---|---|---|
+| Qwen2.5-VL-7B | house_renting | **52.1%** | best memory recovery |
+| InternVL2-8B | house_renting | 41.8% | strong recovery |
+| Qwen3-VL-30B | house_renting | 35.9% | moderate recovery |
+| UI-TARS-7B | house_renting | 23.2% | weakest recovery |
+| all agents | personal_website | 0-9.5% | navigation failures irreducible |
 
-Memory intervention is beneficial when information exists on the page but the agent missed it. It is actively harmful when failures are caused by information being on a different page.
+Memory intervention is beneficial when information exists on the page. It is actively harmful when failures are navigation-based. Surprisingly, GUI specialization (UI-TARS) does not help memory recovery.
 
 ### Finding 6: Agent ranking differs by website and mode
 
-On house_renting, UI-TARS dominates in both vision_only (TRS=0.414) and multimodal (TRS=0.981) modes. On personal_website multimodal, Qwen2.5-VL-7B outperforms all agents including UI-TARS (TRS=0.929 vs 0.875). GUI specialization is most valuable for interaction-heavy websites but less critical for text-heavy academic content where general vision models perform comparably.
+On house_renting, UI-TARS dominates in both vision_only (TRS=0.414) and multimodal (TRS=0.981) modes. On personal_website multimodal, Qwen2.5-VL-7B outperforms all agents including UI-TARS (TRS=0.929 vs 0.875). GUI specialization is most valuable for interaction-heavy websites but less critical for text-heavy academic content.
 
 ### Finding 7: Vision agents converge on navigation-dominated websites
 
-On personal_website vision_only, all agents cluster at TRS=0.417-0.500 regardless of size or specialization. When the primary failure mode is navigation (information on a linked page), neither GUI specialization nor model scale provides an advantage. This suggests failure mode type is a stronger predictor of robustness than model architecture.
+On personal_website vision_only, all agents cluster at TRS=0.417-0.500 regardless of size or specialization. When the primary failure mode is navigation, neither GUI specialization nor model scale provides an advantage. Failure mode type is a stronger predictor of robustness than model architecture.
+
+### Finding 8: CoT is consistently ineffective across all agents
+
+CoT recovery rates range from 4.0-11.3% on house_renting and 2.4-7.1% on personal_website, with high hallucination rates across all agents. Chain-of-thought reasoning does not reliably improve GUI agent performance on static screenshot evaluation tasks.
 
 ---
 

@@ -1,0 +1,22 @@
+{
+  "website": "house_renting",
+  "mode": "vision_only",
+  "agent": "qwen25",
+  "vanilla_failed": 190,
+  "strategies": {
+    "memory": {
+      "evaluated": 190,
+      "recovered": 99,
+      "recovery_rate": 0.5211,
+      "hallucinated": 60,
+      "hallucination_rate": 0.3158
+    },
+    "cot": {
+      "evaluated": 190,
+      "recovered": 8,
+      "recovery_rate": 0.0421,
+      "hallucinated": 10,
+      "hallucination_rate": 0.0526
+    }
+  }
+}

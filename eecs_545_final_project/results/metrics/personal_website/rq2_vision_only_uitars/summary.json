@@ -1,0 +1,22 @@
+{
+  "website": "personal_website",
+  "mode": "vision_only",
+  "agent": "uitars",
+  "vanilla_failed": 43,
+  "strategies": {
+    "memory": {
+      "evaluated": 42,
+      "recovered": 3,
+      "recovery_rate": 0.0714,
+      "hallucinated": 28,
+      "hallucination_rate": 0.6667
+    },
+    "cot": {
+      "evaluated": 42,
+      "recovered": 3,
+      "recovery_rate": 0.0714,
+      "hallucinated": 23,
+      "hallucination_rate": 0.5476
+    }
+  }
+}

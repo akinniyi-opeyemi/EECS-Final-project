@@ -1,0 +1,22 @@
+{
+  "website": "house_renting",
+  "mode": "vision_only",
+  "agent": "internvl",
+  "vanilla_failed": 194,
+  "strategies": {
+    "memory": {
+      "evaluated": 194,
+      "recovered": 81,
+      "recovery_rate": 0.4175,
+      "hallucinated": 107,
+      "hallucination_rate": 0.5515
+    },
+    "cot": {
+      "evaluated": 194,
+      "recovered": 22,
+      "recovery_rate": 0.1134,
+      "hallucinated": 44,
+      "hallucination_rate": 0.2268
+    }
+  }
+}
