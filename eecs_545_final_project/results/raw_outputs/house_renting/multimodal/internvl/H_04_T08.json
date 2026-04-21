@@ -1,0 +1,14 @@
+{
+  "task_id": "H_04_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Boston and identify The Elmwood.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:9888/templates/hidden/index.html",
+  "raw_output": "The Elmwood is available and located at 22 Elmwood Street, Boston, MA 02115. It has 2 bedrooms, 2 bathrooms, and 1 parking spot included. The monthly rent is $2,600.",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

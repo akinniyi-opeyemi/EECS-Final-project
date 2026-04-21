@@ -1,0 +1,14 @@
+{
+  "task_id": "H_10_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Raleigh and identify Pinewood Cottage.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:9888/templates/hidden/index.html",
+  "raw_output": "$1,550/month",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "28",
+  "website": "personal_website",
+  "template": "raw_html_1998",
+  "instruction": "Is Dr. Gerhardt V\u00f6ssing taking prospective graduate students in the upcoming academic year?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_econ_001__raw_html_1998/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "agent": "qwen25",
+  "mode": "vision_only"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "58",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/merrow_lit_001__hugo_papermod/",
+  "raw_output": "No",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

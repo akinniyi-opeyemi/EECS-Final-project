@@ -1,0 +1,14 @@
+{
+  "task_id": "76",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "When does Malcolm hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/thornfield_anth_001__hugo_papermod/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "agent": "qwen25",
+  "mode": "vision_only"
+}

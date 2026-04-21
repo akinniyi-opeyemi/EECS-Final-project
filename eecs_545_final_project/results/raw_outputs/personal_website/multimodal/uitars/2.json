@@ -1,0 +1,14 @@
+{
+  "task_id": "2",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_cs_001__jekyll_alfolio/",
+  "raw_output": "Nivedita Okonkwo is teaching \"CS 301: Introduction to Computer Science\" this semester, and the course takes place in Ramsey Hall, Room 4208.",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

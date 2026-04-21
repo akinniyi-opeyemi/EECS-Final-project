@@ -1,0 +1,14 @@
+{
+  "task_id": "C_11_T02",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the number of bedrooms in Downtown Loft.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:9888/templates/classic/house_11.html",
+  "raw_output": "1",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

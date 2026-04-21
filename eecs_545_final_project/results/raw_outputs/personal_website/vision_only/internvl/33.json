@@ -1,0 +1,14 @@
+{
+  "task_id": "33",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "Is Dr. Gerhardt V\u00f6ssing taking prospective graduate students in the upcoming academic year?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_econ_001__notion/",
+  "raw_output": "No",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}

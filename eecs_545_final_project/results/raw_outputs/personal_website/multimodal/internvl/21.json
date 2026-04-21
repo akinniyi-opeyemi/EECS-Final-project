@@ -1,0 +1,14 @@
+{
+  "task_id": "21",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "When does Gerhardt hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_econ_001__jekyll_alfolio/",
+  "raw_output": "Mondays and Wednesdays, 3:30-5:00 PM",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "H_07_T06",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the pet policy for Parkview Terrace. You may need to navigate to the Details tab and expand a section.",
+  "interaction": "click_details_tab_then_toggle",
+  "perturbation_type": "tab_then_expand",
+  "start_url": "http://localhost:9888/templates/hidden/house_07.html",
+  "raw_output": "Cats only",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

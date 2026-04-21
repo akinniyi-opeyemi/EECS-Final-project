@@ -1,0 +1,14 @@
+{
+  "task_id": "17",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_cs_001__hugo_papermod/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}

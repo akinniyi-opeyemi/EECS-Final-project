@@ -1,0 +1,14 @@
+{
+  "task_id": "M_03_T05",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Check whether Lakeside Condo is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:9888/templates/modern/house_03.html",
+  "raw_output": "No",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

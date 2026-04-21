@@ -1,0 +1,14 @@
+{
+  "task_id": "M_05_T05",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Check whether Riverfront Studio is currently available for rent.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:9888/templates/modern/house_05.html",
+  "raw_output": "Yes, Riverfront Studio is currently available for rent.",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

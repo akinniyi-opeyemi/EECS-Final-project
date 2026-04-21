@@ -1,0 +1,14 @@
+{
+  "task_id": "59",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "Find Yuki Abernathy's Twitter account.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/merrow_lit_001__hugo_papermod/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "agent": "qwen25",
+  "mode": "multimodal"
+}

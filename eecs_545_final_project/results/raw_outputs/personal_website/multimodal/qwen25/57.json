@@ -1,0 +1,14 @@
+{
+  "task_id": "57",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/merrow_lit_001__hugo_papermod/",
+  "raw_output": "LIT 21.735, Graduate Seminar: Postwar American Fiction and the Machine, Spring 2026, in person at Hale 2-190.",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "agent": "qwen25",
+  "mode": "multimodal"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "1",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "When does Niv hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_cs_001__jekyll_alfolio/",
+  "raw_output": "Tuesdays 2:00-4:00 PM, or by appointment",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "vision_only"
+}

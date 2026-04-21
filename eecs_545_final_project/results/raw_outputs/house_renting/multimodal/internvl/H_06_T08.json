@@ -1,0 +1,14 @@
+{
+  "task_id": "H_06_T08",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Use the city filter to find listings in Nashville and identify Oak Hill House.",
+  "interaction": "use_sidebar_city_filter",
+  "perturbation_type": "filter_navigation",
+  "start_url": "http://localhost:9888/templates/hidden/index.html",
+  "raw_output": "Oak Hill House is not available.",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "H_03_T10",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the application fee for Lakeside Condo. You may need to navigate to the Details tab and expand the Fees section.",
+  "interaction": "click_details_tab_then_fees_toggle",
+  "perturbation_type": "tab_then_expand",
+  "start_url": "http://localhost:9888/templates/hidden/house_03.html",
+  "raw_output": "$60",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

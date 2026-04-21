@@ -1,0 +1,14 @@
+{
+  "task_id": "24",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "Find Dr. Gerhardt V\u00f6ssing's Twitter account.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_econ_001__jekyll_alfolio/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

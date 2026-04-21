@@ -1,0 +1,56 @@
+{
+  "website": "personal_website",
+  "agent": "uitars",
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "mode": "multimodal",
+  "total_tasks": 80,
+  "evaluated_tasks": 80,
+  "missing_tasks": 0,
+  "baseline": "raw_html_1998",
+  "success_rates": {
+    "raw_html_1998": 0.8,
+    "hugo_papermod": 0.85,
+    "notion": 0.7,
+    "jekyll_alfolio": 0.7
+  },
+  "temporal_degradation": {
+    "raw_html_1998_to_hugo_papermod": -0.05,
+    "raw_html_1998_to_notion": 0.1,
+    "raw_html_1998_to_jekyll_alfolio": 0.1
+  },
+  "trs": 0.875,
+  "task_type_results": {
+    "T1_recent_pub": {
+      "count": 16,
+      "success_rate": 0.875
+    },
+    "T2_office_hours": {
+      "count": 16,
+      "success_rate": 1.0
+    },
+    "T3_current_course": {
+      "count": 16,
+      "success_rate": 0.75
+    },
+    "T4_accepting": {
+      "count": 16,
+      "success_rate": 0.25
+    },
+    "T5_twitter": {
+      "count": 16,
+      "success_rate": 0.9375
+    }
+  },
+  "perturbation_results": {
+    "framework_style": {
+      "count": 80,
+      "success_rate": 0.7625
+    }
+  },
+  "tier_breakdown": {
+    "must_include": 44,
+    "no_match": 19,
+    "fuzzy_string": 15,
+    "semantic_match": 2
+  }
+}

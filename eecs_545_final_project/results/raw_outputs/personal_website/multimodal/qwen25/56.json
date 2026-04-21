@@ -1,0 +1,14 @@
+{
+  "task_id": "56",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "When does Yuki hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/merrow_lit_001__hugo_papermod/",
+  "raw_output": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "agent": "qwen25",
+  "mode": "multimodal"
+}

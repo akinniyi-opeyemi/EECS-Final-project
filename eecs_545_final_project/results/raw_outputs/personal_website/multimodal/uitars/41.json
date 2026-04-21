@@ -1,0 +1,14 @@
+{
+  "task_id": "41",
+  "website": "personal_website",
+  "template": "jekyll_alfolio",
+  "instruction": "When does Yuki hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/merrow_lit_001__jekyll_alfolio/",
+  "raw_output": "Mondays 3:00\u20135:00 PM and Thursdays 11:00 AM\u201312:00 PM",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

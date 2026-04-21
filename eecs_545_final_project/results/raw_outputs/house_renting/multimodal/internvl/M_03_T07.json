@@ -1,0 +1,14 @@
+{
+  "task_id": "M_03_T07",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the parking details for Lakeside Condo. You may need to click a button to reveal this information.",
+  "interaction": "click_show_details_button",
+  "perturbation_type": "click_to_reveal",
+  "start_url": "http://localhost:9888/templates/modern/house_03.html",
+  "raw_output": "Parking: Street parking only",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

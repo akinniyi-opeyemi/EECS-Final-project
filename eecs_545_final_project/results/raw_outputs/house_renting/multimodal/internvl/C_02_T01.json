@@ -1,0 +1,14 @@
+{
+  "task_id": "C_02_T01",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the monthly rent for Sunset Ridge Home.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:9888/templates/classic/house_02.html",
+  "raw_output": "$2,200/month",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

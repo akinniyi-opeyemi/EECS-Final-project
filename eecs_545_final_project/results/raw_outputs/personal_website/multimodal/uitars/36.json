@@ -1,0 +1,14 @@
+{
+  "task_id": "36",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "When does Gerhardt hold office hours this semester?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_econ_001__hugo_papermod/",
+  "raw_output": "Mondays and Wednesdays, 3:30-5:00 PM",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

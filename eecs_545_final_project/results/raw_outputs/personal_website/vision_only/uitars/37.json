@@ -1,0 +1,14 @@
+{
+  "task_id": "37",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_econ_001__hugo_papermod/",
+  "raw_output": "Dr. Gerhardt V\u00f6ssing is teaching \"Microeconomic Theory and the Design of Economic Institutions\" this semester, and the course takes place in Whitmore Hall, Room 318.",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "vision_only"
+}

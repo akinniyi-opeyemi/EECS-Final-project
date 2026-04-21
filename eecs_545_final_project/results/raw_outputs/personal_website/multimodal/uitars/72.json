@@ -1,0 +1,14 @@
+{
+  "task_id": "72",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/thornfield_anth_001__notion/",
+  "raw_output": "ANTH 101 \u00b7 Introduction to Cultural Anthropology, Ashwood Hall 110, MWF 9:00\u20139:50 AM",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "agent": "uitars",
+  "mode": "multimodal"
+}

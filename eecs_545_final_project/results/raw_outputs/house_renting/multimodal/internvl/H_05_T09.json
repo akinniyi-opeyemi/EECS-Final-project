@@ -1,0 +1,14 @@
+{
+  "task_id": "H_05_T09",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the lease duration for Riverfront Studio. You may need to navigate to the correct tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:9888/templates/hidden/house_05.html",
+  "raw_output": "6 months minimum",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

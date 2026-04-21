@@ -1,0 +1,14 @@
+{
+  "task_id": "M_04_T02",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the number of bedrooms in The Elmwood.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:9888/templates/modern/house_04.html",
+  "raw_output": "2",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

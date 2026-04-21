@@ -1,0 +1,14 @@
+{
+  "task_id": "M_11_T06",
+  "website": "house_renting",
+  "template": "modern",
+  "instruction": "Find the pet policy for Downtown Loft. You may need to click a button to reveal this information.",
+  "interaction": "click_show_details_button",
+  "perturbation_type": "click_to_reveal",
+  "start_url": "http://localhost:9888/templates/modern/house_11.html",
+  "raw_output": "No pets allowed",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

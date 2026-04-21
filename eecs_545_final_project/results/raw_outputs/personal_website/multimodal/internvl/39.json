@@ -1,0 +1,14 @@
+{
+  "task_id": "39",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "Find Dr. Gerhardt V\u00f6ssing's Twitter account.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_econ_001__hugo_papermod/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

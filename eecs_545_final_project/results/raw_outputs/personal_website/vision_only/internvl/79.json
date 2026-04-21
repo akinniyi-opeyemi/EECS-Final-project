@@ -1,0 +1,14 @@
+{
+  "task_id": "79",
+  "website": "personal_website",
+  "template": "hugo_papermod",
+  "instruction": "Find Malcolm Reyes-Whittaker's Twitter account.",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/thornfield_anth_001__hugo_papermod/",
+  "raw_output": "Not found",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "vision_only"
+}

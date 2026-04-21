@@ -1,0 +1,14 @@
+{
+  "task_id": "32",
+  "website": "personal_website",
+  "template": "notion",
+  "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+  "interaction": "navigation",
+  "perturbation_type": "framework_style",
+  "start_url": "http://localhost:9889/sites/halvern_econ_001__notion/",
+  "raw_output": "ECON 8301 \u00b7 Microeconomic Theory I (Ph.D. core)",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

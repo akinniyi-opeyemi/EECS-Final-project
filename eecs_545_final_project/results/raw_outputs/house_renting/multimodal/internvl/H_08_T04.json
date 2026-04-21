@@ -1,0 +1,14 @@
+{
+  "task_id": "H_08_T04",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the contact email address for Cedar Grove Flat. You may need to navigate to the correct tab.",
+  "interaction": "click_contact_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:9888/templates/hidden/house_08.html",
+  "raw_output": "info@cedargroveflats.com",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

@@ -1,0 +1,1581 @@
+[
+  {
+    "task_id": "0",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Nivedita Okonkwo.",
+    "interaction": "navigation",
+    "prediction": "Certified Robustness via Smoothed Representations under Covariate Shift",
+    "ground_truth": "Certified Robustness via Smoothed Representations under Covariate Shift",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Certified Robustness via Smoothed Representations under Covariate Shift"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "1",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Niv hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Tuesdays 2:00\u20134:00 PM",
+    "ground_truth": "Tuesdays 2:00\u20134:00 PM, or by appointment",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Tuesday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "2",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "CS 5891 \u2014 Trustworthy Machine Learning, in Ramsey Hall 1301",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "3",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Nivedita Okonkwo taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "Yes",
+    "ground_truth": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "4",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Nivedita Okonkwo's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Nivedita Okonkwo.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "5",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Nivedita Okonkwo.",
+    "interaction": "navigation",
+    "prediction": "\"Certified Robustness via Smoothed Representations under Covariate Shift,\" NeurIPS, 2024.",
+    "ground_truth": "Certified Robustness via Smoothed Representations under Covariate Shift",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Certified Robustness via Smoothed Representations under Covariate Shift"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "6",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Niv hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Tuesdays 2:00\u20134:00 PM",
+    "ground_truth": "Tuesdays 2:00\u20134:00 PM, or by appointment",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Tuesday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "7",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "CS 5891 \u2014 Trustworthy Machine Learning, Ramsey Hall 1301",
+    "ground_truth": "CS 5891 \u2014 Trustworthy Machine Learning, in Ramsey Hall 1301",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "CS 5891",
+        "Ramsey Hall 1301"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "8",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Nivedita Okonkwo taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "Yes",
+    "ground_truth": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "9",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Nivedita Okonkwo's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Nivedita Okonkwo.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "10",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Nivedita Okonkwo.",
+    "interaction": "navigation",
+    "prediction": "Certified Robustness via Smoothed Representations under Covariate Shift",
+    "ground_truth": "Certified Robustness via Smoothed Representations under Covariate Shift",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Certified Robustness via Smoothed Representations under Covariate Shift"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "11",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Niv hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Tuesdays 2:00\u20134:00 PM, or by appointment",
+    "ground_truth": "Tuesdays 2:00\u20134:00 PM, or by appointment",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Tuesday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "12",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "CS 5891 \u00b7 Trustworthy Machine Learning\nRamsey Hall 1301 \u00b7 MW 10:00\u201311:20 AM \u00b7 graduate",
+    "ground_truth": "CS 5891 \u2014 Trustworthy Machine Learning, in Ramsey Hall 1301",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "CS 5891",
+        "Ramsey Hall 1301"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "13",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Nivedita Okonkwo taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "Yes",
+    "ground_truth": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "14",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Nivedita Okonkwo's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Nivedita Okonkwo.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "15",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Nivedita Okonkwo.",
+    "interaction": "navigation",
+    "prediction": "Certified Robustness via Smoothed Representations under Covariate Shift",
+    "ground_truth": "Certified Robustness via Smoothed Representations under Covariate Shift",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Certified Robustness via Smoothed Representations under Covariate Shift"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "16",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Niv hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Tuesdays 2:00\u20134:00 PM",
+    "ground_truth": "Tuesdays 2:00\u20134:00 PM, or by appointment",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Tuesday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "17",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Nivedita Okonkwo teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "Nivedita Okonkwo is teaching CS 5891 Trustworthy Machine Learning this semester, and it takes place in Ramsey Hall 1301.",
+    "ground_truth": "CS 5891 \u2014 Trustworthy Machine Learning, in Ramsey Hall 1301",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "CS 5891",
+        "Ramsey Hall 1301"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "18",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Nivedita Okonkwo taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "Yes",
+    "ground_truth": "Yes, Nivedita Okonkwo is accepting prospective graduate students. Note: I am accepting Ph.D. students for Fall 2026. Prospective students should apply through the Halvern CS graduate program and mention my name in their statement. I cannot respond to individual inquiry emails before applications are reviewed.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "19",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Nivedita Okonkwo's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Nivedita Okonkwo.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "20",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Dr. Gerhardt V\u00f6ssing.",
+    "interaction": "navigation",
+    "prediction": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+    "ground_truth": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "On the Existence of Equilibrium in Double Auctions with Interdependent Values"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "21",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Gerhardt hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "ground_truth": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Monday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "22",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "ECON 8301 \u2014 Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 \u2014 Game Theory and Economic Behavior, in Whitmore Hall 105",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "23",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Dr. Gerhardt V\u00f6ssing taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "No",
+    "ground_truth": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "24",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Dr. Gerhardt V\u00f6ssing's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "25",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Dr. Gerhardt V\u00f6ssing.",
+    "interaction": "navigation",
+    "prediction": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+    "ground_truth": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "On the Existence of Equilibrium in Double Auctions with Interdependent Values"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "26",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Gerhardt hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "ground_truth": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Monday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "27",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "ECON 8301 \u2014 Microeconomic Theory I (Ph.D. core)\u00a0\u00a0Whitmore Hall 210, TR 9:30-10:45 AM, graduate",
+    "ground_truth": "ECON 8301 \u2014 Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 \u2014 Game Theory and Economic Behavior, in Whitmore Hall 105",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "ECON 8301",
+        "Whitmore Hall 210"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "28",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Dr. Gerhardt V\u00f6ssing taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "No",
+    "ground_truth": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "29",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Dr. Gerhardt V\u00f6ssing's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "30",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Dr. Gerhardt V\u00f6ssing.",
+    "interaction": "navigation",
+    "prediction": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+    "ground_truth": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "On the Existence of Equilibrium in Double Auctions with Interdependent Values"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "31",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Gerhardt hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "ground_truth": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Monday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "32",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "ECON 8301 \u00b7 Microeconomic Theory I (Ph.D. core)",
+    "ground_truth": "ECON 8301 \u2014 Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 \u2014 Game Theory and Economic Behavior, in Whitmore Hall 105",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "33",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Dr. Gerhardt V\u00f6ssing taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "No, Dr. Gerhardt V\u00f6ssing is not taking new Ph.D. students in the 2025-2026 admissions cycle.",
+    "ground_truth": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "not"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "34",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Dr. Gerhardt V\u00f6ssing's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "35",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Dr. Gerhardt V\u00f6ssing.",
+    "interaction": "navigation",
+    "prediction": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+    "ground_truth": "On the Existence of Equilibrium in Double Auctions with Interdependent Values",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "On the Existence of Equilibrium in Double Auctions with Interdependent Values"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "36",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Gerhardt hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "ground_truth": "Mondays and Wednesdays, 3:30-5:00 PM",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Monday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "37",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Dr. Gerhardt V\u00f6ssing teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "ECON 8301",
+    "ground_truth": "ECON 8301 \u2014 Microeconomic Theory I (Ph.D. core), in Whitmore Hall 210; ECON 4500 \u2014 Game Theory and Economic Behavior, in Whitmore Hall 105",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "38",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Dr. Gerhardt V\u00f6ssing taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "No",
+    "ground_truth": "No, Dr. Gerhardt V\u00f6ssing is not accepting new graduate students. Note: I am not taking new Ph.D. students in the 2025-2026 admissions cycle. Students interested in microeconomic theory at Halvern are encouraged to contact Professor A. Marchetti or Professor S. Liang.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "39",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Dr. Gerhardt V\u00f6ssing's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Dr. Gerhardt V\u00f6ssing.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "40",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Yuki Abernathy.",
+    "interaction": "navigation",
+    "prediction": "A Function Call Named Slothrop: Control Flow and Paranoia in Gravity's Rainbow",
+    "ground_truth": "Compiled Fictions: American Literature and the Programming Imagination, 1948\u20131984",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "41",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Yuki hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+    "ground_truth": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Monday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "42",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "LIT 21.014 \u2014 Introduction to Fiction, in Hale 2-190; LIT 21.S02 \u2014 Literature and the Computer, in Hale 3-270",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "43",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "No",
+    "ground_truth": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "44",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Yuki Abernathy's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Yuki Abernathy.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "45",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Yuki Abernathy.",
+    "interaction": "navigation",
+    "prediction": "A Function Call Named Slothrop: Control Flow and Paranoia in Gravity's Rainbow",
+    "ground_truth": "Compiled Fictions: American Literature and the Programming Imagination, 1948\u20131984",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "46",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Yuki hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+    "ground_truth": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Monday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "47",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "LIT 21.014 \u2014 Introduction to Fiction\u00a0\u00a0Hale 2-190, TR 9:30\u201311:00 AM",
+    "ground_truth": "LIT 21.014 \u2014 Introduction to Fiction, in Hale 2-190; LIT 21.S02 \u2014 Literature and the Computer, in Hale 3-270",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "LIT 21.014",
+        "Hale 2-190"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "48",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "No",
+    "ground_truth": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "49",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Yuki Abernathy's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Yuki Abernathy.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "50",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Yuki Abernathy.",
+    "interaction": "navigation",
+    "prediction": "A Function Call Named Slothrop: Control Flow and Paranoia in Gravity's Rainbow",
+    "ground_truth": "Compiled Fictions: American Literature and the Programming Imagination, 1948\u20131984",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "51",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Yuki hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+    "ground_truth": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Monday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "52",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "LIT 21.014 \u00b7 Introduction to Fiction, Hale 2-190",
+    "ground_truth": "LIT 21.014 \u2014 Introduction to Fiction, in Hale 2-190; LIT 21.S02 \u2014 Literature and the Computer, in Hale 3-270",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "LIT 21.014",
+        "Hale 2-190"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "53",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "No",
+    "ground_truth": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "54",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Yuki Abernathy's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Yuki Abernathy.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "55",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Yuki Abernathy.",
+    "interaction": "navigation",
+    "prediction": "Compiled Fictions: American Literature and the Programming Imagination, 1948\u20131984",
+    "ground_truth": "Compiled Fictions: American Literature and the Programming Imagination, 1948\u20131984",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Compiled Fictions: American Literature and the Programming Imagination, 1948\u20131984"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "56",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Yuki hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+    "ground_truth": "Mondays 3:00\u20135:00 PM (in person) and Thursdays 11:00 AM\u201312:00 PM (virtual, by sign-up)",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Monday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "57",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Yuki Abernathy teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "LIT 21.014",
+    "ground_truth": "LIT 21.014 \u2014 Introduction to Fiction, in Hale 2-190; LIT 21.S02 \u2014 Literature and the Computer, in Hale 3-270",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "58",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Yuki Abernathy taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "No",
+    "ground_truth": "Yes, Yuki Abernathy is accepting prospective graduate students. Note: I welcome inquiries from Merrow undergraduates interested in UROP projects at the intersection of literature and computation. I am not currently the primary advisor for graduate students, but I co-advise through the HASTS program.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "59",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Yuki Abernathy's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Yuki Abernathy.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "60",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Malcolm Reyes-Whittaker.",
+    "interaction": "navigation",
+    "prediction": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town",
+    "ground_truth": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "61",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Malcolm hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM",
+    "ground_truth": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Wednesday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "62",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "ANTH 101 \u2014 Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 \u2014 Ethnography of Work, in Ashwood Hall 208",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "63",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Malcolm Reyes-Whittaker taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "not"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "64",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "jekyll_alfolio",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Malcolm Reyes-Whittaker's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Malcolm Reyes-Whittaker.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "65",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Malcolm Reyes-Whittaker.",
+    "interaction": "navigation",
+    "prediction": "\"The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town\"",
+    "ground_truth": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "66",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Malcolm hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM",
+    "ground_truth": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Wednesday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "67",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "ANTH 410 \u2014 Senior Seminar: Fieldwork and Its Discontents, Ashwood Hall 110",
+    "ground_truth": "ANTH 101 \u2014 Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 \u2014 Ethnography of Work, in Ashwood Hall 208",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "68",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Malcolm Reyes-Whittaker taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "not"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "69",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "raw_html_1998",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Malcolm Reyes-Whittaker's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Malcolm Reyes-Whittaker.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "70",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Malcolm Reyes-Whittaker.",
+    "interaction": "navigation",
+    "prediction": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town",
+    "ground_truth": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "71",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Malcolm hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM",
+    "ground_truth": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Wednesday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "72",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "ANTH 101 \u00b7 Introduction to Cultural Anthropology\nAshwood Hall 110 \u00b7 MWF 9:00\u20139:50 AM",
+    "ground_truth": "ANTH 101 \u2014 Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 \u2014 Ethnography of Work, in Ashwood Hall 208",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "ANTH 101",
+        "Ashwood Hall 110"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "73",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Malcolm Reyes-Whittaker taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "not"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "74",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "notion",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Malcolm Reyes-Whittaker's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Malcolm Reyes-Whittaker.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "75",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T1_recent_pub",
+    "instruction": "Find the title of the most recent publication of Malcolm Reyes-Whittaker.",
+    "interaction": "navigation",
+    "prediction": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town",
+    "ground_truth": "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "The Mill Was a Person: Personhood, Loss, and the Ethics of Closure in a Vermont Paper Town"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "76",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T2_office_hours",
+    "instruction": "When does Malcolm hold office hours this semester?",
+    "interaction": "navigation",
+    "prediction": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM",
+    "ground_truth": "Wednesdays 1:00\u20133:00 PM and Fridays 10:00\u201311:30 AM",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Wednesday"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "77",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T3_current_course",
+    "instruction": "What course is Malcolm Reyes-Whittaker teaching this semester, and where does it take place?",
+    "interaction": "navigation",
+    "prediction": "ANTH 101",
+    "ground_truth": "ANTH 101 \u2014 Introduction to Cultural Anthropology, in Ashwood Hall 110; ANTH 324 \u2014 Ethnography of Work, in Ashwood Hall 208",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "78",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T4_accepting",
+    "instruction": "Is Malcolm Reyes-Whittaker taking prospective graduate students in the upcoming academic year?",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "Not applicable \u2014 the institution is undergraduate-only, or the page does not list a graduate-student policy. Note: Thornfield is an undergraduate-only institution. I advise senior theses in cultural anthropology and welcome conversations with juniors considering a research project.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "not"
+      ]
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  },
+  {
+    "task_id": "79",
+    "website": "personal_website",
+    "agent": "internvl",
+    "template": "hugo_papermod",
+    "perturbation_type": "framework_style",
+    "task_type": "T5_twitter",
+    "instruction": "Find Malcolm Reyes-Whittaker's Twitter account.",
+    "interaction": "navigation",
+    "prediction": "Not found",
+    "ground_truth": "The page does not list a Twitter account for Malcolm Reyes-Whittaker.",
+    "success": true,
+    "tier_matched": "fuzzy_string",
+    "match_details": {
+      "matched": "not found",
+      "score": 1.0
+    },
+    "mode": "multimodal",
+    "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B"
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "website": "house_renting",
+  "agent": "internvl",
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "mode": "multimodal",
+  "total_tasks": 264,
+  "evaluated_tasks": 264,
+  "missing_tasks": 0,
+  "baseline": "classic",
+  "success_rates": {
+    "classic": 0.9333,
+    "modern": 0.9286,
+    "hidden": 0.875
+  },
+  "temporal_degradation": {
+    "classic_to_modern": 0.0048,
+    "classic_to_hidden": 0.0583
+  },
+  "trs": 0.9375,
+  "task_type_results": {},
+  "perturbation_results": {
+    "click_to_reveal": {
+      "count": 24,
+      "success_rate": 1.0
+    },
+    "filter_navigation": {
+      "count": 12,
+      "success_rate": 0.5833333333333334
+    },
+    "tab_navigation": {
+      "count": 48,
+      "success_rate": 1.0
+    },
+    "tab_then_expand": {
+      "count": 24,
+      "success_rate": 1.0
+    },
+    "visible": {
+      "count": 156,
+      "success_rate": 0.8717948717948718
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 197,
+    "no_match": 25,
+    "exact_match_contained": 20,
+    "must_include": 22
+  }
+}

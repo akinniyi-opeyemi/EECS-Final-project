@@ -1,0 +1,14 @@
+{
+  "task_id": "C_03_T04",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the contact email address for Lakeside Condo.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:9888/templates/classic/house_03.html",
+  "raw_output": "leasing@lakesidecondo.com",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

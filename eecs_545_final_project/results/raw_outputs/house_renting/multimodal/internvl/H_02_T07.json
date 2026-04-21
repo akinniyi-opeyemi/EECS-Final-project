@@ -1,0 +1,14 @@
+{
+  "task_id": "H_02_T07",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the parking details for Sunset Ridge Home. You may need to navigate to the Details tab.",
+  "interaction": "click_details_tab",
+  "perturbation_type": "tab_navigation",
+  "start_url": "http://localhost:9888/templates/hidden/house_02.html",
+  "raw_output": "2-car garage",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

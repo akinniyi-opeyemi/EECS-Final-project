@@ -1,0 +1,14 @@
+{
+  "task_id": "C_04_T01",
+  "website": "house_renting",
+  "template": "classic",
+  "instruction": "Find the monthly rent for The Elmwood.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:9888/templates/classic/house_04.html",
+  "raw_output": "$2,600/month",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}

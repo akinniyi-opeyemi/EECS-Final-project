@@ -1,0 +1,14 @@
+{
+  "task_id": "H_05_T02",
+  "website": "house_renting",
+  "template": "hidden",
+  "instruction": "Find the number of bedrooms in Riverfront Studio.",
+  "interaction": "none",
+  "perturbation_type": "visible",
+  "start_url": "http://localhost:9888/templates/hidden/house_05.html",
+  "raw_output": "Studio",
+  "error": null,
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "agent": "internvl",
+  "mode": "multimodal"
+}
