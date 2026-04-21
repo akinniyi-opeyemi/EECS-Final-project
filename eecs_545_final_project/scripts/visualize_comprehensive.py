@@ -277,7 +277,7 @@ for col, (website_key, config) in enumerate(websites_list):
         ax.spines["right"].set_visible(False)
         continue
 
-n        = len(modes_order)
+    n        = len(modes_order)
     width    = 0.6
     x_pos    = np.arange(n)
     trs_vals = []
