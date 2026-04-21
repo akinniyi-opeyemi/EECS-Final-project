@@ -138,10 +138,10 @@ srun --partition=spgpu --gres=gpu:1 --mem=40G --time=4:00:00 --pty bash
 
 ```bash
 # login
-ssh akinniyi@bridges2.psc.edu
+ssh <your_username>@bridges2.psc.edu
 
 # setup
-source /ocean/projects/tra260004p/akinniyi/miniconda3/etc/profile.d/conda.sh
+source /ocean/projects/<allocation_id>/<your_username>/miniconda3/etc/profile.d/conda.sh
 conda activate eecs545_b2
 module load cuda
 pip install vllm openai playwright rapidfuzz sentence-transformers
@@ -504,4 +504,4 @@ Information lives on a linked page (teaching.html, publications.html). Agent onl
 ## Acknowledgments
 
 Class API access provided by EECS 545 course staff, University of Michigan.
-Compute provided by University of Michigan Advanced Research Computing (ARC) and NSF ACCESS Bridges-2 (allocation tra260004p).
+Compute provided by University of Michigan Advanced Research Computing (ARC) and NSF ACCESS Bridges-2 (NSF ACCESS Bridges-2).
