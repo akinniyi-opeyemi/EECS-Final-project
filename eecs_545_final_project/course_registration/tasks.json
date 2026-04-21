@@ -1,11 +1,35 @@
 [
   {
-    "task_id": "find_cs310_2000s",
+    "task_id": "find_cs310_2000s_title",
     "website": "course_registration",
     "template": "2000s",
     "env_id": "course_2000s",
     "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Find CS 310 and report its title, instructor, meeting time, and seat count.",
+    "instruction": "Find the title of CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "Algorithms",
+        "must_include": [],
+        "fuzzy_match": []
+      },
+      "reference_answer_raw_annotation": "The title of CS 310 is Algorithms.",
+      "verified": true,
+      "note": "Single deterministic title value."
+    }
+  },
+  {
+    "task_id": "find_cs310_2000s_instructor",
+    "website": "course_registration",
+    "template": "2000s",
+    "env_id": "course_2000s",
+    "start_url": "http://localhost:8001/2000s/index.html",
+    "instruction": "Find the instructor for CS 310.",
     "category": "course_lookup",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -15,21 +39,112 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "Dr. Omar Siddiqui"
+        ],
+        "fuzzy_match": [
+          "Omar Siddiqui",
+          "Professor Omar Siddiqui",
+          "Prof. Omar Siddiqui",
+          "Prof Omar Siddiqui",
+          "Professor Siddiqui",
+          "Prof. Siddiqui",
+          "Prof Siddiqui",
+          "Siddiqui",
+          "Dr. Omar Siddiqui",
+          "Dr Omar Siddiqui",
+          "Dr. Siddiqui",
+          "Dr Siddiqui"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The instructor for CS 310 is Dr. Omar Siddiqui.",
+      "verified": true,
+      "note": "Single deterministic instructor value."
     }
   },
   {
-    "task_id": "find_cs310_2010s",
+    "task_id": "find_cs310_2000s_meeting_time",
+    "website": "course_registration",
+    "template": "2000s",
+    "env_id": "course_2000s",
+    "start_url": "http://localhost:8001/2000s/index.html",
+    "instruction": "Find the meeting time for CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": null,
+        "must_include": [
+          "1:30 PM - 2:45 PM"
+        ],
+        "fuzzy_match": []
+      },
+      "reference_answer_raw_annotation": "CS 310 meets Mon/Wed 1:30 PM - 2:45 PM.",
+      "verified": true,
+      "note": "Single deterministic meeting time value."
+    }
+  },
+  {
+    "task_id": "find_cs310_2000s_seat_count",
+    "website": "course_registration",
+    "template": "2000s",
+    "env_id": "course_2000s",
+    "start_url": "http://localhost:8001/2000s/index.html",
+    "instruction": "Find the seat count for CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": null,
+        "must_include": [
+          "2/26"
+        ],
+        "fuzzy_match": []
+      },
+      "reference_answer_raw_annotation": "CS 310 has 2/26 seats.",
+      "verified": true,
+      "note": "Single deterministic seat-count value."
+    }
+  },
+  {
+    "task_id": "find_cs310_2010s_title",
     "website": "course_registration",
     "template": "2010s",
     "env_id": "course_2010s",
     "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Find CS 310 and report its title, instructor, meeting time, and seat count.",
+    "instruction": "Find the title of CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "Algorithms",
+        "must_include": [],
+        "fuzzy_match": []
+      },
+      "reference_answer_raw_annotation": "The title of CS 310 is Algorithms.",
+      "verified": true,
+      "note": "Single deterministic title value."
+    }
+  },
+  {
+    "task_id": "find_cs310_2010s_instructor",
+    "website": "course_registration",
+    "template": "2010s",
+    "env_id": "course_2010s",
+    "start_url": "http://localhost:8001/2010s/index.html",
+    "instruction": "Find the instructor for CS 310.",
     "category": "course_lookup",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -39,21 +154,112 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "Dr. Omar Siddiqui"
+        ],
+        "fuzzy_match": [
+          "Omar Siddiqui",
+          "Professor Omar Siddiqui",
+          "Prof. Omar Siddiqui",
+          "Prof Omar Siddiqui",
+          "Professor Siddiqui",
+          "Prof. Siddiqui",
+          "Prof Siddiqui",
+          "Siddiqui",
+          "Dr. Omar Siddiqui",
+          "Dr Omar Siddiqui",
+          "Dr. Siddiqui",
+          "Dr Siddiqui"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The instructor for CS 310 is Dr. Omar Siddiqui.",
+      "verified": true,
+      "note": "Single deterministic instructor value."
     }
   },
   {
-    "task_id": "find_cs310_modern",
+    "task_id": "find_cs310_2010s_meeting_time",
+    "website": "course_registration",
+    "template": "2010s",
+    "env_id": "course_2010s",
+    "start_url": "http://localhost:8001/2010s/index.html",
+    "instruction": "Find the meeting time for CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": null,
+        "must_include": [
+          "1:30 PM - 2:45 PM"
+        ],
+        "fuzzy_match": []
+      },
+      "reference_answer_raw_annotation": "CS 310 meets Mon/Wed 1:30 PM - 2:45 PM.",
+      "verified": true,
+      "note": "Single deterministic meeting time value."
+    }
+  },
+  {
+    "task_id": "find_cs310_2010s_seat_count",
+    "website": "course_registration",
+    "template": "2010s",
+    "env_id": "course_2010s",
+    "start_url": "http://localhost:8001/2010s/index.html",
+    "instruction": "Find the seat count for CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": null,
+        "must_include": [
+          "2/26"
+        ],
+        "fuzzy_match": []
+      },
+      "reference_answer_raw_annotation": "CS 310 has 2/26 seats.",
+      "verified": true,
+      "note": "Single deterministic seat-count value."
+    }
+  },
+  {
+    "task_id": "find_cs310_modern_title",
     "website": "course_registration",
     "template": "modern",
     "env_id": "course_modern",
     "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Find CS 310 and report its title, instructor, meeting time, and seat count.",
+    "instruction": "Find the title of CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": "Algorithms",
+        "must_include": [],
+        "fuzzy_match": []
+      },
+      "reference_answer_raw_annotation": "The title of CS 310 is Algorithms.",
+      "verified": true,
+      "note": "Single deterministic title value."
+    }
+  },
+  {
+    "task_id": "find_cs310_modern_instructor",
+    "website": "course_registration",
+    "template": "modern",
+    "env_id": "course_modern",
+    "start_url": "http://localhost:8001/modern/index.html",
+    "instruction": "Find the instructor for CS 310.",
     "category": "course_lookup",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -63,12 +269,79 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "Dr. Omar Siddiqui"
+        ],
+        "fuzzy_match": [
+          "Omar Siddiqui",
+          "Professor Omar Siddiqui",
+          "Prof. Omar Siddiqui",
+          "Prof Omar Siddiqui",
+          "Professor Siddiqui",
+          "Prof. Siddiqui",
+          "Prof Siddiqui",
+          "Siddiqui",
+          "Dr. Omar Siddiqui",
+          "Dr Omar Siddiqui",
+          "Dr. Siddiqui",
+          "Dr Siddiqui"
+        ]
+      },
+      "reference_answer_raw_annotation": "The instructor for CS 310 is Dr. Omar Siddiqui.",
+      "verified": true,
+      "note": "Single deterministic instructor value."
+    }
+  },
+  {
+    "task_id": "find_cs310_modern_meeting_time",
+    "website": "course_registration",
+    "template": "modern",
+    "env_id": "course_modern",
+    "start_url": "http://localhost:8001/modern/index.html",
+    "instruction": "Find the meeting time for CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": null,
+        "must_include": [
+          "1:30 PM - 2:45 PM"
+        ],
         "fuzzy_match": []
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "CS 310 meets Mon/Wed 1:30 PM - 2:45 PM.",
+      "verified": true,
+      "note": "Single deterministic meeting time value."
+    }
+  },
+  {
+    "task_id": "find_cs310_modern_seat_count",
+    "website": "course_registration",
+    "template": "modern",
+    "env_id": "course_modern",
+    "start_url": "http://localhost:8001/modern/index.html",
+    "instruction": "Find the seat count for CS 310.",
+    "category": "course_lookup",
+    "interaction": "varies",
+    "perturbation_type": "era_style",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "exact_match": null,
+        "must_include": [
+          "2/26"
+        ],
+        "fuzzy_match": []
+      },
+      "reference_answer_raw_annotation": "CS 310 has 2/26 seats.",
+      "verified": true,
+      "note": "Single deterministic seat-count value."
     }
   },
   {
@@ -87,12 +360,27 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "Prof. Helen Zhou"
+        ],
+        "fuzzy_match": [
+          "Helen Zhou",
+          "Professor Helen Zhou",
+          "Prof. Helen Zhou",
+          "Prof Helen Zhou",
+          "Professor Zhou",
+          "Prof. Zhou",
+          "Prof Zhou",
+          "Zhou",
+          "Dr. Helen Zhou",
+          "Dr Helen Zhou",
+          "Dr. Zhou",
+          "Dr Zhou"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The instructor for CS 420 is Prof. Helen Zhou.",
+      "verified": true,
+      "note": "Single deterministic instructor value."
     }
   },
   {
@@ -111,12 +399,27 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "Prof. Helen Zhou"
+        ],
+        "fuzzy_match": [
+          "Helen Zhou",
+          "Professor Helen Zhou",
+          "Prof. Helen Zhou",
+          "Prof Helen Zhou",
+          "Professor Zhou",
+          "Prof. Zhou",
+          "Prof Zhou",
+          "Zhou",
+          "Dr. Helen Zhou",
+          "Dr Helen Zhou",
+          "Dr. Zhou",
+          "Dr Zhou"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The instructor for CS 420 is Prof. Helen Zhou.",
+      "verified": true,
+      "note": "Single deterministic instructor value."
     }
   },
   {
@@ -135,12 +438,27 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "Prof. Helen Zhou"
+        ],
+        "fuzzy_match": [
+          "Helen Zhou",
+          "Professor Helen Zhou",
+          "Prof. Helen Zhou",
+          "Prof Helen Zhou",
+          "Professor Zhou",
+          "Prof. Zhou",
+          "Prof Zhou",
+          "Zhou",
+          "Dr. Helen Zhou",
+          "Dr Helen Zhou",
+          "Dr. Zhou",
+          "Dr Zhou"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The instructor for CS 420 is Prof. Helen Zhou.",
+      "verified": true,
+      "note": "Single deterministic instructor value."
     }
   },
   {
@@ -159,12 +477,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "480",
+          "Advanced Software Engineering"
+        ],
+        "fuzzy_match": [
+          "CS 480",
+          "CS480",
+          "CS-480"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The course in Mercer Hall 340 is CS 480, Advanced Software Engineering.",
+      "verified": true,
+      "note": "Single deterministic location match."
     }
   },
   {
@@ -183,12 +508,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "480",
+          "Advanced Software Engineering"
+        ],
+        "fuzzy_match": [
+          "CS 480",
+          "CS480",
+          "CS-480"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The course in Mercer Hall 340 is CS 480, Advanced Software Engineering.",
+      "verified": true,
+      "note": "Single deterministic location match."
     }
   },
   {
@@ -207,12 +539,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "480",
+          "Advanced Software Engineering"
+        ],
+        "fuzzy_match": [
+          "CS 480",
+          "CS480",
+          "CS-480"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The course in Mercer Hall 340 is CS 480, Advanced Software Engineering.",
+      "verified": true,
+      "note": "Single deterministic location match."
     }
   },
   {
@@ -221,7 +560,7 @@
     "template": "2000s",
     "env_id": "course_2000s",
     "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "List all AI courses currently shown.",
+    "instruction": "Apply the AI filter and then name the first course shown.",
     "category": "course_lookup",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -231,12 +570,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "275",
+          "Human-Centered AI"
+        ],
+        "fuzzy_match": [
+          "CS 275",
+          "CS275",
+          "CS-275"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "After applying the AI filter, the first course shown is CS 275, Human-Centered AI.",
+      "verified": true,
+      "note": "Deterministic from the shared course order after filtering to AI courses."
     }
   },
   {
@@ -245,7 +591,7 @@
     "template": "2010s",
     "env_id": "course_2010s",
     "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "List all AI courses currently shown.",
+    "instruction": "Apply the AI filter and then name the first course shown.",
     "category": "course_lookup",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -255,12 +601,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "275",
+          "Human-Centered AI"
+        ],
+        "fuzzy_match": [
+          "CS 275",
+          "CS275",
+          "CS-275"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "After applying the AI filter, the first course shown is CS 275, Human-Centered AI.",
+      "verified": true,
+      "note": "Deterministic from the shared course order after filtering to AI courses."
     }
   },
   {
@@ -269,7 +622,7 @@
     "template": "modern",
     "env_id": "course_modern",
     "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "List all AI courses currently shown.",
+    "instruction": "Apply the AI filter and then name the first course shown.",
     "category": "course_lookup",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -279,84 +632,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "275",
+          "Human-Centered AI"
+        ],
+        "fuzzy_match": [
+          "CS 275",
+          "CS275",
+          "CS-275"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_evening_course_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Identify the evening course and report its code and title.",
-    "category": "course_lookup",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_evening_course_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Identify the evening course and report its code and title.",
-    "category": "course_lookup",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_evening_course_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Identify the evening course and report its code and title.",
-    "category": "course_lookup",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "After applying the AI filter, the first course shown is CS 275, Human-Centered AI.",
+      "verified": true,
+      "note": "Deterministic from the shared course order after filtering to AI courses."
     }
   },
   {
@@ -375,12 +663,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "330",
+          "Database Systems"
+        ],
+        "fuzzy_match": [
+          "CS 330",
+          "CS330",
+          "CS-330"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The full course is CS 330, Database Systems.",
+      "verified": true,
+      "note": "Single deterministic full section."
     }
   },
   {
@@ -399,12 +694,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "330",
+          "Database Systems"
+        ],
+        "fuzzy_match": [
+          "CS 330",
+          "CS330",
+          "CS-330"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The full course is CS 330, Database Systems.",
+      "verified": true,
+      "note": "Single deterministic full section."
     }
   },
   {
@@ -423,300 +725,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "330",
+          "Database Systems"
+        ],
+        "fuzzy_match": [
+          "CS 330",
+          "CS330",
+          "CS-330"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_lowest_seats_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Find the course with the fewest remaining seats and report the seat count.",
-    "category": "course_lookup",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_lowest_seats_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Find the course with the fewest remaining seats and report the seat count.",
-    "category": "course_lookup",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_lowest_seats_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Find the course with the fewest remaining seats and report the seat count.",
-    "category": "course_lookup",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_cs_only_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Filter the course list to show only CS courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_cs_only_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Filter the course list to show only CS courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_cs_only_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Filter the course list to show only CS courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_ai_only_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Filter the course list to show only AI courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_ai_only_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Filter the course list to show only AI courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_ai_only_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Filter the course list to show only AI courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_evening_only_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Filter the course list to show only evening courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_evening_only_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Filter the course list to show only evening courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_evening_only_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Filter the course list to show only evening courses.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The full course is CS 330, Database Systems.",
+      "verified": true,
+      "note": "Single deterministic full section."
     }
   },
   {
@@ -735,12 +756,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "355",
+          "Computer Graphics"
+        ],
+        "fuzzy_match": [
+          "CS 355",
+          "CS355",
+          "CS-355"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Searching for graphics matches CS 355, Computer Graphics.",
+      "verified": true,
+      "note": "Single deterministic search match."
     }
   },
   {
@@ -759,12 +787,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "355",
+          "Computer Graphics"
+        ],
+        "fuzzy_match": [
+          "CS 355",
+          "CS355",
+          "CS-355"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Searching for graphics matches CS 355, Computer Graphics.",
+      "verified": true,
+      "note": "Single deterministic search match."
     }
   },
   {
@@ -783,12 +818,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "355",
+          "Computer Graphics"
+        ],
+        "fuzzy_match": [
+          "CS 355",
+          "CS355",
+          "CS-355"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Searching for graphics matches CS 355, Computer Graphics.",
+      "verified": true,
+      "note": "Single deterministic search match."
     }
   },
   {
@@ -807,12 +849,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "240",
+          "Computer Systems",
+          "370",
+          "Machine Learning Systems",
+          "405",
+          "Operating Systems",
+          "452",
+          "Distributed Systems"
+        ],
+        "fuzzy_match": [
+          "CS 240",
+          "CS240",
+          "CS-240",
+          "CS 370",
+          "CS370",
+          "CS-370",
+          "CS 405",
+          "CS405",
+          "CS-405",
+          "CS 452",
+          "CS452",
+          "CS-452"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Searching for systems matches CS 240 Computer Systems, CS 370 Machine Learning Systems, CS 405 Operating Systems, and CS 452 Distributed Systems.",
+      "verified": true,
+      "note": "Deterministic multi-match search result from course titles."
     }
   },
   {
@@ -831,12 +895,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "240",
+          "Computer Systems",
+          "370",
+          "Machine Learning Systems",
+          "405",
+          "Operating Systems",
+          "452",
+          "Distributed Systems"
+        ],
+        "fuzzy_match": [
+          "CS 240",
+          "CS240",
+          "CS-240",
+          "CS 370",
+          "CS370",
+          "CS-370",
+          "CS 405",
+          "CS405",
+          "CS-405",
+          "CS 452",
+          "CS452",
+          "CS-452"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Searching for systems matches CS 240 Computer Systems, CS 370 Machine Learning Systems, CS 405 Operating Systems, and CS 452 Distributed Systems.",
+      "verified": true,
+      "note": "Deterministic multi-match search result from course titles."
     }
   },
   {
@@ -855,660 +941,34 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "240",
+          "Computer Systems",
+          "370",
+          "Machine Learning Systems",
+          "405",
+          "Operating Systems",
+          "452",
+          "Distributed Systems"
+        ],
+        "fuzzy_match": [
+          "CS 240",
+          "CS240",
+          "CS-240",
+          "CS 370",
+          "CS370",
+          "CS-370",
+          "CS 405",
+          "CS405",
+          "CS-405",
+          "CS 452",
+          "CS452",
+          "CS-452"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "combine_filters_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Apply department and time filters together to find AI courses offered in the afternoon.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "combine_filters_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Apply department and time filters together to find AI courses offered in the afternoon.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "combine_filters_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Apply department and time filters together to find AI courses offered in the afternoon.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "reset_filters_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Clear all filters and return to the full course list.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "reset_filters_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Clear all filters and return to the full course list.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "reset_filters_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Clear all filters and return to the full course list.",
-    "category": "filtering",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs101_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Add CS 101 and verify that it appears in the selected courses area.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs101_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Add CS 101 and verify that it appears in the selected courses area.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs101_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Add CS 101 and verify that it appears in the selected courses area.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs405_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Add CS 405 and verify that it was added successfully.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs405_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Add CS 405 and verify that it was added successfully.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs405_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Add CS 405 and verify that it was added successfully.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "drop_cs355_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Drop CS 355 and verify that it no longer appears in the selected courses area.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "drop_cs355_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Drop CS 355 and verify that it no longer appears in the selected courses area.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "drop_cs355_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Drop CS 355 and verify that it no longer appears in the selected courses area.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_two_drop_one_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Add two courses, then remove one of them and report the final selected set.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_two_drop_one_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Add two courses, then remove one of them and report the final selected set.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_two_drop_one_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Add two courses, then remove one of them and report the final selected set.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "attempt_add_full_course_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Try to add the full course and report what happens.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "attempt_add_full_course_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Try to add the full course and report what happens.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "attempt_add_full_course_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Try to add the full course and report what happens.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "detail_then_add_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Open a course's detail area first, then add that course from the available controls.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "detail_then_add_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Open a course's detail area first, then add that course from the available controls.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "detail_then_add_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Open a course's detail area first, then add that course from the available controls.",
-    "category": "add_drop",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "create_conflict_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Add two courses with a time conflict and report the warning that appears.",
-    "category": "warnings",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "create_conflict_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Add two courses with a time conflict and report the warning that appears.",
-    "category": "warnings",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "create_conflict_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Add two courses with a time conflict and report the warning that appears.",
-    "category": "warnings",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Searching for systems matches CS 240 Computer Systems, CS 370 Machine Learning Systems, CS 405 Operating Systems, and CS 452 Distributed Systems.",
+      "verified": true,
+      "note": "Deterministic multi-match search result from course titles."
     }
   },
   {
@@ -1527,12 +987,18 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Among the default selected courses, CS 310 triggers the low-seat warning.",
+      "verified": true,
+      "note": "The default selected set is CS 310, CS 355, and CS 370, and only CS 310 is low-seat."
     }
   },
   {
@@ -1551,12 +1017,18 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Among the default selected courses, CS 310 triggers the low-seat warning.",
+      "verified": true,
+      "note": "The default selected set is CS 310, CS 355, and CS 370, and only CS 310 is low-seat."
     }
   },
   {
@@ -1575,12 +1047,18 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Among the default selected courses, CS 310 triggers the low-seat warning.",
+      "verified": true,
+      "note": "The default selected set is CS 310, CS 355, and CS 370, and only CS 310 is low-seat."
     }
   },
   {
@@ -1599,12 +1077,17 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "time conflict"
+        ],
+        "fuzzy_match": [
+          "Yes, there is a time conflict",
+          "There is a time conflict"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. The default selected schedule contains a time conflict between CS 355 and CS 370.",
+      "verified": true,
+      "note": "Requires an explicit statement that the current schedule has a time conflict."
     }
   },
   {
@@ -1623,12 +1106,17 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "time conflict"
+        ],
+        "fuzzy_match": [
+          "Yes, there is a time conflict",
+          "There is a time conflict"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. The default selected schedule contains a time conflict between CS 355 and CS 370.",
+      "verified": true,
+      "note": "Requires an explicit statement that the current schedule has a time conflict."
     }
   },
   {
@@ -1647,84 +1135,17 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "time conflict"
+        ],
+        "fuzzy_match": [
+          "Yes, there is a time conflict",
+          "There is a time conflict"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_conflict_then_remove_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Add a course that creates a conflict, then remove it and confirm whether the warning disappears.",
-    "category": "warnings",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_conflict_then_remove_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Add a course that creates a conflict, then remove it and confirm whether the warning disappears.",
-    "category": "warnings",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_conflict_then_remove_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Add a course that creates a conflict, then remove it and confirm whether the warning disappears.",
-    "category": "warnings",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. The default selected schedule contains a time conflict between CS 355 and CS 370.",
+      "verified": true,
+      "note": "Requires an explicit statement that the current schedule has a time conflict."
     }
   },
   {
@@ -1743,12 +1164,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "2 seats",
+          "warning"
+        ],
+        "fuzzy_match": [
+          "low seat warning",
+          "limited seats warning",
+          "low-seat warning"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "CS 310 may trigger a warning because it has only 2 seats remaining, which causes a low-seat or limited-seat warning.",
+      "verified": true,
+      "note": "Requires the low-seat reason and an explicit warning explanation."
     }
   },
   {
@@ -1767,12 +1195,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "2 seats",
+          "warning"
+        ],
+        "fuzzy_match": [
+          "low seat warning",
+          "limited seats warning",
+          "low-seat warning"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "CS 310 may trigger a warning because it has only 2 seats remaining, which causes a low-seat or limited-seat warning.",
+      "verified": true,
+      "note": "Requires the low-seat reason and an explicit warning explanation."
     }
   },
   {
@@ -1791,12 +1226,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "2 seats",
+          "warning"
+        ],
+        "fuzzy_match": [
+          "low seat warning",
+          "limited seats warning",
+          "low-seat warning"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "CS 310 may trigger a warning because it has only 2 seats remaining, which causes a low-seat or limited-seat warning.",
+      "verified": true,
+      "note": "Requires the low-seat reason and an explicit warning explanation."
     }
   },
   {
@@ -1815,12 +1257,17 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "yes"
+        ],
+        "fuzzy_match": [
+          "Yes, conflicting courses can still be added",
+          "Conflicting courses can still be added"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. The interfaces allow conflicting courses to be added and then surface warnings rather than blocking the action.",
+      "verified": true,
+      "note": "Requires stating that conflicting courses can still be added."
     }
   },
   {
@@ -1839,12 +1286,17 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "yes"
+        ],
+        "fuzzy_match": [
+          "Yes, conflicting courses can still be added",
+          "Conflicting courses can still be added"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. The interfaces allow conflicting courses to be added and then surface warnings rather than blocking the action.",
+      "verified": true,
+      "note": "Requires stating that conflicting courses can still be added."
     }
   },
   {
@@ -1863,12 +1315,17 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "yes"
+        ],
+        "fuzzy_match": [
+          "Yes, conflicting courses can still be added",
+          "Conflicting courses can still be added"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. The interfaces allow conflicting courses to be added and then surface warnings rather than blocking the action.",
+      "verified": true,
+      "note": "Requires stating that conflicting courses can still be added."
     }
   },
   {
@@ -1887,12 +1344,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310",
+          "355",
+          "370"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310",
+          "CS 355",
+          "CS355",
+          "CS-355",
+          "CS 370",
+          "CS370",
+          "CS-370"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The default selected Monday courses are CS 310, CS 355, and CS 370.",
+      "verified": true,
+      "note": "All default selected courses meet on Monday."
     }
   },
   {
@@ -1911,12 +1382,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310",
+          "355",
+          "370"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310",
+          "CS 355",
+          "CS355",
+          "CS-355",
+          "CS 370",
+          "CS370",
+          "CS-370"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The default selected Monday courses are CS 310, CS 355, and CS 370.",
+      "verified": true,
+      "note": "All default selected courses meet on Monday."
     }
   },
   {
@@ -1935,12 +1420,26 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310",
+          "355",
+          "370"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310",
+          "CS 355",
+          "CS355",
+          "CS-355",
+          "CS 370",
+          "CS370",
+          "CS-370"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The default selected Monday courses are CS 310, CS 355, and CS 370.",
+      "verified": true,
+      "note": "All default selected courses meet on Monday."
     }
   },
   {
@@ -1959,12 +1458,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "370",
+          "3:30 PM - 4:45 PM"
+        ],
+        "fuzzy_match": [
+          "CS 370",
+          "CS370",
+          "CS-370"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The latest selected class is CS 370 at 3:30 PM - 4:45 PM.",
+      "verified": true,
+      "note": "Deterministic from the default selected set."
     }
   },
   {
@@ -1983,12 +1489,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "370",
+          "3:30 PM - 4:45 PM"
+        ],
+        "fuzzy_match": [
+          "CS 370",
+          "CS370",
+          "CS-370"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The latest selected class is CS 370 at 3:30 PM - 4:45 PM.",
+      "verified": true,
+      "note": "Deterministic from the default selected set."
     }
   },
   {
@@ -2007,12 +1520,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "370",
+          "3:30 PM - 4:45 PM"
+        ],
+        "fuzzy_match": [
+          "CS 370",
+          "CS370",
+          "CS-370"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The latest selected class is CS 370 at 3:30 PM - 4:45 PM.",
+      "verified": true,
+      "note": "Deterministic from the default selected set."
     }
   },
   {
@@ -2031,12 +1551,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310",
+          "1:30 PM - 2:45 PM"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The earliest selected class is CS 310 at 1:30 PM - 2:45 PM.",
+      "verified": true,
+      "note": "Deterministic from the default selected set."
     }
   },
   {
@@ -2055,12 +1582,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310",
+          "1:30 PM - 2:45 PM"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The earliest selected class is CS 310 at 1:30 PM - 2:45 PM.",
+      "verified": true,
+      "note": "Deterministic from the default selected set."
     }
   },
   {
@@ -2079,12 +1613,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310",
+          "1:30 PM - 2:45 PM"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The earliest selected class is CS 310 at 1:30 PM - 2:45 PM.",
+      "verified": true,
+      "note": "Deterministic from the default selected set."
     }
   },
   {
@@ -2103,12 +1644,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "480",
+          "10:00 AM - 12:30 PM"
+        ],
+        "fuzzy_match": [
+          "CS 480",
+          "CS480",
+          "CS-480"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The Friday-only class is CS 480, which meets 10:00 AM - 12:30 PM.",
+      "verified": true,
+      "note": "Single deterministic Friday-only course."
     }
   },
   {
@@ -2127,12 +1675,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "480",
+          "10:00 AM - 12:30 PM"
+        ],
+        "fuzzy_match": [
+          "CS 480",
+          "CS480",
+          "CS-480"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The Friday-only class is CS 480, which meets 10:00 AM - 12:30 PM.",
+      "verified": true,
+      "note": "Single deterministic Friday-only course."
     }
   },
   {
@@ -2151,84 +1706,19 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "480",
+          "10:00 AM - 12:30 PM"
+        ],
+        "fuzzy_match": [
+          "CS 480",
+          "CS480",
+          "CS-480"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "chronological_schedule_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Report all selected courses in chronological order.",
-    "category": "schedule",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "chronological_schedule_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Report all selected courses in chronological order.",
-    "category": "schedule",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "chronological_schedule_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Report all selected courses in chronological order.",
-    "category": "schedule",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The Friday-only class is CS 480, which meets 10:00 AM - 12:30 PM.",
+      "verified": true,
+      "note": "Single deterministic Friday-only course."
     }
   },
   {
@@ -2237,7 +1727,7 @@
     "template": "2000s",
     "env_id": "course_2000s",
     "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Determine whether any selected courses overlap on the same day.",
+    "instruction": "Determine whether any selected courses overlap on the same day, and identify the courses.",
     "category": "schedule",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -2247,12 +1737,16 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "overlap",
+          "355",
+          "370"
+        ],
         "fuzzy_match": []
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. CS 355 and CS 370 overlap on Monday and Wednesday.",
+      "verified": true,
+      "note": "Requires stating that the courses overlap and identifying both overlapping course identifiers from the default selected set."
     }
   },
   {
@@ -2261,7 +1755,7 @@
     "template": "2010s",
     "env_id": "course_2010s",
     "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Determine whether any selected courses overlap on the same day.",
+    "instruction": "Determine whether any selected courses overlap on the same day, and identify the courses.",
     "category": "schedule",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -2271,12 +1765,16 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "overlap",
+          "355",
+          "370"
+        ],
         "fuzzy_match": []
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. CS 355 and CS 370 overlap on Monday and Wednesday.",
+      "verified": true,
+      "note": "Requires stating that the courses overlap and identifying both overlapping course identifiers from the default selected set."
     }
   },
   {
@@ -2285,7 +1783,7 @@
     "template": "modern",
     "env_id": "course_modern",
     "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Determine whether any selected courses overlap on the same day.",
+    "instruction": "Determine whether any selected courses overlap on the same day, and identify the courses.",
     "category": "schedule",
     "interaction": "varies",
     "perturbation_type": "era_style",
@@ -2295,804 +1793,16 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
+        "must_include": [
+          "overlap",
+          "355",
+          "370"
+        ],
         "fuzzy_match": []
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_add_confirm_schedule_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Filter to AI courses, add one course, then confirm that it appears in the schedule.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_add_confirm_schedule_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Filter to AI courses, add one course, then confirm that it appears in the schedule.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "filter_add_confirm_schedule_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Filter to AI courses, add one course, then confirm that it appears in the schedule.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "search_add_report_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Search for systems, add a matching course, then report its instructor and meeting time.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "search_add_report_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Search for systems, add a matching course, then report its instructor and meeting time.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "search_add_report_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Search for systems, add a matching course, then report its instructor and meeting time.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs452_inspect_warnings_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Add CS 452, inspect the warnings, and explain why they appear.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs452_inspect_warnings_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Add CS 452, inspect the warnings, and explain why they appear.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_cs452_inspect_warnings_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Add CS 452, inspect the warnings, and explain why they appear.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_8_credit_schedule_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Build a schedule totaling exactly 8 credits.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_8_credit_schedule_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Build a schedule totaling exactly 8 credits.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_8_credit_schedule_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Build a schedule totaling exactly 8 credits.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_no_conflict_schedule_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Build a schedule with no time conflicts.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_no_conflict_schedule_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Build a schedule with no time conflicts.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_no_conflict_schedule_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Build a schedule with no time conflicts.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_mixed_department_schedule_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Build a schedule containing one CS course, one AI course, and one DATA course.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_mixed_department_schedule_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Build a schedule containing one CS course, one AI course, and one DATA course.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "build_mixed_department_schedule_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Build a schedule containing one CS course, one AI course, and one DATA course.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_highest_credit_not_full_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Find and add a highest-credit course that is not full.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_highest_credit_not_full_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Find and add a highest-credit course that is not full.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "add_highest_credit_not_full_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Find and add a highest-credit course that is not full.",
-    "category": "multi_step",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "compare_alert_locations_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Compare where alerts appear in the modern, retro, and 90s interfaces.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "compare_alert_locations_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Compare where alerts appear in the modern, retro, and 90s interfaces.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "compare_alert_locations_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Compare where alerts appear in the modern, retro, and 90s interfaces.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "compare_schedule_access_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Compare how schedule information is accessed in the modern, retro, and 90s interfaces.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "compare_schedule_access_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Compare how schedule information is accessed in the modern, retro, and 90s interfaces.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "compare_schedule_access_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Compare how schedule information is accessed in the modern, retro, and 90s interfaces.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_hardest_add_drop_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Determine which interface makes add/drop hardest and explain why.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_hardest_add_drop_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Determine which interface makes add/drop hardest and explain why.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "find_hardest_add_drop_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Determine which interface makes add/drop hardest and explain why.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "verify_same_course_data_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Find the same course in all three interfaces and verify that the displayed course information matches.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "verify_same_course_data_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Find the same course in all three interfaces and verify that the displayed course information matches.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "verify_same_course_data_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Find the same course in all three interfaces and verify that the displayed course information matches.",
-    "category": "cross_style",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "Yes. CS 355 and CS 370 overlap on Monday and Wednesday.",
+      "verified": true,
+      "note": "Requires stating that the courses overlap and identifying both overlapping course identifiers from the default selected set."
     }
   },
   {
@@ -3111,12 +1821,18 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The selected course causing the low-seat warning is CS 310.",
+      "verified": true,
+      "note": "Unique low-seat course in the default selected set."
     }
   },
   {
@@ -3135,12 +1851,18 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The selected course causing the low-seat warning is CS 310.",
+      "verified": true,
+      "note": "Unique low-seat course in the default selected set."
     }
   },
   {
@@ -3159,300 +1881,18 @@
       ],
       "reference_answers": {
         "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
+        "must_include": [
+          "310"
+        ],
+        "fuzzy_match": [
+          "CS 310",
+          "CS310",
+          "CS-310"
+        ]
       },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "use_90s_detail_console_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "In the 90s interface, load the correct course row and switch to the correct detail tab to find its alerts.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "use_90s_detail_console_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "In the 90s interface, load the correct course row and switch to the correct detail tab to find its alerts.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "use_90s_detail_console_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "In the 90s interface, load the correct course row and switch to the correct detail tab to find its alerts.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "recover_from_wrong_filter_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "After applying an incorrect filter, recover and complete the intended course-selection task.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "recover_from_wrong_filter_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "After applying an incorrect filter, recover and complete the intended course-selection task.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "recover_from_wrong_filter_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "After applying an incorrect filter, recover and complete the intended course-selection task.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "hidden_action_flow_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Handle a workflow where add/drop is only available after loading or opening a course.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "hidden_action_flow_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Handle a workflow where add/drop is only available after loading or opening a course.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "hidden_action_flow_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Handle a workflow where add/drop is only available after loading or opening a course.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "verify_with_two_signals_2000s",
-    "website": "course_registration",
-    "template": "2000s",
-    "env_id": "course_2000s",
-    "start_url": "http://localhost:8001/2000s/index.html",
-    "instruction": "Add a course and verify success using two different UI signals.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "verify_with_two_signals_2010s",
-    "website": "course_registration",
-    "template": "2010s",
-    "env_id": "course_2010s",
-    "start_url": "http://localhost:8001/2010s/index.html",
-    "instruction": "Add a course and verify success using two different UI signals.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
-    }
-  },
-  {
-    "task_id": "verify_with_two_signals_modern",
-    "website": "course_registration",
-    "template": "modern",
-    "env_id": "course_modern",
-    "start_url": "http://localhost:8001/modern/index.html",
-    "instruction": "Add a course and verify success using two different UI signals.",
-    "category": "hard",
-    "interaction": "varies",
-    "perturbation_type": "era_style",
-    "eval": {
-      "eval_types": [
-        "string_match"
-      ],
-      "reference_answers": {
-        "exact_match": null,
-        "must_include": [],
-        "fuzzy_match": []
-      },
-      "reference_answer_raw_annotation": "",
-      "verified": false,
-      "note": "Ground truth not yet annotated. Fill manually."
+      "reference_answer_raw_annotation": "The selected course causing the low-seat warning is CS 310.",
+      "verified": true,
+      "note": "Unique low-seat course in the default selected set."
     }
   }
 ]
