@@ -25,21 +25,28 @@ MEMORY_COLORS = {
     "internvl": "#e8c98a",
 }
 
+COT_COLORS = {
+    "qwen_vl":  "#c0392b",
+    "uitars":   "#6c3483",
+    "qwen25":   "#1a5276",
+    "internvl": "#784212",
+}
+
 WEBSITES = {
     "house_renting": {
         "title":     "House Renting",
         "templates": ["classic", "modern", "hidden"],
-        "xlabels":   ["classic", "modern", "hidden"],
+        "xlabels":   ["Classic", "Modern", "Hidden"],
     },
     "personal_website": {
         "title":     "Personal Website",
         "templates": ["raw_html_1998", "hugo_papermod", "notion", "jekyll_alfolio"],
-        "xlabels":   ["raw\n1998", "hugo\npapermod", "notion", "jekyll\nalfolio"],
+        "xlabels":   ["Raw\n1998", "Hugo\nPaperMod", "Notion", "Jekyll\nAlFolio"],
     },
     "course_registration": {
         "title":     "Course Registration",
         "templates": ["2000s", "2010s", "modern"],
-        "xlabels":   ["2000s", "2010s", "modern"],
+        "xlabels":   ["2000s", "2010s", "Modern"],
     },
 }
 
@@ -83,10 +90,10 @@ def get_rq2_recovery_rate(website, mode, agent, strategy):
 # ============================================================
 fig = plt.figure(figsize=(30, 22))
 fig.suptitle(
-    "GUI Agent Temporal Robustness: Cross-Agent Comparison",
+    "GUI agent temporal robustness: cross-agent comparison",
     fontsize=18, fontweight="bold", y=0.998
 )
-gs = gridspec.GridSpec(3, 3, figure=fig, hspace=0.48, wspace=0.30)
+gs = gridspec.GridSpec(3, 3, figure=fig, hspace=0.62, wspace=0.30)
 
 # ============================================================
 # ROW 1: line charts per website (vision_only + memory overlay)
@@ -103,7 +110,7 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
         values = [s_text["success_rates"].get(t, 0) * 100 for t in templates]
         ax.plot(x, values, color=cfg["color"], linestyle="--",
                 marker=cfg["marker"], linewidth=2, markersize=7,
-                label=f"{cfg['label']} (text-only)", alpha=0.7, zorder=3)
+        label=f"{cfg['label']} (text-only)", alpha=0.7, zorder=3)
 
     for agent_key in VISION_AGENTS:
         s = load_summary(website_key, "vision_only", agent_key)
@@ -114,10 +121,6 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
         ax.plot(x, values, color=cfg["color"], linestyle="-",
                 marker=cfg["marker"], linewidth=2.5, markersize=8,
                 label=cfg["label"], zorder=3)
-        ax.annotate(f"{values[-1]:.0f}%",
-                    (len(templates) - 1, values[-1]),
-                    textcoords="offset points", xytext=(8, 0),
-                    fontsize=8.5, color=cfg["color"], fontweight="bold")
 
     for agent_key in VISION_AGENTS:
         mem_sr = get_rq2_sr(website_key, "vision_only", agent_key, "memory", templates)
@@ -128,17 +131,26 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
                 marker="o", linewidth=1.8, markersize=6,
                 label=f"{AGENTS[agent_key]['label']} + mem", zorder=2, alpha=0.9)
 
+    for agent_key in VISION_AGENTS:
+        cot_sr = get_rq2_sr(website_key, "vision_only", agent_key, "cot", templates)
+        if not cot_sr:
+            continue
+        values = [cot_sr.get(t, 0) * 100 for t in templates]
+        ax.plot(x, values, color=COT_COLORS[agent_key], linestyle="-.",
+                marker="x", linewidth=1.8, markersize=6,
+                label=f"{AGENTS[agent_key]['label']} + CoT", zorder=2, alpha=0.9)
+
     ax.set_xticks(x)
     ax.set_xticklabels(xlabels, fontsize=10)
-    ax.set_ylim(0, 115)
-    ax.set_ylabel("success rate (%)", fontsize=11)
-    ax.set_title(f"{wconfig['title']} — vision only (solid) + memory (dotted)",
+    ax.set_ylim(0, 140)
+    ax.set_ylabel("Success rate (%)", fontsize=11)
+    ax.set_title(f"{wconfig['title']} — Vision only (solid) + Memory (dotted) + CoT (dash-dot)",
                  fontsize=12, fontweight="bold", pad=12)
-    ax.text(0.6, 0.95,
+    ax.text(0.5, -0.14,
             "† GPT-oss-120B: text-only upper bound, not a vision agent",
-            transform=ax.transAxes, ha="center", va="bottom",
-            fontsize=8, style="italic", color="gray")
-    ax.legend(fontsize=7, loc="upper right", ncol=2,
+            transform=ax.transAxes, ha="center", va="top",
+            fontsize=8, style="italic", color="red", fontweight="bold")
+    ax.legend(fontsize=7, loc="upper right", ncol=3,
               framealpha=0.9, edgecolor="lightgray")
     ax.grid(alpha=0.25, axis="y", zorder=0)
     ax.spines["top"].set_visible(False)
@@ -162,39 +174,37 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
         trs_multi.append(min(s["trs"], 1.5) if s else 0)
 
     bars_v = ax.bar(x - width/2, trs_vision, width, color="#7f77dd",
-                    alpha=0.85, label="vision only",
+                    alpha=0.85, label="Vision only",
                     edgecolor="white", linewidth=1.2, zorder=3)
     bars_m = ax.bar(x + width/2, trs_multi, width, color="#1d9e75",
-                    alpha=0.85, label="multimodal",
+                    alpha=0.85, label="Multimodal",
                     edgecolor="white", linewidth=1.2, zorder=3)
 
     for bar, val in zip(bars_v, trs_vision):
-        if val > 0:
-            ax.text(bar.get_x() + bar.get_width() / 2,
-                    val + 0.015, f"{val:.3f}",
-                    ha="center", va="bottom", fontsize=7.5, fontweight="bold")
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                val + 0.015, f"{val:.3f}",
+                ha="center", va="bottom", fontsize=7.5, fontweight="bold")
     for bar, val in zip(bars_m, trs_multi):
-        if val > 0:
-            ax.text(bar.get_x() + bar.get_width() / 2,
-                    val + 0.015, f"{val:.3f}",
-                    ha="center", va="bottom", fontsize=7.5, fontweight="bold")
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                val + 0.015, f"{val:.3f}",
+                ha="center", va="bottom", fontsize=7.5, fontweight="bold")
 
     ax.axhline(y=1.0, color="gray", linestyle="--",
-               linewidth=1, alpha=0.5, label="perfect robustness (1.0)")
+               linewidth=1, alpha=0.5, label="Perfect robustness (1.0)")
     ax.set_xticks(x)
     ax.set_xticklabels([AGENTS[a]["label"] for a in VISION_AGENTS],
                        fontsize=8.5, rotation=12, ha="right")
     ax.set_ylim(0, 1.65)
     ax.set_ylabel("TRS", fontsize=11)
-    ax.set_title(f"{wconfig['title']} — TRS by Agent",
+    ax.set_title(f"{wconfig['title']} — TRS by agent",
                  fontsize=12, fontweight="bold", pad=12)
     note = "*TRS > 1.0 = inverse degradation (2000s era harder than later)" \
            if website_key == "course_registration" \
            else "Note: GPT-oss-120B excluded (text-only mode)"
-    ax.text(0.6, 0.95, note,
-            transform=ax.transAxes, ha="center", va="bottom",
-            fontsize=7.5, style="italic", color="gray")
-    ax.legend(fontsize=9, loc="upper left",
+    ax.text(0.5, -0.14, note,
+            transform=ax.transAxes, ha="center", va="top",
+            fontsize=7.5, style="italic", color="red", fontweight="bold")
+    ax.legend(fontsize=9, loc="upper right",
               framealpha=0.9, edgecolor="lightgray")
     ax.grid(alpha=0.25, axis="y", zorder=0)
     ax.spines["top"].set_visible(False)
@@ -222,33 +232,31 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     bars_mem = ax.bar(x - width/2, memory_rates, width,
                       color=colors_mem, alpha=0.85,
                       edgecolor="white", linewidth=1.2,
-                      label="memory", zorder=3)
+                      label="Memory", zorder=3)
     bars_cot = ax.bar(x + width/2, cot_rates, width,
                       color=colors_mem, alpha=0.4,
                       edgecolor="white", linewidth=1.2,
                       label="CoT", zorder=3)
 
     for bar, val in zip(bars_mem, memory_rates):
-        if val > 0:
-            ax.text(bar.get_x() + bar.get_width() / 2,
-                    val + 0.5, f"{val:.1f}%",
-                    ha="center", va="bottom", fontsize=8.5, fontweight="bold")
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                val + 0.5, f"{val:.1f}%",
+                ha="center", va="bottom", fontsize=8.5, fontweight="bold")
     for bar, val in zip(bars_cot, cot_rates):
-        if val > 0:
-            ax.text(bar.get_x() + bar.get_width() / 2,
-                    val + 0.5, f"{val:.1f}%",
-                    ha="center", va="bottom", fontsize=8.5, fontweight="bold")
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                val + 0.5, f"{val:.1f}%",
+                ha="center", va="bottom", fontsize=8.5, fontweight="bold")
 
     ax.set_xticks(x)
     ax.set_xticklabels(labels, fontsize=9, rotation=10, ha="right")
-    ax.set_ylabel("recovery rate (%)", fontsize=11)
+    ax.set_ylabel("Recovery rate (%)", fontsize=11)
     ax.set_ylim(0, 100)
     ax.set_title(f"{wconfig['title']} — RQ II recovery (vision only)",
                  fontsize=12, fontweight="bold", pad=12)
-    ax.text(0.6, 0.95,
+    ax.text(0.5, -0.14,
             "Note: GPT-oss-120B excluded — text-only mode has near-zero failures",
-            transform=ax.transAxes, ha="center", va="bottom",
-            fontsize=8, style="italic", color="gray")
+            transform=ax.transAxes, ha="center", va="top",
+            fontsize=8, style="italic", color="red", fontweight="bold")
     ax.legend(fontsize=10, loc="upper right",
               framealpha=0.9, edgecolor="lightgray")
     ax.grid(alpha=0.25, axis="y", zorder=0)
