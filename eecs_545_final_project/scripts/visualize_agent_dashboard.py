@@ -18,6 +18,8 @@ AGENTS = {
 
 VISION_AGENTS = ["qwen_vl", "uitars", "qwen25", "internvl"]
 
+# UMich blue shades: dark → light, one per vision agent
+UMICH_SHADES = ["#00274C", "#1a4f7a", "#4a90c4", "#8ab8d8"]
 MEMORY_COLORS = {
     "qwen_vl":  "#f5a0a0",
     "uitars":   "#b8b4f0",
@@ -89,10 +91,6 @@ def get_rq2_recovery_rate(website, mode, agent, strategy):
 # figure: 3 rows x 3 cols
 # ============================================================
 fig = plt.figure(figsize=(30, 22))
-fig.suptitle(
-    "GUI agent temporal robustness: cross-agent comparison",
-    fontsize=18, fontweight="bold", y=0.998
-)
 gs = gridspec.GridSpec(3, 3, figure=fig, hspace=0.62, wspace=0.30)
 
 # ============================================================
@@ -149,7 +147,7 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     ax.text(0.5, -0.14,
             "† GPT-oss-120B: text-only upper bound, not a vision agent",
             transform=ax.transAxes, ha="center", va="top",
-            fontsize=8, style="italic", color="red", fontweight="bold")
+            fontsize=8, style="italic", color="gray", fontweight="bold")
     ax.legend(fontsize=7, loc="upper right", ncol=3,
               framealpha=0.9, edgecolor="lightgray")
     ax.grid(alpha=0.25, axis="y", zorder=0)
@@ -173,11 +171,11 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
         s = load_summary(website_key, "multimodal", agent_key)
         trs_multi.append(min(s["trs"], 1.5) if s else 0)
 
-    bars_v = ax.bar(x - width/2, trs_vision, width, color="#7f77dd",
+    bars_v = ax.bar(x - width/2, trs_vision, width, color=UMICH_SHADES,
                     alpha=0.85, label="Vision only",
                     edgecolor="white", linewidth=1.2, zorder=3)
-    bars_m = ax.bar(x + width/2, trs_multi, width, color="#1d9e75",
-                    alpha=0.85, label="Multimodal",
+    bars_m = ax.bar(x + width/2, trs_multi, width, color=UMICH_SHADES,
+                    alpha=0.35, label="Multimodal",
                     edgecolor="white", linewidth=1.2, zorder=3)
 
     for bar, val in zip(bars_v, trs_vision):
@@ -203,7 +201,7 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
            else "Note: GPT-oss-120B excluded (text-only mode)"
     ax.text(0.5, -0.14, note,
             transform=ax.transAxes, ha="center", va="top",
-            fontsize=7.5, style="italic", color="red", fontweight="bold")
+            fontsize=7.5, style="italic", color="gray", fontweight="bold")
     ax.legend(fontsize=9, loc="upper right",
               framealpha=0.9, edgecolor="lightgray")
     ax.grid(alpha=0.25, axis="y", zorder=0)
@@ -227,14 +225,13 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
 
     x          = np.arange(len(VISION_AGENTS))
     width      = 0.35
-    colors_mem = [AGENTS[a]["color"] for a in VISION_AGENTS]
 
     bars_mem = ax.bar(x - width/2, memory_rates, width,
-                      color=colors_mem, alpha=0.85,
+                      color=UMICH_SHADES, alpha=0.85,
                       edgecolor="white", linewidth=1.2,
                       label="Memory", zorder=3)
     bars_cot = ax.bar(x + width/2, cot_rates, width,
-                      color=colors_mem, alpha=0.4,
+                      color=UMICH_SHADES, alpha=0.35,
                       edgecolor="white", linewidth=1.2,
                       label="CoT", zorder=3)
 
@@ -256,7 +253,7 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     ax.text(0.5, -0.14,
             "Note: GPT-oss-120B excluded — text-only mode has near-zero failures",
             transform=ax.transAxes, ha="center", va="top",
-            fontsize=8, style="italic", color="red", fontweight="bold")
+            fontsize=8, style="italic", color="gray", fontweight="bold")
     ax.legend(fontsize=10, loc="upper right",
               framealpha=0.9, edgecolor="lightgray")
     ax.grid(alpha=0.25, axis="y", zorder=0)
