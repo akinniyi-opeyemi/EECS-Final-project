@@ -53,8 +53,8 @@ CONFIGS = {
         "colors":    ["#2ecc71", "#3498db", "#9b59b6"]
     },
     "course_registration": {
-        "summary":   Path("results/metrics/course_registration/summary.json"),
-        "per_task":  Path("results/metrics/course_registration/per_task_results.json"),
+        "summary":   Path("results/metrics/course_registration/text_only/gpt_oss/summary.json"),
+        "per_task":  Path("results/metrics/course_registration/text_only/gpt_oss/per_task_results.json"),
         "templates": ["2000s", "2010s", "modern"],
         "baseline":  "2000s",
         "title":     "Course Registration",
@@ -427,10 +427,20 @@ def plot_cross_mode_comparison(website):
         "vision_only": "#e74c3c"
     }
 
+    # agent to use as representative when no top-level summary exists
+    REPRESENTATIVE_AGENT = {
+        "text_only":   "gpt_oss",
+        "multimodal":  "qwen_vl",
+        "vision_only": "qwen_vl",
+    }
     # load summaries for each mode
     summaries = {}
     for mode in modes:
         summary_path = Path(f"results/metrics/{website}/{mode}/summary.json")
+        if not summary_path.exists():
+            # try agent subfolder fallback
+            agent = REPRESENTATIVE_AGENT.get(mode, "qwen_vl")
+            summary_path = Path(f"results/metrics/{website}/{mode}/{agent}/summary.json")
         if summary_path.exists():
             with open(summary_path) as f:
                 summaries[mode] = json.load(f)

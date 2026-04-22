@@ -48,13 +48,13 @@ WEBSITES = {
         "templates": ["2000s", "2010s", "modern"],
         "baseline":  "2000s",
         "modes": {
-            "text_only":   Path("results/metrics/course_registration/text_only/summary.json"),
-            "multimodal":  Path("results/metrics/course_registration/multimodal/summary.json"),
-            "vision_only": Path("results/metrics/course_registration/vision_only/summary.json"),
+            "text_only":   Path("results/metrics/course_registration/text_only/gpt_oss/summary.json"),
+            "multimodal":  Path("results/metrics/course_registration/multimodal/qwen_vl/summary.json"),
+            "vision_only": Path("results/metrics/course_registration/vision_only/qwen_vl/summary.json"),
         },
         "rq2_per_task": {
-            "memory": Path("results/metrics/course_registration/rq2_vision_only/memory_per_task.json"),
-            "cot":    Path("results/metrics/course_registration/rq2_vision_only/cot_per_task.json"),
+            "memory": Path("results/metrics/course_registration/rq2_vision_only_qwen_vl/memory_per_task.json"),
+            "cot":    Path("results/metrics/course_registration/rq2_vision_only_qwen_vl/cot_per_task.json"),
         }
     }
 }

@@ -13,7 +13,8 @@ from pathlib import Path
 # ============================================================
 parser = argparse.ArgumentParser()
 parser.add_argument("--website", required=True,
-    choices=["house_renting", "personal_website"])
+    choices=["house_renting", "personal_website", "course_registration"])
+parser.add_argument("--agent", default="qwen_vl", choices=["gpt_oss","qwen_vl","uitars","qwen25","internvl"])
 parser.add_argument("--mode", required=True,
     choices=["text_only", "multimodal", "vision_only"])
 args = parser.parse_args()
@@ -25,7 +26,7 @@ VIZ_DIR.mkdir(parents=True, exist_ok=True)
 # LOAD RESULTS
 # ============================================================
 summary_path = Path(
-    f"results/metrics/{args.website}/rq2_{args.mode}/summary.json"
+    f"results/metrics/{args.website}/rq2_{args.mode}_{args.agent}/summary.json"
 )
 if not summary_path.exists():
     print(f"No RQ II results found. Run evaluate_rq2.py first.")
@@ -151,7 +152,7 @@ print(f"Saved: {path}")
 per_task_data = {}
 for strategy in strategies:
     per_task_path = Path(
-        f"results/metrics/{args.website}/rq2_{args.mode}/{strategy}_per_task.json"
+        f"results/metrics/{args.website}/rq2_{args.mode}_{args.agent}/{strategy}_per_task.json"
     )
     if per_task_path.exists():
         with open(per_task_path) as f:

@@ -38,6 +38,11 @@ WEBSITES = {
         "templates": ["raw_html_1998", "hugo_papermod", "notion", "jekyll_alfolio"],
         "baseline":  "raw_html_1998",
     },
+    "course_registration": {
+        "title":     "Course Registration",
+        "templates": ["2000s", "2010s", "modern"],
+        "baseline":  "2000s",
+    },
 }
 
 MODES = {
@@ -71,7 +76,10 @@ def short_label(t):
 # FIGURE 1: TRS comparison across agents (main figure)
 # ============================================================
 def plot_agent_trs_comparison():
-    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+    n_websites = len(WEBSITES)
+    fig, axes = plt.subplots(1, n_websites, figsize=(8 * n_websites, 6))
+    if n_websites == 1:
+        axes = [axes]
     fig.suptitle(
         "temporal robustness score across agents and websites",
         fontsize=15, fontweight="bold", y=1.02
@@ -229,11 +237,6 @@ def plot_agent_degradation_lines():
             plt.savefig(path, dpi=150, bbox_inches="tight")
             plt.close()
             print(f"Saved: {path}")
-
-    for agent_key, agent_cfg in AGENTS.items():
-        if mode not in agent_cfg.get("modes", [mode]):
-            continue
-        s = load_summary(website_key, mode, agent_key)
 # ============================================================
 # FIGURE 3: Agent tier comparison (model size vs TRS)
 # ============================================================
@@ -246,7 +249,10 @@ def plot_size_vs_trs():
         "internvl": 8,
     }
 
-    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    n_websites = len(WEBSITES)
+    fig, axes = plt.subplots(1, n_websites, figsize=(7 * n_websites, 6))
+    if n_websites == 1:
+        axes = [axes]
     fig.suptitle(
         "model size vs temporal robustness score (vision only)",
         fontsize=13, fontweight="bold"
