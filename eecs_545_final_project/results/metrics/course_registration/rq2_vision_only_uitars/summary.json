@@ -1,0 +1,22 @@
+{
+  "website": "course_registration",
+  "mode": "vision_only",
+  "agent": "uitars",
+  "vanilla_failed": 37,
+  "strategies": {
+    "memory": {
+      "evaluated": 37,
+      "recovered": 8,
+      "recovery_rate": 0.2162,
+      "hallucinated": 28,
+      "hallucination_rate": 0.7568
+    },
+    "cot": {
+      "evaluated": 37,
+      "recovered": 5,
+      "recovery_rate": 0.1351,
+      "hallucinated": 28,
+      "hallucination_rate": 0.7568
+    }
+  }
+}

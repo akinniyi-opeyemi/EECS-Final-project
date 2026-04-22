@@ -22,13 +22,14 @@ A controlled benchmark for evaluating how VLM-based GUI agents degrade under tem
 eecs_545_final_project/
 ├── house-renting-eval/          # Website 1: 264 tasks, 3 templates
 ├── Personal Website/            # Website 2: 80 tasks, 4 templates
-├── course_registration/         # Website 3: 144 tasks, 3 templates (pending annotation)
+├── course_registration/         # Website 3: 60 tasks, 3 templates
 ├── job_application/             # Website 4: 15 tasks (supplementary)
 ├── scripts/
 │   ├── infer.py                 # Main inference script (--agent, --mode, --website)
 │   ├── evaluate.py              # Evaluation with three-tier metrics
 │   ├── evaluate_rq2.py          # RQ II intervention evaluation
 │   ├── infer_rq2.py             # RQ II intervention inference
+│   ├── config.py                # Environment auto-detection (Mac, Great Lakes, Bridges-2)
 │   ├── visualize.py             # Per-website visualizations
 │   ├── visualize_comprehensive.py  # Full dashboard
 │   ├── visualize_agents.py      # Cross-agent comparison
@@ -56,7 +57,7 @@ All websites use a controlled design: same content across templates, only the UI
 |---|---|---|---|---|
 | house_renting | classic, modern, hidden | 264 | visible, click_to_reveal, tab_navigation, tab_then_expand, filter_navigation | Yes |
 | personal_website | raw_html_1998, hugo_papermod, notion, jekyll_alfolio | 80 | framework_style | Yes |
-| course_registration | 2000s, 2010s, modern | 144 | framework_style | Yes (pending annotation) |
+| course_registration | 2000s, 2010s, modern | 60 | era_style | Yes |
 | job_application | classic, modern, notion | 15 | framework_style | No (supplementary) |
 
 ### Evaluation: Three-Tier Schema
@@ -158,36 +159,38 @@ export OPENAI_BASE_URL="http://promaxgb10-d473.eecs.umich.edu:8000/v1"
 export OPENAI_API_KEY="your_key"
 export QWEN_BASE_URL="http://promaxgb10-d668.eecs.umich.edu:8000/v1"
 export QWEN_API_KEY="your_key"
-export UITARS_BASE_URL="http://localhost:8001/v1"
+export UITARS_BASE_URL="http://localhost:9002/v1"
 export UITARS_API_KEY="local"
-export QWEN25_BASE_URL="http://localhost:8002/v1"
+export QWEN25_BASE_URL="http://localhost:9003/v1"
 export QWEN25_API_KEY="local"
-export INTERNVL_BASE_URL="http://localhost:8003/v1"
+export INTERNVL_BASE_URL="http://localhost:9004/v1"
 export INTERNVL_API_KEY="local"
 ```
+
+Note: `config.py` auto-detects the environment (Mac, Great Lakes, Bridges-2) and sets correct model paths and ports automatically.
 
 ---
 
 ## Serving Models on Great Lakes / Bridges-2
 
 ```bash
-# UI-TARS-7B on port 8001
+# UI-TARS-7B on port 9002 (Bridges-2)
 python -m vllm.entrypoints.openai.api_server \
     --model /path/to/models/UI-TARS-7B-DPO \
-    --port 8001 --host 0.0.0.0 \
-    --max-model-len 4096 --dtype bfloat16
+    --port 9002 --host 0.0.0.0 \
+    --max-model-len 4096 --dtype half
 
-# Qwen2.5-VL-7B on port 8002
+# Qwen2.5-VL-7B on port 9003 (Bridges-2)
 python -m vllm.entrypoints.openai.api_server \
     --model /path/to/models/Qwen2.5-VL-7B-Instruct \
-    --port 8002 --host 0.0.0.0 \
-    --max-model-len 4096 --dtype bfloat16
+    --port 9003 --host 0.0.0.0 \
+    --max-model-len 4096 --dtype half
 
-# InternVL2-8B on port 8003 (requires --trust-remote-code)
+# InternVL2-8B on port 9004 (Bridges-2, requires --trust-remote-code)
 python -m vllm.entrypoints.openai.api_server \
     --model /path/to/models/InternVL2-8B \
-    --port 8003 --host 0.0.0.0 \
-    --max-model-len 4096 --dtype bfloat16 \
+    --port 9004 --host 0.0.0.0 \
+    --max-model-len 4096 --dtype half \
     --trust-remote-code
 
 # Note: use --dtype half instead of bfloat16 on V100 nodes
@@ -198,8 +201,11 @@ python -m vllm.entrypoints.openai.api_server \
 ## Running Inference
 
 ```bash
-# start website server
+# start website server (Mac)
 cd house-renting-eval && python -m http.server 8888
+
+# start course_registration server (Mac)
+python -m http.server 8001 --directory course_registration &
 
 # run inference
 python scripts/infer.py \
@@ -295,9 +301,11 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 
 | Mode | 2000s | 2010s | modern | TRS |
 |---|---|---|---|---|
-| text_only | TBD | TBD | TBD | TBD |
-| multimodal | TBD | TBD | TBD | TBD |
-| vision_only | TBD | TBD | TBD | TBD |
+| text_only (gpt-oss-120B) | 85.0% | 90.0% | 90.0% | 1.059* |
+| multimodal (Qwen3-VL-30B) | 65.0% | 90.0% | 90.0% | 1.385* |
+| vision_only (Qwen3-VL-30B) | 45.0% | 60.0% | 30.0% | 0.667 |
+
+*TRS > 1.0 indicates that the 2000s template is harder than later templates, reversing the expected degradation direction. See Finding 9.
 
 ---
 
@@ -350,6 +358,28 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 
 **Key finding:** Qwen2.5-VL-7B achieves the highest TRS on personal_website multimodal (0.929), outperforming UI-TARS (0.875). This suggests Qwen2.5 handles academic text-heavy content better than GUI-specialized models when DOM text is available.
 
+### RQ I: Cross-Agent Comparison (vision_only, course_registration)
+
+| Agent | 2000s | 2010s | modern | TRS |
+|---|---|---|---|---|
+| gpt-oss-120B | 85.0% | 90.0% | 90.0% | 1.059* |
+| Qwen3-VL-30B | 45.0% | 60.0% | 30.0% | 0.667 |
+| UI-TARS-7B | 55.0% | 50.0% | 10.0% | 0.182 |
+| Qwen2.5-VL-7B | TBD | TBD | TBD | TBD |
+| InternVL2-8B | TBD | TBD | TBD | TBD |
+
+### RQ I: Cross-Agent Comparison (multimodal, course_registration)
+
+| Agent | 2000s | 2010s | modern | TRS |
+|---|---|---|---|---|
+| gpt-oss-120B | 85.0% | 90.0% | 90.0% | 1.059* |
+| Qwen3-VL-30B | 65.0% | 90.0% | 90.0% | 1.385* |
+| UI-TARS-7B | 90.0% | 65.0% | 75.0% | 0.722 |
+| Qwen2.5-VL-7B | TBD | TBD | TBD | TBD |
+| InternVL2-8B | TBD | TBD | TBD | TBD |
+
+*TRS > 1.0 due to inverse degradation pattern. See Finding 9.
+
 ---
 
 ### RQ II: Test-Time Interventions (house_renting, vision_only)
@@ -374,6 +404,17 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 
 **Key finding:** All agents show minimal recovery on personal_website (0-9.5%), confirming that navigation-type failures are irreducible regardless of agent architecture or intervention strategy. High hallucination rates indicate interventions cause agents to fabricate answers rather than admit information is unavailable.
 
+### RQ II: Test-Time Interventions (course_registration, vision_only)
+
+| Agent | Memory Recovered | Memory Rate | Memory Hallucinated | CoT Recovered | CoT Rate | CoT Hallucinated |
+|---|---|---|---|---|---|---|
+| Qwen3-VL-30B | 1 | 3.0% | 31 | 5 | **15.2%** | 21 |
+| UI-TARS-7B | 8 | **21.6%** | 28 | 5 | 13.5% | 28 |
+| Qwen2.5-VL-7B | TBD | TBD | TBD | TBD | TBD | TBD |
+| InternVL2-8B | TBD | TBD | TBD | TBD | TBD | TBD |
+
+**Key finding:** Course_registration is the only website where CoT outperforms memory for Qwen3-VL-30B (15.2% vs 3.0%). This suggests CoT reasoning is more effective when failures are caused by interface complexity rather than information unavailability.
+
 ### RQ II: Memory Recovery Rate by Perturbation Type (house_renting, vision_only)
 
 | Perturbation | Qwen3-VL | UI-TARS | Qwen2.5 | InternVL |
@@ -383,8 +424,6 @@ python scripts/visualize_rq2.py --website house_renting --mode vision_only
 | tab_then_expand | 17% | 50% | 29% | 29% |
 | filter_navigation | 14% | 0% | 100% | 0% |
 | click_to_reveal | 0% | 33% | 25% | 33% |
-
-**Key finding:** click_to_reveal recovery varies by agent (0-33%) unlike tab_navigation which shows partial recovery for some agents. Qwen2.5 achieves 100% filter_navigation recovery, suggesting its text understanding handles sidebar filter context better than other agents.
 
 ---
 
@@ -468,7 +507,11 @@ On personal_website vision_only, all agents cluster at TRS=0.417-0.500 regardles
 
 ### Finding 8: CoT is consistently ineffective across all agents
 
-CoT recovery rates range from 4.0-11.3% on house_renting and 2.4-7.1% on personal_website, with high hallucination rates across all agents. Chain-of-thought reasoning does not reliably improve GUI agent performance on static screenshot evaluation tasks.
+CoT recovery rates range from 4.0-11.3% on house_renting and 2.4-7.1% on personal_website, with high hallucination rates across all agents. Chain-of-thought reasoning does not reliably improve GUI agent performance on static screenshot evaluation tasks. Exception: course_registration shows higher CoT effectiveness (15.2% for Qwen3-VL) due to different failure mode characteristics.
+
+### Finding 9: Era-style perturbations show inverse degradation on course_registration
+
+For course_registration, text_only and multimodal agents perform better on 2010s and modern templates than on the 2000s baseline, producing TRS > 1.0. This reveals that 2000s-era table-based HTML is harder for agents to parse than semantic HTML, reversing the expected degradation direction. Vision-only agents show the expected degradation pattern (modern is hardest at 10-30%) due to the modern template's progressive disclosure UI hiding course details behind interactive panels.
 
 ---
 
@@ -504,4 +547,4 @@ Information lives on a linked page (teaching.html, publications.html). Agent onl
 ## Acknowledgments
 
 Class API access provided by EECS 545 course staff, University of Michigan.
-Compute provided by University of Michigan Advanced Research Computing (ARC) and NSF ACCESS Bridges-2 (NSF ACCESS Bridges-2).
+Compute provided by University of Michigan Advanced Research Computing (ARC) and NSF ACCESS Bridges-2.

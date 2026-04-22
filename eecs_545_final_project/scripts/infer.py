@@ -14,6 +14,7 @@ import json, os, time, argparse, base64
 from pathlib import Path
 from openai import OpenAI
 from playwright.sync_api import sync_playwright
+from config import model_path, agent_url, is_course_reg_url
 
 # ============================================================
 # ARGUMENT PARSING
@@ -60,23 +61,23 @@ AGENT_CONFIGS = {
         "vision":   True,
     },
     "uitars": {
-        "model":    "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/UI-TARS-7B-DPO",
-        "base_url": os.environ.get("UITARS_BASE_URL", "http://localhost:8001/v1"),
+        "model":    model_path("uitars"),
+        "base_url": os.environ.get("UITARS_BASE_URL", agent_url("uitars")),
         "api_key":  os.environ.get("UITARS_API_KEY", "local"),
         "vision":   True,
     },
     "qwen25": {
-        "model":    "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/Qwen2.5-VL-7B-Instruct",
-        "base_url": os.environ.get("QWEN25_BASE_URL", "http://localhost:8002/v1"),
+        "model":    model_path("qwen25"),
+        "base_url": os.environ.get("QWEN25_BASE_URL", agent_url("qwen25")),
         "api_key":  os.environ.get("QWEN25_API_KEY", "local"),
         "vision":   True,
     },
     "internvl": {
-        "model":    "/scratch/eecs545w26_class_root/eecs545w26_class/akinniyi/models/InternVL2-8B",
-        "base_url": os.environ.get("INTERNVL_BASE_URL", "http://localhost:8003/v1"),
+        "model":    model_path("internvl"),
+        "base_url": os.environ.get("INTERNVL_BASE_URL", agent_url("internvl")),
         "api_key":  os.environ.get("INTERNVL_API_KEY", "local"),
         "vision":   True,
-    }
+    },
 }
 
 agent_config = AGENT_CONFIGS[args.agent]
@@ -199,13 +200,14 @@ def get_page_text(url):
         page = browser.new_page(viewport={"width": 1280, "height": 720})
         try:
             page.goto(url, timeout=15000, wait_until="domcontentloaded")
-            page.wait_for_timeout(1500)
+            # wait longer for JS-rendered content
+            wait_time = 3000 if is_course_reg_url(url) else 1500
+            page.wait_for_timeout(wait_time)
             text = page.evaluate("""() => {
-                const clone = document.body.cloneNode(true);
-                clone.querySelectorAll('script, style, noscript').forEach(
-                    el => el.remove()
-                );
-                return clone.innerText.trim();
+            document.querySelectorAll('script, style, noscript').forEach(
+                el => el.remove()
+            );
+            return document.body.innerText.trim();
             }""")
         except Exception as e:
             text = f"ERROR loading page: {e}"
@@ -223,7 +225,8 @@ def get_screenshot_b64(url):
         page = browser.new_page(viewport={"width": 1280, "height": 720})
         try:
             page.goto(url, timeout=15000, wait_until="domcontentloaded")
-            page.wait_for_timeout(1500)
+            wait_time = 3000 if "8001" in url else 1500
+            page.wait_for_timeout(wait_time)
             screenshot_bytes = page.screenshot(full_page=False)
         except Exception as e:
             print(f"\n  screenshot error: {type(e).__name__}: {e}", end=" ")

@@ -1,0 +1,33 @@
+{
+  "website": "course_registration",
+  "agent": "qwen_vl",
+  "model": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+  "mode": "vision_only",
+  "total_tasks": 60,
+  "evaluated_tasks": 60,
+  "missing_tasks": 0,
+  "baseline": "2000s",
+  "success_rates": {
+    "2000s": 0.45,
+    "2010s": 0.6,
+    "modern": 0.3
+  },
+  "temporal_degradation": {
+    "2000s_to_2010s": -0.15,
+    "2000s_to_modern": 0.15
+  },
+  "trs": 0.6667,
+  "task_type_results": {},
+  "perturbation_results": {
+    "era_style": {
+      "count": 60,
+      "success_rate": 0.45
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 3,
+    "must_include": 23,
+    "no_match": 33,
+    "fuzzy_string": 1
+  }
+}

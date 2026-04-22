@@ -1,0 +1,35 @@
+{
+  "website": "course_registration",
+  "agent": "uitars",
+  "model": "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
+  "mode": "multimodal",
+  "total_tasks": 60,
+  "evaluated_tasks": 60,
+  "missing_tasks": 0,
+  "baseline": "2000s",
+  "success_rates": {
+    "2000s": 0.9,
+    "2010s": 0.65,
+    "modern": 0.75
+  },
+  "temporal_degradation": {
+    "2000s_to_2010s": 0.25,
+    "2000s_to_modern": 0.15
+  },
+  "trs": 0.7222,
+  "task_type_results": {},
+  "perturbation_results": {
+    "era_style": {
+      "count": 60,
+      "success_rate": 0.7666666666666667
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 1,
+    "no_match": 14,
+    "exact_match_contained": 1,
+    "must_include": 38,
+    "fuzzy_string": 4,
+    "semantic_match": 2
+  }
+}

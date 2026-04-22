@@ -11,13 +11,15 @@ from pathlib import Path
 from openai import OpenAI
 from playwright.sync_api import sync_playwright
 from interventions import memory_agent, cot_agent
+# add this import at the top
+from config import model_path, agent_url, is_course_reg_url
 
 # ============================================================
 # ARGUMENT PARSING
 # ============================================================
 parser = argparse.ArgumentParser()
 parser.add_argument("--website", required=True,
-    choices=["house_renting", "personal_website"])
+    choices=["house_renting", "personal_website", "course_registration"])
 parser.add_argument("--mode", required=True,
     choices=["text_only", "multimodal", "vision_only"])
 parser.add_argument("--agent", required=True,
@@ -45,24 +47,24 @@ AGENT_CONFIGS = {
         "api_key":  os.environ.get("QWEN_API_KEY", ""),
         "vision":   True,
     },
-    "uitars": {
-        "model":    "/ocean/projects/tra260004p/akinniyi/models/UI-TARS-7B-DPO",
-        "base_url": os.environ.get("UITARS_BASE_URL", "http://localhost:8001/v1"),
+   "uitars": {
+        "model":    model_path("uitars"),
+        "base_url": os.environ.get("UITARS_BASE_URL", agent_url("uitars")),
         "api_key":  os.environ.get("UITARS_API_KEY", "local"),
         "vision":   True,
     },
     "qwen25": {
-        "model":    "/ocean/projects/tra260004p/akinniyi/models/Qwen2.5-VL-7B-Instruct",
-        "base_url": os.environ.get("QWEN25_BASE_URL", "http://localhost:8002/v1"),
+        "model":    model_path("qwen25"),
+        "base_url": os.environ.get("QWEN25_BASE_URL", agent_url("qwen25")),
         "api_key":  os.environ.get("QWEN25_API_KEY", "local"),
         "vision":   True,
     },
     "internvl": {
-        "model":    "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
-        "base_url": os.environ.get("INTERNVL_BASE_URL", "http://localhost:8003/v1"),
+        "model":    model_path("internvl"),
+        "base_url": os.environ.get("INTERNVL_BASE_URL", agent_url("internvl")),
         "api_key":  os.environ.get("INTERNVL_API_KEY", "local"),
         "vision":   True,
-    }
+    },
 }
 
 agent_config = AGENT_CONFIGS[args.agent]
@@ -81,8 +83,9 @@ PAUSE       = 1.5
 # WEBSITE CONFIG
 # ============================================================
 TASK_FILES = {
-    "house_renting":    Path("house-renting-eval/tasks.json"),
-    "personal_website": Path("Personal Website/tasks/test.raw.json")
+    "house_renting":       Path("house-renting-eval/tasks.json"),
+    "personal_website":    Path("Personal Website/tasks/test.raw.json"),
+    "course_registration": Path("course_registration/tasks.json")
 }
 
 SYSTEM_PROMPTS = {
@@ -93,6 +96,10 @@ SYSTEM_PROMPTS = {
     "personal_website": {
         "text_only": "You are a web agent evaluating academic personal websites. Return ONLY the answer.",
         "vision":    "You are a web agent evaluating academic personal websites. Return ONLY the answer."
+    },
+    "course_registration": {
+        "text_only": "You are a web agent evaluating a course registration system. Return ONLY the answer.",
+        "vision":    "You are a web agent evaluating a course registration system. Return ONLY the answer."
     }
 }
 
@@ -100,36 +107,27 @@ SYSTEM_PROMPTS = {
 # LOAD FAILED TASKS FROM VANILLA RUN
 # ============================================================
 def load_failed_tasks(website, mode, agent):
-    """Load tasks that vanilla agent failed on."""
     metrics_path = Path(f"results/metrics/{website}/{mode}/{agent}/per_task_results.json")
-
-    # fall back to old path without agent subfolder (qwen_vl, gpt_oss)
     if not metrics_path.exists():
         metrics_path = Path(f"results/metrics/{website}/{mode}/per_task_results.json")
-
     if not metrics_path.exists():
         print(f"No vanilla results found at {metrics_path}")
         print(f"Run vanilla inference first:")
         print(f"  python scripts/infer.py --website {website} --mode {mode} --agent {agent}")
         exit(1)
-
     with open(metrics_path) as f:
         results = json.load(f)
-
     failed_ids = {r["task_id"] for r in results if not r["success"]}
     print(f"Found {len(failed_ids)} failed tasks from vanilla {mode} ({agent})")
-
     with open(TASK_FILES[website]) as f:
         all_tasks = json.load(f)
-
-    failed_tasks = [t for t in all_tasks
-                    if str(t["task_id"]) in failed_ids]
+    failed_tasks = [t for t in all_tasks if str(t["task_id"]) in failed_ids]
     print(f"Matched {len(failed_tasks)} tasks")
     return failed_tasks
 
 
 # ============================================================
-# PLAYWRIGHT HELPERS
+# PLAYWRIGHT HELPERS — FIXED: live DOM + dynamic wait
 # ============================================================
 def get_page_text(url):
     with sync_playwright() as p:
@@ -137,12 +135,12 @@ def get_page_text(url):
         page = browser.new_page(viewport={"width": 1280, "height": 720})
         try:
             page.goto(url, timeout=15000, wait_until="domcontentloaded")
-            page.wait_for_timeout(1500)
+            wait_time = 3000 if is_course_reg_url(url) else 1500
+            page.wait_for_timeout(wait_time)
             text = page.evaluate("""() => {
-                const clone = document.body.cloneNode(true);
-                clone.querySelectorAll('script, style, noscript').forEach(
+                document.querySelectorAll('script, style, noscript').forEach(
                     el => el.remove());
-                return clone.innerText.trim();
+                return document.body.innerText.trim();
             }""")
         except Exception as e:
             text = f"ERROR: {e}"
@@ -157,7 +155,8 @@ def get_screenshot_b64(url):
         page = browser.new_page(viewport={"width": 1280, "height": 720})
         try:
             page.goto(url, timeout=15000, wait_until="domcontentloaded")
-            page.wait_for_timeout(1500)
+            wait_time = 3000 if any(p in url for p in ["8001", "8002", "9001"]) else 1500
+            page.wait_for_timeout(wait_time)
             screenshot_bytes = page.screenshot(full_page=False)
         except Exception as e:
             screenshot_bytes = None
@@ -182,12 +181,12 @@ def run_strategy(task, strategy_name, output_dir):
         return None, "skipped"
 
     interaction_hints = {
-        "click_show_details_button": "\nNote: Info may be behind 'Show Details' button.",
-        "click_apply_tab":           "\nNote: Info may be under 'Apply' tab.",
-        "click_contact_tab":         "\nNote: Contact info may be under 'Contact' tab.",
-        "click_details_tab":         "\nNote: Info may be under 'Details' tab.",
+        "click_show_details_button":     "\nNote: Info may be behind 'Show Details' button.",
+        "click_apply_tab":               "\nNote: Info may be under 'Apply' tab.",
+        "click_contact_tab":             "\nNote: Contact info may be under 'Contact' tab.",
+        "click_details_tab":             "\nNote: Info may be under 'Details' tab.",
         "click_details_tab_then_toggle": "\nNote: Info may be under 'Details' tab in expandable section.",
-        "use_sidebar_city_filter":   "\nNote: Use city filter in sidebar.",
+        "use_sidebar_city_filter":       "\nNote: Use city filter in sidebar.",
     }
     hint = interaction_hints.get(interaction, "")
 
@@ -226,10 +225,8 @@ def run_strategy(task, strategy_name, output_dir):
             max_tokens=MAX_TOKENS
         )
         raw_output = response.choices[0].message.content.strip()
-
         if strategy_name == "cot":
             raw_output = cot_agent.parse_cot_output(raw_output)
-
         error = None
     except Exception as e:
         raw_output = None

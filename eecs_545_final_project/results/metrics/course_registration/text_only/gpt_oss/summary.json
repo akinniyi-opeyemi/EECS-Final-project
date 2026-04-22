@@ -1,0 +1,33 @@
+{
+  "website": "course_registration",
+  "agent": "gpt_oss",
+  "model": "openai/gpt-oss-120b",
+  "mode": "text_only",
+  "total_tasks": 60,
+  "evaluated_tasks": 60,
+  "missing_tasks": 0,
+  "baseline": "2000s",
+  "success_rates": {
+    "2000s": 0.85,
+    "2010s": 0.9,
+    "modern": 0.9
+  },
+  "temporal_degradation": {
+    "2000s_to_2010s": -0.05,
+    "2000s_to_modern": -0.05
+  },
+  "trs": 1.0588,
+  "task_type_results": {},
+  "perturbation_results": {
+    "era_style": {
+      "count": 60,
+      "success_rate": 0.8833333333333333
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 3,
+    "must_include": 50,
+    "no_match": 6,
+    "no_prediction": 1
+  }
+}

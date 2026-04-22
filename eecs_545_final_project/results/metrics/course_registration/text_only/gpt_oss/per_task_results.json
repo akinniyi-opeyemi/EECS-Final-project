@@ -1,0 +1,1259 @@
+[
+  {
+    "task_id": "find_cs310_2000s_title",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the title of CS 310.",
+    "interaction": "varies",
+    "prediction": "Algorithms",
+    "ground_truth": "The title of CS 310 is Algorithms.",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Algorithms"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_2010s_title",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the title of CS 310.",
+    "interaction": "varies",
+    "prediction": "Algorithms",
+    "ground_truth": "The title of CS 310 is Algorithms.",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Algorithms"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_modern_title",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the title of CS 310.",
+    "interaction": "varies",
+    "prediction": "Algorithms",
+    "ground_truth": "The title of CS 310 is Algorithms.",
+    "success": true,
+    "tier_matched": "exact_match",
+    "match_details": {
+      "matched": "Algorithms"
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_2000s_instructor",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the instructor for CS 310.",
+    "interaction": "varies",
+    "prediction": "Dr. Omar Siddiqui",
+    "ground_truth": "The instructor for CS 310 is Dr. Omar Siddiqui.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Omar Siddiqui"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_2010s_instructor",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the instructor for CS 310.",
+    "interaction": "varies",
+    "prediction": "Dr. Omar Siddiqui",
+    "ground_truth": "The instructor for CS 310 is Dr. Omar Siddiqui.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Omar Siddiqui"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_modern_instructor",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the instructor for CS 310.",
+    "interaction": "varies",
+    "prediction": "Dr. Omar Siddiqui",
+    "ground_truth": "The instructor for CS 310 is Dr. Omar Siddiqui.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Omar Siddiqui"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_2000s_meeting_time",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the meeting time for CS 310.",
+    "interaction": "varies",
+    "prediction": "Mon / Wed\u202f1:30\u202fPM\u202f\u2013\u202f2:45\u202fPM",
+    "ground_truth": "CS 310 meets Mon/Wed 1:30 PM - 2:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "1:30",
+        "2:45"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_2010s_meeting_time",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the meeting time for CS 310.",
+    "interaction": "varies",
+    "prediction": "Mon / Wed\u202f1:30\u202fPM\u202f\u2013\u202f2:45\u202fPM",
+    "ground_truth": "CS 310 meets Mon/Wed 1:30 PM - 2:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "1:30",
+        "2:45"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_modern_meeting_time",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the meeting time for CS 310.",
+    "interaction": "varies",
+    "prediction": "Mon / Wed\u202f1:30\u202fPM\u202f\u2013\u202f2:45\u202fPM",
+    "ground_truth": "CS 310 meets Mon/Wed 1:30 PM - 2:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "1:30",
+        "2:45"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_2000s_seat_count",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the seat count for CS 310.",
+    "interaction": "varies",
+    "prediction": "2/26",
+    "ground_truth": "CS 310 has 2/26 seats.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "2",
+        "26"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_2010s_seat_count",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the seat count for CS 310.",
+    "interaction": "varies",
+    "prediction": "2/26",
+    "ground_truth": "CS 310 has 2/26 seats.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "2",
+        "26"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs310_modern_seat_count",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the seat count for CS 310.",
+    "interaction": "varies",
+    "prediction": "2",
+    "ground_truth": "CS 310 has 2/26 seats.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs420_instructor_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the instructor for CS 420.",
+    "interaction": "varies",
+    "prediction": "Prof. Helen Zhou",
+    "ground_truth": "The instructor for CS 420 is Prof. Helen Zhou.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Zhou"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs420_instructor_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the instructor for CS 420.",
+    "interaction": "varies",
+    "prediction": "Prof. Helen Zhou",
+    "ground_truth": "The instructor for CS 420 is Prof. Helen Zhou.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Zhou"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_cs420_instructor_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the instructor for CS 420.",
+    "interaction": "varies",
+    "prediction": "Prof. Helen Zhou",
+    "ground_truth": "The instructor for CS 420 is Prof. Helen Zhou.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "Zhou"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_mercer340_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the course located in Mercer Hall 340.",
+    "interaction": "varies",
+    "prediction": "CS 480 :: Advanced Software Engineering",
+    "ground_truth": "The course in Mercer Hall 340 is CS 480, Advanced Software Engineering.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "480",
+        "Advanced Software Engineering"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_mercer340_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the course located in Mercer Hall 340.",
+    "interaction": "varies",
+    "prediction": "CS 480: Advanced Software Engineering",
+    "ground_truth": "The course in Mercer Hall 340 is CS 480, Advanced Software Engineering.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "480",
+        "Advanced Software Engineering"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_mercer340_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the course located in Mercer Hall 340.",
+    "interaction": "varies",
+    "prediction": "CS 480: Advanced Software Engineering",
+    "ground_truth": "The course in Mercer Hall 340 is CS 480, Advanced Software Engineering.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "480",
+        "Advanced Software Engineering"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_ai_courses_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Apply the AI filter and then name the first course shown.",
+    "interaction": "varies",
+    "prediction": "CS 275 :: Human-Centered AI",
+    "ground_truth": "After applying the AI filter, the first course shown is CS 275, Human-Centered AI.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "275",
+        "Human-Centered AI"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_ai_courses_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Apply the AI filter and then name the first course shown.",
+    "interaction": "varies",
+    "prediction": "CS 275: Human-Centered AI",
+    "ground_truth": "After applying the AI filter, the first course shown is CS 275, Human-Centered AI.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "275",
+        "Human-Centered AI"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_ai_courses_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Apply the AI filter and then name the first course shown.",
+    "interaction": "varies",
+    "prediction": "CS 275: Human-Centered AI",
+    "ground_truth": "After applying the AI filter, the first course shown is CS 275, Human-Centered AI.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "275",
+        "Human-Centered AI"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_full_course_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the course that is full.",
+    "interaction": "varies",
+    "prediction": "No course is full.",
+    "ground_truth": "The full course is CS 330, Database Systems.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_full_course_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the course that is full.",
+    "interaction": "varies",
+    "prediction": "CS 330: Database Systems",
+    "ground_truth": "The full course is CS 330, Database Systems.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "330",
+        "Database Systems"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_full_course_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find the course that is full.",
+    "interaction": "varies",
+    "prediction": "CS 330: Database Systems",
+    "ground_truth": "The full course is CS 330, Database Systems.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "330",
+        "Database Systems"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "search_graphics_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Search for graphics and identify the matching course.",
+    "interaction": "varies",
+    "prediction": "CS 355 :: Computer Graphics",
+    "ground_truth": "Searching for graphics matches CS 355, Computer Graphics.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "355",
+        "Computer Graphics"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "search_graphics_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Search for graphics and identify the matching course.",
+    "interaction": "varies",
+    "prediction": "CS 355: Computer Graphics",
+    "ground_truth": "Searching for graphics matches CS 355, Computer Graphics.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "355",
+        "Computer Graphics"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "search_graphics_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Search for graphics and identify the matching course.",
+    "interaction": "varies",
+    "prediction": "CS 355: Computer Graphics",
+    "ground_truth": "Searching for graphics matches CS 355, Computer Graphics.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "355",
+        "Computer Graphics"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "search_systems_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Search for systems and report all matching courses.",
+    "interaction": "varies",
+    "prediction": "CS\u202f240\u202f::\u202fComputer\u202fSystems  \nCS\u202f405\u202f::\u202fOperating\u202fSystems  \nCS\u202f452\u202f::\u202fDistributed\u202fSystems",
+    "ground_truth": "Searching for systems matches CS 240, CS 370, CS 405, and CS 452.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "search_systems_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Search for systems and report all matching courses.",
+    "interaction": "varies",
+    "prediction": "CS\u202f240 \u2013 Computer\u202fSystems \u2013 Mon\u202f/\u202fWed\u202f10:00\u201111:15\u202fAM \u2013 Dr.\u202fElena\u202fTorres \u2013 7/24 seats \u2013 4\u202fcr\u202f(Add)  \nCS\u202f370 \u2013 Machine\u202fLearning\u202fSystems \u2013 Mon\u202f/\u202fWed\u202f3:30\u20114:45\u202fPM",
+    "ground_truth": "Searching for systems matches CS 240, CS 370, CS 405, and CS 452.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "search_systems_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Search for systems and report all matching courses.",
+    "interaction": "varies",
+    "prediction": "CS\u202f240: Computer Systems  \nCS\u202f405: Operating Systems  \nCS\u202f452: Distributed Systems  \nCS\u202f370: Machine Learning Systems",
+    "ground_truth": "Searching for systems matches CS 240, CS 370, CS 405, and CS 452.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "240",
+        "370",
+        "405",
+        "452"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_low_seat_warning_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify a selected course that triggers a low-seat warning.",
+    "interaction": "varies",
+    "prediction": "CS 310 :: Algorithms",
+    "ground_truth": "Among the default selected courses, CS 310 triggers the low-seat warning.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_low_seat_warning_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify a selected course that triggers a low-seat warning.",
+    "interaction": "varies",
+    "prediction": "CS\u202f310 \u2013 Algorithms",
+    "ground_truth": "Among the default selected courses, CS 310 triggers the low-seat warning.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_low_seat_warning_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify a selected course that triggers a low-seat warning.",
+    "interaction": "varies",
+    "prediction": "CS\u202f310 \u2013 Algorithms",
+    "ground_truth": "Among the default selected courses, CS 310 triggers the low-seat warning.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "check_current_conflict_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether the currently selected schedule contains a time conflict.",
+    "interaction": "varies",
+    "prediction": "Yes, there is a time conflict (CS\u202f355 and CS\u202f370 overlap).",
+    "ground_truth": "Yes. The default selected schedule contains a time conflict between CS 355 and CS 370.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "conflict"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "check_current_conflict_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether the currently selected schedule contains a time conflict.",
+    "interaction": "varies",
+    "prediction": "Yes",
+    "ground_truth": "Yes. The default selected schedule contains a time conflict between CS 355 and CS 370.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "check_current_conflict_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether the currently selected schedule contains a time conflict.",
+    "interaction": "varies",
+    "prediction": "Yes. The selected schedule has a time conflict.",
+    "ground_truth": "Yes. The default selected schedule contains a time conflict between CS 355 and CS 370.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "conflict"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "explain_cs310_warning_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Explain why CS 310 may trigger a warning.",
+    "interaction": "varies",
+    "prediction": "Because only\u202f2\u202fseats remain out of\u202f26\u202favailable, the system flags it with a low\u2011seat advisory warning.",
+    "ground_truth": "CS 310 may trigger a warning because it has only 2 seats remaining.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "2",
+        "warning"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "explain_cs310_warning_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Explain why CS 310 may trigger a warning.",
+    "interaction": "varies",
+    "prediction": "CS\u202f310 triggers a warning because it has limited availability\u2014only 2 seats remain.",
+    "ground_truth": "CS 310 may trigger a warning because it has only 2 seats remaining.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "2",
+        "warning"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "explain_cs310_warning_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Explain why CS 310 may trigger a warning.",
+    "interaction": "varies",
+    "prediction": "CS\u202f310 triggers a warning because it has limited seats\u2014only 2 spots remain, indicating low availability.",
+    "ground_truth": "CS 310 may trigger a warning because it has only 2 seats remaining.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "2",
+        "warning"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "conflicts_allowed_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether the interface allows adding conflicting courses anyway.",
+    "interaction": "varies",
+    "prediction": "Yes, the interface permits adding conflicting courses.",
+    "ground_truth": "Yes. The interface allows conflicting courses to be added.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "yes"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "conflicts_allowed_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether the interface allows adding conflicting courses anyway.",
+    "interaction": "varies",
+    "prediction": "Yes \u2013 the system lets you add courses that conflict, but it shows a warning about the time overlap.",
+    "ground_truth": "Yes. The interface allows conflicting courses to be added.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "yes"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "conflicts_allowed_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether the interface allows adding conflicting courses anyway.",
+    "interaction": "varies",
+    "prediction": "No \u2013 the system only flags a time\u2011conflict warning but still lets you add the overlapping courses.",
+    "ground_truth": "Yes. The interface allows conflicting courses to be added.",
+    "success": false,
+    "tier_matched": "no_match",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "selected_monday_courses_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "List all currently selected courses that meet on Monday.",
+    "interaction": "varies",
+    "prediction": "CS 310 \u2013 Algorithms  \nCS 355 \u2013 Computer Graphics  \nCS 370 \u2013 Machine Learning Systems",
+    "ground_truth": "The default selected Monday courses are CS 310, CS 355, and CS 370.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310",
+        "355",
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "selected_monday_courses_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "List all currently selected courses that meet on Monday.",
+    "interaction": "varies",
+    "prediction": "CS 310 \u2013 Algorithms  \nCS 355 \u2013 Computer Graphics  \nCS 370 \u2013 Machine Learning Systems",
+    "ground_truth": "The default selected Monday courses are CS 310, CS 355, and CS 370.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310",
+        "355",
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "selected_monday_courses_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "List all currently selected courses that meet on Monday.",
+    "interaction": "varies",
+    "prediction": "CS 310 \u2013 Algorithms  \nCS 355 \u2013 Computer Graphics  \nCS 370 \u2013 Machine Learning Systems",
+    "ground_truth": "The default selected Monday courses are CS 310, CS 355, and CS 370.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310",
+        "355",
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "latest_selected_class_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify the latest selected class in the schedule.",
+    "interaction": "varies",
+    "prediction": "CS 370 :: Machine Learning Systems",
+    "ground_truth": "The latest selected class is CS 370 at 3:30 PM - 4:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "latest_selected_class_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify the latest selected class in the schedule.",
+    "interaction": "varies",
+    "prediction": "CS 370: Machine Learning Systems (Mon / Wed 3:30\u202fPM\u202f\u2013\u202f4:45\u202fPM)",
+    "ground_truth": "The latest selected class is CS 370 at 3:30 PM - 4:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "latest_selected_class_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify the latest selected class in the schedule.",
+    "interaction": "varies",
+    "prediction": "CS 370: Machine Learning Systems",
+    "ground_truth": "The latest selected class is CS 370 at 3:30 PM - 4:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "earliest_selected_class_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify the earliest selected class in the schedule.",
+    "interaction": "varies",
+    "prediction": "CS 310 :: Algorithms",
+    "ground_truth": "The earliest selected class is CS 310 at 1:30 PM - 2:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "earliest_selected_class_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify the earliest selected class in the schedule.",
+    "interaction": "varies",
+    "prediction": "CS\u202f310 \u2013 Algorithms (Mon/Wed\u202f1:30\u202fPM\u202f\u2013\u202f2:45\u202fPM)",
+    "ground_truth": "The earliest selected class is CS 310 at 1:30 PM - 2:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "earliest_selected_class_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Identify the earliest selected class in the schedule.",
+    "interaction": "varies",
+    "prediction": "CS\u202f310 \u2013 Algorithms (starts at 1:30\u202fPM)",
+    "ground_truth": "The earliest selected class is CS 310 at 1:30 PM - 2:45 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_friday_only_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find any Friday-only class and report its code and time.",
+    "interaction": "varies",
+    "prediction": "CS 480 :: 10:00\u202fAM\u202f\u2013\u202f12:30\u202fPM",
+    "ground_truth": "The Friday-only class is CS 480, which meets 10:00 AM - 12:30 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "480"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_friday_only_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find any Friday-only class and report its code and time.",
+    "interaction": "varies",
+    "prediction": "CS\u202f480\u202f\u2013\u202f10:00\u202fAM\u202f\u2013\u202f12:30\u202fPM",
+    "ground_truth": "The Friday-only class is CS 480, which meets 10:00 AM - 12:30 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "480"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "find_friday_only_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Find any Friday-only class and report its code and time.",
+    "interaction": "varies",
+    "prediction": "CS 480: 10:00\u202fAM\u202f\u2013\u202f12:30\u202fPM",
+    "ground_truth": "The Friday-only class is CS 480, which meets 10:00 AM - 12:30 PM.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "480"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "check_overlap_selected_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether any selected courses overlap on the same day, and identify the courses.",
+    "interaction": "varies",
+    "prediction": "CS\u202f355 (Computer Graphics) and CS\u202f370 (Machine Learning Systems) overlap on Mon/Wed.",
+    "ground_truth": "Yes. CS 355 and CS 370 overlap on Monday and Wednesday.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "355",
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "check_overlap_selected_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether any selected courses overlap on the same day, and identify the courses.",
+    "interaction": "varies",
+    "prediction": "Yes. CS\u202f355 (Computer Graphics) 3:00\u202fPM\u20114:15\u202fPM overlaps with CS\u202f370 (Machine Learning Systems) 3:30\u202fPM\u20114:45\u202fPM on both Monday and Wednesday.",
+    "ground_truth": "Yes. CS 355 and CS 370 overlap on Monday and Wednesday.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "355",
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "check_overlap_selected_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Determine whether any selected courses overlap on the same day, and identify the courses.",
+    "interaction": "varies",
+    "prediction": "Yes. CS\u202f355 (Computer Graphics) and CS\u202f370 (Machine Learning Systems) overlap on Monday and Wednesday.",
+    "ground_truth": "Yes. CS 355 and CS 370 overlap on Monday and Wednesday.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "355",
+        "370"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "infer_warning_source_2000s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2000s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Infer which selected course is causing a low-seat warning without being told directly.",
+    "interaction": "varies",
+    "prediction": null,
+    "ground_truth": "The selected course causing the low-seat warning is CS 310.",
+    "success": false,
+    "tier_matched": "no_prediction",
+    "match_details": {},
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "infer_warning_source_2010s",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "2010s",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Infer which selected course is causing a low-seat warning without being told directly.",
+    "interaction": "varies",
+    "prediction": "CS\u202f310 \u2013 Algorithms",
+    "ground_truth": "The selected course causing the low-seat warning is CS 310.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  },
+  {
+    "task_id": "infer_warning_source_modern",
+    "website": "course_registration",
+    "agent": "gpt_oss",
+    "template": "modern",
+    "perturbation_type": "era_style",
+    "task_type": "",
+    "instruction": "Infer which selected course is causing a low-seat warning without being told directly.",
+    "interaction": "varies",
+    "prediction": "CS\u202f310 \u2013 Algorithms",
+    "ground_truth": "The selected course causing the low-seat warning is CS 310.",
+    "success": true,
+    "tier_matched": "must_include",
+    "match_details": {
+      "keywords": [
+        "310"
+      ]
+    },
+    "mode": "text_only",
+    "model": "openai/gpt-oss-120b"
+  }
+]

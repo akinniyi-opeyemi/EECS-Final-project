@@ -15,7 +15,7 @@ from sentence_transformers import SentenceTransformer, util
 # ============================================================
 parser = argparse.ArgumentParser()
 parser.add_argument("--website", required=True,
-    choices=["house_renting", "personal_website"])
+    choices=["house_renting", "personal_website", "course_registration"])
 parser.add_argument("--mode", required=True,
     choices=["text_only", "multimodal", "vision_only"])
 parser.add_argument("--agent", default="qwen_vl",
@@ -32,7 +32,8 @@ print("Ready.\n")
 
 TASK_FILES = {
     "house_renting":    Path("house-renting-eval/tasks.json"),
-    "personal_website": Path("Personal Website/tasks/test.raw.json")
+    "personal_website": Path("Personal Website/tasks/test.raw.json"),
+    "course_registration": Path("course_registration/tasks.json")
 }
 
 def evaluate_prediction(prediction, reference_answers):
