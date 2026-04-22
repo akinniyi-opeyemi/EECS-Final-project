@@ -1,0 +1,22 @@
+{
+  "website": "course_registration",
+  "mode": "vision_only",
+  "agent": "internvl",
+  "vanilla_failed": 37,
+  "strategies": {
+    "memory": {
+      "evaluated": 37,
+      "recovered": 2,
+      "recovery_rate": 0.0541,
+      "hallucinated": 35,
+      "hallucination_rate": 0.9459
+    },
+    "cot": {
+      "evaluated": 37,
+      "recovered": 5,
+      "recovery_rate": 0.1351,
+      "hallucinated": 27,
+      "hallucination_rate": 0.7297
+    }
+  }
+}

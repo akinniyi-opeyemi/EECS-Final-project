@@ -1,0 +1,33 @@
+{
+  "website": "course_registration",
+  "agent": "qwen25",
+  "model": "/ocean/projects/tra260004p/akinniyi/models/Qwen2.5-VL-7B-Instruct",
+  "mode": "vision_only",
+  "total_tasks": 60,
+  "evaluated_tasks": 60,
+  "missing_tasks": 0,
+  "baseline": "2000s",
+  "success_rates": {
+    "2000s": 0.55,
+    "2010s": 0.55,
+    "modern": 0.15
+  },
+  "temporal_degradation": {
+    "2000s_to_2010s": 0.0,
+    "2000s_to_modern": 0.4
+  },
+  "trs": 0.2727,
+  "task_type_results": {},
+  "perturbation_results": {
+    "era_style": {
+      "count": 60,
+      "success_rate": 0.4166666666666667
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 1,
+    "exact_match_contained": 1,
+    "no_match": 35,
+    "must_include": 23
+  }
+}

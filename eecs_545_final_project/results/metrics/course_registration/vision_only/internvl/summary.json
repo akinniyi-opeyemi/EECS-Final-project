@@ -1,0 +1,33 @@
+{
+  "website": "course_registration",
+  "agent": "internvl",
+  "model": "/ocean/projects/tra260004p/akinniyi/models/InternVL2-8B",
+  "mode": "vision_only",
+  "total_tasks": 60,
+  "evaluated_tasks": 60,
+  "missing_tasks": 0,
+  "baseline": "2000s",
+  "success_rates": {
+    "2000s": 0.4,
+    "2010s": 0.4,
+    "modern": 0.35
+  },
+  "temporal_degradation": {
+    "2000s_to_2010s": 0.0,
+    "2000s_to_modern": 0.05
+  },
+  "trs": 0.875,
+  "task_type_results": {},
+  "perturbation_results": {
+    "era_style": {
+      "count": 60,
+      "success_rate": 0.38333333333333336
+    }
+  },
+  "tier_breakdown": {
+    "exact_match": 2,
+    "no_match": 37,
+    "must_include": 11,
+    "fuzzy_string": 10
+  }
+}
