@@ -1,4 +1,7 @@
-# scripts/visualize_agent_dashboard.py
+# scripts/visualize_agent_dashboard_v2.py
+# V2: adds Row 4 (hallucination rates) and Row 5 (net improvement)
+# Usage: python scripts/visualize_agent_dashboard_v2.py
+
 import json
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
@@ -20,6 +23,7 @@ VISION_AGENTS = ["qwen_vl", "uitars", "qwen25", "internvl"]
 
 # UMich blue shades: dark → light, one per vision agent
 UMICH_SHADES = ["#00274C", "#1a4f7a", "#4a90c4", "#8ab8d8"]
+
 MEMORY_COLORS = {
     "qwen_vl":  "#f5a0a0",
     "uitars":   "#b8b4f0",
@@ -52,6 +56,9 @@ WEBSITES = {
     },
 }
 
+# ============================================================
+# HELPERS
+# ============================================================
 def load_summary(website, mode, agent):
     path = Path(f"results/metrics/{website}/{mode}/{agent}/summary.json")
     if path.exists():
@@ -87,14 +94,24 @@ def get_rq2_recovery_rate(website, mode, agent, strategy):
         s = json.load(f)
     return s.get("strategies", {}).get(strategy, {}).get("recovery_rate", 0) * 100
 
-# ============================================================
-# figure: 3 rows x 3 cols
-# ============================================================
-fig = plt.figure(figsize=(30, 22))
-gs = gridspec.GridSpec(3, 3, figure=fig, hspace=0.42, wspace=0.30)
+def get_rq2_hallucination_rate(website, mode, agent, strategy):
+    path = Path(f"results/metrics/{website}/rq2_{mode}_{agent}/summary.json")
+    if not path.exists():
+        path = Path(f"results/metrics/{website}/rq2_{mode}/summary.json")
+    if not path.exists():
+        return 0
+    with open(path) as f:
+        s = json.load(f)
+    return s.get("strategies", {}).get(strategy, {}).get("hallucination_rate", 0) * 100
 
 # ============================================================
-# ROW 1: line charts per website (vision_only + memory overlay)
+# FIGURE: 5 rows x 3 cols
+# ============================================================
+fig = plt.figure(figsize=(30, 36))
+gs = gridspec.GridSpec(5, 3, figure=fig, hspace=0.42, wspace=0.30)
+
+# ============================================================
+# ROW 1: Success rate line charts (vision + memory + CoT)
 # ============================================================
 for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     ax = fig.add_subplot(gs[0, col])
@@ -108,7 +125,7 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
         values = [s_text["success_rates"].get(t, 0) * 100 for t in templates]
         ax.plot(x, values, color=cfg["color"], linestyle="--",
                 marker=cfg["marker"], linewidth=2, markersize=7,
-        label=f"{cfg['label']} (text-only)", alpha=0.7, zorder=3)
+                label=f"{cfg['label']} (text-only)", alpha=0.7, zorder=3)
 
     for agent_key in VISION_AGENTS:
         s = load_summary(website_key, "vision_only", agent_key)
@@ -139,9 +156,12 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
                 label=f"{AGENTS[agent_key]['label']} + CoT", zorder=2, alpha=0.9)
 
     ax.set_xticks(x)
-    ax.set_xticklabels(xlabels, fontsize=10)
+    ax.set_xticklabels(xlabels, fontsize=12)
     ax.set_ylim(0, 140)
-    ax.set_ylabel("Success rate (%)", fontsize=11)
+    ax.set_ylabel("Success rate (%)", fontsize=14, fontweight="bold")
+    ax.tick_params(axis="y", labelsize=12)
+    for label in ax.get_xticklabels():
+        label.set_fontweight("bold")
     ax.set_title(f"{wconfig['title']} — Vision only (solid) + Memory (dotted) + CoT (dash-dot)",
                  fontsize=12, fontweight="bold", pad=12)
     ax.text(0.5, -0.14,
@@ -155,13 +175,12 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     ax.spines["right"].set_visible(False)
 
 # ============================================================
-# ROW 2: TRS vision_only vs multimodal per website (Option A)
-# Same chart type for all 3 websites
+# ROW 2: TRS vision_only vs multimodal per website
 # ============================================================
 for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     ax = fig.add_subplot(gs[1, col])
-    x      = np.arange(len(VISION_AGENTS))
-    width  = 0.35
+    x     = np.arange(len(VISION_AGENTS))
+    width = 0.35
 
     trs_vision = []
     trs_multi  = []
@@ -191,11 +210,14 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
                linewidth=1, alpha=0.5, label="Perfect robustness (1.0)")
     ax.set_xticks(x)
     ax.set_xticklabels([AGENTS[a]["label"] for a in VISION_AGENTS],
-                       fontsize=8.5, rotation=12, ha="right")
+                       fontsize=12, rotation=12, ha="center")
     ax.set_ylim(0, 1.65)
-    ax.set_ylabel("TRS", fontsize=11)
+    ax.set_ylabel("TRS", fontsize=14, fontweight="bold")
+    ax.tick_params(axis="y", labelsize=12)
+    for label in ax.get_xticklabels():
+        label.set_fontweight("bold")
     ax.set_title(f"{wconfig['title']} — TRS by agent",
-                 fontsize=12, fontweight="bold", pad=12)
+                 fontsize=14, fontweight="bold", pad=12)
     note = "*TRS > 1.0 = inverse degradation (2000s era harder than later)" \
            if website_key == "course_registration" \
            else "Note: GPT-oss-120B excluded (text-only mode)"
@@ -209,7 +231,7 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     ax.spines["right"].set_visible(False)
 
 # ============================================================
-# ROW 3: Memory and CoT recovery (all 3 websites)
+# ROW 3: Memory and CoT recovery rates
 # ============================================================
 for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     ax = fig.add_subplot(gs[2, col])
@@ -223,8 +245,8 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
         cot_rates.append(get_rq2_recovery_rate(website_key, "vision_only", agent_key, "cot"))
         labels.append(AGENTS[agent_key]["label"])
 
-    x          = np.arange(len(VISION_AGENTS))
-    width      = 0.35
+    x     = np.arange(len(VISION_AGENTS))
+    width = 0.35
 
     bars_mem = ax.bar(x - width/2, memory_rates, width,
                       color=UMICH_SHADES, alpha=0.85,
@@ -245,8 +267,11 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
                 ha="center", va="bottom", fontsize=8.5, fontweight="bold")
 
     ax.set_xticks(x)
-    ax.set_xticklabels(labels, fontsize=9, rotation=10, ha="right")
-    ax.set_ylabel("Recovery rate (%)", fontsize=11)
+    ax.set_xticklabels(labels, fontsize=12, rotation=10, ha="center")
+    ax.set_ylabel("Recovery rate (%)", fontsize=14, fontweight="bold")
+    ax.tick_params(axis="y", labelsize=12)
+    for label in ax.get_xticklabels():
+        label.set_fontweight("bold")
     ax.set_ylim(0, 100)
     ax.set_title(f"{wconfig['title']} — RQ II recovery (vision only)",
                  fontsize=12, fontweight="bold", pad=12)
@@ -260,8 +285,116 @@ for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 
+# ============================================================
+# ROW 4: Hallucination rates (memory vs CoT)
+# ============================================================
+for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
+    ax = fig.add_subplot(gs[3, col])
+
+    mem_halls = [get_rq2_hallucination_rate(website_key, "vision_only", a, "memory")
+                 for a in VISION_AGENTS]
+    cot_halls = [get_rq2_hallucination_rate(website_key, "vision_only", a, "cot")
+                 for a in VISION_AGENTS]
+    labels    = [AGENTS[a]["label"] for a in VISION_AGENTS]
+
+    x     = np.arange(len(VISION_AGENTS))
+    width = 0.35
+
+    bars_mem = ax.bar(x - width/2, mem_halls, width,
+                      color=UMICH_SHADES, alpha=0.85,
+                      edgecolor="white", linewidth=1.2,
+                      label="Memory", zorder=3)
+    bars_cot = ax.bar(x + width/2, cot_halls, width,
+                      color=UMICH_SHADES, alpha=0.35,
+                      edgecolor="white", linewidth=1.2,
+                      label="CoT", zorder=3)
+
+    for bar, val in zip(bars_mem, mem_halls):
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                val + 0.5, f"{val:.0f}%",
+                ha="center", va="bottom", fontsize=8.5, fontweight="bold")
+    for bar, val in zip(bars_cot, cot_halls):
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                val + 0.5, f"{val:.0f}%",
+                ha="center", va="bottom", fontsize=8.5, fontweight="bold")
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, fontsize=12, rotation=10, ha="center")
+    ax.set_ylabel("Hallucination rate (%)", fontsize=14, fontweight="bold")
+    ax.tick_params(axis="y", labelsize=12)
+    for label in ax.get_xticklabels():
+        label.set_fontweight("bold")
+    ax.set_ylim(0, 115)
+    ax.set_title(f"{wconfig['title']} — Hallucination rate (vision only)",
+                 fontsize=12, fontweight="bold", pad=12)
+    ax.text(0.5, -0.14,
+            "Note: % of vanilla failures where agent gave a confident wrong answer",
+            transform=ax.transAxes, ha="center", va="top",
+            fontsize=8, style="italic", color="gray", fontweight="bold")
+    ax.legend(fontsize=10, loc="upper right",
+              framealpha=0.9, edgecolor="lightgray")
+    ax.grid(alpha=0.25, axis="y", zorder=0)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+# ============================================================
+# ROW 5: Net improvement (recovery - hallucination)
+# ============================================================
+for col, (website_key, wconfig) in enumerate(WEBSITES.items()):
+    ax = fig.add_subplot(gs[4, col])
+
+    mem_net = [get_rq2_recovery_rate(website_key, "vision_only", a, "memory") -
+               get_rq2_hallucination_rate(website_key, "vision_only", a, "memory")
+               for a in VISION_AGENTS]
+    cot_net = [get_rq2_recovery_rate(website_key, "vision_only", a, "cot") -
+               get_rq2_hallucination_rate(website_key, "vision_only", a, "cot")
+               for a in VISION_AGENTS]
+    labels  = [AGENTS[a]["label"] for a in VISION_AGENTS]
+
+    x     = np.arange(len(VISION_AGENTS))
+    width = 0.35
+
+    bars_mem = ax.bar(x - width/2, mem_net, width,
+                      color=UMICH_SHADES, alpha=0.85,
+                      edgecolor="white", linewidth=1.2,
+                      label="Memory", zorder=3)
+    bars_cot = ax.bar(x + width/2, cot_net, width,
+                      color=UMICH_SHADES, alpha=0.35,
+                      edgecolor="white", linewidth=1.2,
+                      label="CoT", zorder=3)
+
+    for bar, val in zip(bars_mem, mem_net):
+        offset = 0.5 if val >= 0 else -3
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                val + offset, f"{val:+.0f}%",
+                ha="center", va="bottom", fontsize=8.5, fontweight="bold")
+    for bar, val in zip(bars_cot, cot_net):
+        offset = 0.5 if val >= 0 else -3
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                val + offset, f"{val:+.0f}%",
+                ha="center", va="bottom", fontsize=8.5, fontweight="bold")
+
+    ax.axhline(y=0, color="black", linewidth=0.8, alpha=0.5)
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, fontsize=12, rotation=10, ha="center")
+    ax.set_ylabel("Net improvement (%)", fontsize=14, fontweight="bold")
+    ax.tick_params(axis="y", labelsize=12)
+    for label in ax.get_xticklabels():
+        label.set_fontweight("bold")
+    ax.set_title(f"{wconfig['title']} — Net improvement (recovery − hallucination)",
+                 fontsize=12, fontweight="bold", pad=12)
+    ax.text(0.5, -0.14,
+            "Positive = net benefit; Negative = intervention made things worse",
+            transform=ax.transAxes, ha="center", va="top",
+            fontsize=8, style="italic", color="gray", fontweight="bold")
+    ax.legend(fontsize=10, loc="upper right",
+              framealpha=0.9, edgecolor="lightgray")
+    ax.grid(alpha=0.25, axis="y", zorder=0)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
 plt.tight_layout(rect=[0, 0, 1, 0.995])
-path = VIZ_DIR / "agent_comprehensive_dashboard.png"
+path = VIZ_DIR / "agent_comprehensive_dashboard_v2.png"
 plt.savefig(path, dpi=150, bbox_inches="tight")
 plt.close()
 print(f"Saved: {path}")
