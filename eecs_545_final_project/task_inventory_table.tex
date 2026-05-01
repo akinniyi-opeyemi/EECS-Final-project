@@ -1,0 +1,97 @@
+\documentclass[10pt]{article}
+\usepackage[landscape, margin=0.75in]{geometry}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{array}
+
+\definecolor{lightgray}{gray}{0.93}
+\definecolor{navy}{RGB}{0,39,76}
+
+\begin{document}
+
+\begin{table*}[ht]
+\centering
+\caption{%
+  Benchmark task inventory. Three domains span 35 unique task types across
+  Classic / Modern / Hidden (House Renting), 2000s / 2010s / Modern
+  (Course Reg.), and Raw / Hugo / Notion / Jekyll (Personal Website) templates,
+  yielding \textbf{428 total evaluation runs}.
+}
+\label{tab:task-inventory}
+\renewcommand{\arraystretch}{1.22}
+\setlength{\tabcolsep}{6pt}
+
+\begin{tabularx}{\textwidth}{l l c c c X}
+\toprule
+\textbf{Domain} & \textbf{Category} & \textbf{\# Tasks} &
+\textbf{Templates} & \textbf{Interaction} & \textbf{Representative Instructions} \\
+\midrule
+
+%% ── House Renting ────────────────────────────────────────────────────────────
+\rowcolor{lightgray}
+\multirow{3}{*}{House Renting}
+  & Extraction (visible)   & 5 & Classic              & None
+  & Find the monthly rent / bedrooms / deadline / email / availability of \textit{\{property\}}. \\
+
+  & Extraction (hidden)    & 4 & Modern, Hidden       & Click / Tab / Tab+Expand
+  & Find the pet policy, parking details, lease duration, or application fee of \textit{\{property\}}. \\
+
+\rowcolor{lightgray}
+  & Navigation             & 1 & Hidden               & Sidebar filter
+  & Use the city filter to locate \textit{\{property\}} in \textit{\{city\}}. \\
+
+\midrule
+
+%% ── Course Registration ──────────────────────────────────────────────────────
+\multirow{5}{*}{Course Reg.}
+  & Lookup                 & 8 & 2000s, 2010s, Modern & Varies
+  & Find title / instructor / meeting time / seat count for CS 310 or CS 420; find course in Mercer 340. \\
+
+\rowcolor{lightgray}
+  & Filtering              & 2 & 2000s, 2010s, Modern & Varies
+  & Search for ``graphics'' / ``systems'' and report matching courses. \\
+
+  & Warnings               & 4 & 2000s, 2010s, Modern & Varies
+  & Identify low-seat warnings; detect / explain time conflicts; check if conflicts are allowed. \\
+
+\rowcolor{lightgray}
+  & Schedule               & 5 & 2000s, 2010s, Modern & Varies
+  & List Monday courses; find earliest / latest / Friday-only class; detect schedule overlaps. \\
+
+  & Hard (inference)       & 1 & 2000s, 2010s, Modern & Varies
+  & Infer \textit{which} selected course is causing a low-seat warning without being told directly. \\
+
+\midrule
+
+%% ── Personal Website ─────────────────────────────────────────────────────────
+\rowcolor{lightgray}
+\multirow{2}{*}{Personal Website}
+  & Extraction             & 4 & Raw, Hugo, Notion, Jekyll & None
+  & Find most recent publication; office hours; current course \& location; grad student acceptance. \\
+
+  & Social / Contact       & 1 & Raw, Hugo, Notion, Jekyll & None
+  & Find \textit{\{name\}}'s Twitter / X account. \\
+
+\midrule[\heavyrulewidth]
+
+\multicolumn{2}{l}{\textbf{Total}} & \textbf{35} &
+  \textit{3 domains $\times$ 3--4 templates} & & \\
+
+\bottomrule
+\end{tabularx}
+
+\smallskip
+\noindent\footnotesize
+\textit{Interaction types — None}: answer directly visible; \textit{Tab}: tab navigation required;
+\textit{Click}: button click reveals hidden info; \textit{Tab+Expand}: tab then accordion expand;
+\textit{Varies}: interaction complexity differs across era-style templates (2000s most complex).
+House Renting tasks are instantiated over 12 property listings per template (120 runs);
+Course Reg.\ runs 20 tasks $\times$ 3 templates (60 runs);
+Personal Website runs 5 tasks $\times$ 4 templates $\times$ 4 personas (80 runs each agent config).
+
+\end{table*}
+
+\end{document}

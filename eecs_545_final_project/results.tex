@@ -1,0 +1,131 @@
+% results.tex
+% Reusable results tables for the paper.
+% ── Table 1: Success Rate by Site, Template, and Agent ──────────────────────
+%
+% Compile with:  pdflatex results.tex
+%
+\documentclass[10pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{caption}
+
+% shorthand
+\newcommand{\tmo}[1]{\textbf{#1}}   % text-only  (bold = upper bound)
+
+\begin{document}
+
+% ════════════════════════════════════════════════════════════════════════════
+% TABLE 1 — Success rate (%) by site, template, and agent
+% ════════════════════════════════════════════════════════════════════════════
+\begin{table*}[ht]
+\centering
+\caption{%
+  Success rate (\%) by domain, template, and input mode.
+  \textbf{Text-Only} (GPT-oss-120B) serves as the upper-bound reference.
+  \textit{Multimodal} and \textit{Vision-Only} columns show the mean across
+  four vision agents (Qwen3-VL-30B, UI-TARS-7B, Qwen2.5-VL-7B, InternVL2-8B).
+  Best vision-only score per domain marked with $^\dagger$;
+  worst with $^\ddagger$.
+}
+\label{tab:success-rate}
+\renewcommand{\arraystretch}{1.20}
+\setlength{\tabcolsep}{7pt}
+
+\begin{tabular}{l l r r r r}
+\toprule
+\textbf{Domain} & \textbf{Template} &
+\makecell{\textbf{Text-Only}\\\textbf{(GPT-oss)}} &
+\makecell{\textbf{Multimodal}\\\textbf{(avg)}} &
+\makecell{\textbf{Vision-Only}\\\textbf{(avg)}} &
+\makecell{\textbf{Vision-Only}\\\textbf{Drop}} \\
+\midrule
+
+%% ── House Renting ────────────────────────────────────────────────────────────
+
+\multirow{3}{*}{House Renting}
+  & Classic  & \tmo{100.0} & 94.6 & \textbf{57.9}$^\dagger$  & $-$42.1 \\
+  & Modern   & \tmo{98.8}  & 85.4 & 25.3                     & $-$73.5 \\
+  & Hidden   & \tmo{100.0} & 94.0 & \textit{16.5}$^\ddagger$ & $-$83.5 \\
+
+\midrule
+
+%% ── Personal Website ─────────────────────────────────────────────────────────
+\multirow{4}{*}{Personal Website}
+  & Raw HTML 1998   & \tmo{95.0} & 75.0 & \textbf{60.0}$^\dagger$  & $-$35.0 \\
+  & Hugo PaperMod   & \tmo{95.0} & 77.5 & 40.0                     & $-$55.0 \\
+  & Notion          & \tmo{90.0} & 77.5 & 27.5                     & $-$62.5 \\
+  & Jekyll Al-Folio & \tmo{80.0} & 65.0 & \textbf{60.0}$^\dagger$  & $-$20.0 \\
+
+\midrule
+
+%% ── Course Registration ──────────────────────────────────────────────────────
+\multirow{3}{*}{Course Reg.}
+  & 2000s  & \tmo{85.0} & 70.0 & 48.8                     & $-$36.2 \\
+  & 2010s  & \tmo{90.0} & 78.8 & \textbf{51.3}$^\dagger$  & $-$38.7 \\
+  & Modern & \tmo{90.0} & 76.3 & \textit{22.5}$^\ddagger$ & $-$67.5 \\
+
+\midrule[\heavyrulewidth]
+
+%% ── Overall ──────────────────────────────────────────────────────────────────
+\multicolumn{2}{l}{\textbf{Overall (macro avg.)}}
+  & \tmo{92.4} & \textbf{79.4} & \textbf{41.0} & $\mathbf{-}$\textbf{51.4} \\
+
+\bottomrule
+\end{tabular}
+
+\smallskip
+\noindent\footnotesize
+Vision-Only avg.\ computed across Qwen3-VL-30B, UI-TARS-7B, Qwen2.5-VL-7B,
+InternVL2-8B. Drop = Vision-Only avg.\ $-$ Text-Only.
+GPT-oss-120B is \textbf{text-only} and excluded from vision averages.
+\end{table*}
+
+
+% ════════════════════════════════════════════════════════════════════════════
+% TABLE 2 — Per-agent success rate (vision-only, all templates averaged)
+% ════════════════════════════════════════════════════════════════════════════
+\begin{table*}[ht]
+\centering
+\caption{%
+  Per-agent success rate (\%) in vision-only mode, averaged across all
+  templates within each domain. GPT-oss-120B text-only shown as reference.
+}
+\label{tab:per-agent-sr}
+\renewcommand{\arraystretch}{1.20}
+\setlength{\tabcolsep}{7pt}
+
+\begin{tabular}{l c c c c c}
+\toprule
+\textbf{Domain} &
+\makecell{\textbf{GPT-oss}\\\textbf{(text)}} &
+\makecell{\textbf{Qwen3-VL}\\\textbf{-30B}} &
+\makecell{\textbf{UI-TARS}\\\textbf{-7B}} &
+\makecell{\textbf{Qwen2.5-VL}\\\textbf{-7B}} &
+\makecell{\textbf{InternVL2}\\\textbf{-8B}} \\
+\midrule
+
+
+House Renting    & \tmo{99.6} & 32.3 & 36.6 & 32.9 & 31.1 \\
+Personal Website & \tmo{90.0} & 47.5 & 46.3 & 47.5 & 46.3 \\
+
+Course Reg.      & \tmo{88.3} & 45.0 & 38.3 & 41.7 & 38.3 \\
+
+\midrule[\heavyrulewidth]
+\textbf{Overall} & \tmo{92.4} & \textbf{42.2} & \textbf{41.0} & \textbf{41.4} & \textbf{39.3} \\
+
+\bottomrule
+\end{tabular}
+
+\smallskip
+\noindent\footnotesize
+Vision-only mode only (no text or HTML source provided to agents).
+House Renting averages across Classic, Modern, and Hidden templates (12
+listings each). Course Reg.\ averages across 2000s, 2010s, and Modern.
+Personal Website averages across Raw HTML 1998, Hugo PaperMod, Notion,
+and Jekyll Al-Folio.
+\end{table*}
+
+\end{document}
