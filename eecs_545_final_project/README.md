@@ -12,7 +12,6 @@ A controlled benchmark for evaluating how VLM-based GUI agents degrade under tem
 |---|---|
 | RQ I | How much do VLM-based GUI agents degrade under controlled interface perturbations, and which perturbation types hurt most? |
 | RQ II | Can lightweight test-time interventions (experience memory, chain-of-thought reasoning) recover lost performance without retraining? |
-| RQ III | What failure modes characterize non-robust GUI agents? |
 
 ---
 
@@ -23,7 +22,7 @@ eecs_545_final_project/
 ├── house-renting-eval/          # Website 1: 264 tasks, 3 templates
 ├── Personal Website/            # Website 2: 80 tasks, 4 templates
 ├── course_registration/         # Website 3: 60 tasks, 3 templates
-├── job_application/             # Website 4: 15 tasks (supplementary)
+├── job_application/             # Website 4: templates exist, inference not run
 ├── scripts/
 │   ├── infer.py                 # Main inference script (--agent, --mode, --website)
 │   ├── evaluate.py              # Evaluation with three-tier metrics
@@ -34,6 +33,11 @@ eecs_545_final_project/
 │   ├── visualize_comprehensive.py  # Full dashboard
 │   ├── visualize_agents.py      # Cross-agent comparison
 │   ├── visualize_rq2.py         # RQ II visualizations
+│   ├── visualize_agent_dashboard.py    # Agent dashboard (single figure)
+│   ├── visualize_agent_dashboard_v2.py # Agent dashboard v2 (5-row × 3-col)
+│   ├── visualize_agent_dashboard_rows.py # Paper-ready row PNGs (5 files)
+│   ├── visualize_agent_hallucinations.py # Hallucination + net-improvement charts
+│   ├── visualize_pipeline.py    # Pipeline diagram (preliminary vs. controlled)
 │   └── interventions/
 │       ├── vanilla.py           # Strategy A: no intervention
 │       ├── memory_agent.py      # Strategy B: few-shot memory
@@ -42,6 +46,8 @@ eecs_545_final_project/
 │   ├── raw_outputs/             # Per-task model predictions
 │   ├── metrics/                 # Evaluation summaries
 │   └── visualizations/          # All generated charts
+├── results.tex                  # LaTeX result tables (SR by template, per-agent SR)
+├── task_inventory_table.tex     # LaTeX benchmark task inventory table
 └── environment.yml
 ```
 
@@ -56,7 +62,7 @@ eecs_545_final_project/
 | house_renting | classic, modern, hidden | 264 | visible, click_to_reveal, tab_navigation, tab_then_expand, filter_navigation | Yes |
 | personal_website | raw_html_1998, hugo_papermod, notion, jekyll_alfolio | 80 | framework_style | Yes |
 | course_registration | 2000s, 2010s, modern | 60 | era_style | Yes |
-| job_application | classic, modern, notion | 15 | framework_style | No (supplementary) |
+| job_application | classic, modern, notion | 15 | framework_style | No (not evaluated) |
 
 ### Evaluation: Three-Tier Schema
 
